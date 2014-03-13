@@ -1,5 +1,5 @@
 
-This set of design files implements the PCB for the HD6309 Singleboard Computer v1.0
+This set of design files pertains to the HD6309 Singleboard Computer v1.0
 
 The HD6309 SBC is a retroputing distraction, born to provide an opportunity to try my hand
 at assembly language for the 6809 - which many have billed as "the most advanced 8-bit
