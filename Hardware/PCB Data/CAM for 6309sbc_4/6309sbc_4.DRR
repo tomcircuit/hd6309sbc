@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: 6309sbc_4.pcb   31-Dec-2013  02:28:55
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : TopLayer to BottomLayer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        20mil (0.508mm)          238              50.18 Inch (1274.64 mm)
+T2        28mil (0.7112mm)         54               24.54 Inch (623.35 mm)
+T3        35mil (0.889mm)          138              29.72 Inch (754.87 mm)
+T4        38mil (0.9652mm)         7                2.52 Inch (63.93 mm)
+T5        42mil (1.0668mm)         106              32.04 Inch (813.83 mm)
+T6        59.5mil (1.5113mm)       4                1.27 Inch (32.17 mm)
+T7        96mil (2.4384mm)         5                2.32 Inch (58.82 mm)
+T8        144mil (3.6576mm)        4         NPTH   21.38 Inch (543.11 mm)
+---------------------------------------------------------------------------
+Totals                             556              163.97 Inch (4164.71 mm)
+
+Total Processing Time : 00:00:00

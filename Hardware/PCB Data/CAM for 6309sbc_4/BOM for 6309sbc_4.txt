@@ -1,0 +1,108 @@
+Bill Of Material For 6309sbc_4.pcb
+On 31-Dec-2013 at 02:28:56
+
+ Comment             Pattern     Quantity  Components
+------------------------------------------------------------------------------
+
+
+ 0                   0805             1    R17
+
+ 0.1uF               0603            12    C2, C4, C5, C7, C8, C11, C15,
+                                           C17, C18, C19, C20, C21
+
+ 10K                 0805             1    R21
+
+ 10uF                0603             2    C3, C16
+
+ 1K                  0805             7    R5, R6, R7, R8, R9, R18, R19
+
+ 2032 HOLDER         CR2032HOLDER     1    BATT
+
+ 220                 0805             1    R14
+
+ 22uF/20V            SMTALIC6R3MM     2    C1, C6
+
+ 27                  0805             2    R22, R23
+
+ 27C256              DIPSOCKET28      1    U1
+
+ 32K SRAM (x2)       DIPSOCKET28N     1    U11
+
+ 330                 0805             5    R11, R12, R13, R15, R16
+
+ 4.7K                0805             6    R2, R3, R4, R10, R20, R24
+
+ 47pF                0805             2    C13, C14
+
+ 5680F               5680F            2    D3, D4
+
+ BAS70               SOT-23-SDT       1    D1
+
+ CIO PORT A          HEADER8X2        1    J1
+
+ CIO PORT B          HEADER8X2        1    J2
+
+ CONFIG              HEADER2          1    JP4
+
+ EPM7128S/LCC        PLCC84           1    U7
+
+ FOUT                TESTPT           1    TP6
+
+ FT230XS             SSO16            1    U10
+
+ GF1G                MLL41            1    D2
+
+ GND                 HEADER2          2    J5, J8
+
+ HD63C09ECP          PLCC44           1    U3
+
+ HY62256             DIPSOCKET28N     1    U12
+
+ IRQ                 HEADER2          1    JP1
+
+ JTAG                HEADER5X2        1    J7
+
+ L5                  TESTPT           1    TP11
+
+ L6                  TESTPT           1    TP12
+
+ L8                  TESTPT           1    TP13
+
+ L9                  TESTPT           1    TP14
+
+ LIC                 TESTPT           1    TP5
+
+ MEZZANINE           HEADER20X2       1    J3
+
+ MUN2211             SOT-23-SDT       3    Q1, Q2, Q3
+
+ OMRON-B3F           OMRON-B3F        2    SW1, SW2
+
+ OSC8A               XOSC8            2    Y1, Y2
+
+ PJ102B              PJ102B           1    J9
+
+ RESET               TESTPT           1    TP1
+
+ RTC7301DG           DIPSOCKET18      1    U6
+
+ RXD                 TESTPT           1    TP15
+
+ SCC.B               HEADER5X2        1    J11
+
+ SD ADAPTER          DIP10W           1    J6
+
+ TXD                 TESTPT           1    TP16
+
+ USB POWER           HEADER2          1    JP3
+
+ USB-B               USB_B            1    J10
+
+ VRTC                TESTPT           1    TP2
+
+ Z8536-CIO           PLCC44           1    U2
+
+ Z85C30/LCC          PLCC44           1    U5
+
+ ZXCM209LE5          SOT-23-5         2    U8, U9
+

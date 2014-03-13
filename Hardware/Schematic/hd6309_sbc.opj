@@ -1,0 +1,181 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\hd6309_sbc.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify)
+    (ANNOTATE_Scope "1")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "TRUE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (Netlist_TAB "7")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "HD6309_MEZZ.NET")
+    (OTHER_Netlist_File2 "HD6303_SBC.CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_Formatter "tango.dll")
+    (OTHER_PCB_Footprint "{PCB Footprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\hd6309_sbc.net"
+      (Type "Report"))
+    (File ".\hd6309_mezz.net"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (GND
+      (LibraryName "D:\ORCAD\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (TMS4464
+      (FullPartName "TMS4464.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\DRAM.OLB")
+      (DeviceIndex "0"))
+    (M5M4464AL-10
+      (FullPartName "M5M4464AL-10.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\DRAM.OLB")
+      (DeviceIndex "0"))
+    (CON4
+      (FullPartName "CON4.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "D:\ORCAD\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("DIODE SCHOTTKY"
+      (FullPartName "DIODE SCHOTTKY.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (LT1610
+      (FullPartName "LT1610.Normal")
+      (LibraryName "P:\MIDI LIGHTSHOW\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (MAX638/SO
+      (FullPartName "MAX638/SO.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\REGULATOR.OLB")
+      (DeviceIndex "0"))
+    (LTC1174-5
+      (FullPartName "LTC1174-5.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\REGULATOR.OLB")
+      (DeviceIndex "0"))
+    (INDUCTOR
+      (FullPartName "INDUCTOR.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (CON2
+      (FullPartName "CON2.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (6581_0
+      (FullPartName "6581_0.Normal")
+      (LibraryName "D:\MY DOCUMENTS\PROJECTS\Z80 SBC\Z180FLAT.DSN")
+      (DeviceIndex "0"))
+    (74ACT652
+      (FullPartName "74ACT652.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\BUSDRIVERTRANSCEIVER.OLB")
+      (DeviceIndex "0"))
+    (74F652
+      (FullPartName "74F652.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\BUSDRIVERTRANSCEIVER.OLB")
+      (DeviceIndex "0"))
+    (74F543
+      (FullPartName "74F543.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\BUSDRIVERTRANSCEIVER.OLB")
+      (DeviceIndex "0"))
+    (74F794/SO
+      (FullPartName "74F794/SO.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\SHIFTREGISTER.OLB")
+      (DeviceIndex "0"))
+    (74HCT646
+      (FullPartName "74HCT646.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\BUSDRIVERTRANSCEIVER.OLB")
+      (DeviceIndex "0"))
+    (74HCT574
+      (FullPartName "74HCT574.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\BUSDRIVERTRANSCEIVER.OLB")
+      (DeviceIndex "0"))
+    (AD734
+      (FullPartName "AD734.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\MISCLINEAR.OLB")
+      (DeviceIndex "0"))
+    (CXA1645M
+      (FullPartName "CXA1645M.Normal")
+      (LibraryName "P:\MIDI LIGHTSHOW\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (74HCT573
+      (FullPartName "74HCT573.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\BUSDRIVERTRANSCEIVER.OLB")
+      (DeviceIndex "0"))
+    (CON3
+      (FullPartName "CON3.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("CONN SOCKET 5x2"
+      (FullPartName "CONN SOCKET 5x2.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("CONN SOCKET 8x2"
+      (FullPartName "CONN SOCKET 8x2.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("NPN CBE"
+      (FullPartName "NPN CBE.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "P:\HD6309 SBC\Hardware\Schematic\hd6309_sbc.dsn")
+      (Path "Design Resources"
+         "P:\HD6309 SBC\Hardware\Schematic\hd6309_sbc.dsn" "SCG_MEZZANINE")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "P:\HD6309 SBC\Hardware\Schematic\hd6309_sbc.dsn" "SCG_MEZZANINE"
+         "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 0 795 -4 -23 689 1378 0 407"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 110 1382 110 670")
+        (Scroll "586 191")
+        (Zoom "104")
+        (Occurrence "/"))
+      (Path "P:\HD6309 SBC\HARDWARE\SCHEMATIC\HD6309_SBC.DSN")
+      (Schematic "SCG_MEZZANINE")
+      (Page "PAGE1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 154 1426 154 714")
+        (Scroll "0 0")
+        (Zoom "52"))
+      (Path "P:\HD6309 SBC\HARDWARE\SCHEMATIC\HD6309_SBC.DSN")
+      (Schematic "EP7128SLI84")
+      (Page "PAGE1")))
+  (LastUsedLibraryBrowseDirectory "C:\Program Files\Orcad\Capture\Library"))
