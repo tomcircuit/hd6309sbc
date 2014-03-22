@@ -21,8 +21,9 @@
 -- 2007-05-10  1.0      toms    Created
 -- 2014-03-06  1.1      toml    Changed data width to 8 bits
 --                              added delay2 state for SCLK fall before CS negate
---                                (it just looks nicer on the scope, but not strictly required for SPI)
---						  chagned MOSI output from Z to DataToTx(0) during idle
+--                  					(it just looks nicer on the scope, but not strictly required for SPI)
+--	  					  					changed MOSI output from Z to DataToTx(0) during idle
+-- 2014-03-21  1.2      toml    Corrected SPI bit shift order (changed to MSB first!)
 -------------------------------------------------------------------------------
 
 library ieee;
@@ -49,18 +50,18 @@ architecture a of simpleSPI_M is
 
 begin
   process(clk, reset, StartTx)
-
-    variable index : integer range 0 to 7 := 0;
-    constant dataLen : integer := 7;   -- this must be set for the length of
+  
+	constant dataLen : integer := 7;   -- this must be set for the length of
                                         -- the data word to be txd
-    variable MOSI_v : std_logic;
+	variable index : integer range 0 to dataLen := 0;
+	variable MOSI_v : std_logic;
   begin
     if reset = '0' then
       DataRxd <= (others => '0');  
       SCLK <= '0';
       SS <= '1';
       MOSI_v := '0';
-      index := 0;
+      index := dataLen;
     else
       if(clk'event and clk = '1') then
         case state is
@@ -72,7 +73,7 @@ begin
               state <= loadData;
             else
               state <= idle;
-              index := 0;
+              index := dataLen;
             end if;
 
           when loadData =>
@@ -94,11 +95,11 @@ begin
             state <= CheckFinished;
             
           when checkFinished =>
-            if(index = dataLen) then
+            if(index = 0) then
               state <= delay2;
            else
               state <= loadData;
-              index := index + 1;
+              index := index - 1;
             end if;
           
           when others => null;

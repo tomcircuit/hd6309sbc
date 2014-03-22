@@ -25,7 +25,7 @@ end decode;
 architecture behavioral of decode is
 
 	-- page to which both on-chip and off-chip IO is mapped
-	constant IO_PAGE : std_logic_vector (7 downto 0) := 		x"02";		-- 0x02XX
+	constant IO_PAGE : std_logic_vector (7 downto 0) := 		x"C0";		-- 0x02XX
 	constant CIO_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"0";		-- IO_PAGE+00...IO_PAGE+0F
 	constant SCC_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"1";		-- IO_PAGE+10...IO_PAGE+1F
 	constant RTC_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"2";		-- IO_PAGE+20...IO_PAGE+2F

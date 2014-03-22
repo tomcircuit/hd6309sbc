@@ -2,88 +2,88 @@ m255
 K3
 13
 cModel Technology
-dC:\Local Storage\Projects\6309 SBC\CPLD\simulation\modelsim
+dC:\altera\13.0sp1
 Ehd6309_glue_tb
-Z0 w1394138983
+Z0 w1394142583
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z6 dC:\Local Storage\Projects\6309 SBC\Hardware\CPLD\simulation\modelsim
-Z7 8C:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd
-Z8 FC:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd
+Z6 dC:\Local Storage\Projects\6309 SBC\Repo\Hardware\CPLD\simulation\modelsim
+Z7 8C:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd
+Z8 FC:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd
 l0
 L15
 VjbQl5NFjBjZSWN_FM7d>`0
-!s100 <FXWZOlhUfkdSj_mCzDBF3
 Z9 OV;C;10.1d;51
 32
-!i10b 1
-Z10 !s108 1394138986.997000
-Z11 !s90 -reportprogress|300|-work|work|C:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd|
-Z12 !s107 C:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd|
+Z10 !s108 1395257481.693000
+Z11 !s90 -reportprogress|300|-work|work|C:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd|
+Z12 !s107 C:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_tb.vhd|
 Z13 o-work work -O0
 Z14 tExplicit 1
+!s100 <FXWZOlhUfkdSj_mCzDBF3
+!i10b 1
 Abehavior
 R1
 R2
 R3
 R4
 R5
-Z15 DEx4 work 14 hd6309_glue_tb 0 22 jbQl5NFjBjZSWN_FM7d>`0
+DEx4 work 14 hd6309_glue_tb 0 22 jbQl5NFjBjZSWN_FM7d>`0
 l85
 L18
 VhImG5dNa2X@kgWl[@HfBz3
-!s100 KZonFNj:`0WYQKiT8m?z51
 R9
 32
-!i10b 1
 R10
 R11
 R12
 R13
 R14
+!s100 KZonFNj:`0WYQKiT8m?z51
+!i10b 1
 Ehd6309_glue_top
-Z16 w1394138833
-Z17 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
-Z18 DPx3 max 13 max_atom_pack 0 22 b7X4QAP_o4WWdMUG8HKG12
-Z19 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
-Z20 DPx3 max 14 max_components 0 22 =Y=OFN@IOo3;]PBgJ[TC^0
+Z15 w1395258874
+Z16 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z17 DPx3 max 13 max_atom_pack 0 22 b7X4QAP_o4WWdMUG8HKG12
+Z18 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z19 DPx3 max 14 max_components 0 22 =Y=OFN@IOo3;]PBgJ[TC^0
 R4
 R5
 R6
-Z21 8C:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho
-Z22 FC:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho
+Z20 8C:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho
+Z21 FC:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho
 l0
 L34
 VG:nn4OH4aW4oi]UeNoJ[X2
+!s100 ODf;iO[dcI[L9L3gllLWV0
 R9
 32
-Z23 !s108 1394138924.313000
-Z24 !s90 -reportprogress|300|-work|work|C:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho|
-Z25 !s107 C:/Local Storage/Projects/6309 SBC/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho|
+!i10b 1
+Z22 !s108 1395258885.646000
+Z23 !s90 -reportprogress|300|-work|work|C:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho|
+Z24 !s107 C:/Local Storage/Projects/6309 SBC/Repo/Hardware/CPLD/simulation/modelsim/HD6309_glue_top.vho|
 R13
 R14
-!s100 ODf;iO[dcI[L9L3gllLWV0
-!i10b 1
 Astructure
+R16
 R17
 R18
 R19
-R20
 R4
 R5
-DEx4 work 15 hd6309_glue_top 0 22 G:nn4OH4aW4oi]UeNoJ[X2
-l1483
+Z25 DEx4 work 15 hd6309_glue_top 0 22 G:nn4OH4aW4oi]UeNoJ[X2
+l1516
 L132
-V`>7a:_T:^>FX>Sb]aUjDM3
-!s100 GkghN<R<K@noX[l[KUAW90
+VU3bZ?G20g8nI1jPoXD1^M0
+!s100 Q4jKXh7Bk4_V@I=hlN^P`2
 R9
 32
+!i10b 1
+R22
 R23
 R24
-R25
 R13
 R14
-!i10b 1

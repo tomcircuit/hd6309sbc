@@ -9,7 +9,7 @@ use IEEE.NUMERIC_STD.ALL;
 -- Target = Altera EPM7128SLI84 CPLD
 -- Tool = Quartus 32-bit web edition 13.0.1
 --
--- VERSION 1.0 - March 6, 2014
+-- VERSION 1.2 - March 22, 2014
 --
 -- This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 
 -- International License. To view a copy of this license, visit 
@@ -20,14 +20,14 @@ entity HD6309_glue_top is
 		XOSC : in std_logic;			-- Oscillator input for CPU (nominally 24 MHz)
 		WOSC : in std_logic;			-- Oscillator input for ACLK/BCLK (nominally 14.745 MHz)
 
-		QCLK : out std_logic;		-- Q phase clock output (nom 2.5 MHz, XOSC divided by 8)
-		ECLK : out std_logic;		-- E phase clock output (nom 2.5 MHz, XOSC divided by 8)
-		BCLK : out std_logic;		-- SCC ch B baudrate (WOSC/4 for SCC BRG or XOSC / 24 for SDLC)
+		QCLK : out std_logic;		-- Q phase clock output (nom 3 MHz, XOSC divided by 8)
+		ECLK : out std_logic;		-- E phase clock output (nom 3 MHz, XOSC divided by 8)
+		BCLK : out std_logic;		-- SCC ch B baudrate (WOSC/4 for SCC BRG)
 		ACLK : out std_logic;		-- SCC ch A baudrate (WOSC/8 for 115.2kbps in SCC 16x mode)
 		
 		RESET : in std_logic;		-- active low RESET input
 		
-		ADDR : in std_logic_vector (15 downto 4);  -- A[15:] from CPU
+		ADDR : in std_logic_vector (15 downto 4);  -- A[15:4] from CPU
 		RW : in std_logic;			-- H = RD, L = WR input from CPU
 		DATA : inout std_logic_vector (7 downto 0); -- D[7:0] from CPU
 		LIC : in std_logic;			-- Instruction Decode flag from CPU		
@@ -70,8 +70,7 @@ architecture behavioral of HD6309_glue_top is
 	signal e_drv, q_drv : std_logic;			-- internal E and Q clocks
 	signal bclk_drv, aclk_drv : std_logic;	-- SCC baud rate reference clocks
 	signal dly_e : std_logic;			-- delayed E clock used for internal SFR access
-	signal sclk_drv : std_logic;		-- 6 MHz clock for SPI peripheral
-
+	
 	-- read, write, peripheral select signals
 	signal rd_n, wr_n, zrd_n, zwr_n, eewr_n : std_logic;
 	signal scccs_n, ciocs_n, rtccs_n, auxcs_n : std_logic;
@@ -84,7 +83,7 @@ architecture behavioral of HD6309_glue_top is
 	-- on-chip I/O signals
 	signal roma14, romsel, romws : std_logic;
 	signal syscs_n, sdccs_n, iopcs_n : std_logic;
-	signal spi_start, spi_busy_n, sdcs_n : std_logic;
+	signal spi_start, spi_busy_n, sdcs_n, sdclk_sel, spi_clk, spi_sddo, spi_sdck : std_logic;
 	signal data_in, sys_data_out, sdc_data_out, iop_data_out, spi_data_rx, spi_data_tx : std_logic_vector(7 downto 0);
 	
 	component cpuclock
@@ -94,7 +93,6 @@ architecture behavioral of HD6309_glue_top is
 				e_out : out std_logic;		-- E quadrature clock output
 				q_out : out std_logic;		-- Q quadrature clock output
 				d_e_out : out std_logic;	-- delayed E quad clock output				
-				s_out : out std_logic;		-- 6 MHz reference clock (for SD SPI peripheral)
 				zw_out : out std_logic		-- write gate (H during State 2)
 													-- used to create WRITE strobe for Zilog peripherals
 		);
@@ -103,8 +101,8 @@ architecture behavioral of HD6309_glue_top is
 	component baudclock
 		port ( reset : in std_logic;		-- global reset
 				clock : in std_logic;		-- 14.745M oscillator input
-				a_out : out std_logic;		-- 115.2kbps * 16 clock output
-				b_out : out std_logic		-- variable * 16 clock output
+				a_out : out std_logic;		-- 115.2kbps * 16 clock output = 1.8432 MHz
+				b_out : out std_logic		-- 3.6864 MHz clock output (for BRG)
 		);
 	end component;
 
@@ -129,14 +127,15 @@ architecture behavioral of HD6309_glue_top is
 	end component;
 	
    -- SD DATA port 
-	component sdport
+	component SDdata
 		port ( reset : in std_logic;	-- global reset
 				 clock : in std_logic;		-- global clock
 				 cs_n : in std_logic;			-- active low select
 				 wr_n : in std_logic;			-- active low write
 				 data : in std_logic_vector(7 downto 0);
 				 dataq : out std_logic_vector(7 downto 0);
-				 update : out std_logic		-- pulses high after a write completes
+				 update_cl : in std_logic;		-- bring high to clear the update output				 
+				 update : out std_logic		-- high after a write completes
 		);
 	end component; 
 	
@@ -156,9 +155,9 @@ architecture behavioral of HD6309_glue_top is
 	end component;
 
 	-- Input-Output port
-	--      7      6     5   4    3    2    1     0
-	--    [SDSW][SDBSY][PB][XX][SDCS][--][LED2][LED1]
-	--      I      I     I   X    O    X    O     O
+	--      7      6     5    4      3    2    1     0
+	--    [SDSW][SDBSY][PB][SDCLK][SDCS][--][LED2][LED1]
+	--      I      I     I    O      O    X    O     O
 	component ioport
 	port (	reset : in std_logic;		-- global reset
 				clock : in std_logic;		-- global clock
@@ -195,7 +194,6 @@ architecture behavioral of HD6309_glue_top is
 		e_out => e_drv,
 		q_out => q_drv,
 		d_e_out => dly_e,
-		s_out => sclk_drv,
 		zw_out => zwgate
 	);
 	
@@ -254,26 +252,30 @@ architecture behavioral of HD6309_glue_top is
 		button => not PBTN
 	);
 	
-	sdcs_n <= iop_data_out(3);
+	sdcs_n <= iop_data_out(4);
+	sdclk_sel <= iop_data_out(5);
 
 	-- map the SD SPI data port
-	SD_PORT : sdport port map (
+	SD_PORT : SDdata port map (
 		reset => reset,
 		clock => XOSC,
 		cs_n => sdccs_n,			-- active low select
 		wr_n => wr_n,				-- active low write
 		data => data_in,
-		dataq => spi_data_tx, 
+		dataq => spi_data_tx,
+		update_cl => not spi_busy_n, -- inverted SPI SS is the acknowledge
 		update => spi_start		-- pulses high after a write completes
 	);
+	
+	spi_clk <= aclk_drv when (sdclk_sel = '1') else XOSC;
 	
 	-- component instantiation
 	SPI_MASTER: simpleSPI_M port map (
       reset    => reset,
-      clk      => sclk_drv,
-      SCLK     => SDCK,
+      clk      => spi_clk,
+      SCLK     => spi_sdck,
       SS       => spi_busy_n,
-      MOSI     => SDDO,
+      MOSI     => spi_sddo,
       MISO     => SDDI,
       DataToTx => spi_data_tx,
       DataRxd  => spi_data_rx,
@@ -339,30 +341,35 @@ architecture behavioral of HD6309_glue_top is
 
 	-- drive the SD CS line
 	SDCS <= sdcs_n;
+	SDDO <= spi_sddo;
+	SDCK <= spi_sdck;
 	
 	-- drive the LED outputs (LED1 and LED2 are easy, LED3 is controlled by the SDCS signal)
 	LED(1 downto 0) <= iop_data_out(1 downto 0) when (reset = '1') else "00";
 	LED(2) <= (not sdcs_n) when (reset = '1') else '0';
 	
 	-- Drive signals onto the TPxx testpoints
-	TP11 <= 	'0';
-	TP12 <= 	'0';
-	TP13 <= 	dly_e when (sys_data_out(6 downto 4) = "001") else
-				spi_busy_n when (sys_data_out(6 downto 4) = "010") else
-				spi_start when (sys_data_out(6 downto 4) = "011") else
-				sclk_drv when (sys_data_out(6 downto 4) = "100") else
-				sys_data_out(2) when (sys_data_out(6 downto 4) = "101") else
-				ready3 when (sys_data_out(6 downto 4) = "110") else
-				ready1 when (sys_data_out(6 downto 4) = "111") else
-				'0';
+	TP11 <= 	spi_sddo;
+	TP12 <= 	SDDI;
+--	TP13 <= 	dly_e when (sys_data_out(6 downto 4) = "001") else
+--				ready1 when (sys_data_out(6 downto 4) = "010") else
+--				ready3 when (sys_data_out(6 downto 4) = "011") else				
+--				sclk_drv when (sys_data_out(6 downto 4) = "100") else
+--				sys_data_out(2) when (sys_data_out(6 downto 4) = "101") else
+--				spi_busy_n when (sys_data_out(6 downto 4) = "110") else
+--				'0';
+
+	TP13 <= sdcs_n;
 	
-	TP14 <= 	iopcs_n when (sys_data_out(6 downto 4) = "001") else
-				syscs_n when (sys_data_out(6 downto 4) = "010") else
-				sdccs_n when (sys_data_out(6 downto 4) = "011") else
-				eewr_n when (sys_data_out(6 downto 4) = "101") else
-				zwgate when (sys_data_out(6 downto 4) = "110") else
-				romcs_n when (sys_data_out(6 downto 4) = "111") else				
-				'0';
+--	TP14 <= 	iopcs_n when (sys_data_out(6 downto 4) = "001") else
+--				syscs_n when (sys_data_out(6 downto 4) = "010") else
+--				sdccs_n when (sys_data_out(6 downto 4) = "011") else
+--				eewr_n when (sys_data_out(6 downto 4) = "100") else
+--				zwgate when (sys_data_out(6 downto 4) = "101") else
+--				spi_start when (sys_data_out(6 downto 4) = "110") else		
+--				'0';
+				
+	TP14 <= spi_sdck;
 				
 end behavioral;
 			

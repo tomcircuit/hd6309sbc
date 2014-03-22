@@ -61,7 +61,6 @@ entity cpuclock is
 				e_out : out std_logic;		-- E quadrature clock output
 				q_out : out std_logic;		-- Q quadrature clock output
 				d_e_out : out std_logic;	-- delayed E quad clock output				
-				s_out : out std_logic;		-- 6 MHz reference clock (for SPI peripheral)
 				zw_out : out std_logic		-- write gate (H during State 2)
 													-- used to create WRITE strobe for Zilog peripherals
 		);
@@ -74,14 +73,13 @@ architecture behavior of cpuclock is
 	signal clock_state : integer range 0 to 6;
 	signal next_state : integer range 0 to 6;
 	signal e_drive : std_logic;
+	signal s_drive : std_logic;
 
 begin
 
---	cpu_div <= 1;
-
+	-- create a 6 MHz state clock, which feeds the E/Q state logic
 	clock_gen : process(clock) begin
 		if (clock = '1' and clock'event) then 
-		
 			if (pre_cnt = cpu_div) then 
 				pre_cnt <= 0;
 				clock_state <= next_state;
@@ -89,8 +87,10 @@ begin
 				pre_cnt <= pre_cnt + 1;
 			end if;
 			
+			-- create an E output shifted by one XCLK period, to be
+			-- used for output enable of CPU readable on-chip registers
+			-- (to satisfy the CPU read data hold time after E falls)
 			d_e_out <= e_drive;
-			
 		end if;
 	end process;
 	
@@ -118,8 +118,6 @@ begin
 	
 	-- update ECLK and QCLK outputs from clock_state value
 	e_drive <= '1' when (clock_state = 3 or clock_state = 4 or clock_state = 5 or clock_state = 6 or clock_state = 2) else '0';
-	
-	s_out <= '1' when (pre_cnt = 1) else '0';
 	q_out <= '1' when (clock_state = 1 or clock_state = 3) else '0';
 	zw_out <= '1' when (clock_state = 2) else '0';
 	e_out <= e_drive;

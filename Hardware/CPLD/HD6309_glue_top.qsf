@@ -108,10 +108,10 @@ set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
 set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING OFF
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name VHDL_FILE simpleSPI_M.vhd
-set_global_assignment -name VHDL_FILE SDport.vhd
 set_global_assignment -name VHDL_FILE HD6309_glue_top.vhd
 set_global_assignment -name VHDL_FILE cpuclock.vhd
 set_global_assignment -name VHDL_FILE baudclock.vhd
 set_global_assignment -name VHDL_FILE SYSport.vhd
 set_global_assignment -name VHDL_FILE IOport.vhd
 set_global_assignment -name VHDL_FILE decode.vhd
+set_global_assignment -name VHDL_FILE SDdata.vhd
