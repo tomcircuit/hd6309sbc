@@ -33,11 +33,9 @@
 ;
 ;********************************************
 
-ZSCC		EQU	$C010		SCC base address
-SCCBC     EQU	ZSCC		SCC channel B command
-SCCBD	EQU	ZSCC+1		SCC channel B data
-SCCAC	EQU	ZSCC+2      		SCC channel A command
-SCCAD	EQU	ZSCC+3		SCC channel A data
+ZSCC		EQU	$C010		; SCC base address
+SCCAC	EQU	ZSCC+2      	; SCC channel A command
+SCCAD	EQU	ZSCC+3		; SCC channel A data
 
 SDPORT	EQU	$C030
 SYSPORT	EQU	$C040
@@ -51,7 +49,7 @@ IO.SDCLK	EQU	$20
 IO.SDSW	EQU	$80
 IO.SDBSY	EQU	$40
 
-MONITOR 	EQU	$C100
+MONITOR 	EQU	$C100		; monitor coldstart entry
 
 SD.CMD	EQU 	0
 SD.A3	EQU	1
@@ -67,36 +65,749 @@ SD.CRC	EQU	5
 		JSR	WRMSG
 		FCB	$A,$D
 		FCN	"SCC Initialized"
+
+SD00:	JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Trying a CMD8...R7="
+		JSR	CLRRESBUF
+		AIM	~IO.SDCS,IOPORT	; assert SD csel	
+		JSR	SD_CMD8                                                                                                         
+		OIM	IO.SDCS,IOPORT		; negate SD csel		
+		JSR	PRRESBUF
+		TST	RESBUF		; examine the R1 byte
+		LBPL	SD0B			; if R1 is positive, command passed, so skip init
+
+; use the SD_INIT routine to initialize the SD card into SPI mode
+SD0:		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Trying to reset SD card...R1="
+		JSR	SPIINIT		; init the SPI port
+		TIM	IO.SDCS,IOPORT		; check the CS line
+		LBNE	SDE			; if negated, there's no card - terminate!
+		JSR	SD_INIT		; init the SD card
+		JSR	WRBYTE
+		LBMI	SDE			; if R1 is negative, init failed, so terminate
+
+; send a CMD8 to query the card (only works for SD V2 or later, so pretty much all micro-SD cards)
+SD0A:	JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Trying a CMD8...R7="
+		JSR	CLRRESBUF
+		AIM	~IO.SDCS,IOPORT	; assert SD csel			
+		JSR	SD_CMD8                                                                                                         
+		OIM	IO.SDCS,IOPORT		; negate SD csel		
+		JSR	PRRESBUF
+		TST	RESBUF		; examine the R1 byte
+		LBMI	SDE			; if R1 is negative, terminate
+
+; send ACMD41 to initialize the card
+SD0B:	JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Trying an ACMD41"
+		CLR	RESBUF+6		; clear timeout counter
+SD1:		INC	RESBUF+6		; increment timeout counter
+		BMI	SDE			; if 128 tries or more, terminate
+; send CMD55 to precede the ACMD41	
+		JSR	WRMSG	
+		FCB	$0A,$0D
+		FCN	"First sending CMD55...R1="
+		AIM	~IO.SDCS,IOPORT	; assert SD csel
+		JSR	SD_CMD55
+		OIM	IO.SDCS,IOPORT		; negate SD csel
+		JSR	WRBYTE
+; send CMD41 to initialize the card
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Next sending CMD41...R1="	
+		AIM	~IO.SDCS,IOPORT	; assert SD csel
+		JSR	SD_CMD41
+		JSR	WRBYTE
+		OIM	IO.SDCS,IOPORT		; negate SD csel
+		TSTA				; test R1 for Z/N
+		BEQ	SD2			;   zero; move on to next command
+		BMI	SDE			;   negative; terminate
+		BRA	SD1			; loop until init is complete
+
+; error during SD card access - terminate!	
+SDE:		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Terminating"
+		OIM	IO.SDCS,IOPORT		; negate SD csel	
+		JMP	MONITOR
+
+; send CMD58 to ensure that block addressing is in effect	
+SD2:		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Trying a CMD58...R1="
+		AIM	~IO.SDCS,IOPORT  	; assert SD csel
+		JSR	CLRRESBUF
+		JSR	SD_CMD58
+		JSR	PRRESBUF	
+		OIM	IO.SDCS,IOPORT	; negate SD csel
+		TST	RESBUF		; examine the R1 byte
+		BMI	SDE			; if R1 is negative, init failed, so terminate
+		LDA	RESBUF+1		; look at CCS bit in OCR (bit 30)
+		BITA	#%01000000	; is block addressing used?
+		BEQ	SDE			;    no, exit
 	
-		JMP	MAIN
+; At this point, the SD card is ready for reading/writing in SPI mode!
+	
+; read some sector into the block buffer
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Reading LBA #00123456...RET="
+		AIM	~IO.SDCS,IOPORT	  	; assert SD csel
+		LDX	#BLKBUF
+		LDD	#LBA_T_S
+		JSR	SD_RD_BLOCK
+		JSR	WRBYTE
+		OIM	IO.SDCS,IOPORT	; negate SD csel
+	
+; display the sector data
+	
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	" last byte of block buffer ="
+		LDA	BLKBUF+511
+		JSR	WRBYTE
+
+; modify the sector data
+	
+		LDX	#BLKBUF		; point to beginning of block data
+		LDD	LBA_T_S		; put $0012 into first word of block
+		STD	,X
+		LDD	LBA_T_S+2		; put $3456 into second word of block
+		STD	2,X
+		INC	BLKBUF+511	; increment last byte of block
+
+; display the sector data
+	
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	" last byte of block buffer ="
+		LDA	BLKBUF+511
+		JSR	WRBYTE
+		
+; write this same sector back to the card 
+
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Writing LBA #00123456...RET="
+		AIM	~IO.SDCS,IOPORT	  	; assert SD csel
+		LDX	#BLKBUF
+		LDD	#LBA_T_S
+		JSR	SD_WR_BLOCK
+		JSR	WRBYTE
+		OIM	IO.SDCS,IOPORT	; negate SD csel
+
+; clear the block buffer
+		CLR	BLKBUF
+		LDX	#BLKBUF
+		LDU	#BLKBUF+1
+		LDW	#511
+		TFM	X+,U+
+		
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	" last byte of block buffer ="
+		LDA	BLKBUF+511
+		JSR	WRBYTE
+			
+; read the sector back into the block buffer
+
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"Reading LBA #00123456...RET="
+		AIM	~IO.SDCS,IOPORT	  	; assert SD csel
+		LDX	#BLKBUF
+		LDD	#LBA_T_S
+		JSR	SD_RD_BLOCK
+		JSR	WRBYTE
+		OIM	IO.SDCS,IOPORT	; negate SD csel
+	
+; display the sector data
+	
+		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	" last byte of block buffer ="
+		LDA	BLKBUF+511
+		JSR	WRBYTE
+
+SDX:		JSR	WRMSG
+		FCB	$0A,$0D
+		FCN	"All done!"
+		OIM	IO.SDCS,IOPORT		; negate SD csel
+		JMP	MONITOR
+	
+********************************************
+* SD_INIT - put SD card into SPI mode
+*           and into IDLE state
+* On exit: A is R1 response byte from CMD0
+********************************************
+SD_INIT:
+;		AIM	~IO.SDCS,IOPORT	; assert SD csel
+;		AIM	~IO.SDCLK,IOPORT	; set SPI to fast mode
+;		LDX	#SDCMD0			; point to CMD0 command structure
+;		LBSR	SD_SEND_CMD
+;		CMPA	#$FF				; check response byte for $FF
+;		BEQ	IN0?
+;		RTS		
+IN0?		OIM 	IO.SDCS,IOPORT		; negate the CS line
+		OIM  IO.SDCLK,IOPORT	; set SPI to slow mode
+		LDB	#10				; send 10 bytes (80 clock pulses) to SD card
+IN1?		LDA	#$FF
+		STA	SDPORT
+IN2?		TIM	IO.SDBSY,IOPORT	; check the SPI busy bit
+		BNE	IN2?				; if set, keep waiting!
+		DECB			   		; decrement counter
+		BNE	IN1?				; loop until all pulses sent
+		AIM	~IO.SDCS,IOPORT	; assert SD csel
+		AIM	~IO.SDCLK,IOPORT	; set SPI to fast mode
+; send GO_IDLE_STATE command 	
+; 01 000000 00000000 00000000 00000000 00000000 1001010 1	
+; response is R1 
+		LDX	#SDCMD0			; point to CMD0 command sentence
+		BRA	SD_SEND_CMD
+	
+********************************************
+* SD_CMD8 - send SD CMD8 
+* On exit: A is R1 response byte from CMD8
+*          RESBUF[0..4] contains R1+OCR
+********************************************
+SD_CMD8:	
+; send CMD8 command - only valid for SDC V2
+; 01 001000 00000000 00000000 00000001 10101010 0000111 1
+; response is R7 (R1 + 32 bits of data)
+		LDX	#SDCMD8			; point to CMD8 command sentence
+		BSR	SD_SEND_CMD		; send command and get R1
+		BRA	SD_GET_R7		; get the R7 (R1+OCR) response bytes
 
 ********************************************
-*              SD stuff
+* SD_CMD58 - send SD CMD58 
+* On exit: A is R1 response byte
+*          RESBUF[0..4] contains R1+OCR
 ********************************************
+SD_CMD58:
+; send CMD58 command 		
+;01 111010 00000000 00000000 00000000 00000000 0111010 1	
+; response is R7 (R1 + 32 bits of data)
+		LDX	#SDCMD58			; point to CMD58 command sentence
+		BSR	SD_SEND_CMD		; send command and get R1
+		BRA	SD_GET_R7		; get the R7 (R1+OCR) response bytes
+	
+********************************************
+* SD_CMD55 - send CD CMD55
+* On exit: A is R1 response byte
+********************************************
+SD_CMD55:	
+; send CMD55 command - "application specific"
+; response is R1 
+		LDX	#SDCMD55			; point to CMD55 command sentence
+		BRA	SD_SEND_CMD		; send command and get R1
+	
+********************************************
+* SD_CMD41 - send CD CMD41
+* On exit: A is R1 response byte
+********************************************
+SD_CMD41:	
+; send CMD41 command - APP_SEND_OP_COND (need CMD55 first!)
+; response is R1 
+		LDX	#SDCMD41			; point to CMD41 command sentence
+		BRA	SD_SEND_CMD		; send command and get R1
 
-; LBA sectors for testing - these are FIVE bytes long to make room
-; for a block counter (for multiple read/writes)
+********************************************
+* SD_GET_R7 - get SD R7 (R1+OCR) response
+* on entry: A is R1 response byte
+* On exit:  A is R1 response byte
+*           B is destroyed
+*           RESBUF[0..4] contains R7
+********************************************
+SD_GET_R7	STA	RESBUF			; save R1 into result buffer
+		JSR	SPIRECV			; read four more response bytes (R7)
+		STB	RESBUF+1
+		JSR	SPIRECV		
+		STB	RESBUF+2	
+		JSR	SPIRECV		
+		STB	RESBUF+3	
+		JSR	SPIRECV		
+		STB	RESBUF+4	
+		RTS
+	
+********************************************
+* SD_SEND_CMD - sends a 6-byte command to MMC/SD card
+* On Entry: X points to command sequence
+* On exit: A is R1 response byte
+*          X is destroyed
+*          B is preserved
+********************************************
+SD_SEND_CMD:
+		PSHS	B			; save original B value
+SD0?		JSR	SPIRECV		; send Ncs
+		CMPB	#$FF
+		BNE	SD0?			; loop until $FF received!
+		CLRB				; clear byte counter
+SD1?		LDA	,X+			; command + addr + crc
+		JSR	SPISEND		; send the byte
+		INCB				; increment byte counter
+		CMPB	#6			; sent all 6 bytes yet?
+		BNE	SD1?			;    no, loop again
+		LDX	#0				; clear byte counter	
+SD2?		JSR	SPIRECV		; send a dummy and read the response
+		TSTB				; examine the received byte (B)
+		BPL	SD_SEN3			;    non-negative, got a response!
+		LEAX	1,X	       	; increment byte counter
+		CMPX	#8			; waited 8 bytes yet?
+		BNE	SD2?			;    no, try again
+SD_SEN3:	TFR	B,A			; move response to A	
+		PULS	B			; restore original B
+		RTS				; return with R1 in A	
+	
+********************************************
+* SD_RD_BLOCK - read a block (sector) from SD card
+* On Entry: D is pointer to block number
+*           X points to block buffer
+* On Exit:  A is status (0 = OK, !0 = ERR)
+*	  B is destroyed
+*	  X is preserved
+********************************************	
+SD_RD_BLOCK:
+		PSHS	X			; save pointer to block buffer
+		TFR	D,X			; put pointer to LBA into X
+		LDA	3,X			; transfer LBA value to CMDBUF A3...A0
+		STA	CMDBUF+SD.A0
+		LDA	2,X
+		STA	CMDBUF+SD.A1
+		LDA	1,X
+		STA	CMDBUF+SD.A2
+		LDA	,X
+		STA	CMDBUF+SD.A3
+		LDA	#$51			; READ_SINGLE_BLOCK command (17)
+		STA	CMDBUF+SD.CMD
+		CLR	CMDBUF+SD.CRC
+		LDX	#CMDBUF
+		BSR	SD_SEND_CMD
+		CMPA	#0			; OK response from read command?
+		BNE	SDRDE		;    no, terminate!
+RD1?		JSR	SPIRECV  		; wait for $FE start token
+		TSTB				; examine token received
+		BPL	SDRDEB		; if positive, it's an error token
+		CMPB	#$FE			; check if it's a start token
+		BNE	RD1?			;    no, get next token
+		LDX	,S			; point to beginning of block buffer
+		LDD	#512			; init transfer counter
+SDRD2	JSR	SPIRBLK		; transfer 512 bytes
+		JSR	SPIRECV		; read the CRC value into RESBUF[0..1]
+		STB	RESBUF
+		JSR	SPIRECV
+		STB	RESBUF+1
+		CLRA				; clear A (all OK)
+SDRDE	PULS	X			; restore block buffer pointer
+		RTS
+SDRDEB	TFR	B,A			; move error token from B into A
+		PULS	X			; restore block buffer pointer
+		RTS				
 
-LBA_T_S	FCB	$00,$12,$34,$56,0	; LBA of sector 00123456
-LBA_T_6 	FCB	$00,$12,$34,$50,5	; LBA of sector 00123450, with TC of 6 sectors
-LBA_MBR	FCB	0,0,0,0,0		; LBA of Master Boot Record
-LBA_2GB	FCB	0,$3A,$D2,0,0	; LBA limit of 2 GB card
-LBA_4GB	FCB	0,$75,$A4,0,0	; LBA limit of 4 GB card
-LBA_8GB	FCB	0,$EB,$48,0,0	; LBA limit of 8 GB card
-LBA_16GB	FCB	1,$D6,$90,0,0	; LBA limit of 16 GB card
-LBA_32GB	FCB	3,$Ad,$20,0,0	; LBA limit of 32 GB card
+********************************************
+* SD_RD_CSD - read the CSD info from SD card
+* On Entry: X points to block buffer
+* On Exit:  A is status (0 = OK, !0 = ERR)
+*	  B is destroyed
+*	  X is preserved
+********************************************	
+SD_RD_CSD:
+		PSHS	X			; save pointer to block buffer
+		LDX	#SDCMD9	
+		JSR	SD_SEND_CMD
+		CMPA	#0			; OK response from read command?
+		BEQ	*+4			;    yes, continue
+		BRA	SDRDE 		;    no, terminate!
+CSD1?	JSR	SPIRECV     	; wait for $FE start token
+		TSTB				; examine token received
+		BPL	SDRDEB		; if positive, it's an error token
+		CMPB	#$FE			; check if it's a start token
+		BNE	CSD1?		;    no, get next token
+		LDX	,S			; point to beginning of block buffer
+		LDD	#16			; init transfer counter
+		BRA	SDRD2
 
-; SD card command and result buffers, pre-made command sentences 
+********************************************
+* SD_WR_BLOCK - write a block (sector) to SD card
+* On Entry: D is pointer to block number
+*           X points to block buffer
+* On Exit:  A is status (either R1 or data response)
+*	  B is destroyed
+*	  X is preserved
+********************************************	
+SD_WR_BLOCK:
+		PSHS	X			; save pointer to block buffer
+		TFR	D,X			; put pointer to LBA into X
+		LDA	3,X			; transfer LBA value to CMDBUF A3...A0
+		STA	CMDBUF+SD.A0
+		LDA	2,X
+		STA	CMDBUF+SD.A1
+		LDA	1,X
+		STA	CMDBUF+SD.A2
+		LDA	,X
+		STA	CMDBUF+SD.A3
+		LDX	#CMDBUF
+		LDA	#$58			; WRITE_SINGLE_BLOCK command (24)
+		STA	SD.CMD,X
+		CLR	SD.CRC,X
+		JSR	SD_SEND_CMD
+		CMPA	#0			; OK response from write command?
+		BNE	SDWRE		;    no, terminate!
+		JSR	SPIRECV     	; send two $FF bytes
+		JSR	SPIRECV
+		LDA	#$FE			; send the $FE start token
+		JSR	SPIBYTE
+		LDX	,S			; load buffer pointer into X
+		LDD	#512			; init transfer counter
+		JSR	SPIWBLK		; transfer 512 bytes to SD card
+		JSR	SPIRECV		; write a dummy CRC value to card
+		JSR	SPIRECV		
+		JSR	SPIRECV		; get data response
+		ANDB	#$1F
+		PSHS	B			; save the response on stack
+SDWR2	JSR	SPIRECV		; send a dummy byte
+		CMPB	#$FF			; anything other than $FF = busy
+		BNE	SDWR2		;    keep polling
+		PULS	A			; put data response back in A
+SDWRE	PULS	X			; restore block buffer pointer
+		RTS
+	
+********************************************
+* SD_WR_MULT - write multiple blocks (sectors) to SD card
+* On Entry: D is pointer to block number:transfer count (FIVE bytes)
+*           X points to start of source data
+* On Exit:  A is status (either R1 or data response)
+*	  B is destroyed
+*	  X is preserved
+********************************************	
+SD_WR_MULT:
+		PSHS	X			; save pointer to block buffer
+		TFR	D,X			; put pointer to LBA into X
+		LDA	3,X			; transfer LBA value to CMDBUF A3...A0
+		STA	CMDBUF+SD.A0
+		LDA	2,X
+		STA	CMDBUF+SD.A1
+		LDA	1,X
+		STA	CMDBUF+SD.A2
+		LDA	,X
+		STA	CMDBUF+SD.A3
+		LDA	4,X 			; save transfer count to TEMP
+		STA	TEMP	
+		LDA	#$59			; WRITE_SINGLE_BLOCK command (25)
+		STA	SD.CMD,X
+		CLR	SD.CRC,X
+		JSR	SD_SEND_CMD
+		CMPA	#0			; OK response from write command?
+		BNE	SDWME		;    no, terminate!
+WM1?		JSR	SPIRECV     	; send two $FF bytes
+		JSR	SPIRECV
+		LDA	#$FC			; send the $FC START token
+		JSR	SPIBYTE
+		PULS	X			; point to source block buffer
+		LDD	#512			; init transfer counter
+		JSR	SPIWBLK		; transfer 512 bytes to SD card
+		PSHS	X			; save updated block buffer pointer
+		JSR	SPIRECV		; write a dummy CRC value to card
+		JSR	SPIRECV		
+		JSR	SPIRECV		; get data response
+		ANDB	#$1F
+		STB	TEMP+1		; save the response at TEMP+1
+WM2?		JSR	SPIRECV		; send a dummy byte
+		CMPB	#$FF			; anything other than $FF = busy
+		BNE	WM2?			;    keep polling
+		TST	TEMP			; examine the block transfer counter
+		BEQ	WM3?			; counter is zero, done with all blocks
+		DEC	TEMP			; non-zero, decrement the counter
+		BRA	WM1?			; send the next packet	
+WM3?		LDA	#$FD			; send a STOP_TRAN token
+		JSR	SPISEND	
+		JSR	SPIRECV		; send a dummy byte 
+WM4?		JSR	SPIRECV		; send a dummy byte
+		CMPB	#$FF			; anything other than $FF = busy
+		BNE	WM4?			;    keep polling
+		LDA	TEMP+1		; put data response into A
+SDWME	PULS	X			; restore block buffer pointer
+		RTS
 
-RESBUF	RMB	5			; SD RESULT buffer (R1/R7)
-CMDBUF	RMB	6			; SD COMMAND buffer (generic)
-SDCMD0	FCB	$40,$00,$00,$00,$00,$95	; SD CMD0 GO_IDLE_STATE
-SDCMD8	FCB	$48,$00,$00,$01,$AA,$87	; SD CMD8 SDV2_CHECK
-SDCMD9   	FCB	$49,$00,$00,$00,$00,$00	; SD CMD9 SEND_CSD
-SDCMD55	FCB	$77,$00,$00,$00,$00,$65	; SD CMD55 APP_OP
-SDCMD41	FCB	$69,$40,$00,$00,$00,$00	; SD ACMD41 APP_SEND_OP_COND
-SDCMD58	FCB	$7A,$00,$00,$00,$00,$75	; SD CMD58 SEND_IF_COND
-SDCMD12	FCB	$4C,$00,$00,$00,$00,$00	; SD CMD12 STOP_TRANSMISSION
+********************************************
+* SD_RD_MULT - read multiple blocks (sectors) from SD card
+* On Entry: D is pointer to block number:transfer count (FIVE bytes)
+*           X points to destination start
+* On Exit:  A is status (0 = OK, !0 = ERR)
+*	  B is destroyed
+*	  X is preserved
+********************************************	
+SD_RD_MULT:
+		PSHS	X			; save pointer to block buffer
+		TFR	D,X			; put pointer to LBA into X
+		LDA	3,X			; transfer LBA value to CMDBUF A3...A0
+		STA	CMDBUF+SD.A0            	
+		LDA	2,X                     	
+		STA	CMDBUF+SD.A1            	
+		LDA	1,X                     	
+		STA	CMDBUF+SD.A2            	
+		LDA	,X                      	
+		STA	CMDBUF+SD.A3            	
+		LDA	4,X 			; save transfer count to TEMP
+		STA	TEMP	                   	
+		LDA	#$52			; READ_MULTIPLE_BLOCK command (18)
+		STA	CMDBUF+SD.CMD           	
+		CLR	CMDBUF+SD.CRC           	
+		LDX	#CMDBUF                 	
+		JSR	SD_SEND_CMD	; send CMD18
+		TSTA				; OK response from read command?
+		BNE	SDRME		;    no, terminate!
+RM1?		JSR	SPIRECV  		; wait for $FE start token
+		TSTB				; examine token received
+		BPL	SDRMEB		; if positive, it's an error token
+		CMPB	#$FE			; check if it's a start token
+		BNE	RM1?			;    no, get next token
+		PULS	X			; get destination pointer
+		LDD	#512			; init transfer counter
+		JSR	SPIRBLK		; transfer 512 bytes
+		PSHS	X			; save the updated dest pointer
+		JSR	SPIRECV		; read the CRC value (16 bits)
+		JSR	SPIRECV			
+		TST	TEMP			; examine the block transfer counter
+		BEQ	RM3?			; counter is zero, done with all blocks
+		DEC	TEMP			; non-zero, decrement the counter
+		BRA	RM1?			; get the next packet	
+		LDX	#SDCMD12		; point to CMD12 sentence
+RM3?		JSR	SPIRECV		; send Ncs
+		CMPB	#$FF                   	
+		BNE	RM3?			; loop until $FF received!
+		CLRB				; clear byte counter
+RM4?		LDA	,X+			; command + addr + crc
+		JSR	SPISEND		; send the byte
+		INCB				; increment byte counter
+		CMPB	#6			; sent all 6 bytes yet?
+		BNE	RM4?			;    no, loop again
+		JSR	SPIRECV		; get stuff byte
+		LDX	#0			; clear byte counter	
+RM5?		JSR	SPIRECV		; send a dummy and read the response
+		TSTB				; examine the received byte (B)
+		BPL	RM6?			;    non-negative, got a response!
+		LEAX	1,X	         	; increment byte counter
+		CMPX	#8			; waited 8 bytes yet?
+		BNE	RM5?			;    no, try again
+RM6?		TFR	B,A			; move response to A	
+RM7?		JSR	SPIRECV		; send a dummy byte
+		CMPB	#$FF			; anything other than $FF = busy
+		BNE	RM7?			;    keep polling
+		CLRA				; clear A (all OK)
+SDRME	PULS	X			; restore block buffer pointer
+		RTS                         	
+SDRMEB	TFR	B,A			; move error token from B into A
+		PULS	X			; restore block buffer pointer
+		RTS				
+
+********************************************
+*              SPI stuff
+********************************************
+	
+********************************************
+* SPIINIT - check for card, if card
+*           present, assert SD CS
+********************************************
+SPIINIT:	OIM	IO.SDCS,IOPORT		; negate SD CS
+		TIM	IO.SDSW,IOPORT 	; test the card detect switch
+		BEQ	S0?				; if no card, leave CS negated
+		AIM	~IO.SDCS,IOPORT	; if card, assert SD CS
+S0?		RTS
+	
+********************************************
+* SPIEXIT - negate SD CS signal
+********************************************
+SPIEXIT:	OIM	IO.SDCS,IOPORT		; negate SD CS signal
+		RTS
+
+********************************************
+* SPIBYTE - r/w transfer a byte via SPI master 
+* On Entry: A = byte to send
+* On Exit:  B = byte received
+*	  A is preserved
+********************************************
+SPIBYTE:	BSR	SPISEND			; send byte in A via SPI
+SB0		TIM  IO.SDBSY,IOPORT	; wait for transaction to end
+		BNE	SB0
+		LDB	SDPORT			; read recevied byte into B
+		RTS
+
+********************************************
+* SPISEND - write a byte via SPI master
+* On Entry: A = byte to send
+* On Exit: all registers preserved
+********************************************
+SPISEND:	TIM  IO.SDBSY,IOPORT	; make sure SPI is ready
+		BNE	SPISEND
+		STA	SDPORT			; send A via SPI
+		RTS
+
+********************************************
+* SPIRECV - read a byte via SPI master
+* On Entry: 
+* On Exit: B = byte read from SPI
+********************************************
+SPIRECV:	TIM  IO.SDBSY,IOPORT	; make sure SPI is ready
+		BNE	SPIRECV
+		LDB	#$FF				; dummy byte value
+		STB	SDPORT			; send dummy via SPI
+		BRA	SB0				; exit via SPIBYTE
+
+********************************************
+* SPIRBLK - read a block of bytes via SPI master
+* CPOL=0 the base value of the clock is zero
+* CPHA=0, data is propagated on a falling edge (high->low clock transition)
+* On Entry: X = pointer to destination block
+*           D = number of bytes to be read
+* On Exit:  X = pointer to destination block+512
+*           D = 0
+********************************************
+SPIRBLK:	PSHS	B			; B gets used by SPIRECV
+		BSR	SPIRECV		; send a dummy and read a data byte
+		STB	,X+			; store in buffer
+		PULS	B			; restore LSB of byte counter
+		DECD				; decrement it
+		BNE	SPIRBLK		;    not done yet, keep reading
+		RTS
+
+********************************************
+* SPIWBLK - write a block of bytes via SPI master
+* CPOL=0 the base value of the clock is zero
+* CPHA=0, data is propagated on a falling edge (high->low clock transition)
+* On Entry: X = pointer to source block
+*           D = number of bytes to be read
+* On Exit:  X = pointer to source block+512
+*           D = 0
+********************************************
+SPIWBLK:	PSHS	A			; A gets used by SPISEND
+		LDA	,X+			; get byte to send from source block
+		JSR	SPISEND		; send data byte (ignore read)
+		PULS	A			; restore MSB of byte counter
+		DECD				; decrement it
+		BNE	SPIWBLK		;    not done yet, keep reading
+		RTS
+	
+***************************************
+*  Result Buffer utility functions
+***************************************
+; clear result buffer
+CLRRESBUF	LDX	#RESBUF
+C1?		CLR	,X+
+		CMPX	#CMDBUF
+		BLO	C1?	
+		RTS
+	
+; print result buffer
+PRRESBUF:	LDX	#RESBUF
+P1?		LDA	,X+
+		JSR	WRBYTE
+		JSR	WRSPACE
+		CMPX	#CMDBUF
+		BLO	P1?	
+		RTS
+
+***************************************
+* WRMSG - Write string(PC) to console
+***************************************
+* The string data immediately follows
+* the function call. The string must
+* be terminated with either a 0 (null)
+* or an $FF. The $FF terminator issues
+* a newline (CR+LF) after the string,
+* while the null terminator does not.
+*
+* Return address on stack is altered
+* to be term+1 prior to RTS.
+***************************************
+WRMSG	PSHS	X			; save 'X'
+		LDX	2,S			; return address is start of string
+		BSR	WRSTR		; output the string to the console
+						; X now points to end of string+1
+		STX	2,S			; save the correct return address (end of string+1)
+		PULS	X			; restore 'X'
+		RTS
+	
+****************************************
+* WRSTR - Write string(x) to console
+***************************************
+* The string data is in memory and is
+* pointed to by X. The string must
+* be terminated with either a 0 (null)
+* or an $FF. The $FF terminator issues
+* a newline (CR+LF) after the string,
+* while the null terminator does not.
+*
+* X is destroyed (points to term+1)
+***************************************
+WRSTR	PSHS	A			; Save A value at entry
+W1?		LDA	,X+			; Get char from X
+		TSTA				; Test character for null terminator
+		BEQ	WRWRD1		;   yes, restore A and exit
+		CMPA	#$FF			; is it an $FF terminator?
+		BEQ	WRLFCR1		;  yes, issue LF+CR and exit
+		JSR	SCCWRITE		; output the char to console
+		BRA	W1?			; process next character
+	
+****************************************
+* WRSPACE - Write a space to console
+****************************************
+WRSPACE	PSHS	A			; Save A value at entry
+		LDA	#$20			; Output a space to console
+		JSR	SCCWRITE
+		BRA	WRWRD1		; restore A value prior to return	
+		
+****************************************
+* WRLFCR - Write LF+CR to console
+****************************************
+WRLFCR	PSHS	A			; Save A value at entry
+WRLFCR1	LDA	#$0A			; Output LF to console
+		JSR	SCCWRITE	
+		LDA	#$0D			; Output CR to console
+		JSR	SCCWRITE	
+		BRA	WRWRD1		; restore A value prior to return
+
+****************************************
+* WRWORD - Write value of D as hex word
+****************************************
+WRWORD	PSHS	A			; save the A accumulator value
+		BSR	WRBYTE		; Output upper byte of word (A)
+		TFR	B,A			; transfer lower byte of word to A
+		BSR	WRBYTE		; output lower byte of word (B)
+WRWRD1	PULS	A			; restore A value prior to return
+		RTS
+	
+****************************************
+* WRBYTE - Write value in A as hex byte
+****************************************
+WRBYTE	PSHS	A			; Save A value to restore upon return
+		LSRA				; shift high nybble into 4 LSB of A
+		LSRA			
+		LSRA			
+		LSRA			
+		BSR	WRDIG		; write the high nybble of A to console
+		LDA	,S			; restore byte value
+		BSR	WRDIG		; write the low nybble to A to console
+		BRA	WRWRD1		; restore A value prior to return
+					
+****************************************
+* WRDIG - Write value in 4 LSB of A as a hex digit
+****************************************
+WRDIG	PSHS	A			; save A value to restore upon return
+		ANDA	#$0F			; mask off 4 MSB
+		ADDA	#'0			; convert base to ASCII 
+		CMPA	#'9			; is result numeric?
+		BLS	WRDIG1		;    yes, output to console
+		ADDA	#7			; add 7 to convert to alpha
+WRDIG1	JSR	SCCWRITE		; output character to console
+		BRA	WRWRD1		; restore A value prior to return
+
+********************************************
+*              SCC stuff
+********************************************
 
 ***************************************
 * SCCINIT - Initialize SCC Channel A
@@ -164,1028 +875,44 @@ S0?		LDA	SCCAC	; reset register pointer to WR0/RR0
    		PULS	A
 		STA	SCCAD	; put character in data register
 		RTS
-	
-		ORG	$0200
+
+********************************************
+*              SD stuff
+********************************************
+
+; LBA sectors for testing - these are FIVE bytes long to make room
+; for a block counter (for multiple read/writes)
+
+LBA_T_S	FCB	$00,$12,$34,$56,0	; LBA of sector 00123456
+LBA_T_6 	FCB	$00,$12,$34,$50,5	; LBA of sector 00123450, with TC of 6 sectors
+LBA_MBR	FCB	0,0,0,0,0		; LBA of Master Boot Record
+LBA_2GB	FCB	0,$3A,$D2,0,0	; LBA limit of 2 GB card
+LBA_4GB	FCB	0,$75,$A4,0,0	; LBA limit of 4 GB card
+LBA_8GB	FCB	0,$EB,$48,0,0	; LBA limit of 8 GB card
+LBA_16GB	FCB	1,$D6,$90,0,0	; LBA limit of 16 GB card
+LBA_32GB	FCB	3,$Ad,$20,0,0	; LBA limit of 32 GB card
+
+; SD card command and result buffers, pre-made command sentences 
+
+RESBUF	RMB	5			; SD RESULT buffer (R1/R7)
+CMDBUF	RMB	6			; SD COMMAND buffer (generic)
+SDCMD0	FCB	$40,$00,$00,$00,$00,$95	; SD CMD0 GO_IDLE_STATE
+SDCMD8	FCB	$48,$00,$00,$01,$AA,$87	; SD CMD8 SDV2_CHECK
+SDCMD9   	FCB	$49,$00,$00,$00,$00,$00	; SD CMD9 SEND_CSD
+SDCMD55	FCB	$77,$00,$00,$00,$00,$65	; SD CMD55 APP_OP
+SDCMD41	FCB	$69,$40,$00,$00,$00,$00	; SD ACMD41 APP_SEND_OP_COND
+SDCMD58	FCB	$7A,$00,$00,$00,$00,$75	; SD CMD58 SEND_IF_COND
+SDCMD12	FCB	$4C,$00,$00,$00,$00,$00	; SD CMD12 STOP_TRANSMISSION
+
+; temporary storage
+TEMP		RMB	2
+;(unsigned long)partition_LBA_begin - from MBR
+PART_BEGIN	RMB	4
+
+		ORG	$0800
 BLKBUF	RMB	512
 BLKEND	EQU	*
 
 MULTBUF	RMB	512*6
 MULTEND	EQU	*	
-
-; temporary storage
-TEMP	RMB	2
-;(unsigned long)partition_LBA_begin - from MBR
-PART_BEGIN	RMB	4
-
-;(unsigned long)fat_begin_lba = Partition_LBA_Begin + Number_of_Reserved_Sectors;
-;(unsigned long)cluster_begin_lba = Partition_LBA_Begin + Number_of_Reserved_Sectors + (Number_of_FATs * Sectors_Per_FAT);
-;(unsigned char)sectors_per_cluster = BPB_SecPerClus;
-;(unsigned long)root_dir_first_cluster = BPB_RootClus;
-
-MAIN:
-
-SD00:	
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Trying a CMD8...R7="
-	JSR	CLRRESBUF
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-	JSR	SD_CMD8                                                                                                         
-	JSR	PRRESBUF
-	TST	RESBUF		; examine the R1 byte
-	LBPL	SD0A			; if R1 is positive, command passed, so skip init
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-
-; use the SD_INIT routine to initialize the SD card into SPI mode
-SD0:	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Trying to reset SD card...R1="
-	JSR	SPIINIT		; init the SPI port
-	TIM	IO.SDCS,IOPORT	; check the CS line
-	LBNE	SDE			; if negated, there's no card - terminate!
-	JSR	SD_INIT		; init the SD card
-	JSR	WRBYTE
-	BPL	SD0A
-	JMP	SDE			; if R1 is negative, init failed, so terminate
-
-; send a CMD8 to query the card (only works for SD V2 or later, so pretty much all micro-SD cards)
-SD0A:	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Trying a CMD8...R7="
-	JSR	CLRRESBUF
-	JSR	SD_CMD8                                                                                                         
-	JSR	PRRESBUF
-	TST	RESBUF		; examine the R1 byte
-	LBMI	SDE			; if R1 is negative, init failed, so terminate
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-
-; send ACMD41 to initialize the card
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Trying an ACMD41"
-	CLR	RESBUF+6		; clear timeout counter
-SD1:	INC	RESBUF+6		; increment timeout counter
-	BMI	SDE			; if 128 tries or more, terminate
-; send CMD55 to precede the ACMD41	
-	JSR	WRMSG	
-	FCB	$0A,$0D
-	FCN	"First sending CMD55...R1="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	JSR	SD_CMD55
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-; send CMD41 to initialize the card
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Next sending CMD41...R1="	
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	JSR	SD_CMD41
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-	TSTA			; test R1 for Z/N
-	BEQ	SD2		;   zero; move on to next command
-	BMI	SDE		;   negative; terminate
-	BRA	SD1		; loop until init is complete
-
-; error during SD card access - terminate!	
-SDE:	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Terminating"
-	OIM	IO.SDCS,IOPORT	; negate SD csel	
-	JMP	MONITOR
-
-; send CMD58 to ensure that block addressing is in effect	
-SD2:	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Trying a CMD58...R1="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	JSR	CLRRESBUF
-	JSR	SD_CMD58
-	JSR	PRRESBUF	
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-	TST	RESBUF		; examine the R1 byte
-	BMI	SDE		; if R1 is negative, init failed, so terminate
-	LDA	RESBUF+1		; look at CCS bit in OCR (bit 30)
-	BITA	#%01000000		; is block addressing used?
-	BEQ	SDE		;    no, exit
-	
-; At this point, the SD card is ready for reading/writing in SPI mode!
-
-; read the MBR at LBA 0 - report the type code and the LBA of the first partition (P1) FAT Vol ID
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Reading MBR...RET="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	LDX	#BLKBUF
-	LDD	#LBA_MBR
-	JSR	SD_RD_BLOCK
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-; FAT type byte
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"FAT type =" 
-	LDA	BLKBUF+$01BE+$4			; examine first partition Type Code
-	JSR	WRBYTE
-; determine LBA block of P1 boot sector
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"LBA of P1 boot sector ="
-	LDX	#PART_BEGIN					; put LBA of P1 into PART_BEGIN
-	LDA	BLKBUF+$01BE+$8	
-	STA	3,X
-	LDA	BLKBUF+$01BE+$9	
-	STA	2,X
-	LDA	BLKBUF+$01BE+$A	
-	STA	1,X
-	LDA	BLKBUF+$01BE+$B	
-	STA	,X
-	LDD	PART_BEGIN
-	JSR	WRWORD
-	LDD	PART_BEGIN+2
-	JSR	WRWORD	
-; read the P1 FAT Volume ID into the block buffer
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Reading boot sector...RET="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	LDX	#BLKBUF
-	LDD	#PART_BEGIN
-	JSR	SD_RD_BLOCK
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-; disassemble the FAT Volume ID and display stats
-; bytes per sector (should always be 512)
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"   Bytes per sector="
-	LDB	BLKBUF+$0B
-	LDA	BLKBUF+$0C
-	JSR	WRWORD
-; sectors per cluster
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"   Sectors per cluster="
-	LDA	BLKBUF+$0D
-	JSR	WRBYTE
-; reserved sectors 
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"   Reserved sectors="
-	LDB	BLKBUF+$0E
-	LDA	BLKBUF+$0F
-	JSR	WRWORD
-; Number of FATs (should always be 2)
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"   Number of FATs="
-	LDA	BLKBUF+$10
-	JSR	WRBYTE
-; Sectors per FAT
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"   Sectors per FAT="
-	LDB	BLKBUF+$26
-	LDA	BLKBUF+$27
-	JSR	WRWORD
-	LDB	BLKBUF+$24
-	LDA	BLKBUF+$25
-	JSR	WRWORD
-; starting cluster of root directory
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"   Root directory 1st cluster="
-	LDB	BLKBUF+$2E
-	LDA	BLKBUF+$2F
-	JSR	WRWORD
-	LDB	BLKBUF+$2C
-	LDA	BLKBUF+$2D
-	JSR	WRWORD
-	
-; read some sector into the block buffer
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Reading LBA #00123456...RET="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	LDX	#BLKBUF
-	LDD	#LBA_T_S
-	JSR	SD_RD_BLOCK
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-	
-; display the sector data
-	
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	" last byte of LBA #00123456 ="
-	LDA	BLKBUF+511
-	JSR	WRBYTE
-
-; modify the sector data
-	
-	LDX	#BLKBUF		; point to beginning of block data
-	LDD	LBA_T_S		; put $0012 into first word of block
-	STD	,X
-	LDD	LBA_T_S+2		; put $3456 into second word of block
-	STD	2,X
-	INC	BLKBUF+511                ; increment last byte of block
-		
-; write this same sector back to the card 
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Writing LBA #00123456...RET="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	LDX	#BLKBUF
-	LDD	#LBA_T_S
-	JSR	SD_WR_BLOCK
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-	
-; read the sector back into the block buffer
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Reading LBA #00123456...RET="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	LDX	#BLKBUF
-	LDD	#LBA_T_S
-	JSR	SD_RD_BLOCK
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-	
-; display the sector data
-	
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	" last byte of LBA #00123456 ="
-	LDA	BLKBUF+511
-	JSR	WRBYTE
-	
-;; read the CSD info into the first 16 bytes of the block buffer 
-;
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading CSD...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-;	LDX	#BLKBUF
-;	JSR	SD_RD_CSD
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel
-;; examine CSD structure field to be sure it's SDHC card
-;	LDAA	BLKBUF						; get byte with CSD structure
-;	ANDA	#$C0							; mask off CSD_STRUCTURE bits
-;	CMPA	#$40							; check for CSD_STURCTURE = 1 (SDHC)
-;	BEQ	*+5							;    no, terminate
-;	JMP	SDX
-;; card capacity ( in 512 KB increments ) is at offset +8,9
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"SDHC card found, C_SIZE value="
-;	LDD	BLKBUF+8
-;	JSR	WRWORD
-
-;; read a sector that shouldn't exist
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading LBA #01D69000...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-;	LDX	#BLKBUF
-;	LDD	#LBA_16GB
-;	JSR	SD_RD_BLOCK
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel	
-
-;; write a sector that shouldn't exist
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Writing LBA #01D69000...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-;	LDX	#BLK	
-;	LDX	#BLKBUF
-;	LDD	#LBA_16GB
-;	JSR	SD_WR_BLOCK
-;	JSR	WRBYTE
-;	OIM	IOPORT,IO.SDCS	; negate SD csel		
-
-;; write multiple sectors to the card 
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Writing LBA #00123450:5...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-;	LDX	#$C100
-;	LDD	#LBA_T_6
-;	JSR	SD_WR_MULT
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel	
-	
-; clear multi-sector test RAM
-	LDX	#MULTBUF
-SD3:	CLR	,X+
-	CMPX	#MULTEND
-	BNE	SD3
-	
-; read these sector back into the RAM starting at $0700
-	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"Reading LBA #00123450:5...RET="
-	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-	LDX	#MULTBUF
-	LDD	#LBA_T_6
-	JSR	SD_RD_MULT
-	JSR	WRBYTE
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading LBA #00123450...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-;	LDX	#MULTBUF
-;	LDD	#LBA_T_6
-;	JSR	SD_RD_BLOCK
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel
-;
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading LBA #00123451...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-;	LDX	#MULTBUF+$200
-;	INC	LBA_T_6+3	
-;	LDD	#LBA_T_6
-;	JSR	SD_RD_BLOCK
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel
-;
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading LBA #00123452...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-;	LDX	#MULTBUF+$400
-;	INC	LBA_T_6+3	
-;	LDD	#LBA_T_6
-;	JSR	SD_RD_BLOCK
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel
-;
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading LBA #00123453...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-;	LDX	#MULTBUF+$600
-;	INC	LBA_T_6+3	
-;	LDD	#LBA_T_6
-;	JSR	SD_RD_BLOCK
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel
-;
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading LBA #00123454...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel	
-;	LDX	#MULTBUF+$800
-;	INC	LBA_T_6+3	
-;	LDD	#LBA_T_6
-;	JSR	SD_RD_BLOCK
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel
-;
-;	JSR	WRMSG
-;	FCB	$0A,$0D
-;	FCN	"Reading LBA #00123455...RET="
-;	AIM	~IO.SDCS,IOPORT	  	; assert SD csel
-;	LDX	#MULTBUF+$A00
-;	INC	LBA_T_6+3	
-;	LDD	#LBA_T_6
-;	JSR	SD_RD_BLOCK
-;	JSR	WRBYTE
-;	OIM	IO.SDCS,IOPORT	; negate SD csel
-
-SDX:	JSR	WRMSG
-	FCB	$0A,$0D
-	FCN	"All done!"
-	OIM	IO.SDCS,IOPORT	; negate SD csel
-	SWI
-	
-********************************************
-* SD_INIT - put SD card into SPI mode
-*           and into IDLE state
-* On exit: A is R1 response byte from CMD0
-********************************************
-SD_INIT:
-;		AIM	~IO.SDCS,IOPORT	; assert SD csel
-;		AIM	~IO.SDCLK,IOPORT	; set SPI to fast mode
-;		LDX	#SDCMD0			; point to CMD0 command structure
-;		LBSR	SD_SEND_CMD
-;		CMPA	#$FF				; check response byte for $FF
-;		BEQ	IN0?
-;		RTS		
-IN0?		OIM 	IO.SDCS,IOPORT		; negate the CS line
-		OIM  IO.SDCLK,IOPORT	; set SPI to slow mode
-		LDB	#10				; send 10 bytes (80 clock pulses) to SD card
-IN1?		LDA	#$FF
-		STA	SDPORT
-IN2?		TIM	IO.SDBSY,IOPORT	; check the SPI busy bit
-		BNE	IN2?				; if set, keep waiting!
-		DECB			   		; decrement counter
-		BNE	IN1?				; loop until all pulses sent
-		AIM	~IO.SDCS,IOPORT	; assert SD csel
-		AIM	~IO.SDCLK,IOPORT	; set SPI to fast mode
-; send GO_IDLE_STATE command 	
-; 01 000000 00000000 00000000 00000000 00000000 1001010 1	
-; response is R1 
-		LDX	#SDCMD0			; point to CMD0 command sentence
-		BRA	SD_SEND_CMD
-	
-********************************************
-* SD_CMD8 - send SD CMD8 
-* On exit: A is R1 response byte from CMD8
-*          RESBUF[0..4] contains R1+OCR
-********************************************
-SD_CMD8:	
-; send CMD8 command - only valid for SDC V2
-; 01 001000 00000000 00000000 00000001 10101010 0000111 1
-; response is R7 (R1 + 32 bits of data)
-	LDX	#SDCMD8			; point to CMD8 command sentence
-	BSR	SD_SEND_CMD		; send command and get R1
-	BRA	SD_GET_R7		; get the R7 (R1+OCR) response bytes
-
-********************************************
-* SD_CMD58 - send SD CMD58 
-* On exit: A is R1 response byte
-*          RESBUF[0..4] contains R1+OCR
-********************************************
-SD_CMD58:
-; send CMD58 command 		
-;01 111010 00000000 00000000 00000000 00000000 0111010 1	
-; response is R7 (R1 + 32 bits of data)
-	LDX	#SDCMD58			; point to CMD58 command sentence
-	BSR	SD_SEND_CMD		; send command and get R1
-	BRA	SD_GET_R7		; get the R7 (R1+OCR) response bytes
-	
-********************************************
-* SD_CMD55 - send CD CMD55
-* On exit: A is R1 response byte
-********************************************
-SD_CMD55:	
-; send CMD55 command - "application specific"
-; response is R1 
-	LDX	#SDCMD55			; point to CMD55 command sentence
-	BRA	SD_SEND_CMD		; send command and get R1
-	
-********************************************
-* SD_CMD41 - send CD CMD41
-* On exit: A is R1 response byte
-********************************************
-SD_CMD41:	
-; send CMD41 command - APP_SEND_OP_COND (need CMD55 first!)
-; response is R1 
-	LDX	#SDCMD41			; point to CMD41 command sentence
-	BRA	SD_SEND_CMD		; send command and get R1
-
-********************************************
-* SD_GET_R7 - get SD R7 (R1+OCR) response
-* on entry: A is R1 response byte
-* On exit:  A is R1 response byte
-*           B is destroyed
-*           RESBUF[0..4] contains R7
-********************************************
-SD_GET_R7	STA	RESBUF			; save R1 into result buffer
-	JSR	SPIRECV			; read four more response bytes (R7)
-	STB	RESBUF+1
-	JSR	SPIRECV		
-	STB	RESBUF+2	
-	JSR	SPIRECV		
-	STB	RESBUF+3	
-	JSR	SPIRECV		
-	STB	RESBUF+4	
-	RTS
-	
-********************************************
-* SD_SEND_CMD - sends a 6-byte command to MMC/SD card
-* On Entry: X points to command sequence
-* On exit: A is R1 response byte
-*          X is destroyed
-*          B is preserved
-********************************************
-SD_SEND_CMD:
-		PSHS	B		; save original B value
-SD_SEN0:	
-		JSR	SPIRECV		; send Ncs
-		CMPB	#$FF
-		BNE	SD_SEN0		; loop until $FF received!
-		CLRB			; clear byte counter
-SD_SEN1:
-		LDA	,X+		; command + addr + crc
-		JSR	SPISEND		; send the byte
-		INCB			; increment byte counter
-		CMPB	#6		; sent all 6 bytes yet?
-		BNE	SD_SEN1		;    no, loop again
-
-		LDX	#0		; clear byte counter	
-SD_SEN2:
-		JSR	SPIRECV		; send a dummy and read the response
-		TSTB			; examine the received byte (B)
-		BPL	SD_SEN3		;    non-negative, got a response!
-		LEAX	1,X         		; increment byte counter
-		CMPX	#8		; waited 8 bytes yet?
-		BNE	SD_SEN2		;    no, try again
-SD_SEN3:
-		TFR	B,A		; move response to A	
-		PULS	B		; restore original B
-		RTS			; return with R1 in A	
-	
-********************************************
-* SD_RD_BLOCK - read a block (sector) from SD card
-* On Entry: D is pointer to block number
-*           X points to block buffer
-* On Exit:  A is status (0 = OK, !0 = ERR)
-*	  B is destroyed
-*	  X is preserved
-********************************************	
-SD_RD_BLOCK:
-	PSHS	X		; save pointer to block buffer
-	TFR	D,X		; put pointer to LBA into X
-	LDA	3,X		; transfer LBA value to CMDBUF A3...A0
-	STA	CMDBUF+SD.A0
-	LDA	2,X
-	STA	CMDBUF+SD.A1
-	LDA	1,X
-	STA	CMDBUF+SD.A2
-	LDA	,X
-	STA	CMDBUF+SD.A3
-	
-	LDA	#$51		; READ_SINGLE_BLOCK command (17)
-	STA	CMDBUF+SD.CMD
-	CLR	CMDBUF+SD.CRC
-	LDX	#CMDBUF
-	BSR	SD_SEND_CMD
-	CMPA	#0		; OK response from read command?
-	BNE	SDRDE		;    no, terminate!
-
-SDRD1	JSR	SPIRECV  		; wait for $FE start token
-	TSTB			; examine token received
-	BPL	SDRDEB		; if positive, it's an error token
-	CMPB	#$FE		; check if it's a start token
-	BNE	SDRD1		;    no, get next token
-	
-	PULS	X		; point to beginning of block buffer
-	PSHS	X		; re-save block buffer pointer
-	LDD	#512		; init transfer counter
-SDRD2	JSR	SPIRBLK		; transfer 512 bytes
-
-	JSR	SPIRECV		; read the CRC value into RESBUF[0..1]
-	STB	RESBUF
-	JSR	SPIRECV
-	STB	RESBUF+1
-	CLRA			; clear A (all OK)
-SDRDE	PULS	X		; restore block buffer pointer
-	RTS
-SDRDEB	TFR	B,A		; move error token from B into A
-	PULS	X		; restore block buffer pointer
-	RTS				
-
-********************************************
-* SD_RD_CSD - read the CSD info from SD card
-* On Entry: X points to block buffer
-* On Exit:  A is status (0 = OK, !0 = ERR)
-*	  B is destroyed
-*	  X is preserved
-********************************************	
-SD_RD_CSD:
-	PSHS	X		; save pointer to block buffer
-	LDX	#SDCMD9	
-	JSR	SD_SEND_CMD
-	CMPA	#0		; OK response from read command?
-	BEQ	*+4		;    yes, continue
-	BRA	SDRDE 		;    no, terminate!
-
-SDCSD1	JSR	SPIRECV     		; wait for $FE start token
-	TSTB			; examine token received
-	BPL	SDRDEB		; if positive, it's an error token
-	CMPB	#$FE		; check if it's a start token
-	BNE	SDCSD1		;    no, get next token
-	
-	PULS	X		; point to beginning of block buffer
-	PSHS	X		; re-save block buffer pointer
-	LDD	#16		; init transfer counter
-	BRA	SDRD2
-
-********************************************
-* SD_WR_BLOCK - write a block (sector) to SD card
-* On Entry: D is pointer to block number
-*           X points to block buffer
-* On Exit:  A is status (either R1 or data response)
-*	  B is destroyed
-*	  X is preserved
-********************************************	
-SD_WR_BLOCK:
-	PSHS	X		; save pointer to block buffer
-	TFR	D,X		; put pointer to LBA into X
-	LDA	3,X		; transfer LBA value to CMDBUF A3...A0
-	STA	CMDBUF+SD.A0
-	LDA	2,X
-	STA	CMDBUF+SD.A1
-	LDA	1,X
-	STA	CMDBUF+SD.A2
-	LDA	,X
-	STA	CMDBUF+SD.A3
-
-	LDX	#CMDBUF
-	LDA	#$58		; WRITE_SINGLE_BLOCK command (24)
-	STA	SD.CMD,X
-	CLR	SD.CRC,X
-	JSR	SD_SEND_CMD
-	CMPA	#0		; OK response from write command?
-	BNE	SDWRE		;    no, terminate!
-
-	JSR	SPIRECV     		; send two $FF bytes
-	JSR	SPIRECV
-	LDA	#$FE		; send the $FE start token
-	JSR	SPIBYTE
-	
-	PULS	X		; point to beginning of block buffer
-	PSHS	X		; re-save block buffer pointer
-	LDD	#512		; init transfer counter
-	JSR	SPIWBLK		; transfer 512 bytes to SD card
-	
-	JSR	SPIRECV		; write a dummy CRC value to card
-	JSR	SPIRECV		
-	
-	JSR	SPIRECV		; get data response
-	ANDB	#$1F
-	PSHS	B		; save the response on stack
-	
-SDWR2	JSR	SPIRECV		; send a dummy byte
-	CMPB	#$FF		; anything other than $FF = busy
-	BNE	SDWR2		;    keep polling
-	
-	PULS	A		; put data response back in A
-SDWRE	PULS	X		; restore block buffer pointer
-	RTS
-	
-********************************************
-* SD_WR_MULT - write multiple blocks (sectors) to SD card
-* On Entry: D is pointer to block number:transfer count (FIVE bytes)
-*           X points to start of source data
-* On Exit:  A is status (either R1 or data response)
-*	  B is destroyed
-*	  X is preserved
-********************************************	
-SD_WR_MULT:
-	PSHS	X		; save pointer to block buffer
-	TFR	D,X		; put pointer to LBA into X
-	LDA	3,X		; transfer LBA value to CMDBUF A3...A0
-	STA	CMDBUF+SD.A0
-	LDA	2,X
-	STA	CMDBUF+SD.A1
-	LDA	1,X
-	STA	CMDBUF+SD.A2
-	LDA	,X
-	STA	CMDBUF+SD.A3
-	
-	LDA	4,X 		; save transfer count to TEMP
-	STA	TEMP	
-
-	LDX	#CMDBUF
-	LDA	#$59		; WRITE_SINGLE_BLOCK command (25)
-	STA	SD.CMD,X
-	CLR	SD.CRC,X
-	JSR	SD_SEND_CMD
-	CMPA	#0		; OK response from write command?
-	BNE	SDWME		;    no, terminate!
-
-SDWM1	JSR	SPIRECV     		; send two $FF bytes
-	JSR	SPIRECV
-	LDA	#$FC		; send the $FC START token
-	JSR	SPIBYTE
-	
-	PULS	X		; point to source block buffer
-	LDD	#512		; init transfer counter
-	JSR	SPIWBLK		; transfer 512 bytes to SD card
-	PSHS	X		; save updated block buffer pointer
-	
-	JSR	SPIRECV		; write a dummy CRC value to card
-	JSR	SPIRECV		
-	
-	JSR	SPIRECV		; get data response
-	ANDB	#$1F
-	STB	TEMP+1		; save the response at TEMP+1
-	
-SDWM2	JSR	SPIRECV		; send a dummy byte
-	CMPB	#$FF		; anything other than $FF = busy
-	BNE	SDWM2		;    keep polling
-	
-	TST	TEMP		; examine the block transfer counter
-	BEQ	SDWM3		; counter is zero, done with all blocks
-	DEC	TEMP		; non-zero, decrement the counter
-	BRA	SDWM1		; send the next packet	
-	
-SDWM3	LDA	#$FD		; send a STOP_TRAN token
-	JSR	SPISEND	
-	JSR	SPIRECV		; send a dummy byte 
-		
-SDWM4	JSR	SPIRECV		; send a dummy byte
-	CMPB	#$FF		; anything other than $FF = busy
-	BNE	SDWM4		;    keep polling
-	
-	LDA	TEMP+1		; put data response into A
-SDWME	PULS	X		; restore block buffer pointer
-	RTS
-
-********************************************
-* SD_RD_MULT - read multiple blocks (sectors) from SD card
-* On Entry: D is pointer to block number:transfer count (FIVE bytes)
-*           X points to destination start
-* On Exit:  A is status (0 = OK, !0 = ERR)
-*	  B is destroyed
-*	  X is preserved
-********************************************	
-SD_RD_MULT:
-	PSHS	X		; save pointer to block buffer
-	TFR	D,X		; put pointer to LBA into X
-	LDA	3,X		; transfer LBA value to CMDBUF A3...A0
-	STA	CMDBUF+SD.A0
-	LDA	2,X
-	STA	CMDBUF+SD.A1
-	LDA	1,X
-	STA	CMDBUF+SD.A2
-	LDA	,X
-	STA	CMDBUF+SD.A3
-	
-	LDA	4,X 		; save transfer count to TEMP
-	STA	TEMP	
-	
-	LDA	#$52		; READ_MULTIPLE_BLOCK command (18)
-	STA	CMDBUF+SD.CMD
-	CLR	CMDBUF+SD.CRC
-	LDX	#CMDBUF
-	JSR	SD_SEND_CMD		; send CMD18
-	CMPA	#0		; OK response from read command?
-	BNE	SDRME		;    no, terminate!
-
-SDRM1	JSR	SPIRECV  		; wait for $FE start token
-	TSTB			; examine token received
-	BPL	SDRMEB		; if positive, it's an error token
-	CMPB	#$FE		; check if it's a start token
-	BNE	SDRM1		;    no, get next token
-	
-	PULS	X		; get destination pointer
-	LDD	#512		; init transfer counter
-	JSR	SPIRBLK		; transfer 512 bytes
-	PSHS	X				; save the updated dest pointer
-	JSR	SPIRECV		; read the CRC value (16 bits)
-	JSR	SPIRECV		
-
-	TST	TEMP		; examine the block transfer counter
-	BEQ	SDRM3		; counter is zero, done with all blocks
-	DEC	TEMP		; non-zero, decrement the counter
-	BRA	SDRM1		; get the next packet	
-
-	LDX	#SDCMD12		; point to CMD12 sentence
-SDRM3	JSR	SPIRECV		; send Ncs
-	CMPB	#$FF
-	BNE	SDRM3		; loop until $FF received!
-	CLRB			; clear byte counter
-SDRM4	LDA	,X+		; command + addr + crc
-	JSR	SPISEND		; send the byte
-	INCB			; increment byte counter
-	CMPB	#6		; sent all 6 bytes yet?
-	BNE	SDRM4		;    no, loop again
-	
-	JSR	SPIRECV		; get stuff byte
-
-	LDX	#0		; clear byte counter	
-SDRM5	JSR	SPIRECV		; send a dummy and read the response
-	TSTB			; examine the received byte (B)
-	BPL	SDRM6		;    non-negative, got a response!
-	LEAX	1,X         		; increment byte counter
-	CMPX	#8		; waited 8 bytes yet?
-	BNE	SDRM5		;    no, try again
-SDRM6	TFR	B,A		; move response to A	
-	
-SDRM7	JSR	SPIRECV		; send a dummy byte
-	CMPB	#$FF		; anything other than $FF = busy
-	BNE	SDRM7		;    keep polling
-
-	CLRA			; clear A (all OK)
-SDRME	PULS	X		; restore block buffer pointer
-	RTS
-SDRMEB	TFR	B,A		; move error token from B into A
-	PULS	X		; restore block buffer pointer
-	RTS				
-	
-********************************************
-* SPIINIT - set SD SPI port to initial state
-********************************************
-SPIINIT:	OIM	IO.SDCS,IOPORT		; negate SD CS
-		TIM	IO.SDSW,IOPORT 	; test the card detect switch
-		BEQ	S0?				; if no card, leave CS negated
-		AIM	~IO.SDCS,IOPORT	; if card, assert SD CS
-S0?		RTS
-	
-********************************************
-* SPIEXIT - release HD6303Y Port6 from bit-banged SPI
-********************************************
-SPIEXIT:	OIM	IO.SDCS,IOPORT		; negate SD CS signal
-		RTS
-
-********************************************
-* SPIBYTE - r/w transfer a byte via SPI master 
-* CPOL=0 the base value of the clock is zero
-* CPHA=0, data are captured on the clock's rising edge (low->high transition)
-*             and data is propagated on a falling edge (high->low clock transition)
-* On Entry: A = byte to send
-* On Exit:  B = byte received
-*	  A is preserved
-********************************************
-SPIBYTE:	STA	SDPORT
-S0?		TIM  IO.SDBSY,IOPORT
-		BNE	S0?
-		LDB	SDPORT
-SPIBX:	RTS
-
-********************************************
-* SPISEND - write a byte via SPI master
-* CPOL=0 the base value of the clock is zero
-* CPHA=0, data is propagated on a falling edge (high->low clock transition)
-* On Entry: A = byte to send
-* On Exit: all registers preserved
-********************************************
-SPISEND:	STA	SDPORT
-S0?		TIM  IO.SDBSY,IOPORT
-		BNE	S0?
-		RTS
-
-********************************************
-* SPIRECV - read a byte via SPI master
-* CPOL=0 the base value of the clock is zero
-* CPHA=0, data is propagated on a falling edge (high->low clock transition)
-* On Entry: 
-* On Exit: B = byte read from SPI
-********************************************
-SPIRECV:	LDB	#$FF
-		STB	SDPORT
-S0?		TIM  IO.SDBSY,IOPORT
-		BNE	S0?
-		LDB	SDPORT		
-		RTS
-
-********************************************
-* SPIRBLK - read a block of bytes via SPI master
-* CPOL=0 the base value of the clock is zero
-* CPHA=0, data is propagated on a falling edge (high->low clock transition)
-* On Entry: X = pointer to destination block
-*           D = number of bytes to be read
-* On Exit:  X = pointer to destination block+512
-*           D = 0
-********************************************
-SPIRBLK:	PSHS	B		; B gets used by SPIRECV
-		JSR	SPIRECV		; send a dummy and read a data byte
-		STB	,X+		; store in buffer
-		PULS	B		; restore LSB of byte counter
-		SUBD	#1		; decrement it
-		BNE	SPIRBLK		;    not done yet, keep reading
-		RTS
-
-********************************************
-* SPIWBLK - write a block of bytes via SPI master
-* CPOL=0 the base value of the clock is zero
-* CPHA=0, data is propagated on a falling edge (high->low clock transition)
-* On Entry: X = pointer to source block
-*           D = number of bytes to be read
-* On Exit:  X = pointer to source block+512
-*           D = 0
-********************************************
-SPIWBLK:	PSHS	A		; B gets used by SPIRECV
-		LDA	,X+		; get byte to send from source block
-		JSR	SPISEND		; send data byte (ignore read)
-		PULS	A		; restore MSB of byte counter
-		SUBD	#1		; decrement it
-		BNE	SPIWBLK		;    not done yet, keep reading
-		RTS
-	
-***************************************
-*  Result Buffer utility functions
-***************************************
-; clear result buffer
-CLRRESBUF:
-	LDX	#RESBUF
-CLRRES1	CLR	,X+
-	CMPX	#CMDBUF
-	BLO	CLRRES1	
-	RTS
-	
-; print result buffer
-PRRESBUF:
-	LDX	#RESBUF
-PRRES1	LDA	,X+
-	JSR	WRBYTE
-	JSR	WRSPACE
-	CMPX	#CMDBUF
-	BLO	PRRES1	
-	RTS
-
-***************************************
-* WRMSG - Write string(PC) to console
-***************************************
-* The string data immediately follows
-* the function call. The string must
-* be terminated with either a 0 (null)
-* or an $FF. The $FF terminator issues
-* a newline (CR+LF) after the string,
-* while the null terminator does not.
-*
-* Return address on stack is altered
-* to be term+1 prior to RTS.
-***************************************
-WRMSG	PSHS	X				; save 'X'
-	LDX	2,S			; return address is start of string
-	BSR	WRSTR			; output the string to the console
-					; X now points to end of string+1
-	STX	2,S			; save the correct return address (end of string+1)
-	PULS	X				; restore 'X'
-	RTS
-	
-****************************************
-* WRSTR - Write string(x) to console
-***************************************
-* The string data is in memory and is
-* pointed to by X. The string must
-* be terminated with either a 0 (null)
-* or an $FF. The $FF terminator issues
-* a newline (CR+LF) after the string,
-* while the null terminator does not.
-*
-* X is destroyed (points to term+1)
-***************************************
-WRSTR	PSHS	A			; Save A value at entry
-WRSTR1	LDA	,X+			; Get char from X
-	TSTA				; Test character for null terminator
-	BEQ	WRSPAC1			;   yes, restore A and exit
-	CMPA	#$FF			; is it an $FF terminator?
-	BEQ	WRLFCR1			;  yes, issue LF+CR and exit
-	JSR	SCCWRITE			; output the char to console
-	BRA	WRSTR1			; process next character
-	
-****************************************
-* WRSPACE - Write a space to console
-****************************************
-WRSPACE	PSHS	A			; Save A value at entry
-	LDA	#$20			; Output a space to console
-	JSR	SCCWRITE
-WRSPAC1	PULS	A			; restore A value prior to return
-	RTS
-	
-****************************************
-* WRLFCR - Write LF+CR to console
-****************************************
-WRLFCR	PSHS	A				; Save A value at entry
-WRLFCR1	LDA	#$0A			; Output LF to console
-	JSR	SCCWRITE	
-	LDA	#$0D			; Output CR to console
-	JSR	SCCWRITE	
-	PULS	A				; restore A value prior to return
-	RTS
-
-****************************************
-* WRWORD - Write value of D as hex word
-****************************************
-WRWORD	PSHS	A				; save the A accumulator value
-	BSR	WRBYTE			; Output upper byte of word (A)
-	TFR	B,A			; transfer lower byte of word to A
-	BSR	WRBYTE			; output lower byte of word (B)
-	PULS	A				; restore original A value
-	RTS
-	
-****************************************
-* WRBYTE - Write value in A as hex byte
-****************************************
-WRBYTE	PSHS	A				; Save A value to restore upon return
-	PSHS	A				; Save A value for later
-	LSRA				; shift high nybble into 4 LSB of A
-	LSRA			
-	LSRA			
-	LSRA			
-	BSR	WRDIG			; write the high nybble of A to console
-	PULS	A				; restore byte value
-	BSR	WRDIG			; write the low nybble to A to console
-	PULS	A				; restore A value prior to return
-	RTS
-					
-****************************************
-* WRDIG - Write value in 4 LSB of A as a hex digit
-****************************************
-WRDIG	PSHS	A				; save A value to restore upon return
-	ANDA	#$0F			; mask off 4 MSB
-	ADDA	#'0			; convert base to ASCII 
-	CMPA	#'9			; is result numeric?
-	BLS	WRDIG1		;    yes, output to console
-	ADDA	#7			; add 7 to convert to alpha
-WRDIG1	JSR	SCCWRITE			; output character to console
-	PULS	A				; restore A value prior to return
-	RTS
-
-
-
-
-
 
