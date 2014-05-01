@@ -1,0 +1,85 @@
+                      (                      test09.asm):00001 * TEST09.ASM
+                      (                      test09.asm):00002 * test of the Z85C30 SCC channel B
+                      (                      test09.asm):00003 * T. LeMense 3/29/2014
+                      (                      test09.asm):00004 
+                      (                      test09.asm):00005 * HARDWARE INFORMATION
+     C010             (                      test09.asm):00006 ZSCC            EQU     $C010           ; SCC base address
+     C010             (                      test09.asm):00007 SCCBC   EQU     ZSCC                    ; SCC channel B command
+     C011             (                      test09.asm):00008 SCCBD   EQU     ZSCC+1          ; SCC channel B data
+     C012             (                      test09.asm):00009 SCCAC   EQU     ZSCC+2          ; SCC channel A command
+     C013             (                      test09.asm):00010 SCCAD   EQU     ZSCC+3          ; SCC channel A data
+     C000             (                      test09.asm):00011 ZCIO            EQU     $C000           ; CIO base address
+     C020             (                      test09.asm):00012 ZRTC            EQU     $C020           ; RTC base address
+     C030             (                      test09.asm):00013 SDCARD  EQU     $C030           ; SDCARD register address
+     C040             (                      test09.asm):00014 SYSCFG  EQU     $C040           ; SYSCFG register address
+     C050             (                      test09.asm):00015 INOUTP  EQU     $C050           ; INOUT register address
+                      (                      test09.asm):00016 
+                      (                      test09.asm):00017 * Start of program
+                      (                      test09.asm):00018                 ORG     0
+                      (                      test09.asm):00019 
+0000 B6C010           (                      test09.asm):00020 INITSCC:        LDA     SCCBC           ; reset the SCC ch.B register pointer
+0003 8E0036           (                      test09.asm):00021                 LDX     #SCCTBL
+0006 A680             (                      test09.asm):00022 L?0             LDA     ,X+                     ; load address from table
+0008 81FF             (                      test09.asm):00023                 CMPA    #$FF            ; is it $ff? (end of table)
+000A 270A             (                      test09.asm):00024                 BEQ     OUTPUT          ;    yes, done with init
+000C B7C010           (                      test09.asm):00025                 STA     SCCBC           ;    no, write the register pointer to WR0
+000F A680             (                      test09.asm):00026                 LDA     ,X+                     ; get data byte from table
+0011 B7C010           (                      test09.asm):00027                 STA     SCCBC           ; write it to SCC ch.B
+0014 20F0             (                      test09.asm):00028                 BRA     L?0
+                      (                      test09.asm):00029         
+0016 B6C010           (                      test09.asm):00030 OUTPUT: LDA     SCCBC           ; reset ch.B register pointer to WR0/RR0
+0019 B6C010           (                      test09.asm):00031                 LDA     SCCBC           ; read RR0
+001C 8404             (                      test09.asm):00032                 ANDA    #%00000100      ; examine the TX buffer empty bit
+001E 27F6             (                      test09.asm):00033                 BEQ     OUTPUT          ;    if not empty, check again
+0020 8642             (                      test09.asm):00034                 LDA     #'B
+0022 B7C011           (                      test09.asm):00035                 STA     SCCBD           ; put character in ch.B data register
+                      (                      test09.asm):00036                 
+0025 B6C012           (                      test09.asm):00037 L?0             LDA     SCCAC           ; reset ch.A register pointer to WR0/RR0
+0028 B6C012           (                      test09.asm):00038                 LDA     SCCAC           ; read RR0
+002B 8404             (                      test09.asm):00039                 ANDA    #%00000100      ; examine the TX buffer empty bit
+002D 27F6             (                      test09.asm):00040                 BEQ     L?0                     ;    if not empty, check again
+002F 8641             (                      test09.asm):00041                 LDA     #'A
+0031 B7C013           (                      test09.asm):00042                 STA     SCCAD           ; put character in ch.A data register
+0034 20E0             (                      test09.asm):00043                 BRA     OUTPUT
+                      (                      test09.asm):00044 
+                      (                      test09.asm):00045 ;Initialization table for SCC registers
+                      (                      test09.asm):00046 ; thanks to John Monahan (S100Computers.com)
+                      (                      test09.asm):00047 
+                      (                      test09.asm):00048 SCCTBL:
+0036 09               (                      test09.asm):00049                 FCB     $09                     ; select WR9
+0037 40               (                      test09.asm):00050                 FCB     %01000000       ; Reset Ch B
+0038 09               (                      test09.asm):00051                 FCB     $09                     ; select WR9 again
+0039 00               (                      test09.asm):00052                 FCB     %00000000               ; un-reset Ch B
+                      (                      test09.asm):00053 
+003A 04               (                      test09.asm):00054                 FCB     $04                     ; Point to WR4
+003B 44               (                      test09.asm):00055                 FCB     $44             ; X16 clock,1 Stop,NP
+                      (                      test09.asm):00056 
+003C 03               (                      test09.asm):00057                 FCB     $03             ; Point to WR3
+003D C1               (                      test09.asm):00058                 FCB     $C1             ; Enable receiver, No Auto Enable (Hardware CTS), Receive 8 bits
+                      (                      test09.asm):00059 
+003E 05               (                      test09.asm):00060                 FCB     $05             ; Point to WR5
+003F EA               (                      test09.asm):00061                 FCB     $EA             ; Enable, Transmit 8 bits RTS,DTR, Enable
+                      (                      test09.asm):00062 
+0040 0B               (                      test09.asm):00063                 FCB     $0B             ; Point to WR11
+0041 05               (                      test09.asm):00064                 FCB     $05                     ; RX clock = TX clock = RTXC pin; TRXC pin = xmit clock
+                      (                      test09.asm):00065 
+                      (                      test09.asm):00066 ;               FCB     $0C             ; Point to WR12
+                      (                      test09.asm):00067 ;               FCB  $06                ; Low byte 19,200 Baud
+                      (                      test09.asm):00068 ;               FCB     $0E             ; Low byte 9600 Baud
+                      (                      test09.asm):00069 
+                      (                      test09.asm):00070 ;               FCB     $0D             ; Point to WR13
+                      (                      test09.asm):00071 ;               FCB     $00             ; High byte for Baud
+                      (                      test09.asm):00072 ;               FCB     $01             ; High byte for Baud
+                      (                      test09.asm):00073 
+                      (                      test09.asm):00074 ;               FCB     $0E                     ; Point to WR14
+                      (                      test09.asm):00075 ;               FCB     $01                     ; Using a 4.9152 MHz BRG Clock.
+                      (                      test09.asm):00076 
+                      (                      test09.asm):00077 ;               FCB     $0F                     ; Point to WR15(If required)
+                      (                      test09.asm):00078 ;               FCB     $00                     ; Generate Int with CTS going high      
+                      (                      test09.asm):00079 
+0042 FF               (                      test09.asm):00080                 FCB     $FF                     ; EOT marker
+0043 FF               (                      test09.asm):00081                 FCB     $FF
+                      (                      test09.asm):00082 
+                      (                      test09.asm):00083         
+                      (                      test09.asm):00084 
+                      (                      test09.asm):00085 
