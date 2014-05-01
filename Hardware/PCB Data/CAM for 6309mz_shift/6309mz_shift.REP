@@ -1,0 +1,165 @@
+*************************************************************
+FileName = 6309mz_shift.GBR
+AutoAperture = True
+*************************************************************
+Generating : 
+      File : 6309mz_shift.GTL
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : 6309mz_shift.GBL
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D24
+    D25
+    D26
+    D27
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : 6309mz_shift.GTO
+
+    Adding Layer      : TopOverlay
+
+
+Used DCodes :
+    D17
+    D18
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : 6309mz_shift.GTS
+
+    Adding Layer      : TopSolder
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : 6309mz_shift.GBS
+
+    Adding Layer      : BottomSolder
+
+    Adding Layer      : BottomLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D35
+    D36
+    D37
+    D39
+    D40
+    D41
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : 6309mz_shift.GM1
+
+    Adding Layer      : Board Outline
+
+
+Used DCodes :
+    D18
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : 6309mz_shift.GM4
+
+    Adding Layer      : Fab Notes
+
+
+Used DCodes :
+    D17
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : 6309mz_shift.GD1
+
+    Adding Layer      : DrillDrawing
+
+    Adding Drill Pair : TopLayer-BottomLayer
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : 6309mz_shift.GG1
+
+    Adding Layer      : DrillGuide
+
+    Adding Drill Pair : TopLayer-BottomLayer
+
+
+Used DCodes :
+    D42
+*************************************************************
+

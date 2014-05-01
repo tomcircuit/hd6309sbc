@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: 6309mz_shift.pcb   7-Apr-2014   20:16:53
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : TopLayer to BottomLayer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        20mil (0.508mm)          37               21.81 Inch (553.99 mm)
+T2        28mil (0.7112mm)         20               23.23 Inch (590.15 mm)
+T3        38mil (0.9652mm)         1                13.81 Inch (350.90 mm)
+T4        42mil (1.0668mm)         135              36.41 Inch (924.80 mm)
+---------------------------------------------------------------------------
+Totals                             193              95.27 Inch (2419.84 mm)
+
+Total Processing Time : 00:00:00

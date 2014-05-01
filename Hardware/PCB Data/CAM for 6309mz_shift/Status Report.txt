@@ -1,0 +1,24 @@
+CAM Outputs Generation Report
+for 'CAM Outputs for 6309mz_shift.cam'
+at 20:16:53 on 7-Apr-2014 
+
+
+'OSHpark_drill'
+'6309mz_shift.TXT' generated
+'6309mz_shift.DRL' generated
+'6309mz_shift.DRR' generated
+
+'OSHpark_gerber'
+'6309mz_shift.GTL' generated
+'6309mz_shift.GBL' generated
+'6309mz_shift.GTO' generated
+'6309mz_shift.GTS' generated
+'6309mz_shift.GBS' generated
+'6309mz_shift.GM1' generated
+'6309mz_shift.GM4' generated
+'6309mz_shift.GD1' generated
+'6309mz_shift.GG1' generated
+'6309mz_shift.REP' generated
+
+
+Total number of generated files = 13
