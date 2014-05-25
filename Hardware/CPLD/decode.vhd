@@ -5,76 +5,115 @@ use IEEE.NUMERIC_STD.ALL;
 entity decode is
 	port( reset : in std_logic;		-- global reset
 			addr : in std_logic_vector(15 downto 4);	-- CPU address bus
-			eclk : in std_logic;			-- CPU E clock
 			rd_n : in std_logic;			-- CPU READ signal (active low)
 			wr_n : in std_logic;			-- CPU WRITE signal (active low)
 			romsel : in std_logic;		-- ROM banking control
+			romseh : in std_logic;     -- ROM banking control
 			ciocs : out std_logic;		-- CIO active low select
 			scccs : out std_logic;		-- SCC active low select
 			rtccs : out std_logic;		-- RTC active low select
-			auxcs : out std_logic;		-- AUX active low select
 			romcs : out std_logic;		-- ROM active low select
 			ram1cs : out std_logic;		-- RAM #1 active low select
 			ram2cs : out std_logic;		-- RAM #2 active low select
 			syscs : out std_logic;		-- SYSTEM port active low select
 			sdccs : out std_logic;		-- SD card interface active low select
-			iopcs : out std_logic		-- IO port active low select
+			iopcs : out std_logic;		-- IO port active low select
+			vercs : out std_logic		-- VERSION port active low select
 		);
 end decode;
 
 architecture behavioral of decode is
 
-	-- page to which both on-chip and off-chip IO is mapped
-	constant IO_PAGE : std_logic_vector (7 downto 0) := 		x"C0";		-- 0x02XX
-	constant CIO_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"0";		-- IO_PAGE+00...IO_PAGE+0F
-	constant SCC_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"1";		-- IO_PAGE+10...IO_PAGE+1F
-	constant RTC_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"2";		-- IO_PAGE+20...IO_PAGE+2F
-	constant SDCARD_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"3"; 		-- IO_PAGE+30...IO_PAGE+3F		
-	constant SYSCFG_PARA : std_logic_vector (11 downto 0) := IO_PAGE & x"4";		-- IO_PAGE+40...IO_PAGE+4F
-	constant INOUT_PARA : std_logic_vector (11 downto 0) := 	IO_PAGE & x"5";		-- IO_PAGE+50...IO_PAGE+5F	
+	signal region1, region2, region3, region4, region5, region6 : std_logic;
+	signal para0, para1, para2, para3, para4, para5, para6 : std_logic;
 	
-		begin
+begin
+
+
+	-- Decode Address Regions in Memory Map
+	---------------------------------------
 	
-	-- Address Decoder
-	------------------
-	-- RAM #1 from 0x0000-7FFF 
-	-- RAM #2 from 0x8000-BFFF read and write access
-	--			 from 0xC000-FFFF write access
-	--			 from 0xC000-FFFF read access when ROMSEL = 0
-	--
-	-- ROM from 0xC000-FFFF read access when ROMSEL = 1
-		
-	-- active LOW ROM chip seelct during reads from pages C0-FF when ROMSEL is high (default)
-	romcs <= '0' when ( reset = '1' and addr(15 downto 8) /= IO_PAGE and addr(15 downto 14) = "11" and romsel = '1' ) else '1';	
+	-- REGION1 = 0x0000...0x7FFF
+	region1 <= reset and not addr(15);	
+	
+	-- REGION2 = 0x8000...0xBFFF
+	region2 <= reset and addr(15) and not addr(14);
+	
+	-- REGION3 = 0xC000...0xDFFF
+	region3 <= reset and addr(15) and addr(14) and not addr(13);
+	
+	-- REGION4 = 0xE000...0xE0FF
+   region4 <= reset and addr(15) and addr(14) and addr(13) and not addr(12) and not addr(11) and not addr(10) and not addr(9) and not addr(8);
+	
+	-- REGION5 = 0xE100...0xE1FF
+   region5 <= reset and addr(15) and addr(14) and addr(13) and not addr(12) and not addr(11) and not addr(10) and not addr(9) and addr(8);	
+	
+	-- REGION6 = 0xE200...0xFFFF
+	region6 <= reset and addr(15) and addr(14) and addr(13) and not region4 and not region5;
+	
+	
+	-- Decode Paragraphs in Memory Map
+	----------------------------------
+	
+	-- PARA0 = 0xXX0X
+	para0 <= not addr(7) and not addr(6) and not addr(5) and not addr(4);
+	
+	-- PARA1 = 0xXX1X
+	para1 <= not addr(7) and not addr(6) and not addr(5) and addr(4);	
+	
+	-- PARA2 = 0xXX2X
+	para2 <= not addr(7) and not addr(6) and addr(5) and not addr(4);		
+	
+	-- PARA3 = 0xXX3X
+	para3 <= not addr(7) and not addr(6) and addr(5) and addr(4);			
+	
+	-- PARA4 = 0xXX4X
+	para4 <= not addr(7) and addr(6) and not addr(5) and not addr(4);				
+	
+	-- PARA5 = 0xXX5X
+	para5 <= not addr(7) and addr(6) and not addr(5) and addr(4);					
+	
+	-- PARA6 = 0xXX6X
+	para6 <= not addr(7) and addr(6) and addr(5) and not addr(4);	
+	
 
-	-- active LOW RAM #1 chip select during access to pages 00-7F
-	ram1cs <= '0' when ( reset = '1' and eclk = '1' and addr(15 downto 8) /= IO_PAGE and addr(15) = '0' ) else '1';
+	
+	-- Generate Select Signals from Region Strobes
+	----------------------------------------------
+	
+	-- RAM#1 in region 1
+	ram1cs <= not region1;
+	
+	-- RAM#2 in region 2 and region 3 when romsel = 0 or a write and region 6 when romseh = 0 or a write
+	ram2cs <= '0' when region2 = '1' or ( region3 = '1' and (romsel = '0' or wr_n = '0') ) 
+	                              or ( region6 = '1' and (romseh = '0' or wr_n = '0') ) else '1';
 
-	-- active LOW RAM1 chip select during access to pages 80-BF
-	-- and pages C0-FF during reads when ROMSEL is LOW
-	ram2cs <= '0' when ( reset = '1' and eclk = '1' and addr(15 downto 8) /= IO_PAGE and 
-			( ( addr(15 downto 14) = "10" ) or ( addr(15 downto 14) = "11" and romsel = '0' ) ) )	else '1';	
+	-- ROM in region 3 when romsel = 1 and reads or in region 6 when romseh = 1 and reads
+	romcs <= '0' when ( (region3 = '1' and ( romsel = '1' and rd_n = '0' ) )
+	                               or ( region6 = '1' and (romseh = '1' and rd_n = '0') ) ) else '1';
 																								
 	-- active LOW CIO chip select output driver
-	ciocs <= '0' when ( reset = '1' and addr(15 downto 4) = CIO_PARA ) else '1';
+	ciocs <= not (region4 and para0);
 	
 	-- active LOW CIO chip select output driver 
-	scccs <= '0' when ( reset = '1' and addr(15 downto 4) = SCC_PARA ) else '1';
-	
+	scccs <= not (region4 and para1);
+
 	-- active LOW RTC chip select output 
-	rtccs <= '0' when ( reset = '1' and addr(15 downto 4) = RTC_PARA ) else '1';
-	
-	-- active LOW auxillary chip select output (upper 128 bytes of IO_PAGE)
-	auxcs <= '0' when ( reset = '1' and addr(15 downto 8) = IO_PAGE and addr(7) = '1' ) else '1';
-														
-	-- active LOW system config port select
-	syscs <= '0' when ( reset = '1' and addr(15 downto 4) = SYSCFG_PARA ) else '1';
+	rtccs <= not (region4 and para2);
 
 	-- active LOW SD card port select
-	sdccs <= '0' when ( reset = '1' and addr(15 downto 4) = SDCARD_PARA ) else '1';
+	sdccs <= not (region4 and para3);
+	
+	-- active LOW system config port select
+	syscs <= not (region4 and para4);
 
 	-- active LOW I/O port select
-	iopcs <= '0' when ( reset = '1' and addr(15 downto 4) = INOUT_PARA ) else '1';
+	iopcs <= not (region4 and para5);
+
+	-- active LOW VERSION port select
+	vercs <= not (region4 and para6);
 	
 end behavioral;		
+
+
 

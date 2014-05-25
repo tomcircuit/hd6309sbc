@@ -11,6 +11,9 @@ use IEEE.NUMERIC_STD.ALL;
 --              ___________             ___________             _______
 --  E _________/           \___________/           \___________/
 --
+--                ___________             ___________             _______
+--  D-E _________/           \___________/           \___________/
+--
 -- ST 0     1     3     2     0     1     3     2     0     1     3       
 --
 --
@@ -74,7 +77,8 @@ architecture behavior of cpuclock is
 	signal next_state : integer range 0 to 6;
 	signal e_drive : std_logic;
 	signal s_drive : std_logic;
-
+	signal state_vec : std_logic_vector(2 downto 0);
+	
 begin
 
 	-- create a 6 MHz state clock, which feeds the E/Q state logic
@@ -87,7 +91,7 @@ begin
 				pre_cnt <= pre_cnt + 1;
 			end if;
 			
-			-- create an E output shifted by one XCLK period, to be
+			-- create an E output delayed by one XCLK period, to be
 			-- used for output enable of CPU readable on-chip registers
 			-- (to satisfy the CPU read data hold time after E falls)
 			d_e_out <= e_drive;
@@ -115,12 +119,22 @@ begin
 			next_state <= 0;
 		end if;
 	end process;
+
+
+	-- generate ECLK and QCLK outputs from state value
+	-- the hardcoded logic impl. requires FAR fewer macrocells than the conditional assignment impl.
+	state_vec <= std_logic_vector(to_unsigned(clock_state,3));		
 	
-	-- update ECLK and QCLK outputs from clock_state value
-	e_drive <= '1' when (clock_state = 3 or clock_state = 4 or clock_state = 5 or clock_state = 6 or clock_state = 2) else '0';
-	q_out <= '1' when (clock_state = 1 or clock_state = 3) else '0';
-	zw_out <= '1' when (clock_state = 2) else '0';
-	e_out <= e_drive;
+	--	e_drive <= '1' when (clock_state = 3 or clock_state = 4 or clock_state = 5 or clock_state = 6 or clock_state = 2) else '0';	
+	e_drive <= state_vec(1) or state_vec(2);
+	e_out <= e_drive;	
+	
+	--	q_out <= '1' when (clock_state = 1 or clock_state = 3) else '0';
+   q_out <= state_vec(0) and not state_vec(2);
+
+	-- generate Zilog write strobe output from state value	
+	--	zw_out <= '1' when (clock_state = 2) else '0';
+	zw_out <= not state_vec(0) and state_vec(1) and not state_vec(2);
 	
 end behavior;		
 

@@ -1,4 +1,0 @@
-set tool_name "ModelSim-Altera (VHDL)"
-set corner_file_list {
-	{{"Slow Model"} {HD6309_glue_top.vho HD6309_glue_top_vhd.sdo}}
-}

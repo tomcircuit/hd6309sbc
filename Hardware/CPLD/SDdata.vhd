@@ -2,9 +2,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- SPI_DATA port at 0x230
+-- SD_DATA port (SPI master data port) 
+--
 --      7   6   5   4   3   2   1   0
 --    [D7][D6][D5][D4][D3][D2][D1][D0]
+--     rw  rw  rw  rw  rw  rw  rw  rw
+-- RST: 0   0   0   0   0   0   0   0
 --
 -- a WRITE starts a SPI transfer of the written data
 -- and reads in a new byte. a READ drives the read

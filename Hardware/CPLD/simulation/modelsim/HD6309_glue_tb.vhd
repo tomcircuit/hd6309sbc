@@ -144,7 +144,42 @@ begin
 	end process pb_gen;
 	
   stim : process is
-		begin
+		  
+	procedure internal_cyc is 
+	  begin
+        wait until ECLK'event and ECLK='0';
+        ALLADDR(15 downto 0) <= "1111111111111111";   -- an internal cycle
+       		  
+        wait until QCLK'event and QCLK='1';
+    		  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
+        RW <= '1';
+        DATA <= "ZZZZZZZZ";
+	end procedure internal_cyc;
+	
+	procedure write_cyc(waddress: in std_logic_vector(15 downto 0);
+	                       wdata : in std_logic_vector(7 downto 0)) is
+	   begin
+        wait until ECLK'event and ECLK='0';
+			  ALLADDR <= waddress;        
+			          
+        wait until QCLK'event and QCLK='1';
+			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
+        RW <= '0';
+        DATA <= wdata;
+  end procedure write_cyc;
+  
+	procedure read_cyc(raddress: in std_logic_vector(15 downto 0)) is
+	   begin
+        wait until ECLK'event and ECLK='0';
+			  ALLADDR <= raddress;        
+			          
+        wait until QCLK'event and QCLK='1';
+			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
+        RW <= '1';
+  end procedure read_cyc;
+
+  begin
+		  
       RESET <= '0';
   		  ADDR <= "1111111111111111";
   		  RW <= '1';
@@ -152,235 +187,99 @@ begin
 		  
 		  RESET <= '1';
 		  wait for 10 ns;
+
+  -- test each bigpage (x0000, x1000, x2000, etc.)
 		  
-      for address in 0 to 20 loop
-        
-        ALLADDR(15 downto 0) <= "1111111111111111";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111111";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111111";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
+--			for address in 0 to 15 loop
+--	      
+--	      internal_cyc;
+--	      internal_cyc;
+--	      read_cyc(std_logic_vector(to_unsigned(address, 4)) & "000000000000");
+--	      internal_cyc;
+--	      internal_cyc;
+--	      write_cyc(std_logic_vector(to_unsigned(address, 4)) & "000000000000", "11001010");
+--	      internal_cyc;
+--	      read_cyc(std_logic_vector(to_unsigned(address, 4)) & "000000000000");
+--
+--      end loop;        
+   
+   -- now test IO pages (0xE000, 0xE010, 0xE020...)
       
-        ALLADDR <= "0000001001010000";    -- a read of the port at 0x250
-        
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-        
-        ALLADDR(15 downto 0) <= "1111111111111111";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-        
-        ALLADDR(15 downto 0) <= "1111111111111110";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR <= "0000001000110000";    -- a write of the port at 0x230
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '0';
-        DATA <= "11001010";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111111";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-        
-        ALLADDR <= "0000001001010000";    -- a read of the port at 0x250
-        
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111110";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111110";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111110";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111110";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-        ALLADDR(15 downto 0) <= "1111111111111110";   -- an internal cycle
-           		  
-        wait until QCLK'event and QCLK='1';
-        
-			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
-        RW <= '1';
-        DATA <= "ZZZZZZZZ";
-        
-        wait until ECLK'event and ECLK='0';
-
-      end loop;        
-		  
---			for address in 0 to 48 loop
---
---			  ALLADDR <= std_logic_vector(to_unsigned(address*16,16));			 
---
---			  wait until QCLK'event and QCLK='1';
---			  
---			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
---			  
---      		--TEST 1 : address WRITE 
---			  RESET <= '1';
---			  RW <= '0';
---			  DATA <= "10101010";
---			  
---			  wait until QCLK'event and QCLK='1';
---			  
---			  --TEST 2 : address READ
---		    RESET <= '1';
---			  RW <= '1';
---			  DATA <= "ZZZZZZZZ";
---
---			end loop;
---			
---		  wait until QCLK'event and QCLK='1';
---
---      -- set ROMSEL to 1			  
---		  ADDR(15 downto 0) <= "0000001001000000";
---		  RESET <= '1';
---		  RW <= '0';
---		  DATA <= "00000001";
---			
---			for address in 0 to 127 loop
---
---			  ALLADDR <= std_logic_vector(to_unsigned(address*512,16));			 
---
---			  wait until QCLK'event and QCLK='1';
---			  
---			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
---			  
---      		--TEST 1 : address WRITE 
---			  RESET <= '1';
---			  RW <= '0';
---			  DATA <= "10101010";
---			  
---			  wait until QCLK'event and QCLK='1';
---			  
---			  --TEST 2 : address READ
---		    RESET <= '1';
---			  RW <= '1';
---			  DATA <= "ZZZZZZZZ";			  
---
---			end loop;
---			
---		  wait until QCLK'event and QCLK='1';
---
---      -- set ROMSEL to 0			  
---		  ADDR(15 downto 0) <= "0000001001000000";
---		  RESET <= '1';
---		  RW <= '0';
---		  DATA <= "00000000";
---			
---			for address in 0 to 127 loop
---
---			  ALLADDR <= std_logic_vector(to_unsigned(address*512,16));			 
---
---			  wait until QCLK'event and QCLK='1';
---			  
---			  ADDR(15 downto 0) <= ALLADDR(15 downto 0);
---			  
---      		--TEST 1 : address WRITE 
---			  RESET <= '1';
---			  RW <= '0';
---			  DATA <= "10101010";
---			  
---			  wait until QCLK'event and QCLK='1';
---			  
---			  --TEST 2 : address READ
---		    RESET <= '1';
---			  RW <= '1';
---			  DATA <= "ZZZZZZZZ";
---
+--      for address in 0 to 15 loop
+--        
+--        internal_cyc;
+--        internal_cyc;
+--        read_cyc(x"E0" & std_logic_vector(to_unsigned(address, 4)) & x"0");
+--        internal_cyc;
+--        internal_cyc;
+--        write_cyc(x"E0" & std_logic_vector(to_unsigned(address, 4)) & x"0","00001111");
+--        
 --			end loop;
 			
-			wait;
+	-- now test banked RAM
+
+--      internal_cyc;
+--
+--      -- test SET ROMSEL, ROMSEH
+--      write_cyc(x"E040",x"0E");
+--   
+--      internal_cyc;
+--      read_cyc(x"DB00");
+--      internal_cyc;
+--      write_cyc(x"DB00",x"11");
+--      internal_cyc;
+--      read_cyc(x"E800");
+--      internal_cyc;
+--      write_cyc(x"E800",x"11");      
+--      internal_cyc;
+--
+--      -- test CLEAR ROMSEL
+--      write_cyc(x"E040",x"0C");
+--   
+--      internal_cyc;
+--      read_cyc(x"DB00");
+--      internal_cyc;
+--      write_cyc(x"DB00",x"10");
+--      internal_cyc;
+--      read_cyc(x"E800");
+--      internal_cyc;
+--      write_cyc(x"E800",x"10");      
+--      internal_cyc;
+--
+--      -- test CLEAR ROMSEH
+--      write_cyc(x"E040",x"0A");
+--   
+--      internal_cyc;
+--      read_cyc(x"DB00");
+--      internal_cyc;
+--      write_cyc(x"DB00",x"01");
+--      internal_cyc;
+--      read_cyc(x"E800");
+--      internal_cyc;
+--      write_cyc(x"E800",x"01");      
+--      internal_cyc;
+--
+--      -- test CLEAR ROMSEH, ROMSEL
+--      write_cyc(x"E040",x"08");
+--   
+--      internal_cyc;
+--      read_cyc(x"DB00");
+--      internal_cyc;
+--      write_cyc(x"DB00",x"00");
+--      internal_cyc;
+--      read_cyc(x"E800");
+--      internal_cyc;
+--      write_cyc(x"E800",x"00");      
+--      internal_cyc;
+      
+  -- now test Pseudo Random generator
+  
+    for address in 1 to 257 loop
+      read_cyc(x"E060");
+      internal_cyc;
+    end loop;
 			
+		wait;
   end process stim;
 	
 end architecture;

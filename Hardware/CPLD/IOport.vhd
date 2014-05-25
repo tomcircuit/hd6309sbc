@@ -2,11 +2,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Input-Output port 
---       7     6      5      4    3   2    1     0
+-- Input-Output port for SD card interface, pushbutton, and LED's
+--
+--       7     6      5     4     3   2   1     0
 --    [SDSW][SDBSY][SDCLK][SDCS][PB][--][LED2][LED1]
---       I     I      O      O    I   X    O     O
---  all bits read, output bits readback
+--       r     r      rw    rw    r   r   rw    rw
+-- RST:  x     x      0     1     x   0   1     1
 
 entity IOport is
 	port(	reset : in std_logic;	-- global reset
@@ -25,7 +26,7 @@ end IOport;
 architecture behavior of IOport is
 	signal led_latch : std_logic_vector(1 downto 0); -- LED drive outputs
 	signal sdcs_latch, sdclk_latch : std_logic; -- SD CS control and SD clock select
-	signal busy_latch, switch_latch, button_latch : std_logic; -- synchronized inputs
+	signal switch_latch, button_latch : std_logic; -- synchronized inputs
 begin
 	process (reset,clock,data,button) begin
 		-- set all outputs upon reset
@@ -48,7 +49,6 @@ begin
 			if (cs_n = '1') then
 				button_latch <= button;
 				switch_latch <= sdswitch;
-				busy_latch <= sdbusy;
 			end if;
 		end if;
 	end process;
@@ -57,10 +57,13 @@ begin
 	dataq(1 downto 0) <= led_latch;
 	dataq(2) <= '0';
 	dataq(3) <= button_latch;	
+--	dataq(3) <= button;	
 	dataq(4) <= sdcs_latch;	
 	dataq(5) <= sdclk_latch;
-	dataq(6) <= busy_latch;
+--	dataq(6) <= busy_latch;
+	dataq(6) <= sdbusy;
 	dataq(7) <= switch_latch;	
+--	dataq(7) <= sdswitch;	
 	
 end behavior;		
 

@@ -1,10 +1,10 @@
 
-This set of design files implements the glue logic for the HD6309 Singleboard Computer v1.0
+This set of design files implements the glue logic for the HD6309 Singleboard Computer 
+
+CPLD VERSION v1.3
 
 Target device is Altera EPM7128SLI in 84 pin PLCC
-Development tool is Altera Quartus web edition
-
-
+Development tool is Altera Quartus web edition v11
 
 As present, all planned functions have been implemented:
 
@@ -13,20 +13,26 @@ As present, all planned functions have been implemented:
 	---> note; 1WS is nasty, because this will slow down all the 6309 "idle" cycles, also!
 		The power-on default is 1WS, in order to support slower EPROM devices at boot.
 		
-. all address decoding for on-chip and off-chip peripherals
+. SCC Ch A and Ch B baudrate clocks generated from 14.745 MHz oscillator
+		
+. Hardware SPI master* for SD card access
 
-. decoding of the uppermost 128bytes of the I/O page to an "AUXCS" signal ("spare" signal on schematic)
+. [new 1.3] SPI clocks (fast and slow) derived only from 24 MHz oscillator
 
-. hardware SPI master* for SD card access (chews up a lot of macrocells!)
+. [new 1.3] moved IO page to $E000-E1FF:
+            $E000=CIO, $E010=SCC, $E020=RTC, $E030=SD_DATA, $E040=SYS, $E050=CFG, $E060=VER
+		  $E070-$E1FF are undecoded space (for use by expansion card devices, for example)
 
-. test signal multiplexer for TP13 and TP14
+. [new 1.3] selectable EPROM 27C128/27C256 support (pin 27 defaults to state of CONFIG jumper at RESET)
 
-. selectable EEPROM/EPROM support (write-enable for EEPROM, RA14 for EPROM)
+. [new 1.3] CPLD version "register" at $E060 - returns $13
+
+. [new 1.3] removed test mux for TP11,12,13,14 pins - these are now fixed to echo SD card signals
 
 *Note that the hardware SPI was something that I found while casting about on the intarwebs.  
 SimpleSPI_M.vhd is copyright 2007 by Tom Scott, of Mission Technologies
 http://www.mission-technologies.org/read_article.php?subject=VHDL&id=14
-It works exactly as described, and so I was happy to include it, almost as-is, into my project.
+It works well, and so I was happy to include it, with relatively minor changes, into my project.
 
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
@@ -35,7 +41,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/
 
 HD6309 Singleboard Computer (SBC)
 Tom LeMense
-3/12/2014
+5/25/2014
 
 tlemense@yahoo.com
 @TomLeMense
