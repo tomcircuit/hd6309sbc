@@ -1,20 +1,20 @@
-; Extended MS BASIC with autostart ROM
+; Extended MS BASIC with autostart ROM 
 ;
 ; This is a derived work from that of Grant Searle.
 ; http://searle.hostei.com/grant/6809/Simple6809.html
 ;
 ; I have used Grant's 6809 Extended BASIC with very
 ; minimal adapations to port to hd6309 CPU or the
-; SBC hardware. For now, enjoy!
+; SBC hardware CPLD V1.3.
 ;
 ; target toolchain: lwtools lwasm ver 4.10 
 ;
-; tomcircuit 4/22/2014
+; tomcircuit 5/20/2014
 
-ZSCCAC    EQU  $C012          ; SCC channel A command
-ZSCCAD    EQU  $C013          ; SCC channel A data
-SYSCFG    EQU  $C040		; ROM WS, ROMSEL, and RA14 select
-IOPORT    EQU  $C050          ; SD card and LED control
+ZSCCAC    EQU  $E012          ; SCC channel A command
+ZSCCAD    EQU  $E013          ; SCC channel A data
+SYSCFG    EQU  $E040		; ROM WS, ROMSEL, ROMSEH, and RA14 select
+IOPORT    EQU  $E050          ; SD card and LED control
                                
 BS        EQU  8              BACKSPACE 
 LF        EQU  $A             LINEFEED
@@ -186,7 +186,7 @@ V_SWI     EQU  $FFFA
 V_NMI     EQU  $FFFC           
 V_RESET   EQU  $FFFE           
                                
-          ORG  $DB00           
+          ORG  $D000           
                                
 ; Wait for a keystroke from the console.
 KEYWAIT   BSR  KEYIN          ; GET A CHARACTER FROM CONSOLE IN 
@@ -235,10 +235,8 @@ WRWAIT    LDA  ZSCCAC         ; reset register pointer to WR0/RR0
                               
 RESVEC:
 LA00E     LDS  #LINBUF+LBUFMX+1 SET STACK TO TOP OF LINE INPUT BUFFER
-          LDA  #%00010000     ; turn off LED1 and LED2, disable SD card
-          STA  IOPORT
-		LDA	#%00000010	; make ROM 0WS, select ROM, set RA14 low
-		STA	SYSCFG
+	     AIM  %11111100,IOPORT  ; turn off LED1 and LED2
+		AIM  %11111110,SYSCFG  ; make ROM 0WS access
           JSR  SCCA_INIT      ;initialize SCC channel A
           LDA  RSTFLG         GET WARM START FLAG 
           CMPA #$55           IS IT A WARM START? 
@@ -252,8 +250,7 @@ LA00E     LDS  #LINBUF+LBUFMX+1 SET STACK TO TOP OF LINE INPUT BUFFER
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; COLD START ENTRY
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
-BACDST    LDA  #%00010011     ; turn ON LED1 and LED2
-          STA  IOPORT
+BACDST    OIM  %00010011,IOPORT   ; turn ON LED1 and LED2, disable SD card
           LDX  #PROGST+1      POINT X TO CLEAR 1ST 1K OF RAM 
 LA077     CLR  ,--X           MOVE POINTER DOWN TWO-CLEAR BYTE 
           LEAX 1,X            ADVANCE POINTER ONE 
@@ -303,12 +300,10 @@ L8031     STU  ,X++           STORE ‘FC’ ERROR AT USR ADDRESSES
 ; banner is visible, also.
 L8032     JSR  KEYIN
           BEQ  L8032
-          LDA  #%00010010     ; turn OFF LED1
-          STA  IOPORT		
+		AIM  %11111110,IOPORT  ; turn OFF LED1
 L8033     JSR  KEYIN
           BEQ  L8033
-          LDA  #%00010000     ; turn OFF LED2
-          STA  IOPORT		
+		AIM  %11111100,IOPORT  ; turn OFF LED1 and LED2
 ; OUTPUT THE WELCOME BANNER AT COLDSTART
           LDX  #LA147-1       POINT X TO COLOR BASIC COPYRIGHT MESSAGE 
           JSR  LB99C          PRINT ‘COLOR BASIC’ 
@@ -2497,6 +2492,7 @@ LB740     LDA  FP0SGN         GET SIGN OF FPA0 MANTISSA
           JSR  LBCC8          SHIFT BINARY POINT TO EXTREME RIGHT OF FPA0 
           LDX  FPA0+2         LOAD X WITH LOWER TWO BYTES OF FPA0 
           RTS                  
+
                                
 ; PEEK                         
 PEEK      BSR  LB740          CONVERT FPA0 TO INTEGER IN REGISTER X 
@@ -2508,7 +2504,30 @@ POKE      BSR  LB734          EVALUATE 2 EXPRESSIONS
           LDX  BINVAL         GET THE ADDRESS TO BE 'POKE'ED 
           STB  ,X             STORE THE DATA IN THAT ADDRESS 
           RTS                  
-                               
+
+;
+; SBC6309 V1.3 IO page begins at $E000
+;
+; Put some text here in the ROM about the build. This
+; isn't reachable from the 6309 CPU, but does appear
+; in the ROM when burned, so can be used for ID and
+; version information.
+;
+          ORG  $E000
+          
+          FCN  "Extended MS BASIC with autostart ROM"
+          FCN  "This is a derived work from that of \ Searle."
+          FCN  "http://searle.hostei.com/grant/6809/Simple6809.html"
+          FCC  "I have used Grant's 6809 Extended BASIC with very "
+          FCC  "minimal adapations to port to hd6309 CPU or the "
+          FCN  "SBC hardware. Requires SBC6309 CPLD V1.3!"
+          FCN  "target toolchain: lwtools lwasm ver 4.10"
+          FCN  "tomcircuit@gmail.com 5/25/2014"
+
+;
+; skip over SBC6309 V1.3 expansion page!
+;
+          ORG  $E200
                                
 ; LIST                         
 LIST      PSHS CC             SAVE ZERO FLAG ON STACK 
@@ -2798,6 +2817,7 @@ LB9AC     LDA  #SPACE         SPACE TO CONSOLE OUT
           FCB  SKP2           SKIP NEXT TWO BYTES 
 LB9AF     LDA  #'?            QUESTION MARK TO CONSOLE OUT 
 LB9B1     JMP  PUTCHR         JUMP TO CONSOLE OUT 
+
                                
 ; FLOATING POINT MATH PACKAGE                      
                                
@@ -5405,6 +5425,12 @@ L9281     DECA                * DECREMENT ZEROES COUNTER AND
           LDA  ,S+            RESTORE THE ZEROES COUNTER 
           BNE  L927B          BRANCH IF NOT DONE 
 L928E     RTS                  
+
+
+;
+; "LINE INPUT" is stupid, so the LINE token is prime takeover target
+; if a command needs to be added!
+;
                                
 ; LINE                         
 LINE      CMPA #TOK_INPUT     ‘INPUT’ TOKEN 
@@ -5436,7 +5462,7 @@ SCCA_TBL: FCB  $09,$80        ; Point to WR9; Reset Ch A
 
 ; Information about build
           FCB  0
-          FCC  "MICROSOFT BASIC FOR HD6309 SBC. BUILT APRIL 22, 2014"
+          FCC  "MICROSOFT BASIC FOR HD6309 SBC V1.3. BUILT MAY 20, 2014"
           FCB  0
                              
 ; END OF EXTENDED BASIC                      
