@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'XOSC'
+Slack : -22.500
+TNS   : -475.100
+
+Type  : Setup 'WOSC'
+Slack : -9.000
+TNS   : -27.000
+
+Type  : Hold 'XOSC'
+Slack : -7.500
+TNS   : -37.500
+
+Type  : Hold 'WOSC'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'XOSC'
+Slack : -3.500
+TNS   : -350.000
+
+Type  : Minimum Pulse Width 'WOSC'
+Slack : -3.500
+TNS   : -21.000
+
+------------------------------------------------------------

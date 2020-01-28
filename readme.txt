@@ -17,25 +17,27 @@ intended. The long-term goal is to make a companion card that mates with the sta
 stretch software-goal (NitrOS-9). Therefore, some sort of video display, keyboard
 interface, and perhaps some larger store of memory (and associated MMU). 
 
-Firmware wise, the short-term goal is a ROM monitor program. I've already ported the
-(excellent) Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot
-be redistributed. Instead, I work on a new monitor in the spirit of Motorola's ASSIST09.
-A longer-term goal is a ROM-resident BASIC interpreter. Here, I find no better candidate
-than Lee Davison's excellent ehBasic which exists for the 6502 and 68000. From the latter
-I think the 68K version is more suited to be adapted to the hd6303. Finally, the firm-
-ware stretch goal is to port NitrOS-9 operating system (level I) to the SBC. Here I am
-completely a noob; I've never used OS-9 at all, but it seems like a nice OS.
+Firmware wise, things are not quite as settled. For my own use I've ported the (excellent) 
+Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot
+be redistributed. What would be nice is a monitor in the spirit of Motorola's ASSIST09.
+Another firmware goal is a ROM-resident BASIC interpreter. Grant Searle to the rescue,
+who has dissected and commented 6809 MICROSOFT BASIC, which I've adapted to this SBC.
+The firmware stretch goal is some sort of operating system, such as NitrOS-9 operating 
+system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems 
+like a nice OS.
 
-At least...that's the plan right now...
+More up-to-date information on the SBC can be found on the Hackaday project page:
+https://hackaday.io/project/345-hd6309-singleboard-computer
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
 HD6309 Singleboard Computer (SBC)
 Tom LeMense
-3/12/2014
+1/28/2020
 
-tlemense@yahoo.com
+tomcircuit@gmail.com
 @TomLeMense
+
 
 		

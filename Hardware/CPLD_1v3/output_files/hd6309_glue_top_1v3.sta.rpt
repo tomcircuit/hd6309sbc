@@ -1,0 +1,1239 @@
+TimeQuest Timing Analyzer report for hd6309_glue_top_1v3
+Fri Jan 10 07:28:48 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'XOSC'
+ 12. Setup: 'WOSC'
+ 13. Hold: 'XOSC'
+ 14. Hold: 'WOSC'
+ 15. Minimum Pulse Width: 'XOSC'
+ 16. Minimum Pulse Width: 'WOSC'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Output Enable Times
+ 24. Minimum Output Enable Times
+ 25. Output Disable Times
+ 26. Minimum Output Disable Times
+ 27. Setup Transfers
+ 28. Hold Transfers
+ 29. Report TCCS
+ 30. Report RSKM
+ 31. Unconstrained Paths
+ 32. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; hd6309_glue_top_1v3                                               ;
+; Device Family      ; MAX7000S                                                          ;
+; Device Name        ; EPM7128SLC84-10                                                   ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                           ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; WOSC       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { WOSC } ;
+; XOSC       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { XOSC } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 21.74 MHz ; 21.74 MHz       ; XOSC       ;      ;
+; 100.0 MHz ; 100.0 MHz       ; WOSC       ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Setup Summary                   ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; XOSC  ; -22.500 ; -439.100      ;
+; WOSC  ; -9.000  ; -27.000       ;
++-------+---------+---------------+
+
+
++--------------------------------+
+; Hold Summary                   ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; XOSC  ; -7.500 ; -37.500       ;
+; WOSC  ; 5.000  ; 0.000         ;
++-------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; XOSC  ; -3.500 ; -322.000      ;
+; WOSC  ; -3.500 ; -21.000       ;
++-------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'XOSC'                                                                                                                                                                                               ;
++---------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -22.500 ; simpleSPI_M:SPI_MASTER|SS                                    ; SDdata:SD_PORT|upd_latch                                     ; XOSC         ; XOSC        ; 0.500        ; -13.000    ; 8.000      ;
+; -14.800 ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 13.800     ;
+; -14.800 ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 13.800     ;
+; -14.000 ; cpuclock:CPU_CLOCK|clock_state[2]                            ; sysport:SYS_PORT|romp27_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 13.000     ;
+; -14.000 ; cpuclock:CPU_CLOCK|clock_state[1]                            ; sysport:SYS_PORT|romp27_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 13.000     ;
+; -10.600 ; simpleSPI_M:SPI_MASTER|state.state_bit_1                     ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 9.600      ;
+; -10.600 ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 9.600      ;
+; -9.800  ; cpuclock:CPU_CLOCK|clock_state[0]                            ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.800  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.800  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.800  ; sysport:SYS_PORT|romseh_latch                                ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.800  ; sysport:SYS_PORT|romws_latch                                 ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.800  ; simpleSPI_M:SPI_MASTER|index[2]                              ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.800  ; simpleSPI_M:SPI_MASTER|index[1]                              ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.800  ; simpleSPI_M:SPI_MASTER|index[0]                              ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
+; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|pre_cnt                                   ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[0]                            ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[0]                            ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|d_e_out                                   ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|d_e_out                                   ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; sysport:SYS_PORT|romseh_latch                                ; sysport:SYS_PORT|romseh_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; sysport:SYS_PORT|romseh_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; sysport:SYS_PORT|romseh_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; sysport:SYS_PORT|romws_latch                                 ; sysport:SYS_PORT|romws_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; sysport:SYS_PORT|romws_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; sysport:SYS_PORT|romws_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; IOport:IO_PORT|led_latch[1]                                  ; IOport:IO_PORT|led_latch[1]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|led_latch[1]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|led_latch[1]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; sysport:SYS_PORT|romsel_latch                                ; sysport:SYS_PORT|romsel_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; sysport:SYS_PORT|romsel_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; sysport:SYS_PORT|romsel_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; sysport:SYS_PORT|romsel_latch                                ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; IOport:IO_PORT|sdclk_latch                                   ; IOport:IO_PORT|sdclk_latch                                   ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|sdclk_latch                                   ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|sdclk_latch                                   ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|upd_latch                                     ; SDdata:SD_PORT|upd_latch                                     ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|upd_latch                                     ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|upd_latch                                     ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; IOport:IO_PORT|led_latch[0]                                  ; IOport:IO_PORT|led_latch[0]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|led_latch[0]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|led_latch[0]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; IOport:IO_PORT|button_latch                                  ; IOport:IO_PORT|button_latch                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; sysport:SYS_PORT|config_latch                                ; sysport:SYS_PORT|config_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; IOport:IO_PORT|sdcs_latch                                    ; IOport:IO_PORT|sdcs_latch                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|sdcs_latch                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|sdcs_latch                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; IOport:IO_PORT|switch_latch                                  ; IOport:IO_PORT|switch_latch                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[5]                                    ; SDdata:SD_PORT|d_latch[5]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[5]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[5]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[7]                                    ; SDdata:SD_PORT|d_latch[7]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[7]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[7]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[6]                                    ; SDdata:SD_PORT|d_latch[6]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[6]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[6]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[4]                                    ; SDdata:SD_PORT|d_latch[4]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[4]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[4]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[2]                                    ; SDdata:SD_PORT|d_latch[2]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[2]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[2]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[0]                                    ; SDdata:SD_PORT|d_latch[0]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[0]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[0]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[3]                                    ; SDdata:SD_PORT|d_latch[3]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[3]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[3]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[1]                                    ; SDdata:SD_PORT|d_latch[1]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[1]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[1]                                    ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_1                     ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_1                     ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|index[0]                              ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|index[2]                              ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|index[1]                              ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|index[1]                              ; simpleSPI_M:SPI_MASTER|index[1]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ; simpleSPI_M:SPI_MASTER|index[1]                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
++---------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'WOSC'                                                                                                                                                                                                                                ;
++--------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                     ; To Node                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -9.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; WOSC         ; WOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; WOSC         ; WOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; WOSC         ; WOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; WOSC         ; WOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; WOSC         ; WOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; WOSC         ; WOSC        ; 1.000        ; 0.000      ; 8.000      ;
++--------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'XOSC'                                                                                                                                                                                               ;
++--------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -7.500 ; SDdata:SD_PORT|upd_latch                                     ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -7.500 ; SDdata:SD_PORT|upd_latch                                     ; simpleSPI_M:SPI_MASTER|index[1]                              ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -7.500 ; SDdata:SD_PORT|upd_latch                                     ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -7.500 ; SDdata:SD_PORT|upd_latch                                     ; simpleSPI_M:SPI_MASTER|index[2]                              ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -7.500 ; SDdata:SD_PORT|d_latch[6]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -7.500 ; SDdata:SD_PORT|d_latch[4]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -7.500 ; SDdata:SD_PORT|d_latch[5]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -7.500 ; SDdata:SD_PORT|d_latch[7]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.000      ;
+; -6.700 ; SDdata:SD_PORT|d_latch[2]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.800      ;
+; -6.700 ; SDdata:SD_PORT|d_latch[0]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.800      ;
+; -6.700 ; SDdata:SD_PORT|d_latch[1]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.800      ;
+; -6.700 ; SDdata:SD_PORT|d_latch[3]                                    ; simpleSPI_M:SPI_MASTER|MOSI_v                                ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.800      ;
+; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|pre_cnt                                   ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[0]                            ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|clock_state[0]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[0]                            ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|clock_state[1]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|d_e_out                                   ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|d_e_out                                   ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|romseh_latch                                ; sysport:SYS_PORT|romseh_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; sysport:SYS_PORT|romseh_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; sysport:SYS_PORT|romseh_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|romws_latch                                 ; sysport:SYS_PORT|romws_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; sysport:SYS_PORT|romws_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; sysport:SYS_PORT|romws_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; IOport:IO_PORT|led_latch[1]                                  ; IOport:IO_PORT|led_latch[1]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|led_latch[1]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|led_latch[1]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|romsel_latch                                ; sysport:SYS_PORT|romsel_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; sysport:SYS_PORT|romsel_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; sysport:SYS_PORT|romsel_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|romseh_latch                                ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|romws_latch                                 ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[0]                            ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                   ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|romsel_latch                                ; cpuclock:CPU_CLOCK|clock_state[2]                            ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; IOport:IO_PORT|sdclk_latch                                   ; IOport:IO_PORT|sdclk_latch                                   ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|sdclk_latch                                   ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|sdclk_latch                                   ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|upd_latch                                     ; SDdata:SD_PORT|upd_latch                                     ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|upd_latch                                     ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|upd_latch                                     ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; IOport:IO_PORT|led_latch[0]                                  ; IOport:IO_PORT|led_latch[0]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|led_latch[0]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|led_latch[0]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; IOport:IO_PORT|button_latch                                  ; IOport:IO_PORT|button_latch                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|config_latch                                ; sysport:SYS_PORT|config_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; IOport:IO_PORT|sdcs_latch                                    ; IOport:IO_PORT|sdcs_latch                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; IOport:IO_PORT|sdcs_latch                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; IOport:IO_PORT|sdcs_latch                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; IOport:IO_PORT|switch_latch                                  ; IOport:IO_PORT|switch_latch                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[5]                                    ; SDdata:SD_PORT|d_latch[5]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[5]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[5]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[7]                                    ; SDdata:SD_PORT|d_latch[7]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[7]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[7]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[6]                                    ; SDdata:SD_PORT|d_latch[6]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[6]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[6]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[4]                                    ; SDdata:SD_PORT|d_latch[4]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[4]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[4]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[2]                                    ; SDdata:SD_PORT|d_latch[2]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[2]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[2]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[0]                                    ; SDdata:SD_PORT|d_latch[0]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[0]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[0]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[3]                                    ; SDdata:SD_PORT|d_latch[3]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[3]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[3]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[1]                                    ; SDdata:SD_PORT|d_latch[1]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                            ; SDdata:SD_PORT|d_latch[1]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                            ; SDdata:SD_PORT|d_latch[1]                                    ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_1                     ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_1                     ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|index[0]                              ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|index[2]                              ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; simpleSPI_M:SPI_MASTER|index[1]                              ; simpleSPI_M:SPI_MASTER|index[0]                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
++--------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'WOSC'                                                                                                                                                                                                                                ;
++-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                     ; To Node                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 5.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; WOSC         ; WOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; WOSC         ; WOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; WOSC         ; WOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; WOSC         ; WOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; WOSC         ; WOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ; WOSC         ; WOSC        ; 0.000        ; 0.000      ; 8.000      ;
++-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'XOSC'                                                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; IOport:IO_PORT|button_latch                                  ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; IOport:IO_PORT|button_latch                                  ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; IOport:IO_PORT|led_latch[0]                                  ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; IOport:IO_PORT|led_latch[0]                                  ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; IOport:IO_PORT|led_latch[1]                                  ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; IOport:IO_PORT|led_latch[1]                                  ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; IOport:IO_PORT|sdclk_latch                                   ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; IOport:IO_PORT|sdclk_latch                                   ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; IOport:IO_PORT|sdcs_latch                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; IOport:IO_PORT|sdcs_latch                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; IOport:IO_PORT|switch_latch                                  ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; IOport:IO_PORT|switch_latch                                  ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[0]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[0]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[1]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[1]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[2]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[2]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[3]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[3]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[4]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[4]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[5]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[5]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[6]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[6]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[7]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|d_latch[7]                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; SDdata:SD_PORT|upd_latch                                     ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; SDdata:SD_PORT|upd_latch                                     ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[0] ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[1] ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[2] ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; count4:SPI_CLK_DIV|lpm_counter:LPM_COUNTER_component|dffs[3] ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|clock_state[0]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|clock_state[0]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|clock_state[1]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|clock_state[1]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|clock_state[2]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|clock_state[2]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|d_e_out                                   ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|d_e_out                                   ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|pre_cnt                                   ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; cpuclock:CPU_CLOCK|pre_cnt                                   ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[0]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[0]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[1]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[1]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[2]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[2]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[3]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[3]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[4]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[4]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[5]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[5]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[6]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[6]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[7]                            ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|DataRxd[7]                            ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|MOSI_v                                ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|MOSI_v                                ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|SCLK                                  ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|SCLK                                  ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|SS                                    ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|SS                                    ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|index[0]                              ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|index[0]                              ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|index[1]                              ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|index[1]                              ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|index[2]                              ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|index[2]                              ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|state.state_bit_0                     ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|state.state_bit_1                     ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|state.state_bit_1                     ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Fall       ; simpleSPI_M:SPI_MASTER|state.state_bit_2                     ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; sysport:SYS_PORT|config_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; sysport:SYS_PORT|config_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; sysport:SYS_PORT|romp27_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; sysport:SYS_PORT|romp27_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; sysport:SYS_PORT|romseh_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; sysport:SYS_PORT|romseh_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; sysport:SYS_PORT|romsel_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; sysport:SYS_PORT|romsel_latch                                ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; XOSC  ; Rise       ; sysport:SYS_PORT|romws_latch                                 ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; XOSC  ; Rise       ; sysport:SYS_PORT|romws_latch                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; XOSC  ; Rise       ; CPU_CLOCK|clock_state[0]|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; XOSC  ; Rise       ; CPU_CLOCK|clock_state[0]|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; XOSC  ; Rise       ; CPU_CLOCK|clock_state[1]|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; XOSC  ; Rise       ; CPU_CLOCK|clock_state[1]|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; XOSC  ; Rise       ; CPU_CLOCK|clock_state[2]|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; XOSC  ; Rise       ; CPU_CLOCK|clock_state[2]|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; XOSC  ; Rise       ; CPU_CLOCK|d_e_out|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; XOSC  ; Rise       ; CPU_CLOCK|d_e_out|clk                                        ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'WOSC'                                                                                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------+
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; WOSC  ; Rise       ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; WOSC  ; Rise       ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[0] ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; WOSC  ; Rise       ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; WOSC  ; Rise       ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[1] ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; WOSC  ; Rise       ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; WOSC  ; Rise       ; baudclock:BAUD_CLOCK|count3:counter|lpm_counter:LPM_COUNTER_component|dffs[2] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; WOSC  ; Rise       ; BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[0]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; WOSC  ; Rise       ; BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[0]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; WOSC  ; Rise       ; BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[1]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; WOSC  ; Rise       ; BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[1]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; WOSC  ; Rise       ; BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; WOSC  ; Rise       ; BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; WOSC  ; Rise       ; WOSC|dataout                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; WOSC  ; Rise       ; WOSC|dataout                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR[*]   ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[4]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  ADDR[5]  ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[6]  ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[7]  ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[8]  ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[9]  ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[10] ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[11] ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[12] ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[13] ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[14] ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+;  ADDR[15] ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+; CONF      ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+; DATA[*]   ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+; PBTN      ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+; RESET     ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+; RW        ; XOSC       ; 7.800  ; 7.800  ; Rise       ; XOSC            ;
+; SDSW      ; XOSC       ; 7.000  ; 7.000  ; Rise       ; XOSC            ;
+; RESET     ; XOSC       ; -6.000 ; -6.000 ; Fall       ; XOSC            ;
+; SDDI      ; XOSC       ; -6.000 ; -6.000 ; Fall       ; XOSC            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR[*]   ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[4]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[5]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[6]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[7]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[8]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[9]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[10] ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[11] ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[12] ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[13] ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[14] ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  ADDR[15] ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+; CONF      ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+; DATA[*]   ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+; PBTN      ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+; RESET     ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+; RW        ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+; SDSW      ; XOSC       ; -2.000 ; -2.000 ; Rise       ; XOSC            ;
+; RESET     ; XOSC       ; 11.000 ; 11.000 ; Fall       ; XOSC            ;
+; SDDI      ; XOSC       ; 11.000 ; 11.000 ; Fall       ; XOSC            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ACLK      ; WOSC       ; 5.000  ; 5.000  ; Rise       ; WOSC            ;
+; BCLK      ; WOSC       ; 5.000  ; 5.000  ; Rise       ; WOSC            ;
+; DATA[*]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; ECLK      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; LED[*]    ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  LED[0]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  LED[1]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  LED[2]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; QCLK      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; RAM2CS    ; XOSC       ; 23.400 ; 23.400 ; Rise       ; XOSC            ;
+; ROMCS     ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; ROMP27    ; XOSC       ; 5.000  ; 5.000  ; Rise       ; XOSC            ;
+; SDCS      ; XOSC       ; 5.000  ; 5.000  ; Rise       ; XOSC            ;
+; TP13      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; WR        ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; ZWR       ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; DATA[*]   ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+; SDCK      ; XOSC       ; 18.000 ; 18.000 ; Fall       ; XOSC            ;
+; SDDO      ; XOSC       ; 18.000 ; 18.000 ; Fall       ; XOSC            ;
+; TP11      ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+; TP14      ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ACLK      ; WOSC       ; 5.000  ; 5.000  ; Rise       ; WOSC            ;
+; BCLK      ; WOSC       ; 5.000  ; 5.000  ; Rise       ; WOSC            ;
+; DATA[*]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; ECLK      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; LED[*]    ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  LED[0]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  LED[1]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  LED[2]   ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; QCLK      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; RAM2CS    ; XOSC       ; 21.000 ; 21.000 ; Rise       ; XOSC            ;
+; ROMCS     ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; ROMP27    ; XOSC       ; 5.000  ; 5.000  ; Rise       ; XOSC            ;
+; SDCS      ; XOSC       ; 5.000  ; 5.000  ; Rise       ; XOSC            ;
+; TP13      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; WR        ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; ZWR       ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+; DATA[*]   ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+; SDCK      ; XOSC       ; 18.000 ; 18.000 ; Fall       ; XOSC            ;
+; SDDO      ; XOSC       ; 18.000 ; 18.000 ; Fall       ; XOSC            ;
+; TP11      ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+; TP14      ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; ADDR[4]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[4]    ; DATA[0]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[4]    ; DATA[1]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[4]    ; DATA[2]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[4]    ; DATA[3]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[4]    ; DATA[4]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[4]    ; DATA[5]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[4]    ; DATA[6]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[4]    ; DATA[7]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[4]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[4]    ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[5]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[5]    ; DATA[0]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[1]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[2]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[3]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[4]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[5]    ; DATA[5]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[5]    ; DATA[6]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[5]    ; DATA[7]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[5]    ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[5]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[6]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[6]    ; DATA[0]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[1]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[2]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[3]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[4]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[6]    ; DATA[5]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[6]    ; DATA[6]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[6]    ; DATA[7]     ; 24.500 ; 24.500 ; 24.500 ; 24.500 ;
+; ADDR[6]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[6]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[7]    ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[7]    ; DATA[2]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[7]    ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[7]    ; DATA[4]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[7]    ; DATA[5]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[7]    ; DATA[6]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[7]    ; DATA[7]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[7]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[8]    ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[8]    ; DATA[2]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[8]    ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[8]    ; DATA[4]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[8]    ; DATA[5]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[8]    ; DATA[6]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[8]    ; DATA[7]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[8]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[9]    ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[9]    ; DATA[2]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[9]    ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[9]    ; DATA[4]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[9]    ; DATA[5]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[9]    ; DATA[6]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[9]    ; DATA[7]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[9]    ; RAM2CS      ; 18.000 ;        ;        ; 18.000 ;
+; ADDR[9]    ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[9]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[10]   ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[10]   ; DATA[2]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[10]   ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[10]   ; DATA[4]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[10]   ; DATA[5]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[10]   ; DATA[6]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[10]   ; DATA[7]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[10]   ; RAM2CS      ; 19.600 ;        ;        ; 19.600 ;
+; ADDR[10]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[10]   ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[11]   ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[11]   ; DATA[2]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[11]   ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[11]   ; DATA[4]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[11]   ; DATA[5]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[11]   ; DATA[6]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[11]   ; DATA[7]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[11]   ; RAM2CS      ; 19.600 ;        ;        ; 19.600 ;
+; ADDR[11]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[11]   ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[12]   ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[12]   ; DATA[2]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[12]   ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
+; ADDR[12]   ; DATA[4]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[12]   ; DATA[5]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[12]   ; DATA[6]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[12]   ; DATA[7]     ; 24.500 ; 10.000 ; 10.000 ; 24.500 ;
+; ADDR[12]   ; RAM2CS      ; 19.600 ;        ;        ; 19.600 ;
+; ADDR[12]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[12]   ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[13]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[13]   ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[13]   ; DATA[2]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[13]   ; DATA[3]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[13]   ; DATA[4]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[13]   ; DATA[5]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[13]   ; DATA[6]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[13]   ; DATA[7]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[13]   ; RAM2CS      ; 18.800 ; 20.400 ; 20.400 ; 18.800 ;
+; ADDR[13]   ; ROMCS       ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[13]   ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[14]   ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[14]   ; DATA[2]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[14]   ; DATA[3]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[14]   ; DATA[4]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[14]   ; DATA[5]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[14]   ; DATA[6]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[14]   ; DATA[7]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[14]   ; RAM2CS      ;        ; 18.000 ; 18.000 ;        ;
+; ADDR[14]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[15]   ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[15]   ; DATA[2]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[15]   ; DATA[3]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[15]   ; DATA[4]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[15]   ; DATA[5]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[15]   ; DATA[6]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[15]   ; DATA[7]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[15]   ; RAM1CS      ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[15]   ; RAM2CS      ; 20.400 ;        ;        ; 20.400 ;
+; ADDR[15]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
+; RESET      ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
+; RESET      ; DATA[2]     ; 16.500 ;        ;        ; 16.500 ;
+; RESET      ; DATA[3]     ; 16.500 ;        ;        ; 16.500 ;
+; RESET      ; DATA[4]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RESET      ; DATA[5]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RESET      ; DATA[6]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RESET      ; DATA[7]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RESET      ; LED[0]      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; LED[1]      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; LED[2]      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; RAM1CS      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; RAM2CS      ; 20.400 ;        ;        ; 20.400 ;
+; RESET      ; RD          ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; WR          ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; ZRD         ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; ZWR         ;        ; 10.000 ; 10.000 ;        ;
+; RW         ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
+; RW         ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
+; RW         ; DATA[2]     ; 16.500 ;        ;        ; 16.500 ;
+; RW         ; DATA[3]     ; 16.500 ;        ;        ; 16.500 ;
+; RW         ; DATA[4]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RW         ; DATA[5]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RW         ; DATA[6]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RW         ; DATA[7]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; RW         ; RAM2CS      ;        ; 20.400 ; 20.400 ;        ;
+; RW         ; RD          ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; WR          ;        ; 10.000 ; 10.000 ;        ;
+; RW         ; ZRD         ;        ; 10.000 ; 10.000 ;        ;
+; RW         ; ZWR         ;        ; 10.000 ; 10.000 ;        ;
+; SDDI       ; TP12        ; 10.000 ;        ;        ; 10.000 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; ADDR[4]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[4]    ; DATA[0]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[4]    ; DATA[1]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[4]    ; DATA[2]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[4]    ; DATA[3]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[4]    ; DATA[4]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[4]    ; DATA[5]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[4]    ; DATA[6]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[4]    ; DATA[7]     ; 10.000 ; 24.500 ; 24.500 ; 10.000 ;
+; ADDR[4]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[4]    ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[5]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[5]    ; DATA[0]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; DATA[1]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; DATA[2]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; DATA[3]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; DATA[4]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; DATA[5]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; DATA[6]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; DATA[7]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[5]    ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[5]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[6]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[6]    ; DATA[0]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[1]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[2]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[3]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[4]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[5]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[6]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[7]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[6]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; DATA[2]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; DATA[4]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[7]    ; DATA[5]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[7]    ; DATA[6]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[7]    ; DATA[7]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[7]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[7]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; DATA[2]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; DATA[4]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[8]    ; DATA[5]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[8]    ; DATA[6]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[8]    ; DATA[7]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[8]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[8]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; DATA[2]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; DATA[4]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[9]    ; DATA[5]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[9]    ; DATA[6]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[9]    ; DATA[7]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[9]    ; RAM2CS      ; 18.000 ;        ;        ; 18.000 ;
+; ADDR[9]    ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[9]    ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[9]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; DATA[2]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; DATA[4]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[10]   ; DATA[5]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[10]   ; DATA[6]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[10]   ; DATA[7]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[10]   ; RAM2CS      ; 18.800 ;        ;        ; 18.800 ;
+; ADDR[10]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[10]   ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[10]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; DATA[2]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; DATA[4]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[11]   ; DATA[5]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[11]   ; DATA[6]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[11]   ; DATA[7]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[11]   ; RAM2CS      ; 18.800 ;        ;        ; 18.800 ;
+; ADDR[11]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[11]   ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[11]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; DATA[2]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; DATA[4]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[12]   ; DATA[5]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[12]   ; DATA[6]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[12]   ; DATA[7]     ; 21.500 ; 10.000 ; 10.000 ; 21.500 ;
+; ADDR[12]   ; RAM2CS      ; 18.800 ;        ;        ; 18.800 ;
+; ADDR[12]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[12]   ; RTCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[12]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[13]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; DATA[2]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; DATA[3]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; DATA[4]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[13]   ; DATA[5]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[13]   ; DATA[6]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[13]   ; DATA[7]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[13]   ; RAM2CS      ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
+; ADDR[13]   ; ROMCS       ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[13]   ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[13]   ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; DATA[2]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; DATA[3]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; DATA[4]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[14]   ; DATA[5]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[14]   ; DATA[6]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[14]   ; DATA[7]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[14]   ; RAM2CS      ;        ; 18.000 ; 18.000 ;        ;
+; ADDR[14]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[14]   ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; DATA[2]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; DATA[3]     ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; DATA[4]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[15]   ; DATA[5]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[15]   ; DATA[6]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[15]   ; DATA[7]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; ADDR[15]   ; RAM1CS      ;        ; 10.000 ; 10.000 ;        ;
+; ADDR[15]   ; RAM2CS      ; 18.000 ;        ;        ; 18.000 ;
+; ADDR[15]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; ADDR[15]   ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; DATA[2]     ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; DATA[3]     ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; DATA[4]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RESET      ; DATA[5]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RESET      ; DATA[6]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RESET      ; DATA[7]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RESET      ; LED[0]      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; LED[1]      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; LED[2]      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; RAM1CS      ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; RAM2CS      ; 18.000 ;        ;        ; 18.000 ;
+; RESET      ; RD          ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; RTCCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; WR          ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; ZRD         ; 10.000 ;        ;        ; 10.000 ;
+; RESET      ; ZWR         ;        ; 10.000 ; 10.000 ;        ;
+; RW         ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; DATA[2]     ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; DATA[3]     ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; DATA[4]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RW         ; DATA[5]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RW         ; DATA[6]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RW         ; DATA[7]     ; 10.000 ; 21.500 ; 21.500 ; 10.000 ;
+; RW         ; RAM2CS      ;        ; 18.000 ; 18.000 ;        ;
+; RW         ; RD          ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
+; RW         ; WR          ;        ; 10.000 ; 10.000 ;        ;
+; RW         ; ZRD         ;        ; 10.000 ; 10.000 ;        ;
+; RW         ; ZWR         ;        ; 10.000 ; 10.000 ;        ;
+; SDDI       ; TP12        ; 10.000 ;        ;        ; 10.000 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------------------+
+; Output Enable Times                                                   ;
++-----------+------------+--------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+------+------------+-----------------+
+; DATA[*]   ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
++-----------+------------+--------+------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Output Enable Times                                           ;
++-----------+------------+--------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+------+------------+-----------------+
+; DATA[*]   ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 19.500 ;      ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 27.500 ;      ; Rise       ; XOSC            ;
++-----------+------------+--------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; DATA[*]   ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; DATA[*]   ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[0]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[3]  ; XOSC       ; 19.500    ;           ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 27.500    ;           ; Rise       ; XOSC            ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; WOSC       ; WOSC     ; 6        ; 0        ; 0        ; 0        ;
+; XOSC       ; XOSC     ; 212      ; 1        ; 12       ; 231      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; WOSC       ; WOSC     ; 6        ; 0        ; 0        ; 0        ;
+; XOSC       ; XOSC     ; 212      ; 1        ; 12       ; 231      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 26    ; 26   ;
+; Unconstrained Input Port Paths  ; 537   ; 537  ;
+; Unconstrained Output Ports      ; 33    ; 33   ;
+; Unconstrained Output Port Paths ; 238   ; 238  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jan 10 07:28:46 2020
+Info: Command: quartus_sta HD6309_glue_top -c hd6309_glue_top_1v3
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Warning (335095): TimeQuest Timing Analyzer does not support the analysis of latches as synchronous elements for the currently selected device family.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'hd6309_glue_top_1v3.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name XOSC XOSC
+    Info (332105): create_clock -period 1.000 -name WOSC WOSC
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -22.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -22.500      -439.100 XOSC 
+    Info (332119):    -9.000       -27.000 WOSC 
+Info (332146): Worst-case hold slack is -7.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -7.500       -37.500 XOSC 
+    Info (332119):     5.000         0.000 WOSC 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.500      -322.000 XOSC 
+    Info (332119):    -3.500       -21.000 WOSC 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 383 megabytes
+    Info: Processing ended: Fri Jan 10 07:28:48 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

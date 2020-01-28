@@ -1,0 +1,9 @@
+Fitter Status : Successful - Fri Jan 10 07:28:43 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : hd6309_glue_top_1v3
+Top-level Entity Name : HD6309_glue_top
+Family : MAX7000S
+Device : EPM7128SLC84-10
+Timing Models : Final
+Total macrocells : 87 / 128 ( 68 % )
+Total pins : 59 / 68 ( 87 % )

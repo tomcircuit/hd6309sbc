@@ -1,0 +1,91 @@
+Archive Project report for hd6309_glue_top_1v3
+Sun May 25 19:18:41 2014
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Sun May 25 19:18:41 2014 ;
+; Revision Name          ; hd6309_glue_top_1v3                   ;
+; Top-level Entity Name  ; HD6309_glue_top                       ;
+; Family                 ; MAX7000S                              ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'G:/HD6309_sbc/Hardware/CPLD/HD6309_glue_top_1v3.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'hd6309_glue_top_1v3.archive.rpt'
+Info: Evaluation of Tcl script c:/altera/11.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 190 megabytes
+    Info: Processing ended: Sun May 25 19:18:42 2014
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++----------------------------------------------------------------+
+; Files Archived                                                 ;
++----------------------------------------------------------------+
+; File Name                                                      ;
++----------------------------------------------------------------+
+; baudclock.vhd                                                  ;
+; count3.cmp                                                     ;
+; count3.qip                                                     ;
+; count3.vhd                                                     ;
+; count4.cmp                                                     ;
+; count4.qip                                                     ;
+; count4.vhd                                                     ;
+; cpuclock.vhd                                                   ;
+; decode.vhd                                                     ;
+; HD6309_glue_top.qpf                                            ;
+; HD6309_glue_top.qsf                                            ;
+; HD6309_glue_top.vhd                                            ;
+; hd6309_glue_top_1v3.qsf                                        ;
+; HD6309_glue_top_assignment_defaults.qdf                        ;
+; incremental_db/compiled_partitions/hd6309_glue_top_1v3.db_info ;
+; IOport.vhd                                                     ;
+; SDdata.vhd                                                     ;
+; simpleSPI_M.vhd                                                ;
+; SYSport.vhd                                                    ;
++----------------------------------------------------------------+
+
+
