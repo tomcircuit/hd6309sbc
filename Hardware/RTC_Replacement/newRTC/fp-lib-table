@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name newRTC)(type KiCad)(uri ${KIPRJMOD}/newRTC.pretty)(options "")(descr ""))
+)

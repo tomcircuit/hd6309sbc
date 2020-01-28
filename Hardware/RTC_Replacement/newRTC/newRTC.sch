@@ -1,0 +1,268 @@
+EESchema Schematic File Version 4
+LIBS:newRTC-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR05
+U 1 1 5E23D9C4
+P 2600 2950
+F 0 "#PWR05" H 2600 2700 50  0001 C CNN
+F 1 "GND" H 2605 2777 50  0000 C CNN
+F 2 "" H 2600 2950 50  0001 C CNN
+F 3 "" H 2600 2950 50  0001 C CNN
+	1    2600 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2950 2600 2800
+Wire Wire Line
+	2600 2800 2850 2800
+Wire Wire Line
+	2850 2100 2300 2100
+Text Label 2300 2100 0    50   ~ 0
+FOUT
+Wire Wire Line
+	2850 2200 2300 2200
+Text Label 2300 2200 0    50   ~ 0
+~NMI
+Wire Wire Line
+	3350 2000 3600 2000
+Wire Wire Line
+	3350 2100 3600 2100
+Wire Wire Line
+	3350 2200 3900 2200
+Wire Wire Line
+	3350 2300 3900 2300
+Wire Wire Line
+	2300 2000 2850 2000
+Text Label 2300 2000 0    50   ~ 0
+SCL
+Text Label 3900 2100 2    50   ~ 0
+VBAT
+Text Label 3900 2200 2    50   ~ 0
+SDA
+Text Label 3900 2300 2    50   ~ 0
+~RESET
+$Comp
+L power:+4V #PWR03
+U 1 1 5E23ECAC
+P 3600 1850
+F 0 "#PWR03" H 3600 1700 50  0001 C CNN
+F 1 "+4V" H 3615 2023 50  0000 C CNN
+F 2 "" H 3600 1850 50  0001 C CNN
+F 3 "" H 3600 1850 50  0001 C CNN
+	1    3600 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2000 3600 1850
+$Comp
+L Timer_RTC:DS3232M U1
+U 1 1 5E23FCCE
+P 6000 2400
+F 0 "U1" H 6350 2850 50  0000 C CNN
+F 1 "DS3232M" H 6250 2750 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6050 1900 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS3232M.pdf" H 6270 2550 50  0001 C CNN
+	1    6000 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2200 6500 2200
+Text Label 7250 2200 2    50   ~ 0
+FOUT
+Wire Wire Line
+	7250 2500 6900 2500
+Text Label 7250 2500 2    50   ~ 0
+~NMI
+Wire Wire Line
+	4650 2200 4950 2200
+Text Label 4650 2200 0    50   ~ 0
+SCL
+$Comp
+L power:GND #PWR07
+U 1 1 5E2412F7
+P 6000 2950
+F 0 "#PWR07" H 6000 2700 50  0001 C CNN
+F 1 "GND" H 6005 2777 50  0000 C CNN
+F 2 "" H 6000 2950 50  0001 C CNN
+F 3 "" H 6000 2950 50  0001 C CNN
+	1    6000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2950 6000 2800
+$Comp
+L power:+4V #PWR04
+U 1 1 5E243A68
+P 6000 1850
+F 0 "#PWR04" H 6000 1700 50  0001 C CNN
+F 1 "+4V" H 6015 2023 50  0000 C CNN
+F 2 "" H 6000 1850 50  0001 C CNN
+F 3 "" H 6000 1850 50  0001 C CNN
+	1    6000 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2000 6000 1850
+Text Label 5600 1900 0    50   ~ 0
+VBAT
+Wire Wire Line
+	5900 1900 5900 2000
+Wire Wire Line
+	5600 1900 5900 1900
+$Comp
+L power:+4V #PWR01
+U 1 1 5E244D79
+P 4950 1500
+F 0 "#PWR01" H 4950 1350 50  0001 C CNN
+F 1 "+4V" H 4965 1673 50  0000 C CNN
+F 2 "" H 4950 1500 50  0001 C CNN
+F 3 "" H 4950 1500 50  0001 C CNN
+	1    4950 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1650 4950 1500
+$Comp
+L power:+4V #PWR02
+U 1 1 5E2450B3
+P 5250 1500
+F 0 "#PWR02" H 5250 1350 50  0001 C CNN
+F 1 "+4V" H 5265 1673 50  0000 C CNN
+F 2 "" H 5250 1500 50  0001 C CNN
+F 3 "" H 5250 1500 50  0001 C CNN
+	1    5250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1650 5250 1500
+$Comp
+L Device:R_US R1
+U 1 1 5E2458FE
+P 4950 1800
+F 0 "R1" H 5018 1846 50  0000 L CNN
+F 1 "3.3K" H 5018 1755 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4990 1790 50  0001 C CNN
+F 3 "~" H 4950 1800 50  0001 C CNN
+	1    4950 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1950 4950 2200
+Connection ~ 4950 2200
+Wire Wire Line
+	4950 2200 5500 2200
+$Comp
+L Device:R_US R2
+U 1 1 5E247D59
+P 5250 1800
+F 0 "R2" H 5318 1846 50  0000 L CNN
+F 1 "3.3K" H 5318 1755 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5290 1790 50  0001 C CNN
+F 3 "~" H 5250 1800 50  0001 C CNN
+	1    5250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1950 5250 2300
+Text Label 4650 2300 0    50   ~ 0
+SDA
+Connection ~ 5250 2300
+Wire Wire Line
+	5250 2300 4650 2300
+Wire Wire Line
+	5250 2300 5500 2300
+Wire Wire Line
+	4650 2600 5100 2600
+Wire Wire Line
+	5400 2600 5500 2600
+Text Label 4650 2600 0    50   ~ 0
+~RESET
+$Comp
+L power:GND #PWR06
+U 1 1 5E24B148
+P 3600 2950
+F 0 "#PWR06" H 3600 2700 50  0001 C CNN
+F 1 "GND" H 3605 2777 50  0000 C CNN
+F 2 "" H 3600 2950 50  0001 C CNN
+F 3 "" H 3600 2950 50  0001 C CNN
+	1    3600 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2950 3600 2800
+$Comp
+L Device:C C1
+U 1 1 5E24C6D3
+P 3600 2650
+F 0 "C1" H 3715 2696 50  0000 L CNN
+F 1 "1uF" H 3715 2605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3638 2500 50  0001 C CNN
+F 3 "~" H 3600 2650 50  0001 C CNN
+	1    3600 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2100 3600 2500
+Connection ~ 3600 2100
+Wire Wire Line
+	3600 2100 3900 2100
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 5E24DFDA
+P 5250 2600
+F 0 "JP2" H 5250 2805 50  0000 C CNN
+F 1 "RTC RESET" H 5250 2714 50  0000 C CNN
+F 2 "Connectors:GS2" H 5250 2600 50  0001 C CNN
+F 3 "~" H 5250 2600 50  0001 C CNN
+	1    5250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5E24E9BF
+P 6750 2500
+F 0 "JP1" H 6750 2705 50  0000 C CNN
+F 1 "RTC NMI" H 6750 2614 50  0000 C CNN
+F 2 "Connectors:GS2" H 6750 2500 50  0001 C CNN
+F 3 "~" H 6750 2500 50  0001 C CNN
+	1    6750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2500 6600 2500
+NoConn ~ 3350 2800
+$Comp
+L Connector_Generic:Conn_02x09_Counter_Clockwise H1
+U 1 1 5E246465
+P 3050 2400
+F 0 "H1" H 3100 3017 50  0000 C CNN
+F 1 "RTC DIP Header" H 3100 2926 50  0000 C CNN
+F 2 "newRTC:RTC-DIP-Header" H 3050 2400 50  0001 C CNN
+F 3 "~" H 3050 2400 50  0001 C CNN
+	1    3050 2400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3350 2400
+NoConn ~ 3350 2500
+NoConn ~ 3350 2600
+NoConn ~ 3350 2700
+NoConn ~ 2850 2300
+NoConn ~ 2850 2400
+NoConn ~ 2850 2500
+NoConn ~ 2850 2600
+NoConn ~ 2850 2700
+$EndSCHEMATC
