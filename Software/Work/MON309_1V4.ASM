@@ -2902,13 +2902,45 @@ USTAT	LDA	SCCAC		; reset register pointer to WR0/RR0
 
 ; I2C low-level routines
 
+;I2CPORT	EQU	IOPAGE+$20	;soft I2C port
+;I2C.DSCK EQU $80
+;I2C.DSDA EQU $40
+;I2C.MSCK EQU $08
+;I2C.MSDA EQU $04
+
+
 // interface primitives
 #define sI2C_SetSDAHigh		SDADataPort |= ( SDAMask )
+SetSDAHigh MACRO NOEXPAND
+		OIM	  #I2C.DSDA,I2CPORT		;I2C_SetSDAHigh
+ENDM
+	
 #define sI2C_SetSDALow		SDADataPort &= ~( SDAMask )
+SetSDALow MACRO NOEXPAND
+		AIM   #~I2C.DSDA,I2CPORT	;I2C_SetSDALow
+ENDM
+
 #define sI2C_SDAStatus		(( SDADataPort & ( SDAMask )) != 0)
+SDAStatus MACRO NOEXPAND
+		TIM   #I2C.MSDA,I2CPORT		;I2C_SDAStatus (Z = 1 if SDA is low)
+ENDM
+
 #define sI2C_SetSCLHigh		SCLDataPort |= ( SCLMask )
+SetSCLHigh MACRO NOEXPAND
+		OIM	  #I2C.DSCK,I2CPORT		;I2C_SetSCLKigh
+ENDM
+
 #define sI2C_SetSCLLow		SCLDataPort &= ~( SCLMask )
+SetSCLLow MACRO NOEXPAND
+		AIM   #~I2C.DSCK,I2CPORT	;I2C_SetSCKLow
+ENDM
+
 #define sI2C_SCLStatus		(( SCLDataPort & ( SCLMask )) != 0)
+SCLStatus MACRO NOEXPAND
+		TIM   #I2C.MSCK,I2CPORT		;I2C_SCKStatus (Z = 1 if SCK is low)
+ENDM
+
+
 
 // I2C status flags
 #define sI2C_fSuccess		0
@@ -2919,111 +2951,129 @@ USTAT	LDA	SCCAC		; reset register pointer to WR0/RR0
 #define sI2C_ACKNOWLEDGE	1
 #define sI2C_NOTACKNOWLEDGE	0
 
-char sI2C_Initialize(void)
-{
-	sI2C_SetSDAHigh;
-	sI2C_SetSCLHigh;
-}
+;; I2C_Initialize - set SCL and SDA high
+I2C_Initialize
+		SetSDAHigh		;I2C_SetSDAHigh
+		SetSCKHigh		;I2C_SetSCKHigh
+		RTS
 
-// sI2C_SetClkHigh - sends SCL pin high and waits for any clock stretching peripherals. 
+;; I2C_SetClkHigh - sends SCL pin high and waits for any clock stretching peripherals. 
+;	while (!sI2C_SCLStatus)
+;	{
+;		_nop_();		
+;		_nop_();		
+;		sI2C_SetSCLHigh;
+;		_nop_();
+;	}
+I2C_SetClkHigh
+		NOP
+		NOP
+		SetSCKHigh      ; try to release SCK
+		NOP
+		NOP
+		SCKStatus 		; check is SCK is really high yet
+		BEQ	  SetClkHigh   
+		RTS
 
-void sI2C_SetClkHigh(void)
-{
-	while (!sI2C_SCLStatus)
-	{
-		_nop_();		
-		_nop_();		
-		sI2C_SetSCLHigh;
-		_nop_();
-	}
-}
+;; I2C_BitDelay - insures minimum high and low clock times on I2C bus. 
+I2C_BitDelay
+		NOP
+		NOP
+		NOP
+		NOP
+		NOP
+		NOP
+        RTS                                                               
 
-// sI2C_BitDelay - insures minimum high and low clock times on I2C bus. 
+;; I2C_SendStop - send a STOP condition
+;	sI2C_SetSDALow;			// Get SDA ready for stop
+;	sI2C_SetClkHigh();		// Set Clock for stop
+;	sI2C_BitDelay();
+;	sI2C_SetSDAHigh;		// Send I2C stop
+;	sI2C_BitDelay();
+I2C_SendStop
+    	SetSDALow
+		BSR	 SetClkHigh
+		BSR  I2C_BitDelay
+		SetSDAHigh
+		BRA  I2C_BitDelay
 
-void sI2C_BitDelay(void)
-{
-	{
-		_nop_();
-		_nop_();
-		_nop_();
-		_nop_();
+;; I2C_SendByte - sends one byte of data to an I2C slave device and check for Slave ACK
+;{
+;	char stat;
+;	unsigned char mask, i;
+;	mask = 0x80;				// start at MSB
+;	
+;	for(i=0; i<8; i++)			// send one byte of data
+;	{
+;		if (wrbyte & mask)		// examine bit under mask
+;			sI2C_SetSDAHigh;	// bit to send is 1, bring SDA high
+;		else
+;			sI2C_SetSDALow;		// bit to send is 0, bring SDA low
+;
+;		sI2C_SetClkHigh();		// bring SCL high at beginning of bit
+;		sI2C_BitDelay();
+;		sI2C_SetSCLLow;			// bring SCL low to clock in data
+;		sI2C_BitDelay();
+;		mask = mask >> 1;		// move from MSB -> LSB
+;	}
+;	stat = sI2C_SendNAK();		// Master NAK allows check for Slave ACK	
+;	return stat;
+;}
+;;char I2C_SendByte(accumulator A)
+I2C_SendByte
+		PUSHS	A,X
+		LDX		#8
+?SB0	SetSDAHigh
+		TSTA
+		BPL		?SB1
+		SetSTALow
+?SB1	BSR		I2C_SetClkHigh
+		BSR		I2C_BitDelay
+		SetSCLLow
+		BSR		I2C_BitDelay
+		LSLA
+		LEAX	-1,X
+		BNE		?SB0
+		PULS	A,X
+		RTS
 
-		_nop_();
-		_nop_();
-		_nop_();
-		_nop_();
+;; sI2C_RcvByte - receives one byte of data from an I2C slave device
+;{
+;	unsigned char mask,rdata,i;
+;	rdata=0;
+;	mask = 0x80;
+;
+;	sI2C_SDAInput;				// make DIR an input so reading can take place
+;
+;	for(i=0; i<8; i++)			// read one byte of data
+;	{
+;		sI2C_SetClkHigh();		// read one data bit
+;		sI2C_BitDelay();
+;		if ( sI2C_SDAStatus )		// get data bit from SDA pin
+;			rdata |= mask;		// set masked bit in received byte if SDA is high
+;
+;		sI2C_SetSCLLow;			// clear SCL pin to end bit
+;		sI2C_BitDelay();
+;		mask = mask >> 1;		// move from MSB -> LSB
+;	}
+;
+;	sI2C_SDAOutput;
+;	if (sendack == 0)
+;		sI2C_SendNAK();
+;	else
+;		sI2C_SendACK();
+;
+;	return rdata;
+;}
+;;accumulator B <- sI2C_RcvByte(sendack in CC.C)
+I2C_RcvByte
+		PUSHS	A,X
+		TFR		CC,B		; copy CCR to B (to save carry bit)
+		
 
-		_nop_();
-		_nop_();
-		_nop_();
-		_nop_();
-	}
-}
 
-void sI2C_SendStop()
-{
-	sI2C_SetSDALow;			// Get SDA ready for stop
-	sI2C_SetClkHigh();		// Set Clock for stop
-	sI2C_BitDelay();
-	sI2C_SetSDAHigh;		// Send I2C stop
-	sI2C_BitDelay();
-}
 
-// sI2C_SendByte - sends one byte of data to an I2C slave device and check for Slave ACK
-
-char sI2C_SendByte(unsigned char wrbyte)
-{
-	char stat;
-	unsigned char mask, i;
-	mask = 0x80;				// start at MSB
-	
-	for(i=0; i<8; i++)			// send one byte of data
-	{
-		if (wrbyte & mask)		// examine bit under mask
-			sI2C_SetSDAHigh;	// bit to send is 1, bring SDA high
-		else
-			sI2C_SetSDALow;		// bit to send is 0, bring SDA low
-
-		sI2C_SetClkHigh();		// bring SCL high at beginning of bit
-		sI2C_BitDelay();
-		sI2C_SetSCLLow;			// bring SCL low to clock in data
-		sI2C_BitDelay();
-		mask = mask >> 1;		// move from MSB -> LSB
-	}
-	stat = sI2C_SendNAK();		// Master NAK allows check for Slave ACK	
-	return stat;
-}
-
-// sI2C_RcvByte - receives one byte of data from an I2C slave device
-
-unsigned char sI2C_RcvByte(unsigned char sendack)
-{
-	unsigned char mask,rdata,i;
-	rdata=0;
-	mask = 0x80;
-
-	sI2C_SDAInput;				// make DIR an input so reading can take place
-
-	for(i=0; i<8; i++)			// read one byte of data
-	{
-		sI2C_SetClkHigh();		// read one data bit
-		sI2C_BitDelay();
-		if ( sI2C_SDAStatus )		// get data bit from SDA pin
-			rdata |= mask;		// set masked bit in received byte if SDA is high
-
-		sI2C_SetSCLLow;			// clear SCL pin to end bit
-		sI2C_BitDelay();
-		mask = mask >> 1;		// move from MSB -> LSB
-	}
-
-	sI2C_SDAOutput;
-	if (sendack == 0)
-		sI2C_SendNAK();
-	else
-		sI2C_SendACK();
-
-	return rdata;
-}
 
 // sI2C_SendNAK - send a NotAcknowlege from Master (also, check for Slave ACK)
 
