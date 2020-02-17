@@ -2909,70 +2909,62 @@ USTAT	LDA	SCCAC		; reset register pointer to WR0/RR0
 ;I2C.MSDA EQU $04
 
 
-// interface primitives
-#define sI2C_SetSDAHigh		SDADataPort |= ( SDAMask )
-SetSDAHigh MACRO NOEXPAND
-		OIM	  #I2C.DSDA,I2CPORT		;I2C_SetSDAHigh
-ENDM
-	
-#define sI2C_SetSDALow		SDADataPort &= ~( SDAMask )
-SetSDALow MACRO NOEXPAND
-		AIM   #~I2C.DSDA,I2CPORT	;I2C_SetSDALow
-ENDM
+;; interface primitives
 
-#define sI2C_SDAStatus		(( SDADataPort & ( SDAMask )) != 0)
-SDAStatus MACRO NOEXPAND
+;define sI2C_SDAStatus		(( SDADataPort & ( SDAMask )) != 0)
+SDAStatus MACRO 
 		TIM   #I2C.MSDA,I2CPORT		;I2C_SDAStatus (Z = 1 if SDA is low)
 ENDM
 
-#define sI2C_SetSCLHigh		SCLDataPort |= ( SCLMask )
-SetSCLHigh MACRO NOEXPAND
-		OIM	  #I2C.DSCK,I2CPORT		;I2C_SetSCLKigh
+;define sI2C_SetSDAHigh		SDADataPort |= ( SDAMask )
+SetSDAHigh MACRO 
+		OIM	  #I2C.DSDA,I2CPORT		;I2C_SetSDAHigh
+ENDM
+	
+;define sI2C_SetSDALow		SDADataPort &= ~( SDAMask )
+SetSDALow MACRO 
+		AIM   #~I2C.DSDA,I2CPORT	;I2C_SetSDALow
 ENDM
 
-#define sI2C_SetSCLLow		SCLDataPort &= ~( SCLMask )
-SetSCLLow MACRO NOEXPAND
-		AIM   #~I2C.DSCK,I2CPORT	;I2C_SetSCKLow
-ENDM
-
-#define sI2C_SCLStatus		(( SCLDataPort & ( SCLMask )) != 0)
-SCLStatus MACRO NOEXPAND
+;define sI2C_SCLStatus		(( SCLDataPort & ( SCLMask )) != 0)
+SCLStatus MACRO 
 		TIM   #I2C.MSCK,I2CPORT		;I2C_SCKStatus (Z = 1 if SCK is low)
 ENDM
 
+;define sI2C_SetSCLHigh		SCLDataPort |= ( SCLMask )
+SetSCLHigh MACRO 
+		OIM	  #I2C.DSCK,I2CPORT		;I2C_SetSCLKigh
+ENDM
 
+;define sI2C_SetSCLLow		SCLDataPort &= ~( SCLMask )
+SetSCLLow MACRO 
+		AIM   #~I2C.DSCK,I2CPORT	;I2C_SetSCKLow
+ENDM
 
-// I2C status flags
-#define sI2C_fSuccess		0
-#define sI2C_fNoSlaveAck	1
-#define sI2C_fBusError		2
+;macro to set SCL high with clock stretching
+StretchSCLHigh MACRO 
+SSH0	NOP
+		NOP
+		SetSCKHigh      ; try to release SCK
+		NOP
+		NOP
+		SCLStatus 		; check is SCK is really high yet
+		BEQ	  SSH0
+ENDM
 
-// EERead Acknowledge Constants
-#define sI2C_ACKNOWLEDGE	1
-#define sI2C_NOTACKNOWLEDGE	0
+;; I2C status flags
+I2C_fSuccess	EQU	0
+I2C_fNoSlaveAck EQU 1
+I2C_fBusError	EQU	2
+
+;; EERead Acknowledge Constants
+I2C_ACKNOWLEDGE EQU	1
+I2C_NOTACKNOWLEDGE EQU	0
 
 ;; I2C_Initialize - set SCL and SDA high
 I2C_Initialize
 		SetSDAHigh		;I2C_SetSDAHigh
 		SetSCKHigh		;I2C_SetSCKHigh
-		RTS
-
-;; I2C_SetClkHigh - sends SCL pin high and waits for any clock stretching peripherals. 
-;	while (!sI2C_SCLStatus)
-;	{
-;		_nop_();		
-;		_nop_();		
-;		sI2C_SetSCLHigh;
-;		_nop_();
-;	}
-I2C_SetClkHigh
-		NOP
-		NOP
-		SetSCKHigh      ; try to release SCK
-		NOP
-		NOP
-		SCKStatus 		; check is SCK is really high yet
-		BEQ	  SetClkHigh   
 		RTS
 
 ;; I2C_BitDelay - insures minimum high and low clock times on I2C bus. 
@@ -2993,7 +2985,7 @@ I2C_BitDelay
 ;	sI2C_BitDelay();
 I2C_SendStop
     	SetSDALow
-		BSR	 SetClkHigh
+		StetchSCLHigh
 		BSR  I2C_BitDelay
 		SetSDAHigh
 		BRA  I2C_BitDelay
@@ -3028,7 +3020,7 @@ I2C_SendByte
 		TSTA
 		BPL		?SB1
 		SetSTALow
-?SB1	BSR		I2C_SetClkHigh
+?SB1	StretchSCLHigh
 		BSR		I2C_BitDelay
 		SetSCLLow
 		BSR		I2C_BitDelay
@@ -3036,6 +3028,10 @@ I2C_SendByte
 		LEAX	-1,X
 		BNE		?SB0
 		PULS	A,X
+		
+;	stat = sI2C_SendNAK();		// Master NAK allows check for Slave ACK	
+;	return stat;
+		
 		RTS
 
 ;; sI2C_RcvByte - receives one byte of data from an I2C slave device
