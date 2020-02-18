@@ -2884,7 +2884,7 @@ USTAT	LDA	SCCAC		; reset register pointer to WR0/RR0
 ; READ MULTI   == [START], 0xD0 ADDR, [ack], <REG ADDR>, [ack], [START], 0xD1 ADDR, [ack], <read data>, [ACK], <read data>, [ACK], ... [STOP]
 ; WRITE MULTI  == [START], 0xD0 ADDR, [ack], <REG ADDR>, [ack], <WRITE DATA>, [ack], <WRITE DATA>, [ack], ... [STOP]
 
-; best strategy is probably to allocate a 16 BYTE RAM buffer of time & date that is loaded via MULTI READ r0-r6:
+; best strategy is probably to allocate a 16 BYTE RAM buffer of time & date that is loaded via I2C_ReadMany
 ; B0 = BCD seconds 00-59 [ 0  40S 20S 10S 8S 4S 2S 1S ]
 ; B1 = BCD minutes 00-59 [ 0  40M 20M 10M 8S 4S 2S 1S ]
 ; B2 = BCD hours   00-23 [ 0  ~24 20H 10H 8H 4H 2H 1H ]   ~24 == 0
@@ -2903,53 +2903,55 @@ USTAT	LDA	SCCAC		; reset register pointer to WR0/RR0
 ; I2C low-level routines
 
 ;I2CPORT	EQU	IOPAGE+$20	;soft I2C port
-;I2C.DSCK EQU $80
-;I2C.DSDA EQU $40
-;I2C.MSCK EQU $08
-;I2C.MSDA EQU $04
+I2C.DSCL EQU $80
+I2C.DSDA EQU $40
+I2C.MSCL EQU $08
+I2C.MSDA EQU $04
 
+;; I2C interface primitives - hardware dependent
 
-;; interface primitives
-
-;define sI2C_SDAStatus		(( SDADataPort & ( SDAMask )) != 0)
-SDAStatus MACRO 
+;;define sI2C_SDAStatus		(( SDADataPort & ( SDAMask )) != 0)
+I2C_SDAStatus MACRO 
 		TIM   #I2C.MSDA,I2CPORT		;I2C_SDAStatus (Z = 1 if SDA is low)
 ENDM
 
-;define sI2C_SetSDAHigh		SDADataPort |= ( SDAMask )
-SetSDAHigh MACRO 
-		OIM	  #I2C.DSDA,I2CPORT		;I2C_SetSDAHigh
-ENDM
-	
-;define sI2C_SetSDALow		SDADataPort &= ~( SDAMask )
-SetSDALow MACRO 
+;;define sI2C_SetSDALow		SDADataPort &= ~( SDAMask )
+I2C_SetSDALow MACRO 
 		AIM   #~I2C.DSDA,I2CPORT	;I2C_SetSDALow
 ENDM
 
-;define sI2C_SCLStatus		(( SCLDataPort & ( SCLMask )) != 0)
-SCLStatus MACRO 
-		TIM   #I2C.MSCK,I2CPORT		;I2C_SCKStatus (Z = 1 if SCK is low)
+;;define sI2C_SetSDAHigh		SDADataPort |= ( SDAMask )
+I2C_SetSDAHigh MACRO 
+		OIM	  #I2C.DSDA,I2CPORT		;I2C_SetSDAHigh
+ENDM
+	
+;;define sI2C_SCLStatus		(( SCLDataPort & ( SCLMask )) != 0)
+I2C_SCLStatus MACRO 
+		TIM   #I2C.MSCL,I2CPORT		;I2C_SCKStatus (Z = 1 if SCK is low)
 ENDM
 
-;define sI2C_SetSCLHigh		SCLDataPort |= ( SCLMask )
-SetSCLHigh MACRO 
-		OIM	  #I2C.DSCK,I2CPORT		;I2C_SetSCLKigh
+;;define sI2C_SetSCLLow		SCLDataPort &= ~( SCLMask )
+I2C_SetSCLLow MACRO 
+		AIM   #~I2C.DSCL,I2CPORT	;I2C_SetSCLLow
 ENDM
 
-;define sI2C_SetSCLLow		SCLDataPort &= ~( SCLMask )
-SetSCLLow MACRO 
-		AIM   #~I2C.DSCK,I2CPORT	;I2C_SetSCKLow
+;;define sI2C_SetSCLHigh		SCLDataPort |= ( SCLMask )
+I2C_SetSCLHigh MACRO 
+		OIM	  #I2C.DSCL,I2CPORT		;I2C_SetSCLHigh
 ENDM
 
-;macro to set SCL high with clock stretching
-StretchSCLHigh MACRO 
+;;macro to release SCL and SDA
+I2C_SetBothHigh MACRO
+		OIM	  #(I2C.DSCL+I2C.DSDA),I2CPORT		;set both SDA and SCL high
+ENDM
+
+;;macro to set SCL high with clock stretching
+I2C_StretchSCLHigh MACRO 
 SSH0	NOP
+		SetSCLHigh      ; try to release SCL
 		NOP
-		SetSCKHigh      ; try to release SCK
-		NOP
-		NOP
-		SCLStatus 		; check is SCK is really high yet
-		BEQ	  SSH0
+		SCLStatus 		; check is SCL is really high yet
+		BEQ	  SSH0		; if Z set, SCL is still low -> try again
 ENDM
 
 ;; I2C status flags
@@ -2961,13 +2963,9 @@ I2C_fBusError	EQU	2
 I2C_ACKNOWLEDGE EQU	1
 I2C_NOTACKNOWLEDGE EQU	0
 
-;; I2C_Initialize - set SCL and SDA high
-I2C_Initialize
-		SetSDAHigh		;I2C_SetSDAHigh
-		SetSCKHigh		;I2C_SetSCKHigh
-		RTS
-
-;; I2C_BitDelay - insures minimum high and low clock times on I2C bus. 
+;; I2C_BitDelay - ensures minimum high and low clock times on I2C bus. 
+;; no input parameters
+;; no return value
 I2C_BitDelay
 		NOP
 		NOP
@@ -2976,310 +2974,205 @@ I2C_BitDelay
 		NOP
 		NOP
         RTS                                                               
+		
+		
+		
+		
 
 ;; I2C_SendStop - send a STOP condition
-;	sI2C_SetSDALow;			// Get SDA ready for stop
-;	sI2C_SetClkHigh();		// Set Clock for stop
-;	sI2C_BitDelay();
-;	sI2C_SetSDAHigh;		// Send I2C stop
-;	sI2C_BitDelay();
+;; no input parameters
+;; no return value
 I2C_SendStop
-    	SetSDALow
-		StetchSCLHigh
+    	I2C_SetSDALow
+		I2C_StetchSCLHigh
 		BSR  I2C_BitDelay
-		SetSDAHigh
-		BRA  I2C_BitDelay
+		I2C_SetSDAHigh
+		BRA  I2C_BitDelay		; return via I2C_BitDelay
 
 ;; I2C_SendByte - sends one byte of data to an I2C slave device and check for Slave ACK
-;{
-;	char stat;
-;	unsigned char mask, i;
-;	mask = 0x80;				// start at MSB
-;	
-;	for(i=0; i<8; i++)			// send one byte of data
-;	{
-;		if (wrbyte & mask)		// examine bit under mask
-;			sI2C_SetSDAHigh;	// bit to send is 1, bring SDA high
-;		else
-;			sI2C_SetSDALow;		// bit to send is 0, bring SDA low
-;
-;		sI2C_SetClkHigh();		// bring SCL high at beginning of bit
-;		sI2C_BitDelay();
-;		sI2C_SetSCLLow;			// bring SCL low to clock in data
-;		sI2C_BitDelay();
-;		mask = mask >> 1;		// move from MSB -> LSB
-;	}
-;	stat = sI2C_SendNAK();		// Master NAK allows check for Slave ACK	
-;	return stat;
-;}
-;;char I2C_SendByte(accumulator A)
+;; inputs: A = byte to send to slave
+;; return: A = byte sent to slave, Z = 1 if slave ACK
 I2C_SendByte
-		PUSHS	A,X
-		LDX		#8
-?SB0	SetSDAHigh
-		TSTA
-		BPL		?SB1
-		SetSTALow
-?SB1	StretchSCLHigh
-		BSR		I2C_BitDelay
-		SetSCLLow
-		BSR		I2C_BitDelay
-		LSLA
-		LEAX	-1,X
-		BNE		?SB0
-		PULS	A,X
-		
-;	stat = sI2C_SendNAK();		// Master NAK allows check for Slave ACK	
-;	return stat;
-		
+		PSHS	A,X				; preserve ACC A and X
+		LDX		#8				; init X as loop counter
+?SB0	SetSDAHigh				; assume data bit is '1'
+		TSTA					; examine ACC A bits
+		BMI		?SB1			; if MSB is clear (positive value)...
+		SetSTALow				; clear data bit to '0'
+?SB1	StretchSCLHigh			; release SCL, wait for stretch
+		BSR		I2C_BitDelay	; half-bit delay
+		SetSCLLow				; drive SCL low
+		BSR		I2C_BitDelay	; half-bit delay
+		LSLA					; shift ACC A to expose next bit to send
+		LEAX	-1,X			; decrement loop counter
+		BNE		?SB0			; loop back until all bits are sent
+		PULS	A,X             ; restore ACC A and X
+		I2C_SDAStatus			; get ACK/NAK status into Z
 		RTS
 
 ;; sI2C_RcvByte - receives one byte of data from an I2C slave device
-;{
-;	unsigned char mask,rdata,i;
-;	rdata=0;
-;	mask = 0x80;
-;
-;	sI2C_SDAInput;				// make DIR an input so reading can take place
-;
-;	for(i=0; i<8; i++)			// read one byte of data
-;	{
-;		sI2C_SetClkHigh();		// read one data bit
-;		sI2C_BitDelay();
-;		if ( sI2C_SDAStatus )		// get data bit from SDA pin
-;			rdata |= mask;		// set masked bit in received byte if SDA is high
-;
-;		sI2C_SetSCLLow;			// clear SCL pin to end bit
-;		sI2C_BitDelay();
-;		mask = mask >> 1;		// move from MSB -> LSB
-;	}
-;
-;	sI2C_SDAOutput;
-;	if (sendack == 0)
-;		sI2C_SendNAK();
-;	else
-;		sI2C_SendACK();
-;
-;	return rdata;
-;}
-;;accumulator B <- sI2C_RcvByte(sendack in CC.C)
+;; inputs: A = 0 --> NAK, otherwise ACK
+;; return: A = byte received from slave
 I2C_RcvByte
-		PUSHS	A,X
-		TFR		CC,B		; copy CCR to B (to save carry bit)
+		PSHS	B,X				; preserve B and X
+		TFR		A,B				; copy ACC A to B (to save ACK/NAK status)
+		LDX		#8				; init X as loop counter
+		CLRA					; clear A before shifting in bits		
+?RB0	I2C_StretchSCLHigh		; release SCL, wait for stretch
+		BSR		I2C_BitDelay	; half-bit delay
+		I2C_SDAStatus			; check SDA pin (Z = 1 if low)
+		BEQ		?RB1			; if SDA is low, leave ACC A alone
+		ORA		#$80			; otherwise, set MSB
+?RB1	I2C_SetSCLLow			; clear SCL to end bit		
+		BSR		I2C_BitDelay	; half-bit delay
+		LEAX	-1,X			; decrement loop counter
+		BNE		?RB0			; loop back until all bits are received
+		TSTB					; examine B (to determine ACK/NAK status)
+		PULS	B,X				; restore B and X (no flags affected)
+		BEQ		I2C_SendNAK		; if input parameter was zero, send a NAK
+								; fall into I2C_SendACK
+
+;; I2C_SendACK - send an Acknowlege from Master
+;; inputs: none
+;; return: Z = 1
+I2C_SendACK
+		I2C_SetSDALow			; assert SDA for MASTER ACK
+		BRA		I2C_SN1			; otherwise same as sending NAK
+
+;; I2C_SendNAK - send a NotAcknowlege from Master (also, check for Slave ACK)
+;; inputs: none
+;; return: ACK/NAK status in Z (Z = 1 if slave ACK)
+I2C_SendNAK
+		I2C_SetSDAHigh			; release SDA line for MASTER NAK / or query slave ACK
+I2C_SN1	I2C_StretchSCLHigh		; send clock for NAK
+		BSR		I2C_BitDelay	; half-bit delay
+		I2C_SDAStatus			; reflect SDA status in Z
+		I2C_SetSCLLow			; finish teh NAK bit
+		BRA		I2C_BitDelay	; return through half-bit delay
+
+;; I2C_GoMaster - sends an I2C start and slave address and check for acknowledge
+;; inputs: A = slave address A[7:1] + R/W A[0]
+;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError (if SDA stuck low)
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+I2C_GoMaster
+		I2C_SetBothHigh			; release SDA and SCL
+		BSR		I2C_BitDelay	; allow SDA to float high
+		I2C_SDAStatus			; check SDA state
+		BNE		?GMBERR			; if SDA is still low, return with fBusError
+		I2C_SetSDALow			; begin I2C START by bringing SDA low first
+		BSR		I2C_BitDelay	; half-bit delay		
+		I2C_SetSCLLow			; complete I2C START by bringing SCL low
+		BSR		I2C_BitDelay	; half-bit delay
+		BSR		I2C_SendByte	; now send the byte in A, Z = 1 means sent OK
+		BNE		?GMSNAK			; if no slave ACK, then return with fNoSlaveAck
+		CLRA					; send a fSuccess code (0) and set Z = 1
+		RTS
+?GMSNAK LDA		I2C_fNoSlaveAck	; send a fNoSlaveAck code (1) and set Z = 0
+		TSTA
+		RTS
+?GMBERR	LDA		I2C_fBusError	; return a fBusError code (2) and set Z = 0
+		TSTA					
+		RTS
 		
+;; I2C_WriteMany - writes one or more bytes of data to a specific address
+;; inputs: A = slave address, B = register address, 
+;;         X = addr of write data buffer, Y = number of bytes to write
+;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+I2C_WriteMany
+		ANDA	#$FE			; send START and slave address (WRITE)
+		BSR 	I2C_GoMaster	; try to send slave address
+		BNE		?WMERR			; error, return with status!
+		TFR     B,A				; copy register address into A
+		BSR		I2C_SendByte	; try to send register address
+		BNE		?WMERR			; error, return with status!
+?WM0	LEAY	0,Y				; test the byte counter
+		BEQ		?WMEND			; all done, send a STOP
+?WM1	LDA		,X+				; copy byte from write buffer to A
+		BSR		I2C_SendByte	; try to send data byte
+		BNE		?WMERR			; error, return with status!
+		LEAY	-1,Y			; decrement the byte counter
+		BNE		?WM1			; repeat until finished
+?WMEND	CLRA					; return code is fSuccess (0)
+?WMERR	BSR		I2C_SendStop	; send a STOP condition		
+		TSTA					; make sure Z is set according to return code!
+		RTS
+		
+;; I2C_WriteByte - write one byte of data to a specific address
+;; inputs: A = slave address, B = register address, 
+;;		   E = data to write
+;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+I2C_WriteByte
+		ANDA	#$FE			; send START and slave address (WRITE)
+		BSR 	I2C_GoMaster	; try to send slave address
+		BNE		?WBERR			; error, return with status!
+		TFR     B,A				; copy register address into A
+		BSR		I2C_SendByte	; try to send register address
+		BNE		?WBERR			; error, return with status!
+		TFR		E,A				; copy data byte into A
+		BSR		I2C_SendByte	; try to send data byte
+		BNE		?WBERR			; error, return with status!
+		CLRA					; return code is fSuccess (0)
+?WBERR	BSR		I2C_SendStop	; send a STOP condition		
+		TSTA					; make sure Z is set according to return code!
+		RTS
+		
+;; I2C_ReadMany - read one or more bytes of data from a specific address
+;; inputs: A = slave address, B = register address, 
+;;         X = addr of read data buffer, Y = number of bytes to read
+;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+;;         B = value of last read data byte
+I2C_ReadMany
+		ANDA	#$FE			; send START and slave address (WRITE)
+		BSR 	I2C_GoMaster	; try to send slave address
+		BNE		?RMERR			; error, return with status!
+		EXCG    B,A				; register address into A, slave address into B
+		BSR		I2C_SendByte	; try to send register address
+		BNE		?RMERR			; error, return with status!
+		TFR		B,A				; slave address back into A		
+		ORA		#$01			; send START and slave address (READ)		
+		BSR 	I2C_GoMaster	; try to send slave address
+		BNE		?RMERR			; error, return with status!
+?RM0	LEAY	0,Y				; test the byte counter
+		BEQ		?RMEND			; all done, send a STOP
+?RM1	LDA		#I2C_ACKNOWLEDGE	; assume ACK
+		LEAY	-1,Y			; decrement the byte counter
+		BNE		?RM2			; not the last byte to read
+		LDA		#I2C_NOTACKNOWLEDGE	; yes, last byte, responsd with NAK
+?RM2	BSR		I2C_RcvByte		; read the data byte
+		STA		,X+				; store in buffer
+		TFR		A,B				; copy read byte to B
+		BRA		?RM0			; repeat until finished
+?RMEND	CLRA					; return code is fSuccess (0)
+?RMERR	BSR		I2C_SendStop	; send a STOP condition		
+		TSTA					; make sure Z is set according to return code!
+		RTS
 
-
-
-
-// sI2C_SendNAK - send a NotAcknowlege from Master (also, check for Slave ACK)
-
-char sI2C_SendNAK(void)
-{
-	char stat;
-
-	sI2C_SetSDAHigh;		// release SDA line for MASTER Not Acknowledge / Query Slave Ack
-	sI2C_SDAInput;
-	sI2C_SetClkHigh();		// send clock for Mot Acknowledge
-	sI2C_BitDelay();
-
-	if ( sI2C_SDAStatus )		// check for valid acknowledge bit
-		stat = sI2C_fNoSlaveAck;
-	else
-		stat = sI2C_fSuccess;
-
-	sI2C_SetSCLLow;				// finish acknowledge bit
-	sI2C_BitDelay();
-	sI2C_SDAOutput;
-	return stat;
-}
-
-// sI2C_SendACK - send an Acknowlege from Master
-
-void sI2C_SendACK(void)
-{
-	sI2C_SetSDALow;			// Pull SDA low line for Acknowledge
-	sI2C_SetClkHigh();		// send clock for acknowledge
-	sI2C_BitDelay();
-	sI2C_SetSCLLow;			// finish acknowledge bit
-	sI2C_BitDelay();
-}
-
-// sI2C_GoMaster - sends an I2C start and slave address and check for acknowledge
-
-char sI2C_GoMaster(unsigned char slaveaddr)
-{
-	char stat;
-
-	sI2C_SetSDAHigh;		// make sure SDA and SCL are both high to start with
-	sI2C_SetSCLHigh;
-	sI2C_BitDelay();
-
-	sI2C_SDAInput;			// make SDA an input temporarily to check its status
-
-	if (sI2C_SDAStatus)
-	{
-		sI2C_SDAOutput;
-		sI2C_SetSDALow;			// begin I2C start
-		sI2C_BitDelay();
-		sI2C_SetSCLLow;
-		sI2C_BitDelay();		// complete I2C start
-		stat = sI2C_SendByte(slaveaddr);
-	}
-	else
-		stat = sI2C_fBusError;
-
-	return stat;
-}
-
-// sI2C_EEWrite - writes one or more bytes of data to a specific address to an I2C EEPROM;
-
-char sI2C_EEWrite(unsigned char slaveaddr, unsigned char bytecnt, unsigned int wraddr, char *wrdata)
-{
-	char stat;
-	unsigned char count,temp;
-	count = 0;
-
-	stat = sI2C_GoMaster(slaveaddr & 0xfe);		// send START and slave address (WRITE)
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	temp = wraddr >> 8;
-	stat = sI2C_SendByte(temp);
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	temp = wraddr & 0xff;
-	stat = sI2C_SendByte(temp);
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	for(count=0; count < bytecnt; count++)
-	{
-		stat = sI2C_SendByte(wrdata[count]);
-		if (stat != sI2C_fSuccess)
-		{
-			sI2C_SendStop();
-			return stat;
-		}
-	}
-
-	sI2C_SendStop();		// send stop command
-	return sI2C_fSuccess;
-}					
-
-
-// sI2C_EEWriteByte - writes one byte of data to a specific address to an I2C EEPROM;
-
-char sI2C_EEWriteByte(unsigned char slaveaddr, unsigned int wraddr, char wrdata)
-{
-	char stat;
-	unsigned char temp;
-
-	stat = sI2C_GoMaster(slaveaddr & 0xfe);		// send START and slave address (WRITE)
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	temp = wraddr >> 8;
-	stat = sI2C_SendByte(temp);
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	temp = wraddr & 0xff;
-	stat = sI2C_SendByte(temp);
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	stat = sI2C_SendByte(wrdata);
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	sI2C_SendStop();		// send stop command
-	return sI2C_fSuccess;
-}					
-
-
-// sI2C_EEWrite - writes one or more bytes of data to a specific address to an I2C EEPROM;
-
-char sI2C_EERead(unsigned char slaveaddr, unsigned char bytecnt, unsigned int rdaddr, char *rddata)
-{
-	char stat;
-	unsigned char count,temp;
-	count = 0;
-
-	stat = sI2C_GoMaster(slaveaddr & 0xfe);		// send START and slave address (WRITE)
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	temp = rdaddr >> 8;
-	stat = sI2C_SendByte(temp);
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	temp = rdaddr & 0xff;
-	stat = sI2C_SendByte(temp);
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	stat = sI2C_GoMaster(slaveaddr | 0x01);		// send START and slave address (READ)
-	if (stat != sI2C_fSuccess)
-	{
-		sI2C_SendStop();
-		return stat;
-	}
-
-	if (bytecnt > 1)
-		for(count=0; count < bytecnt-1; count++)
-			rddata[count] = sI2C_RcvByte(sI2C_ACKNOWLEDGE);
-
-	rddata[bytecnt-1] = sI2C_RcvByte(sI2C_NOTACKNOWLEDGE);
-
-	sI2C_SendStop();		// send stop command
-	return sI2C_fSuccess;
-}
-
-// sI2C_EEStatus - report status of the EEPROM (check for slave ack);
-
-char sI2C_EEStatus(unsigned char slaveaddr)
-{
-	char stat;
-
-	stat = sI2C_GoMaster(slaveaddr | 0x01);		// send START and slave address (READ)
-												// slave should ACK the slave address
-	sI2C_SendStop();							// we really didn't want to do anything else
-												// so send I2C stop command.
-	return stat;
-}
-
+;; I2C_ReadByte - read a single byte from a specific address
+;; inputs: A = slave address, B = register address, 
+;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+;;		   B = value of read data byte
+I2C_ReadByte
+		ANDA	#$FE			; send START and slave address (WRITE)
+		BSR 	I2C_GoMaster	; try to send slave address
+		BNE		?RBERR			; error, return with status!
+		EXCG    B,A				; register address into A, slave address into B
+		BSR		I2C_SendByte	; try to send register address
+		BNE		?RBERR			; error, return with status!
+		TFR		B,A				; slave address back into A		
+		ORA		#$01			; send START and slave address (READ)		
+		BSR 	I2C_GoMaster	; try to send slave address
+		BNE		?RBERR			; error, return with status!
+		LDA		#I2C_NOTACKNOWLEDGE	; only one byte, so NAK it
+		BSR		I2C_RcvByte		; read the data byte
+		TFR		A,B				; copy byte value to B
+?RBEND	CLRA					; return code is fSuccess (0)
+?RBERR	BSR		I2C_SendStop	; send a STOP condition		
+		TSTA					; make sure Z is set according to return code!
+		RTS
 		
 ;
 ; MACHINE VECTORS
