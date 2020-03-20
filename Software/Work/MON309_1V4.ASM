@@ -62,143 +62,119 @@
 
 ; HARDWARE INFORMATION
 
-IOPAGE	EQU	$E000		; Base address of I/O page
-ROM		EQU	$E200		; Start of ROM space
-RAM		EQU	$BF60		; MON309 data goes here
-STACK	EQU	RAM+$A0		; MON309 Stack (Top of RAM)
+IOPAGE		EQU	$E000		; Base address of I/O page
+ROM			EQU	$E200		; Start of ROM space
+RAM			EQU	$BF60		; MON309 data goes here
+STACK		EQU	RAM+$A0		; MON309 Stack (Top of RAM)
 
 ZCIO		EQU	IOPAGE+$00	; CIO base address
 CIOC		EQU	ZCIO           ; CIO port C access
 CIOB		EQU	ZCIO+1		; CIO port B access
 CIOA		EQU	ZCIO+2		; CIO port A access
-CIOCTL	EQU	ZCIO+3         ; CIO control register
+CIOCTL		EQU	ZCIO+3         ; CIO control register
 
 ZSCC		EQU	IOPAGE+$10	; SCC base address
-SCCBC	EQU	ZSCC			; SCC channel B command
-SCCBD	EQU	ZSCC+1		; SCC channel B data
-SCCAC	EQU	ZSCC+2		; SCC channel A command
-SCCAD	EQU	ZSCC+3		; SCC channel A data
+SCCBC		EQU	ZSCC			; SCC channel B command
+SCCBD		EQU	ZSCC+1		; SCC channel B data
+SCCAC		EQU	ZSCC+2		; SCC channel A command
+SCCAD		EQU	ZSCC+3		; SCC channel A data
 
-I2CPORT	EQU	IOPAGE+$20	;soft I2C port
-I2C.DSCK EQU $80
-I2C.DSDA EQU $40
-I2C.MSCK EQU $08
-I2C.MSDA EQU $04
+I2CPORT		EQU	IOPAGE+$20	;soft I2C port
+I2C.DSCK 	EQU $80
+I2C.DSDA 	EQU $40
+I2C.MSCK 	EQU $08
+I2C.MSDA 	EQU $04
 
-;RTCBASE	EQU	IOPAGE+$20	; RTC base address
-;RTC1S	EQU	RTCBASE
-;RTC10S	EQU 	RTCBASE+1
-;RTC1M	EQU 	RTCBASE+2
-;RTC10M	EQU 	RTCBASE+3
-;RTC1H	EQU 	RTCBASE+4
-;RTC10H	EQU 	RTCBASE+5
-;RTCDOW	EQU	RTCBASE+6
-;RTC1D	EQU 	RTCBASE+7
-;RTC10D	EQU	RTCBASE+8
-;RTC1MO	EQU	RTCBASE+9
-;RTC10MO	EQU	RTCBASE+10
-;RTC1YR	EQU	RTCBASE+11
-;RTC10YR	EQU	RTCBASE+12
-;RTC100YR	EQU	RTCBASE+13
-;RTC1KYR	EQU	RTCBASE+14
-;RTCCTL	EQU	RTCBASE+15
-
-;RTC.B0	EQU	0			; RTC bank 0
-;RTC.B1	EQU	4			; RTC bank 1
-;RTC.B2	EQU	8			; RTC bank 2
-;RTC.STOP	EQU	2			; RTC STOP bit
-;RTC.FOS	EQU	8			; RTC power interrupted bit
-
-SDPORT	EQU	IOPAGE+$30	; SDPORT register address
-SYSCFG	EQU	IOPAGE+$40	; SYSCFG register address
-IOPORT	EQU	IOPAGE+$50	; INOUT register address
+SDPORT		EQU	IOPAGE+$30	; SDPORT register address
+SYSCFG		EQU	IOPAGE+$40	; SYSCFG register address
+IOPORT		EQU	IOPAGE+$50	; INOUT register address
 		
 ; MON09 INTERNAL MEMORY
 
-		ORG	RAM			; Internal MON09 variables
-SWIADR	RMB	2			; SWI VECTOR ADDRESS
-SWI2ADR	RMB	2			; SWI2 VECTOR ADDRESS
-SWI3ADR	RMB	2			; SWI3 VECTOR ADDRESS
-IRQADR	RMB	2			; IRQ VECTOR ADDRESS
-FIRQADR	RMB	2			; FIRQ VECTOR ADDRESS
-NMIADR	RMB	2			; NMI VECTOR ADDRESS
-IOCON	RMB	1			; I/O CONFIGURATION BYTE
-UART1	RMB	2			; UART 1 ADDRESS
-UART2	RMB	2			; UART 2 ADDRESS
-SAVCC	RMB	1			; SAVED CONDITION CODE REGISTER
-SAVA		RMB	1			; SAVED 6809 A REGISTER
-SAVB		RMB	1			; SAVED 6809 B REGISTER
-SAVDP	RMB	1			; SAVED DIRECT PAGE REGISTER
-SAVX		RMB	2			; SAVED X REGISTER
-SAVY		RMB	2			; SAVED Y REGISTER
-SAVU		RMB	2			; SAVED U REGISTER
-SAVPC	RMB	2			; SAVED PROGRAM COUNTER
-SAVS		RMB	2			; SAVED S REGISTER
-TEMP		RMB	2			; TEMPORARY STORAGE
-STPFLG	RMB	1			; REGISTER DISPLAY WHILE STEPPING FLAG
-PTRSAV	RMB	2			; SINGLE STEP AND DISASSEMBLER CODE POINTER
-INSTYP	RMB	1			; DISASSEMBLED INSTRUCTION TYPE
-POSBYT	RMB	1			; POSTBYTE STORAGE AREA
-BRKTAB	RMB	24			; BREAKPOINT TABLE
-DSPBUF	RMB	50			; DISASSEMBLER DISPLAY BUFFER
-INSRAM	RMB	7			; INSTRUCTION EXECUTION ADDRESS
+			ORG	RAM				; Internal MON09 variables
+SWIADR		RMB	2				; SWI VECTOR ADDRESS
+SWI2ADR		RMB	2				; SWI2 VECTOR ADDRESS
+SWI3ADR		RMB	2				; SWI3 VECTOR ADDRESS
+IRQADR		RMB	2				; IRQ VECTOR ADDRESS
+FIRQADR		RMB	2				; FIRQ VECTOR ADDRESS
+NMIADR		RMB	2				; NMI VECTOR ADDRESS
+IOCON		RMB	1				; I/O CONFIGURATION BYTE
+UART1		RMB	2				; UART 1 ADDRESS
+UART2		RMB	2				; UART 2 ADDRESS
+SAVCC		RMB	1				; SAVED CONDITION CODE REGISTER
+SAVA		RMB	1				; SAVED 6809 A REGISTER
+SAVB		RMB	1				; SAVED 6809 B REGISTER
+SAVDP		RMB	1				; SAVED DIRECT PAGE REGISTER
+SAVX		RMB	2				; SAVED X REGISTER
+SAVY		RMB	2				; SAVED Y REGISTER
+SAVU		RMB	2				; SAVED U REGISTER
+SAVPC		RMB	2				; SAVED PROGRAM COUNTER
+SAVS		RMB	2				; SAVED S REGISTER
+TEMP		RMB	2				; TEMPORARY STORAGE
+STPFLG		RMB	1				; REGISTER DISPLAY WHILE STEPPING FLAG
+PTRSAV		RMB	2				; SINGLE STEP AND DISASSEMBLER CODE POINTER
+INSTYP		RMB	1				; DISASSEMBLED INSTRUCTION TYPE
+POSBYT		RMB	1				; POSTBYTE STORAGE AREA
+BRKTAB		RMB	24				; BREAKPOINT TABLE
+DSPBUF		RMB	50				; DISASSEMBLER DISPLAY BUFFER
+INSRAM		RMB	7				; INSTRUCTION EXECUTION ADDRESS
 
 ;                       	
-		ORG	ROM			; MONITOR CODE
+			ORG	ROM				; MONITOR CODE
 ;
 ; INITIALIZATIONS
 ;
-RESET	LDS	#STACK		; SET UP STACK
-		CLR	RAM			; clear first byte of RAM
-		LDX	#RAM			; point to start of RAM
-		LDU	#RAM+1		; point to next byte of RAM
-		LDW	#(INSRAM-SWIADR+7)	; length of RAM area
-		TFM	X,U+			; copy zero to all of RAM area
-		LDD	#NMIHND		; install default NMI handler
-		STD	NMIADR		; at re-vector address
+RESET	LDS		#STACK			; SET UP STACK
+		CLR		RAM				; clear first byte of RAM
+		LDX		#RAM			; point to start of RAM
+		LDU		#RAM+1			; point to next byte of RAM
+		LDW		#(INSRAM-SWIADR+7)	; length of RAM area
+		TFM		X,U+			; copy zero to all of RAM area
+		LDD		#NMIHND			; install default NMI handler
+		STD		NMIADR			; at re-vector address
 		LBSR	INITSCCA		; INITIALIZE SCC CHANNEL A
 		LBSR	INITSCCB		; initialize SCC channel B
-		LDA	#3			; DEFAULT I/O CONFIGURATION
-		STA	IOCON		; SET IT
-		LDD	#RAM			; DEFAULT STACK AT TOP OF RAM
-		STD	SAVS			; SAVE IT
-		LDA	#$D0			; SET CC
-		STA	SAVCC		; SAVE IT
-MONITOR	LBSR	WRMSG		; OUTPUT MESSAGE
-		FCB	$0A,$0D
-		FCC	'MON309 Version 1.4'
-		FCB	$0A,$0D
-		FCC	'May 2014, Tom LeMense'
-		FCB	$0A,$0D
-		FCC	'Portions Copyright 1985-2007 Dave Dunfield'
-		FCB	$0A,$0D
-		FCC	'All rights reserved.'
-		FCB	$0A,$FF
-MAIN		LDS	#STACK		; fix stack in case error               
-		LBSR	WRMSG		; output message                        
-		FCN	'* '           ; monitor prompt                        
-		LBSR	GETECH		; get character                         
-		CLRB				; indicate no second char               
+		LDA		#3				; DEFAULT I/O CONFIGURATION
+		STA		IOCON			; SET IT
+		LDD		#RAM			; DEFAULT STACK AT TOP OF RAM
+		STD		SAVS			; SAVE IT
+		LDA		#$D0			; SET CC
+		STA		SAVCC			; SAVE IT
+MONITOR	LBSR	WRMSG			; OUTPUT MESSAGE
+		FCB		$0A,$0D
+		FCC		'MON309 Version 1.4'
+		FCB		$0A,$0D
+		FCC		'May 2014, Tom LeMense'
+		FCB		$0A,$0D
+		FCC		'Portions Copyright 1985-2007 Dave Dunfield'
+		FCB		$0A,$0D
+		FCC		'All rights reserved.'
+		FCB		$0A,$FF
+MAIN	LDS		#STACK			; fix stack in case error               
+		LBSR	WRMSG			; output message                        
+		FCN		'* '           	; monitor prompt                        
+		LBSR	GETECH			; get character                         
+		CLRB					; indicate no second char               
 		                                                                
 ; LOOK FOR COMMAND IN TABLE                                           
-LOOKC	LDX	#CMDTAB		; point to command table                
-		CLR	TEMP			; indicate no partial match             
+LOOKC	LDX		#CMDTAB			; point to command table                
+		CLR		TEMP			; indicate no partial match             
 L1?		CMPD	,X++			; does it match?                        
-		BEQ	L3?			;    yes it does                        
+		BEQ		L3?				;    yes it does                        
 		CMPA	-2,X			; does first char match?                
-		BNE	L2?			;    no, don't record                   
-		DEC	TEMP			; set flag                              
-L2?		LEAX	2,X			; advance to next                       
-		TST	,X			; have we hit the end?                  
-		BNE	L1?			;    no, keep looking                   
-		TSTB				; already have two chars?               
-		BNE	ERROR		;    yes, error                         
-		LDB	TEMP			; any partial matches?                  
-		BEQ	ERROR		;    no, error                          
-		TFR	A,B			; save char in 'a'                      
-		LBSR	GETECH		; get next char                         
-		EXG	A,B			; swap back                             
-		BRA	LOOKC		; and continue                          
+		BNE		L2?				;    no, don't record                   
+		DEC		TEMP			; set flag                              
+L2?		LEAX	2,X				; advance to next                       
+		TST		,X				; have we hit the end?                  
+		BNE		L1?				;    no, keep looking                   
+		TSTB					; already have two chars?               
+		BNE		ERROR			;    yes, error                         
+		LDB		TEMP			; any partial matches?                  
+		BEQ		ERROR			;    no, error                          
+		TFR		A,B				; save char in 'a'                      
+		LBSR	GETECH			; get next char                         
+		EXG		A,B				; swap back                             
+		BRA		LOOKC			; and continue                          
 ; COMMAND WAS FOUND, EXECUTE IT                                       
 L3?		LBSR	SPACE		; output space                          
 		JSR	[,X]			; execute command                       
@@ -228,17 +204,17 @@ CMDTAB	FCC	'DM'			; display memory
 		FCC	'E'            ; substitute memory                     
 		FCB 	0			
 		FDB	SUBMEM                                                 
-		FCC	'L'			; load ascii hex                        
-          FCB  0              		
+		FCC	'L'				; load ascii hex                        
+        FCB  0              		
 		FDB	LOAD                                                   
-		FCC	'B'			; set breakpoint                        
-          FCB  0              		
+		FCC	'B'				; set breakpoint                        
+        FCB  0              		
 		FDB	SETBRK                                                 
-		FCC	'S'			; step                                  
-          FCB  0              		
+		FCC	'S'				; step                                  
+        FCB  0              		
 		FDB	GOSTEP                                                 
-		FCC	'G'			; go                                    
-          FCB  0              		
+		FCC	'G'				; go                                    
+        FCB  0              		
 		FDB	GOEXEC                                                 
 		FCC	'FM'			; fill memory                           
 		FDB	FILMEM                                                 
@@ -248,15 +224,11 @@ CMDTAB	FCC	'DM'			; display memory
 		FDB	WRLOOP                                                 
 		FCC	'MT'			; memory test                           
 		FDB	RAMTEST                                                
-		FCC	'W'			; write memory                          
-          FCB  0                        		
+		FCC	'W'				; write memory                          
+        FCB  0                        		
 		FDB	WRIMEM                                                 
 		FCC	'MM'			; move memory                           
 		FDB	MOVMEM                                                 
-;		FCC	'XR'			; repeating 16 bit read                 
-;		FDB	XRLOOP                                                 
-;		FCC	'XW'			; repeating 16 bit write                
-;		FDB	XWLOOP                                                 
 		FCC	'TI'			; initialize time and date              
 		FDB	RTCINIT                                                
 		FCC	'TD'			; display time and date                 
@@ -271,16 +243,16 @@ CMDTAB	FCC	'DM'			; display memory
 		FDB	ZREAD                                                  
 		FCC	'ZW'			; zilog cio write                       
 		FDB	ZWRITE                                                 
-		FCC	'+'			; hex addition                          
-          FCB  0                        		
+		FCC	'+'				; hex addition                          
+        FCB  0                        		
 		FDB	HEXADD                                                 
-		FCC	'-'			; hex subtraction                       
-          FCB  0                        		
+		FCC	'-'				; hex subtraction                       
+        FCB  0                        		
 		FDB	HEXSUB                                                 
-		FCC	'?'			; help command                          
-          FCB  0                        		
+		FCC	'?'				; help command                          
+        FCB  0                        		
 		FDB	HELP                                                   
-		FCB	0			; mark end of table                     
+		FCB	0				; mark end of table                     
 ;                                                                     
 ; 'F' - FILL MEMORY                                                   
 ;                                                                     
@@ -754,63 +726,75 @@ ZWRITE:	LDA  CIOCTL         ; read CIO control register to get to state 0
 ; RTCINIT
 ; Initialize RTC 
 ;
-;RTCINIT	LDA	#(RTC.B0+RTC.STOP)	
-;		STA	RTCCTL		; set the STOP bit
-;		LDA	#76
-;		BSR	DELAY		; wait 244us
-;		LDA	#(RTC.B1+RTC.STOP)
-;		STA	RTCCTL		; Select BANK 1
-;		LDX	#RTCBASE
-;R1?		CLR	,X+			; Clear RTC registers 1-14 in bank 1
-;		CMPX	#RTCBASE+15	; cleared RTCBASE+0..14?
-;		BNE	R1?
-;		LDA	#(RTC.B2+RTC.STOP)	
-;		STA	RTCCTL      	; Select BANK 2
-;		LDX	#RTCBASE			
-;R2?		CLR	,X+			; Clear RTC registers 1-14 in bank 2
-;		CMPX	#RTCBASE+15    ; cleared RTCBASE+0..14?
-;		BNE	R2?
-;		LDA	#(RTC.B0+RTC.STOP)
-;		STA	RTCCTL      	; Select BANK 0
-;		LDX	#RTCBASE				
-;R0?  	CLR	,X+			; Clear RTC registers 1-14 in bank 0
-;		CMPX	#RTCBASE+15	; cleared RTCBASE+0..14?
-;		BNE	R0?            
-;		LDA	#RTC.B0
-;		STA	RTCCTL		; Clear the STOP bit
-;          LBRA LFCR           ; exit via new line                                                             
-	
-;                                                                           
-; DELAY                                                                     
-; delay about 3us per acc-A LSB (used for RTC access)                           
-;                                                                           
-;D0?       NOP                                                               
-;          NOP                                                               
-;          NOP                                                               
-;          NOP                                                               
-;DELAY     DECA                                                              
-;          BNE  D0?                                                          
-;          RTS                                                               
+RTC_CTRL_INIT	EQU	$1C			; #ENOSC = 0, BBQSW = 0, CONV = 0, INTCN = 1, A2IE = 0, A1IE = 0
+RTC_REG_CTRL	EQU	$0E			; DS3232 control register addr is 0E
+RTC_STAT_INIT	EQU $88			; do not clear OSF bit, enable 32KHz output 
+RTC_REG_STAT	EQU	$0F         ; DS3232 status register addr is 0E
+RTCINIT:
+		LBSR	I2C_Initialize	; init the I2C bus and the RTC
+		CMPA	#255			; check for bus fault
+		BEQ		RTC_ERR1
+		LDB		#RTC_CTRL_INIT	; write the default value to DS3232 control reg
+		LDA		#RTC_REG_CTRL	
+		LBSR	RTC_WriteReg
+		BNE		RTC_ERR1
+		LDA		#RTC_REG_STAT	; read the DS3232 STATUS register
+		LBSR	RTC_ReadReg
+		TSTB					; test the status value
+		BPL     ?INIT1
+RTC_ERR0
+		LBRA	WRMSG			; exit via CLOCK STOPPED warning
+		FCB		$0A,$0D
+		FCC		'DS3232 Clock Interrupted!'
+		FCB		$0A,$FF        		
+RTC_ERR1
+		LBRA	WRMSG			; exit via BUS ERROR output message
+		FCB		$0A,$0D
+		FCC		'DS3232 I2C Bus Error!'
+		FCB		$0A,$FF        
+?INIT1	LBRA 	LFCR           ; exit via new line                                                             				
 	
 ;
 ; RTCREAD
 ; Read RTC registers and display time
 ;
-;RTCREAD	LDX	#DSPBUF		; point to disassembly buffer space
-;		BSR	RTCMSG		; build RTC time and date message at X
-;		LBSR	WRLIN		; print it out
-;		LBRA	LFCR			; return via CR-LF
+RTCREAD	LDX		#DSPBUF			; use disassembly buffer space for RTC register read
+		CLRA					; point to register 0 as starting address
+		LBSR	RTC_Read16		; read the first 16 registers of the DS3232M RTC
+		BNE		RTC_ERR1		; if not successful, report an error
+		LDY		#DSPBUF+16		; use disassembly buffer space to build TIME string
+		LDD		#RTCTBL			; use the time/date table
+		BSR		RTCTIME			; read registers to DSPBUF[0..15], format into TIME string
+
+		LDA		#$FF
+		STA		,X
+		LDX		#DSPBUF			; point to beginning of entire string
+		LBSR	WRLIN
+		LBRA	LFCR			; return via CR-LF
 		
+; B0 = BCD seconds 00-59 [ 0  40S 20S 10S 8S 4S 2S 1S ]
+; B1 = BCD minutes 00-59 [ 0  40M 20M 10M 8S 4S 2S 1S ]
+; B2 = BCD hours   00-23 [ 0  ~24 20H 10H 8H 4H 2H 1H ]   ~24 == 0
+; B3 = day 0-7           [ 0   0   0   0   0 4D 2D 1D ]
+; B4 = date 0-31         [ 0   0   0  10T 8T 4T 2T 1T ]
+; B5 = cent/month        [ C   0   0  10N 8N 4N 2N 1N ]
+; B6 = year 0-99         [80Y 40Y 20Y 10Y 8Y 4Y 2Y 1Y ]
+; B7,8,9,A = alarm 1 (see datasheet)
+; BB,C,D = alarm 2  (see datasheet)
+; BE = control [~EOSC BBSQW CONV NA NA INTCN A2IE A1IE ]   ~EOSC == 0, BBSQW == 0, CONV == 0, INTCN = 0 for 1HZ INT, 1 for ALARM INT, AxIE = 1 to enable alarm 
+; BF = status  [ OSF  BB32K  0    0 EN32K BSY A2F A1F ]    OSF set when osc has stopped, BB32K == 0, EN32K == 0 (turn off), BSY (doing temp), AxF = 1 alarm match occured (manual clear)
+
 ;
-; RTCMSG - build time/date string at X
+; RTCTIME - build time string at Y from raw RTC data at X using table at D
 ;	
-;RTCMSG	PSHS	X			; save pointer to buffer space
-;		LDA	RTCCTL		; check the busy bit
-;		BITA	#1			; mask all but the BUSY bit
-;		BEQ	RTCR.1
-;		LDA	#76
-;		BSR	DELAY		; wait 244us
-;		BRA	RTCREAD		; check BUSY bit again
+RTCTIME	TFR		D,W			; copy pointer to format table to W
+        PSHS	X,Y			; save pointer to buffers
+
+
+
+
+
+
 ;RTCR.1	LDA	#(RTC.B0)
 ;		STA	RTCCTL    	; Select BANK 0
 ;		LDY	#RTCTBL		; put address of display table into Y
@@ -2222,6 +2206,48 @@ SWIHN4	LEAX	1,X			; skip opcode
 		DECB				; reduce count                                  
 		BNE	SWIHN3		; go again                                      
 		LBRA	MAIN			; do prompt                                     
+
+; B0 = BCD seconds 00-59 [ 0  40S 20S 10S 8S 4S 2S 1S ]
+; B1 = BCD minutes 00-59 [ 0  40M 20M 10M 8S 4S 2S 1S ]
+; B2 = BCD hours   00-23 [ 0  ~24 20H 10H 8H 4H 2H 1H ]   ~24 == 0
+; B3 = day 0-7           [ 0   0   0   0   0 4D 2D 1D ]
+; B4 = date 0-31         [ 0   0   0  10T 8T 4T 2T 1T ]
+; B5 = cent/month        [ C   0   0  10N 8N 4N 2N 1N ]
+; B6 = year 0-99         [80Y 40Y 20Y 10Y 8Y 4Y 2Y 1Y ]
+; B7,8,9,A = alarm 1 (see datasheet)
+; BB,C,D = alarm 2  (see datasheet)
+; BE = control [~EOSC BBSQW CONV NA NA INTCN A2IE A1IE ]   ~EOSC == 0, BBSQW == 0, CONV == 0, INTCN = 0 for 1HZ INT, 1 for ALARM INT, AxIE = 1 to enable alarm 
+; BF = status  [ OSF  BB32K  0    0 EN32K BSY A2F A1F ]    OSF set when osc has stopped, BB32K == 0, EN32K == 0 (turn off), BSY (doing temp), AxF = 1 alarm match occured (manual clear)
+
+
+
+; RTC Time Formatting Table
+; RTC REG OFFSET, ASCII BUFFER OFFSET, AND value, OR value
+;   REG OFFSET = 0...15 RTC register 
+;   REG OFFSET = $10 + 0...15 --> RTC register LOWER NYBBLE
+;   REG OFFSET = $20 + 0...15 --> RTC register UPPER NYBBLE (shifted into lower nybble prior to AND / OR)
+;   REG OFFSET = 64 --> no RTC read
+;   REG OFFSET = >127 --> end of table
+;
+RTCTBL	FCB	$22,0,$03,$30	; 10 hour
+		FCB	$12,1,$0F,$30	; 1 hour
+		FCB	64,2,0,':		;   :
+		FCB	$21,3,$07,$30	; 10 minute
+		FCB	$11,4,$0F,$30	; 1 minute
+		FCB	64,5,0,':		;   :
+		FCB	$20,6,$07,$30	; 10 second
+		FCB	$10,7,$0F,$30	; 1 second
+		FCB	64,8,0,$20		   ; 
+		FCB	$25,9,$01,$30	; 10 month
+		FCB	$15,10,$0F,$30	; 1 month
+		FCB	64,11,0,'/		;   -
+		FCB	$24,12,$03,$30	; 10 day	
+		FCB	$14,13,$0F,$30	; 1 day
+		FCB	64,14,0,'/		;   -
+		FCB	$26,15,$0f,$30	; 10 year
+		FCB	$16,16,$0F,$30	; 1 year
+		FCB	64,17,0,255		; end of table
+		FCB	255	 			; EOT		
 	
 ; CONSTANTS
 PCRG		FCC	',PCR'	
@@ -2687,36 +2713,6 @@ CONTAB	FCB	$05,$00,$00,$00	; 'BHI', NO C OR Z
 		FCB	$0E,$08,$02,$04	; 'BLE', V-=N OR Z=1
 		FCB	$0C,$06,$0E
 	
-;	
-; RTC Time Formatting Table
-; RTC REG OFFSET, ASCII BUFFER OFFSET, AND value, OR value
-;   REG OFFSET = 64 --> no RTC reg read
-;   REG OFFSET = >127 --> end of table
-;
-;RTCTBL	FCB	64,19,0,$0A		; [LF]
-;		FCB	64,20,0,$0D		; [CR]
-;		FCB	$5,0,$03,$30		; 10 hour
-;		FCB	$4,1,$0F,$30		; 1 hour
-;		FCB	64,2,0,':			;   :
-;		FCB	$3,3,$07,$30		; 10 minute
-;		FCB	$2,4,$0F,$30		; 1 minute
-;		FCB	64,5,0,':			;   :
-;		FCB	$1,6,$07,$30		; 10 second
-;		FCB	$0,7,$0F,$30		; 1 second
-;		FCB	64,8,0,$20		; 
-;		FCB	$A,9,$01,$30		; 10 month
-;		FCB	$9,10,$0F,$30		; 1 month
-;		FCB	64,11,0,'/		;   -
-;		FCB	$8,12,$03,$30		; 10 day	
-;		FCB	$7,13,$0F,$30		; 1 day
-;		FCB	64,14,0,'/		;   -
-;		FCB	$E,15,$03,$30		; 1000 year		
-;		FCB	$D,16,$0F,$30		; 100 year
-;		FCB	$C,17,$0f,$30		; 10 year
-;		FCB	$B,18,$0F,$30		; 1 year
-;		FCB	64,21,0,0			; [null]
-;		FCB	255	 			; EOT
-	
 ; TRANSFER AND EXCHANGE REGISTER TABLE
 TFREGT	FDB	SAVA	
 INDTAB	FDB	SAVX	
@@ -2875,6 +2871,7 @@ USTAT	LDA	SCCAC		; reset register pointer to WR0/RR0
 		EORA	#$00000101	; invert both flags to make ZERO result mean not ready / no char waiting	
 		RTS
 		
+;	
 ;
 ; MACHINE SPECIFIC I/O ROUTINES FOR DS3232M RTC
 ;
@@ -2902,50 +2899,48 @@ USTAT	LDA	SCCAC		; reset register pointer to WR0/RR0
 
 ; I2C low-level routines
 
-;I2CPORT	EQU	IOPAGE+$20	;soft I2C port
-I2C.DSCL EQU $80
-I2C.DSDA EQU $40
-I2C.MSCL EQU $08
-I2C.MSDA EQU $04
+;; I2C status flags
+I2C_fSuccess	EQU	0
+I2C_fNoSlaveAck EQU 1
+I2C_fBusError	EQU	2
+
+;; I2C Acknowledge Constants
+I2C_ACKNOWLEDGE EQU	1
+I2C_NOTACKNOWLEDGE EQU	0
+
+;; DS3232M constants
+RTC_ADDR		EQU		$D0
 
 ;; I2C interface primitives - hardware dependent
 
-;;define sI2C_SDAStatus		(( SDADataPort & ( SDAMask )) != 0)
 I2C_SDAStatus MACRO 
 		TIM   #I2C.MSDA,I2CPORT		;I2C_SDAStatus (Z = 1 if SDA is low)
 ENDM
 
-;;define sI2C_SetSDALow		SDADataPort &= ~( SDAMask )
 I2C_SetSDALow MACRO 
 		AIM   #~I2C.DSDA,I2CPORT	;I2C_SetSDALow
 ENDM
 
-;;define sI2C_SetSDAHigh		SDADataPort |= ( SDAMask )
 I2C_SetSDAHigh MACRO 
 		OIM	  #I2C.DSDA,I2CPORT		;I2C_SetSDAHigh
 ENDM
 	
-;;define sI2C_SCLStatus		(( SCLDataPort & ( SCLMask )) != 0)
 I2C_SCLStatus MACRO 
 		TIM   #I2C.MSCL,I2CPORT		;I2C_SCKStatus (Z = 1 if SCK is low)
 ENDM
 
-;;define sI2C_SetSCLLow		SCLDataPort &= ~( SCLMask )
 I2C_SetSCLLow MACRO 
 		AIM   #~I2C.DSCL,I2CPORT	;I2C_SetSCLLow
 ENDM
 
-;;define sI2C_SetSCLHigh		SCLDataPort |= ( SCLMask )
 I2C_SetSCLHigh MACRO 
 		OIM	  #I2C.DSCL,I2CPORT		;I2C_SetSCLHigh
 ENDM
 
-;;macro to release SCL and SDA
 I2C_SetBothHigh MACRO
 		OIM	  #(I2C.DSCL+I2C.DSDA),I2CPORT		;set both SDA and SCL high
 ENDM
 
-;;macro to set SCL high with clock stretching
 I2C_StretchSCLHigh MACRO 
 SSH0	NOP
 		SetSCLHigh      ; try to release SCL
@@ -2954,14 +2949,29 @@ SSH0	NOP
 		BEQ	  SSH0		; if Z set, SCL is still low -> try again
 ENDM
 
-;; I2C status flags
-I2C_fSuccess	EQU	0
-I2C_fNoSlaveAck EQU 1
-I2C_fBusError	EQU	2
+;; I2C_Initialize - cycle SCK until SDA goes high, up to 255 times 
+;; This is per the DS3232M datasheet to re-sync communication.
+;; inputs: none
+;; return: A = number of SCL cycles required (255 = fault)
+I2C_Initialize
+		CLRA					; clear cycle counter
+?IN0	BSR		I2C_SendNAK		; do a NAK cycle (toggles SCL with SDA high), SDA status in Z
+		BNE		I2C_SendStop	; SDA is high, so all is well, return via SendStop
+		INCA					; increment cycle counter
+		BNE		?IN0			; not wrapped to '0' yet, keep trying
+		I2C_SetBothHigh 		; failed: release both SCL and SDA		
+		DECA					; decrement counter back to 255
+		RTS
 
-;; EERead Acknowledge Constants
-I2C_ACKNOWLEDGE EQU	1
-I2C_NOTACKNOWLEDGE EQU	0
+;; I2C_SendStop - send a STOP condition
+;; inputs: none
+;; return: none
+I2C_SendStop
+    	I2C_SetSDALow			; SCL high followed by SDA high is STOP condition
+		I2C_StetchSCLHigh
+		BSR  I2C_BitDelay
+		I2C_SetSDAHigh		
+		; fall into BitDelay...		
 
 ;; I2C_BitDelay - ensures minimum high and low clock times on I2C bus. 
 ;; no input parameters
@@ -2974,20 +2984,6 @@ I2C_BitDelay
 		NOP
 		NOP
         RTS                                                               
-		
-		
-		
-		
-
-;; I2C_SendStop - send a STOP condition
-;; no input parameters
-;; no return value
-I2C_SendStop
-    	I2C_SetSDALow
-		I2C_StetchSCLHigh
-		BSR  I2C_BitDelay
-		I2C_SetSDAHigh
-		BRA  I2C_BitDelay		; return via I2C_BitDelay
 
 ;; I2C_SendByte - sends one byte of data to an I2C slave device and check for Slave ACK
 ;; inputs: A = byte to send to slave
@@ -3010,7 +3006,8 @@ I2C_SendByte
 		I2C_SDAStatus			; get ACK/NAK status into Z
 		RTS
 
-;; sI2C_RcvByte - receives one byte of data from an I2C slave device
+;; sI2C_RcvByte - receives one byte of data from an I2C slave device, with
+;;                the ability to control NAK or ACK of the received data
 ;; inputs: A = 0 --> NAK, otherwise ACK
 ;; return: A = byte received from slave
 I2C_RcvByte
@@ -3030,24 +3027,20 @@ I2C_RcvByte
 		TSTB					; examine B (to determine ACK/NAK status)
 		PULS	B,X				; restore B and X (no flags affected)
 		BEQ		I2C_SendNAK		; if input parameter was zero, send a NAK
-								; fall into I2C_SendACK
+		; fall into I2C_SendACK
 
-;; I2C_SendACK - send an Acknowlege from Master
+;; I2C_SendNAK & SendACK - send a NAK or ACK to I2C slave device
 ;; inputs: none
-;; return: Z = 1
+;; return: ACK/NAK status in Z (Z = 1 if either slave or master ACK)
 I2C_SendACK
 		I2C_SetSDALow			; assert SDA for MASTER ACK
 		BRA		I2C_SN1			; otherwise same as sending NAK
-
-;; I2C_SendNAK - send a NotAcknowlege from Master (also, check for Slave ACK)
-;; inputs: none
-;; return: ACK/NAK status in Z (Z = 1 if slave ACK)
 I2C_SendNAK
 		I2C_SetSDAHigh			; release SDA line for MASTER NAK / or query slave ACK
 I2C_SN1	I2C_StretchSCLHigh		; send clock for NAK
 		BSR		I2C_BitDelay	; half-bit delay
 		I2C_SDAStatus			; reflect SDA status in Z
-		I2C_SetSCLLow			; finish teh NAK bit
+		I2C_SetSCLLow			; finish the NAK bit
 		BRA		I2C_BitDelay	; return through half-bit delay
 
 ;; I2C_GoMaster - sends an I2C start and slave address and check for acknowledge
@@ -3073,13 +3066,30 @@ I2C_GoMaster
 ?GMBERR	LDA		I2C_fBusError	; return a fBusError code (2) and set Z = 0
 		TSTA					
 		RTS
+
+;; RTC_Write16 - write 16 bytes of data into DS3232 RTC
+;; inputs: A = starting register address
+;;         X = addr of write data buffer
+;; return: X = addr of write data buffer
+;;         A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+;;		   Y,B are destroyed
+RTC_Write16
+		TFR		A,B         	; copy starting reg address to B
+		LDA		#RTC_ADDR		; put DS3232 slave address in A
+		LDY		#16				; byte count is 16
+		; fall into I2C_WriteMany		
 		
 ;; I2C_WriteMany - writes one or more bytes of data to a specific address
-;; inputs: A = slave address, B = register address, 
-;;         X = addr of write data buffer, Y = number of bytes to write
+;; inputs: A = slave address
+;;         B = register address
+;;         X = addr of write data buffer
+;;         Y = number of bytes to write
 ;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
 ;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+;;		   Y is destroyed
 I2C_WriteMany
+		PSHS	X				; preserve write buffer address
 		ANDA	#$FE			; send START and slave address (WRITE)
 		BSR 	I2C_GoMaster	; try to send slave address
 		BNE		?WMERR			; error, return with status!
@@ -3096,10 +3106,24 @@ I2C_WriteMany
 ?WMEND	CLRA					; return code is fSuccess (0)
 ?WMERR	BSR		I2C_SendStop	; send a STOP condition		
 		TSTA					; make sure Z is set according to return code!
+		PULS	X				; restore buffer start address
 		RTS
+
+;; RTC_WriteReg - write a single byte into DS3232 RTC
+;; inputs: A = register address
+;;         B = value to write
+;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+;;		   B,E are destroyed
+RTC_WriteReg
+		TFR		B,E				; copy byte value to E
+		TFR		A,B				; copy register address to B
+		LDA		#RTC_ADDR		; DS3232 slave address (shifted) in A
+		; fall into I2C_WriteByte
 		
 ;; I2C_WriteByte - write one byte of data to a specific address
-;; inputs: A = slave address, B = register address, 
+;; inputs: A = slave address
+;;         B = register address
 ;;		   E = data to write
 ;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
 ;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
@@ -3110,21 +3134,39 @@ I2C_WriteByte
 		TFR     B,A				; copy register address into A
 		BSR		I2C_SendByte	; try to send register address
 		BNE		?WBERR			; error, return with status!
-		TFR		E,A				; copy data byte into A
+		TFR		E,A				; copy data byte to be written into A
 		BSR		I2C_SendByte	; try to send data byte
 		BNE		?WBERR			; error, return with status!
 		CLRA					; return code is fSuccess (0)
 ?WBERR	BSR		I2C_SendStop	; send a STOP condition		
 		TSTA					; make sure Z is set according to return code!
 		RTS
+
+;; RTC_Read16 - read 16 bytes of data from DS3232 RTC
+;; inputs: A = starting register address
+;;         X = addr of read data buffer
+;; return: X = addr of read data buffer
+;;         A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+;;		   Y,B are destroyed
+RTC_Read16
+		TFR		A,B         	; copy starting reg address to B
+		LDA		#RTC_ADDR		; put DS3232 slave address in A
+		LDY		#16				; byte count is 16
+		; fall into I2C_ReadMany		
 		
 ;; I2C_ReadMany - read one or more bytes of data from a specific address
-;; inputs: A = slave address, B = register address, 
-;;         X = addr of read data buffer, Y = number of bytes to read
-;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;; inputs: A = slave address
+;;         B = register address
+;;         X = addr of read data buffer
+;;         Y = number of bytes to read
+;; return: B = value of last read data byte
+;;         X = addr of read data buffer
+;;		   A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
 ;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
-;;         B = value of last read data byte
+;;		   Y is destroyed
 I2C_ReadMany
+		PSHS	X				; preserve buffer start address
 		ANDA	#$FE			; send START and slave address (WRITE)
 		BSR 	I2C_GoMaster	; try to send slave address
 		BNE		?RMERR			; error, return with status!
@@ -3148,13 +3190,25 @@ I2C_ReadMany
 ?RMEND	CLRA					; return code is fSuccess (0)
 ?RMERR	BSR		I2C_SendStop	; send a STOP condition		
 		TSTA					; make sure Z is set according to return code!
+		PULS	X				; restore buffer start address
 		RTS
+		
+;; RTC_ReadReg - read a single byte from DS3232 RTC
+;; inputs: A = register address
+;; return: B = value of read data byte
+;;		   A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
+RTC_ReadReg
+		TFR		A,B				; copy register address to B
+		LDA		#RTC_ADDR		; DS3232 slave address (shifted) in A
+		; fall into I2C_ReadByte
 
 ;; I2C_ReadByte - read a single byte from a specific address
-;; inputs: A = slave address, B = register address, 
-;; return: A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
+;; inputs: A = slave address
+;;         B = register address, 
+;; return: B = value of read data byte
+;;		   A = I2C_fSuccess or I2C_NoSlaveAck or I2C_fBusError
 ;;         Z = 1 when I2C_fSuccess, otherwise Z = 0
-;;		   B = value of read data byte
 I2C_ReadByte
 		ANDA	#$FE			; send START and slave address (WRITE)
 		BSR 	I2C_GoMaster	; try to send slave address
@@ -3173,7 +3227,7 @@ I2C_ReadByte
 ?RBERR	BSR		I2C_SendStop	; send a STOP condition		
 		TSTA					; make sure Z is set according to return code!
 		RTS
-		
+
 ;
 ; MACHINE VECTORS
 ;

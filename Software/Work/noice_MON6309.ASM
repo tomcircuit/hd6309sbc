@@ -6,7 +6,8 @@
 *  Copyright (c) 1992-2006 by John Hartman
 *
 *  Modification History:
-*	13-Mar-06 JLH ported from 6809 version with assistance from Robert Gault
+*    13-Mar-2006 JLH ported from 6809 version with assistance from Robert Gault
+*     8-Mar-2016 TJL corrected bug in the RUN_TARGET handler 
 *
 *============================================================================
 *
@@ -634,9 +635,9 @@ RUN_TARGET
         LDD     #$113D                  LDMD #imm
         STD     COMBUF+30               Start code string
         LDA     REG_MD                  #imm is desired MD value
-        STA     COMBUF+31
+        STA     COMBUF+32
         LDA     #$39                    RTS
-        STA     COMFUB+32
+        STA     COMFUB+33
         JSR     COMBUF+30
 *
 *  Restore V, which isn't on the stack
