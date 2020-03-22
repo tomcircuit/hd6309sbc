@@ -14,7 +14,8 @@
 ;  HARDWARE PLATFORM CUSTOMIZATIONS
 ;
 RAM_START       EQU     $DE00           ; START OF MONITOR RAM
-ROM_START       EQU     $E200           ; START OF MONITOR CODE
+ROM_START       EQU     $C000           ; START OF ROM IMAGE
+ROM_HSTART		EQU		$E200			; START OF HIGH ROM (above IO)
 JUMP_TABLE		EQU		$FFC0			; START OF UTILITY JUMP TABLE
 HARD_VECT       EQU     $FFF0           ; START OF HARDWARE VECTORS
                                          
@@ -170,7 +171,7 @@ TASK_REG_SZ     EQU     *-TASK_REGS
 ;  Communications buffer
 ;  (Must be at least as long as TASK_REG_SZ.  At least 19 bytes recommended.
 ;  Larger values may improve speed of NoICE memory move commands.)
-COMBUF_SIZE     EQU     128             ; DATA SIZE FOR COMM BUFFER
+COMBUF_SIZE     EQU     128             ; DATA SIZE FOR COMM BUFFER  
 COMBUF          RMB     2+COMBUF_SIZE+1 ; BUFFER ALSO HAS FN, LEN, AND CHECK
 COMCH			RMB		1               ; SCC address used for NoICE monitor
 										; ($10=Ch B, $12=Ch A, >$80 not assigned)
@@ -182,9 +183,13 @@ RTCBUFPTR		RMB		2				; points to a 32-byte block in RAM for RTC
 
 RAM_END         EQU     *               ; ADDRESS OF TOP+1 OF RAM
 
+;===========================================================================
+; MC6809 Floating Point functions (available as binary file only)
+		ORG		ROM_START
+		INCLUDEBIN float09.bin
 ;
 ;===========================================================================
-        ORG     ROM_START
+        ORG     ROM_HSTART
 ;
 ;  Power on reset
 RESET
