@@ -1,0 +1,282 @@
+example parsing and MODE 
+	
+: STORE
+. BLOCK
+< DEST
+L LENGTH
+// DELIMITER (space, CR, command)
+
+
+
+At start:
+MODE = XAM
+COUNT = 0
+A0 <- 0
+A1 <- A2 
+A3 <- A2
+
+
+Begin parsing...
+
+(1) repeat (display @ A1) until A1 >= A2
+(2) CANCEL if overflow
+(3) A1 is initial A2 value so just a single value is displayed
+(4) new A0 means increment COUNT
+
+
+DDDD : DD DD DD //
+XXXXXXSSSSSSSSSSSS
+   | |  |  |  |  |
+   | |  |  |  |  |	 
+   | |  |  |  |  +-----------STORE: // means stop storing, display memory between A1 and A2 (1)
+   | |  |  |  |
+   | |  |  |  +----------STORE: NEW A0(4) means store A0 at A2, increment A2 (2)
+   | |  |  |
+   | |  |  +----------STORE: NEW A0(4) means store A0 at A2, increment A2 (2)
+   | |  |      
+   | |  +----------STORE: NEW A0(4) means store A0 at A2, increment A2 (2)
+   | |         
+   | +---------XAM: ':' means set mode to STORE
+   | 
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3 
+   
+   
+: DD DD DD //
+XSSSSSSSSSSSS                                                                           
+|  |  |  |  |
+|  |  |  |  +-----------STORE: // means stop storing, display memory between A1 and A2 (1,3)
+|  |  |  |                                                                           
+|  |  |  +----------STORE: NEW A0(4) means store A0 at A2, increment A2 (2)
+|  |  |                                                                              
+|  |  +----------STORE: NEW A0(4) means store A0 at A2, increment A2 (2)
+|  |                                                                                 
+|  +----------STORE: NEW A0(4) means store A0 at A2, increment A2 (2)
+|                                                                                     
++---------XAM: ':' means set mode to STORE
+
+
+: //
+XSSS
+|  |
+|  +-----------STORE: // means stop storing, display memory between A1 and A2 (3)
+|                                                                                     
++---------XAM: ':' means set mode to STORE
+
+
+ G
+XX
+ |
+ +------------XAM: G means transfer control to A1
+ 
+ 
+ N
+XX
+ |
+ +------------XAM: N means do nothing, continue parsing
+ 
+ 
+ T
+XX
+ |
+ +------------XAM: T means output time and date, cancel rest of input line
+ 
+
+CR
+XX
+ |                                                            
+ +----------XAM: COUNT = 0 means do nothing
+
+
+DDDD G
+XXXXXX
+   | |
+   | +------------XAM: G means transfer control to A1
+   |                                                            
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3
+
+
+DDDD //
+XXXXXXX
+   |  |
+   |  +------------XAM: // means display memory between A1 and A2 (3)
+   |                                                            
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3
+   
+   
+DDDD . DDDD	// 
+XXXXXXBBBBBBBB
+   | |    |  |    
+   | |    |  +----------BLOCK: // means display memory between A1 and A2 (1)
+   | |    |      
+   | |    +----------BLOCK: NEW A0(4) means copy A0 to A2
+   | |
+   | +-----------XAM: '.' means set mode to BLOCK
+   |
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3	 
+   
+
+. DDDD //                                                            
+XBBBBBBBB                                                            
+|    |  |
+|    |  +------------BLOCK: // means display memory between A1 and A2 (1)
+|    |                                                            
+|    +----------BLOCK: NEW A0(4) means copy A0 to A2
+|                                                                  
++---------XAM: '.' means set mode to BLOCK
+
+
+DDDD . //
+XXXXXXBBB
+   | |  |      
+   | |  +----------BLOCK: // means display memory between A1 and A2 (3)
+   | |                                                            	 
+   | +---------XAM: '.' means set mode to BLOCK
+   | 
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3
+
+	 
+. //
+XBBB	 
+|  |
+|  +-----------BLOCK: // means dump memory between A1 and A2 (3)
+|
++---------XAM: '.' means set mode to BLOCK
+
+
+DDDD L DDDD	//
+XXXXXXLLLLLLLL
+   | |    |  |    
+   | |    |  +-----------LENG: // means dump memory between A1 and A2 (1)
+   | |    |         
+   | |    +----------LENG: NEW A0(4) means add A0 to A2 (2)
+   | |          
+   | +---------XAM: 'L' means set mode to LENG
+   | 
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3
+	 
+
+L DDDD //                                           
+XLLLLLLLL                                                            
+|    |  |
+|    |  +-----------LENG: // means display memory between A1 and A2 (1)
+|    |                                                            
+|    +-----------LENG: NEW A0(4) means add A0 to A2 (2)
+|                                                                  
++---------XAM: 'L' means set mode to LENG
+
+
+DDDD L //
+XXXXXXLLL
+   | |  |      
+   | |  +----------LENG: // means display memory between A1 and A2 (3)
+   | |                                                            	 
+   | +---------XAM: 'L' means set mode to LENG
+   | 
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3
+
+	 
+L //
+XLLL	 
+|  |
+|  +----------LENG: // means display memory between A1 and A2 (3)
+|
++---------XAM: 'L' means set mode to LENG
+
+
+DDDD < DDDD . DDDD C
+XXXXXXDDDDDDDBDBDBDB
+   | |    | |    | |
+   | |    | |    | +--------DBLOCK: 'C' with COUNT = 3 means 'COPY' (treat as delimeter) memory between A1...A2 to A3
+   | |    | |    |
+   | |    | |    +------DBLOCK: NEW A0(4) means copy A0 to A2
+   | |    | |
+   | |    | +--------DEST: '.' means set mode to DBLOCK
+   | |    |     
+   | |    +-------DEST: NEW A0(4) means copy A0 to A1,A2
+   | |         
+   | +----------XAM: '<' means set mode to DEST
+   |
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3
+   
+
+DDDD < DDDD .  C
+XXXXXXDDDDDDDBDB
+   | |    | |  |
+   | |    | |  +--------DBLOCK: 'C' with COUNT != 3 means CANCEL
+   | |    | |
+   | |    | +--------DEST: '.' means set mode to DBLOCK
+   | |    |     
+   | |    +-------DEST: NEW A0(4) means copy A0 to A1,A2
+   | |         
+   | +---------XAM: '<' means set mode to DEST
+   |
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3
+
+
+DDDD < . DDDD C
+XXXXXXDDBDBDBDB
+   | | |    | |
+   | | |    | +--------DBLOCK: 'C' with COUNT != 3 means CANCEL
+   | | |    |
+   | | |    +------DBLOCK: NEW A0 means copy A0 to A2
+   | | |
+   | | +--------DEST: '.' means set mode to DBLOCK
+   | |    
+   | +-----XAM: '<' means set mode to DEST
+   |
+   +-----XAM: NEW A0 means copy A0 to A1,A2,A3
+   
+   
+< DDDD . DDDD C                                                                                   
+XDDDDDDDBDBDBDB                                                                                   
+|    | |    | |                                                                                   
+|    | |    | +--------DBLOCK: 'C' with COUNT != 3 means CANCEL
+|    | |    |                                                                                     
+|    | |    +------DBLOCK: NEW A0 means copy A0 to A2                                             
+|    | |
+|    | +--------DEST: '.' means set mode to DBLOCK
+|    |     
+|    +-------DEST: NEW A0 means copy A0 to A1,A2
+|         
++---------XAM: '<' means set mode to DEST
+
+
+DDDD + DDDD	// 
+XXXXXXAAAAAAAA
+   | |    |  |    
+   | |    |  +----------ARITH-SUM: // with COUNT=2 means display A1+A2
+   | |    |      
+   | |    +----------ARITH-SUM: NEW A0(4) means copy A0 to A2
+   | |
+   | +-----------XAM: '+' means set mode to ARITH-SUM
+   |
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3	 
+   
+
+DDDD - DDDD	// 
+XXXXXXAAAAAAAA
+   | |    |  |    
+   | |    |  +----------ARITH-DIF: // with COUNT=2 means display A1-A2
+   | |    |      
+   | |    +----------ARITH-DIF: NEW A0(4) means copy A0 to A2
+   | |
+   | +-----------XAM: '+' means set mode to ARITH-DIF
+   |
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3	 
+
+
+DDDD * DDDD	// 
+XXXXXXAAAAAAAA
+   | |    |  |    
+   | |    |  +----------ARITH-MUL: // with COUNT=2 means display A1*A2
+   | |    |      
+   | |    +----------ARITH-MUL: NEW A0(4) means copy A0 to A2
+   | |
+   | +-----------XAM: '/' means set mode to ARITH-MUL
+   |
+   +----------XAM: NEW A0(4) means copy A0 to A1,A2,A3	 
+
+
+
+
+
