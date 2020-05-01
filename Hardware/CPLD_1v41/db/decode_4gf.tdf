@@ -1,0 +1,77 @@
+--lpm_decode CASCADE_CHAIN="MANUAL" DEVICE_FAMILY="MAX7000S" IGNORE_CASCADE_BUFFERS="OFF" LPM_DECODES=8 LPM_WIDTH=3 data enable eq CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_lpm_decode 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cmpr_4mc (dataa[3..0], datab[3..0])
+RETURNS ( aeb);
+
+--synthesis_resources = 
+SUBDESIGN decode_4gf
+( 
+	data[2..0]	:	input;
+	enable	:	input;
+	eq[7..0]	:	output;
+) 
+VARIABLE 
+	cmpr1 : cmpr_4mc;
+	cmpr2 : cmpr_4mc;
+	cmpr3 : cmpr_4mc;
+	cmpr4 : cmpr_4mc;
+	cmpr5 : cmpr_4mc;
+	cmpr6 : cmpr_4mc;
+	cmpr7 : cmpr_4mc;
+	cmpr8 : cmpr_4mc;
+	const_data0w[2..0]	: WIRE;
+	const_data1w[2..0]	: WIRE;
+	const_data2w[2..0]	: WIRE;
+	const_data3w[2..0]	: WIRE;
+	const_data4w[2..0]	: WIRE;
+	const_data5w[2..0]	: WIRE;
+	const_data6w[2..0]	: WIRE;
+	const_data7w[2..0]	: WIRE;
+	eq_node[7..0]	: WIRE;
+
+BEGIN 
+	cmpr1.dataa[] = ( enable, data[]);
+	cmpr1.datab[] = ( B"1", const_data0w[]);
+	cmpr2.dataa[] = ( enable, data[]);
+	cmpr2.datab[] = ( B"1", const_data1w[]);
+	cmpr3.dataa[] = ( enable, data[]);
+	cmpr3.datab[] = ( B"1", const_data2w[]);
+	cmpr4.dataa[] = ( enable, data[]);
+	cmpr4.datab[] = ( B"1", const_data3w[]);
+	cmpr5.dataa[] = ( enable, data[]);
+	cmpr5.datab[] = ( B"1", const_data4w[]);
+	cmpr6.dataa[] = ( enable, data[]);
+	cmpr6.datab[] = ( B"1", const_data5w[]);
+	cmpr7.dataa[] = ( enable, data[]);
+	cmpr7.datab[] = ( B"1", const_data6w[]);
+	cmpr8.dataa[] = ( enable, data[]);
+	cmpr8.datab[] = ( B"1", const_data7w[]);
+	const_data0w[] = B"000";
+	const_data1w[] = B"001";
+	const_data2w[] = B"010";
+	const_data3w[] = B"011";
+	const_data4w[] = B"100";
+	const_data5w[] = B"101";
+	const_data6w[] = B"110";
+	const_data7w[] = B"111";
+	eq[] = eq_node[];
+	eq_node[] = ( cmpr8.aeb, cmpr7.aeb, cmpr6.aeb, cmpr5.aeb, cmpr4.aeb, cmpr3.aeb, cmpr2.aeb, cmpr1.aeb);
+END;
+--VALID FILE

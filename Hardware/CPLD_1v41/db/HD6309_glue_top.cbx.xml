@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="HD6309_glue_top">
+		<CBX_INST_ENTRY INSTANCE_NAME="|HD6309_glue_top|decode10:PERIP_DECODE|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_khf.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,9 @@
+
+State Machine - |HD6309_glue_top|simpleSPI_M:SPI_MASTER|state
+Name state.state_bit_2 state.state_bit_1 state.state_bit_0 
+state.idle 0 0 0 
+state.loadData 0 0 1 
+state.delay1 0 1 1 
+state.delay2 0 1 0 
+state.txBit 1 1 0 
+state.CheckFinished 1 0 0 

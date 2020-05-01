@@ -1,0 +1,117 @@
+--lpm_decode CASCADE_CHAIN="MANUAL" DEVICE_FAMILY="MAX7000S" IGNORE_CASCADE_BUFFERS="OFF" LPM_DECODES=16 LPM_WIDTH=4 data enable eq CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_lpm_decode 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cmpr_5mc (dataa[4..0], datab[4..0])
+RETURNS ( aeb);
+
+--synthesis_resources = 
+SUBDESIGN decode_khf
+( 
+	data[3..0]	:	input;
+	enable	:	input;
+	eq[15..0]	:	output;
+) 
+VARIABLE 
+	cmpr1 : cmpr_5mc;
+	cmpr10 : cmpr_5mc;
+	cmpr11 : cmpr_5mc;
+	cmpr12 : cmpr_5mc;
+	cmpr13 : cmpr_5mc;
+	cmpr14 : cmpr_5mc;
+	cmpr15 : cmpr_5mc;
+	cmpr16 : cmpr_5mc;
+	cmpr2 : cmpr_5mc;
+	cmpr3 : cmpr_5mc;
+	cmpr4 : cmpr_5mc;
+	cmpr5 : cmpr_5mc;
+	cmpr6 : cmpr_5mc;
+	cmpr7 : cmpr_5mc;
+	cmpr8 : cmpr_5mc;
+	cmpr9 : cmpr_5mc;
+	const_data0w[3..0]	: WIRE;
+	const_data10w[3..0]	: WIRE;
+	const_data11w[3..0]	: WIRE;
+	const_data12w[3..0]	: WIRE;
+	const_data13w[3..0]	: WIRE;
+	const_data14w[3..0]	: WIRE;
+	const_data15w[3..0]	: WIRE;
+	const_data1w[3..0]	: WIRE;
+	const_data2w[3..0]	: WIRE;
+	const_data3w[3..0]	: WIRE;
+	const_data4w[3..0]	: WIRE;
+	const_data5w[3..0]	: WIRE;
+	const_data6w[3..0]	: WIRE;
+	const_data7w[3..0]	: WIRE;
+	const_data8w[3..0]	: WIRE;
+	const_data9w[3..0]	: WIRE;
+	eq_node[15..0]	: WIRE;
+
+BEGIN 
+	cmpr1.dataa[] = ( enable, data[]);
+	cmpr1.datab[] = ( B"1", const_data0w[]);
+	cmpr10.dataa[] = ( enable, data[]);
+	cmpr10.datab[] = ( B"1", const_data9w[]);
+	cmpr11.dataa[] = ( enable, data[]);
+	cmpr11.datab[] = ( B"1", const_data10w[]);
+	cmpr12.dataa[] = ( enable, data[]);
+	cmpr12.datab[] = ( B"1", const_data11w[]);
+	cmpr13.dataa[] = ( enable, data[]);
+	cmpr13.datab[] = ( B"1", const_data12w[]);
+	cmpr14.dataa[] = ( enable, data[]);
+	cmpr14.datab[] = ( B"1", const_data13w[]);
+	cmpr15.dataa[] = ( enable, data[]);
+	cmpr15.datab[] = ( B"1", const_data14w[]);
+	cmpr16.dataa[] = ( enable, data[]);
+	cmpr16.datab[] = ( B"1", const_data15w[]);
+	cmpr2.dataa[] = ( enable, data[]);
+	cmpr2.datab[] = ( B"1", const_data1w[]);
+	cmpr3.dataa[] = ( enable, data[]);
+	cmpr3.datab[] = ( B"1", const_data2w[]);
+	cmpr4.dataa[] = ( enable, data[]);
+	cmpr4.datab[] = ( B"1", const_data3w[]);
+	cmpr5.dataa[] = ( enable, data[]);
+	cmpr5.datab[] = ( B"1", const_data4w[]);
+	cmpr6.dataa[] = ( enable, data[]);
+	cmpr6.datab[] = ( B"1", const_data5w[]);
+	cmpr7.dataa[] = ( enable, data[]);
+	cmpr7.datab[] = ( B"1", const_data6w[]);
+	cmpr8.dataa[] = ( enable, data[]);
+	cmpr8.datab[] = ( B"1", const_data7w[]);
+	cmpr9.dataa[] = ( enable, data[]);
+	cmpr9.datab[] = ( B"1", const_data8w[]);
+	const_data0w[] = B"0000";
+	const_data10w[] = B"1010";
+	const_data11w[] = B"1011";
+	const_data12w[] = B"1100";
+	const_data13w[] = B"1101";
+	const_data14w[] = B"1110";
+	const_data15w[] = B"1111";
+	const_data1w[] = B"0001";
+	const_data2w[] = B"0010";
+	const_data3w[] = B"0011";
+	const_data4w[] = B"0100";
+	const_data5w[] = B"0101";
+	const_data6w[] = B"0110";
+	const_data7w[] = B"0111";
+	const_data8w[] = B"1000";
+	const_data9w[] = B"1001";
+	eq[] = eq_node[];
+	eq_node[] = ( cmpr16.aeb, cmpr15.aeb, cmpr14.aeb, cmpr13.aeb, cmpr12.aeb, cmpr11.aeb, cmpr10.aeb, cmpr9.aeb, cmpr8.aeb, cmpr7.aeb, cmpr6.aeb, cmpr5.aeb, cmpr4.aeb, cmpr3.aeb, cmpr2.aeb, cmpr1.aeb);
+END;
+--VALID FILE
