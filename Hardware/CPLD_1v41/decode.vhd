@@ -10,9 +10,9 @@ entity decode is
 			addr : in std_logic_vector(15 downto 8);	-- CPU address bus
 			rd_n : in std_logic;			-- CPU READ signal (active low)
 			wr_n : in std_logic;			-- CPU WRITE signal (active low)
-			romsel : in std_logic;		-- ROM banking control
-			romseh : in std_logic;     -- ROM banking control
-   		rom : out std_logic;		-- ROM select
+			romenl : in std_logic;		-- ROM banking control
+			romenh : in std_logic;     -- ROM banking control
+   		rom : out std_logic;		   -- ROM select
 			ram1 : out std_logic;		-- RAM #1 select
 			ram2 : out std_logic;		-- RAM #2 select
 			peripl : out std_logic;		-- LOW peripheral (0xE000-0xE0FF) select
@@ -55,12 +55,12 @@ begin
 	ram1 <= region1;
 	
 	-- RAM#2 in region 2 and region 3 when romsel = 0 or a write and region 6 when romseh = 0 or a write
-	ram2 <= '1' when region2 = '1' or ( region3 = '1' and (romsel = '0' or wr_n = '0') ) 
-	                              or ( region6 = '1' and (romseh = '0' or wr_n = '0') ) else '0';
+	ram2 <= '1' when region2 = '1' or ( region3 = '1' and (romenl = '0' or wr_n = '0') ) 
+	                              or ( region6 = '1' and (romenh = '0' or wr_n = '0') ) else '0';
 
 	-- ROM in region 3 when romsel = 1 and reads or in region 6 when romseh = 1 and reads
-	rom <= '1' when ( (region3 = '1' and ( romsel = '1' and rd_n = '0' ) )
-	                               or ( region6 = '1' and (romseh = '1' and rd_n = '0') ) ) else '0';
+	rom <= '1' when ( (region3 = '1' and ( romenl = '1' and rd_n = '0' ) )
+	                               or ( region6 = '1' and (romenh = '1' and rd_n = '0') ) ) else '0';
 																								
 	-- LOW peripheral block
 	peripl <= region4;

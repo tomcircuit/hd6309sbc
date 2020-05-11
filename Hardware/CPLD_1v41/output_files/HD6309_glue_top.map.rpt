@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HD6309_glue_top
-Fri May 01 13:43:37 2020
+Mon May 11 15:26:08 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -50,12 +50,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri May 01 13:43:37 2020           ;
+; Analysis & Synthesis Status ; Successful - Mon May 11 15:26:08 2020           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; HD6309_glue_top                                 ;
 ; Top-level Entity Name       ; HD6309_glue_top                                 ;
 ; Family                      ; MAX7000S                                        ;
-; Total macrocells            ; 97                                              ;
+; Total macrocells            ; 94                                              ;
 ; Total pins                  ; 56                                              ;
 +-----------------------------+-------------------------------------------------+
 
@@ -181,15 +181,15 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 97                   ;
+; Logic cells          ; 94                   ;
 ; Total registers      ; 51                   ;
 ; I/O pins             ; 56                   ;
 ; Shareable expanders  ; 2                    ;
-; Parallel expanders   ; 17                   ;
+; Parallel expanders   ; 14                   ;
 ; Maximum fan-out node ; RESET                ;
-; Maximum fan-out      ; 76                   ;
-; Total fan-out        ; 1090                 ;
-; Average fan-out      ; 7.03                 ;
+; Maximum fan-out      ; 73                   ;
+; Total fan-out        ; 1037                 ;
+; Average fan-out      ; 6.82                 ;
 +----------------------+----------------------+
 
 
@@ -198,7 +198,7 @@ applicable agreement for further details.
 +----------------------------------------------+------------+------+-----------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Macrocells ; Pins ; Full Hierarchy Name                                                                                             ; Library Name ;
 +----------------------------------------------+------------+------+-----------------------------------------------------------------------------------------------------------------+--------------+
-; |HD6309_glue_top                             ; 97         ; 56   ; |HD6309_glue_top                                                                                                ; work         ;
+; |HD6309_glue_top                             ; 94         ; 56   ; |HD6309_glue_top                                                                                                ; work         ;
 ;    |I2Cport:I2C_PORT|                        ; 3          ; 0    ; |HD6309_glue_top|I2Cport:I2C_PORT                                                                               ; work         ;
 ;    |IOport:IO_PORT|                          ; 7          ; 0    ; |HD6309_glue_top|IOport:IO_PORT                                                                                 ; work         ;
 ;    |SDdata:SD_PORT|                          ; 8          ; 0    ; |HD6309_glue_top|SDdata:SD_PORT                                                                                 ; work         ;
@@ -333,6 +333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+; eq7  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; eq8  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; eq9  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -381,7 +382,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 01 13:43:35 2020
+    Info: Processing started: Mon May 11 15:26:06 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HD6309_glue_top -c HD6309_glue_top
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file simplespi_m.vhd
@@ -420,16 +421,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file count4.
 Info (12021): Found 2 design units, including 1 entities, in source file decode10.vhd
     Info (12022): Found design unit 1: decode10-SYN
     Info (12023): Found entity 1: decode10
-Info (12021): Found 2 design units, including 1 entities, in source file decode8.vhd
-    Info (12022): Found design unit 1: decode8-SYN
-    Info (12023): Found entity 1: decode8
 Info (12021): Found 2 design units, including 1 entities, in source file count6.vhd
     Info (12022): Found design unit 1: count6-SYN
     Info (12023): Found entity 1: count6
 Info (12127): Elaborating entity "HD6309_glue_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at HD6309_glue_top.vhd(104): object "periph" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at HD6309_glue_top.vhd(108): object "nu8_sel" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at HD6309_glue_top.vhd(108): object "nu9_sel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at HD6309_glue_top.vhd(101): object "periph" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at HD6309_glue_top.vhd(105): object "nu7_sel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at HD6309_glue_top.vhd(105): object "nu8_sel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at HD6309_glue_top.vhd(105): object "nu9_sel" assigned a value but never read
 Info (12128): Elaborating entity "cpuclock" for hierarchy "cpuclock:CPU_CLOCK"
 Info (12128): Elaborating entity "count6" for hierarchy "count6:AUX_CLOCK"
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component"
@@ -474,15 +473,15 @@ Info (280013): Promoted pin-driven signal(s) to global signal
     Info (280015): Promoted clear signal driven by pin "RESET" to global clear signal
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "LIC"
-Info (21057): Implemented 155 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
     Info (21059): Implemented 25 output pins
     Info (21060): Implemented 10 bidirectional pins
-    Info (21063): Implemented 97 macrocells
+    Info (21063): Implemented 94 macrocells
     Info (21073): Implemented 2 shareable expanders
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 477 megabytes
-    Info: Processing ended: Fri May 01 13:43:37 2020
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 476 megabytes
+    Info: Processing ended: Mon May 11 15:26:08 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

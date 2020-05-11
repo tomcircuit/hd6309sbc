@@ -120,5 +120,4 @@ set_global_assignment -name VHDL_FILE I2Cport.vhd
 set_global_assignment -name QIP_FILE count3.qip
 set_global_assignment -name QIP_FILE count4.qip
 set_global_assignment -name QIP_FILE decode10.qip
-set_global_assignment -name QIP_FILE decode8.qip
 set_global_assignment -name QIP_FILE count6.qip

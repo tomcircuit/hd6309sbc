@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "05/01/2020 13:43:42"
+-- DATE "05/11/2020 15:26:13"
 
 -- 
 -- Device: Altera EPM7128SLI84-10 Package PLCC84
@@ -168,105 +168,105 @@ SIGNAL ww_SDDO : std_logic;
 SIGNAL ww_SDCS : std_logic;
 SIGNAL ww_SDDI : std_logic;
 SIGNAL ww_SDSW : std_logic;
-SIGNAL \DATA[0]~147_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~147_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~156_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~157_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~173_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~174_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~181_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~188_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~203_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~212_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[0]~130_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~134_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[1]~138_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~147_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~148_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[4]~159_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[5]~163_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~171_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~179_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \rd_n~2_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \rd_n~2_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \rd_n~2_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -388,28 +388,28 @@ SIGNAL \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]_pclk_bus\ : std_logic_v
 SIGNAL \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -696,17 +696,6 @@ SIGNAL \SD_PORT|d_latch[0]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[0]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[0]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[0]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SPI_MASTER|SCLK_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[4]_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[4]_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[4]_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -718,6 +707,17 @@ SIGNAL \SD_PORT|d_latch[4]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[4]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[4]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[4]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SPI_MASTER|SCLK_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|SCLK~1_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|SCLK~1_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|SCLK~1_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -850,39 +850,6 @@ SIGNAL \SYS_PORT|asel_latch_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SYS_PORT|asel_latch_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SYS_PORT|asel_latch_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SYS_PORT|asel_latch_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[5]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SD_PORT|d_latch[1]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \BAUD_CLOCK|a_out~5_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|scl_latch_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|scl_latch_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|scl_latch_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -905,6 +872,28 @@ SIGNAL \SD_PORT|d_latch[7]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[7]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[7]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[7]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[5]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \SD_PORT|d_latch[1]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|sda_latch_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|sda_latch_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|sda_latch_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -927,6 +916,17 @@ SIGNAL \SD_PORT|d_latch[6]_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[6]_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[6]_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch[6]_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \BAUD_CLOCK|a_out~5_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|sda_mon_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|sda_mon_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \I2C_PORT|sda_mon_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -1026,50 +1026,17 @@ SIGNAL \SPI_MASTER|MOSI_v~11_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|MOSI_v~11_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|MOSI_v~11_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|MOSI_v~11_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[1]~323_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[3]~325_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[4]~329_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[5]~332_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[3]~290_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|MOSI_v~13_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|MOSI_v~13_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|MOSI_v~13_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -1103,105 +1070,105 @@ SIGNAL \~VCC~0_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \~VCC~0_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \~VCC~0_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \~VCC~0_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~345_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~346_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~347_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~361_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~362_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~363_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~376_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~377_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~378_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~305_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~306_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~307_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~321_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~322_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~323_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~336_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~337_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~338_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \ADDR_DECODE|ram2~20_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \ADDR_DECODE|ram2~20_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \ADDR_DECODE|ram2~20_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -1235,39 +1202,39 @@ SIGNAL \spi_pclk~19bal_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \spi_pclk~19bal_pena_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \spi_pclk~19bal_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \spi_pclk~19bal_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[2]~380_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[6]~381_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[7]~382_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[2]~340_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[6]~341_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \DATA[7]~342_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \ADDR_DECODE|ram2~26_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \ADDR_DECODE|ram2~26_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \ADDR_DECODE|ram2~26_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -1282,20 +1249,19 @@ SIGNAL \ADDR_DECODE|ram2~26_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SYS_PORT|process_0~4_datain_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SPI_MASTER|MOSI_v~4_datain_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \SYS_PORT|process_0~5_datain_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \DATA[0]~1\ : std_logic;
-SIGNAL \DATA[1]~2\ : std_logic;
-SIGNAL \DATA[2]~3\ : std_logic;
-SIGNAL \DATA[3]~4\ : std_logic;
-SIGNAL \DATA[4]~5\ : std_logic;
-SIGNAL \DATA[5]~6\ : std_logic;
-SIGNAL \DATA[6]~7\ : std_logic;
-SIGNAL \DATA[7]~8\ : std_logic;
+SIGNAL \DATA[0]~0\ : std_logic;
+SIGNAL \DATA[1]~1\ : std_logic;
+SIGNAL \DATA[2]~2\ : std_logic;
+SIGNAL \DATA[3]~3\ : std_logic;
+SIGNAL \DATA[4]~4\ : std_logic;
+SIGNAL \DATA[5]~5\ : std_logic;
+SIGNAL \DATA[6]~6\ : std_logic;
+SIGNAL \DATA[7]~7\ : std_logic;
 SIGNAL \I2CSDA~0\ : std_logic;
 SIGNAL \RESET~dataout\ : std_logic;
+SIGNAL \SDDI~dataout\ : std_logic;
 SIGNAL \CPU_CLOCK|pre_cnt~dataout\ : std_logic;
 SIGNAL \RW~dataout\ : std_logic;
-SIGNAL \CPU_CLOCK|d_e_out~dataout\ : std_logic;
-SIGNAL \SDDI~dataout\ : std_logic;
 SIGNAL \IO_PORT|sdclk_latch~dataout\ : std_logic;
 SIGNAL \XOSC~dataout\ : std_logic;
 SIGNAL \spi_pclk~19bal_dataout\ : std_logic;
@@ -1304,54 +1270,52 @@ SIGNAL \SPI_MASTER|state.state_bit_0~dataout\ : std_logic;
 SIGNAL \SPI_MASTER|state.state_bit_1~dataout\ : std_logic;
 SIGNAL \SPI_MASTER|SS~dataout\ : std_logic;
 SIGNAL \spi_start~dataout\ : std_logic;
-SIGNAL \DATA[0]~147_dataout\ : std_logic;
-SIGNAL \DATA[7]~156_dataout\ : std_logic;
+SIGNAL \CPU_CLOCK|d_e_out~dataout\ : std_logic;
+SIGNAL \DATA[0]~130_dataout\ : std_logic;
+SIGNAL \DATA[7]~134_dataout\ : std_logic;
 SIGNAL \SYS_PORT|romsel_latch~dataout\ : std_logic;
-SIGNAL \DATA[1]~323_pexpout\ : std_logic;
-SIGNAL \DATA[1]~157_dataout\ : std_logic;
-SIGNAL \SYS_PORT|romseh_latch~dataout\ : std_logic;
-SIGNAL \DATA[2]~347_pexpout\ : std_logic;
-SIGNAL \DATA[2]~346_pexpout\ : std_logic;
-SIGNAL \DATA[2]~345_pexpout\ : std_logic;
+SIGNAL \DATA[1]~138_dataout\ : std_logic;
 SIGNAL \I2C_PORT|sda_mon~dataout\ : std_logic;
-SIGNAL \DATA[2]~173_dataout\ : std_logic;
-SIGNAL \DATA[2]~380_dataout\ : std_logic;
+SIGNAL \SYS_PORT|romseh_latch~dataout\ : std_logic;
+SIGNAL \DATA[2]~307_pexpout\ : std_logic;
+SIGNAL \DATA[2]~306_pexpout\ : std_logic;
+SIGNAL \DATA[2]~305_pexpout\ : std_logic;
+SIGNAL \DATA[2]~147_dataout\ : std_logic;
+SIGNAL \DATA[2]~340_dataout\ : std_logic;
 SIGNAL \I2C_PORT|scl_latch~dataout\ : std_logic;
 SIGNAL \CONF~dataout\ : std_logic;
 SIGNAL \SYS_PORT|process_0~4_dataout\ : std_logic;
 SIGNAL \SYS_PORT|romp27_latch~dataout\ : std_logic;
 SIGNAL \PBTN~dataout\ : std_logic;
 SIGNAL \IO_PORT|button_latch~dataout\ : std_logic;
-SIGNAL \DATA[3]~325_pexpout\ : std_logic;
-SIGNAL \DATA[3]~174_dataout\ : std_logic;
+SIGNAL \DATA[3]~290_pexpout\ : std_logic;
+SIGNAL \DATA[3]~148_dataout\ : std_logic;
 SIGNAL \SYS_PORT|config_latch~dataout\ : std_logic;
-SIGNAL \DATA[4]~329_pexpout\ : std_logic;
 SIGNAL \IO_PORT|sdcs_latch~dataout\ : std_logic;
-SIGNAL \DATA[4]~181_dataout\ : std_logic;
+SIGNAL \DATA[4]~159_dataout\ : std_logic;
 SIGNAL \SYS_PORT|asel_latch~dataout\ : std_logic;
-SIGNAL \DATA[5]~332_pexpout\ : std_logic;
-SIGNAL \DATA[5]~188_dataout\ : std_logic;
-SIGNAL \DATA[6]~363_pexpout\ : std_logic;
-SIGNAL \DATA[6]~362_pexpout\ : std_logic;
-SIGNAL \DATA[6]~361_pexpout\ : std_logic;
+SIGNAL \DATA[5]~163_dataout\ : std_logic;
 SIGNAL \I2C_PORT|sda_latch~dataout\ : std_logic;
-SIGNAL \DATA[6]~203_dataout\ : std_logic;
-SIGNAL \DATA[6]~381_dataout\ : std_logic;
-SIGNAL \DATA[7]~378_pexpout\ : std_logic;
-SIGNAL \DATA[7]~377_pexpout\ : std_logic;
-SIGNAL \DATA[7]~376_pexpout\ : std_logic;
+SIGNAL \DATA[6]~323_pexpout\ : std_logic;
+SIGNAL \DATA[6]~322_pexpout\ : std_logic;
+SIGNAL \DATA[6]~321_pexpout\ : std_logic;
+SIGNAL \DATA[6]~171_dataout\ : std_logic;
+SIGNAL \DATA[6]~341_dataout\ : std_logic;
+SIGNAL \DATA[7]~338_pexpout\ : std_logic;
+SIGNAL \DATA[7]~337_pexpout\ : std_logic;
+SIGNAL \DATA[7]~336_pexpout\ : std_logic;
 SIGNAL \SDSW~dataout\ : std_logic;
 SIGNAL \IO_PORT|switch_latch~dataout\ : std_logic;
-SIGNAL \DATA[7]~212_dataout\ : std_logic;
-SIGNAL \DATA[7]~382_dataout\ : std_logic;
+SIGNAL \DATA[7]~179_dataout\ : std_logic;
+SIGNAL \DATA[7]~342_dataout\ : std_logic;
 SIGNAL \~VCC~0~dataout\ : std_logic;
 SIGNAL \ADDR_DECODE|ram1~1_dataout\ : std_logic;
 SIGNAL \rd_n~2_dataout\ : std_logic;
 SIGNAL \wr_n~5_dataout\ : std_logic;
 SIGNAL \wr_n~8_dataout\ : std_logic;
 SIGNAL \WOSC~dataout\ : std_logic;
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_dataout\ : std_logic;
-SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_dataout\ : std_logic;
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_dataout\ : std_logic;
+SIGNAL \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_dataout\ : std_logic;
 SIGNAL \IO_PORT|sdcs_latch~1_dataout\ : std_logic;
 SIGNAL \LED~3_dataout\ : std_logic;
 SIGNAL \LED~6_dataout\ : std_logic;
@@ -1373,23 +1337,23 @@ SIGNAL \SPI_MASTER|MOSI_v~4_dataout\ : std_logic;
 SIGNAL \SPI_MASTER|MOSI_v~15_pexpout\ : std_logic;
 SIGNAL \SPI_MASTER|MOSI_v~dataout\ : std_logic;
 SIGNAL \SPI_MASTER|MOSI_v~11_dataout\ : std_logic;
-SIGNAL \ADDR~dataout\ : std_logic_vector(15 DOWNTO 4);
 SIGNAL \CPU_CLOCK|clock_state\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \SPI_MASTER|index\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \AUX_CLOCK|LPM_COUNTER_component|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \IO_PORT|led_latch\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \SD_PORT|d_latch\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \SPI_MASTER|DataRxd\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \SPI_MASTER|index\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \IO_PORT|led_latch\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \ADDR~dataout\ : std_logic_vector(15 DOWNTO 4);
+SIGNAL \AUX_CLOCK|LPM_COUNTER_component|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \ALT_INV_I2CSDA~0\ : std_logic;
-SIGNAL \ALT_INV_DATA[7]~8\ : std_logic;
-SIGNAL \ALT_INV_DATA[6]~7\ : std_logic;
-SIGNAL \ALT_INV_DATA[5]~6\ : std_logic;
-SIGNAL \ALT_INV_DATA[4]~5\ : std_logic;
-SIGNAL \ALT_INV_DATA[3]~4\ : std_logic;
-SIGNAL \ALT_INV_DATA[2]~3\ : std_logic;
-SIGNAL \ALT_INV_DATA[1]~2\ : std_logic;
-SIGNAL \ALT_INV_DATA[0]~1\ : std_logic;
+SIGNAL \ALT_INV_DATA[7]~7\ : std_logic;
+SIGNAL \ALT_INV_DATA[6]~6\ : std_logic;
+SIGNAL \ALT_INV_DATA[5]~5\ : std_logic;
+SIGNAL \ALT_INV_DATA[4]~4\ : std_logic;
+SIGNAL \ALT_INV_DATA[3]~3\ : std_logic;
+SIGNAL \ALT_INV_DATA[2]~2\ : std_logic;
+SIGNAL \ALT_INV_DATA[1]~1\ : std_logic;
+SIGNAL \ALT_INV_DATA[0]~0\ : std_logic;
 SIGNAL \ALT_INV_SDSW~dataout\ : std_logic;
 SIGNAL \ALT_INV_SDDI~dataout\ : std_logic;
 SIGNAL \ALT_INV_PBTN~dataout\ : std_logic;
@@ -1459,329 +1423,326 @@ SDCS <= ww_SDCS;
 ww_SDDI <= SDDI;
 ww_SDSW <= SDSW;
 
-\DATA[0]~147_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
-
-\DATA[0]~147_pterm1_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[0]~130_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[0]~147_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(6) & NOT \IO_PORT|led_latch\(0));
+\DATA[0]~130_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \SPI_MASTER|DataRxd\(0));
 
-\DATA[0]~147_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(6) & \IO_PORT|led_latch\(0));
+\DATA[0]~130_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\IO_PORT|led_latch\(0) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11)
+& NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6));
 
-\DATA[0]~147_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(6));
-
-\DATA[0]~147_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[0]~130_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[0]~147_pxor_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(0));
+\DATA[0]~130_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[0]~147_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[0]~130_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\DATA[0]~130_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[0]~147_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[0]~130_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\DATA[0]~130_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[0]~147_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[0]~130_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[0]~147_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[0]~130_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~156_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~134_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~156_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5));
+\DATA[7]~134_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & 
+\ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
 
-\DATA[7]~156_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7));
+\DATA[7]~134_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& \ADDR~dataout\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
 
-\DATA[7]~156_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~134_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& NOT \ADDR~dataout\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & \ADDR~dataout\(5) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+
+\DATA[7]~134_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~156_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~134_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~156_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[7]~156_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~134_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~156_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~134_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~156_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[7]~134_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[7]~156_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~134_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~156_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~134_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~157_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \IO_PORT|led_latch\(1) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
-
-\DATA[1]~157_pterm1_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[1]~138_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~157_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \IO_PORT|led_latch\(1) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+\DATA[1]~138_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \SPI_MASTER|DataRxd\(1));
 
-\DATA[1]~157_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SYS_PORT|romsel_latch~dataout\ & \SPI_MASTER|DataRxd\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+\DATA[1]~138_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\SYS_PORT|romsel_latch~dataout\ & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT 
+\ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6));
 
-\DATA[1]~157_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+\DATA[1]~138_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\IO_PORT|led_latch\(1) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11)
+& NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6));
 
-\DATA[1]~157_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[1]~138_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~157_pxor_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(1));
+\DATA[1]~138_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~157_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[1]~138_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~157_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[1]~138_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\DATA[1]~138_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[1]~157_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[1]~138_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~157_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[1]~138_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~173_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\I2C_PORT|sda_mon~dataout\ & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5));
+\DATA[2]~147_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & 
+\ADDR~dataout\(5) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \ADDR~dataout\(4));
 
-\DATA[2]~173_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(5) & \SPI_MASTER|DataRxd\(2) & \ADDR~dataout\(6));
+\DATA[2]~147_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & 
+\ADDR~dataout\(5) & NOT \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(4) & \SPI_MASTER|DataRxd\(2));
 
-\DATA[2]~173_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(7) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~147_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_mon~dataout\ & \ADDR~dataout\(5) & \ADDR~dataout\(6));
 
-\DATA[2]~173_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(6));
+\DATA[2]~147_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_mon~dataout\ & NOT \RW~dataout\);
 
-\DATA[2]~173_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(4) & \SPI_MASTER|DataRxd\(2) & NOT \ADDR~dataout\(6));
+\DATA[2]~147_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_mon~dataout\ & NOT \ADDR~dataout\(6) & NOT \ADDR~dataout\(4));
 
-\DATA[2]~173_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~147_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~173_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~147_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~173_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~147_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~173_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[2]~147_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[2]~173_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~147_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~173_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~147_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[3]~174_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SYS_PORT|romp27_latch~dataout\ & \ADDR~dataout\(6) & \SPI_MASTER|DataRxd\(3) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT 
-\ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(4));
+\DATA[3]~148_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
 
-\DATA[3]~174_pterm1_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~148_pterm1_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[3]~174_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(3) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(5) & NOT \I2C_PORT|scl_latch~dataout\);
+\DATA[3]~148_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \SPI_MASTER|DataRxd\(3));
 
-\DATA[3]~174_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\ADDR~dataout\(6) & NOT \IO_PORT|button_latch~dataout\ & \SPI_MASTER|DataRxd\(3) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT 
-\ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(5));
+\DATA[3]~148_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\SYS_PORT|romp27_latch~dataout\ & \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
+NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
 
-\DATA[3]~174_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\ADDR~dataout\(6) & \SPI_MASTER|DataRxd\(3) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10)
-& NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(5));
+\DATA[3]~148_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\IO_PORT|button_latch~dataout\ & \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
+NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(6) & \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
 
-\DATA[3]~174_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~148_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[3]~174_pxor_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(3));
+\DATA[3]~148_pxor_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[3]~174_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[3]~148_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[3]~174_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[3]~148_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[3]~174_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~148_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[3]~174_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~148_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[4]~181_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(5));
-
-\DATA[4]~181_pterm1_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[4]~159_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[4]~181_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(5) & \IO_PORT|sdcs_latch~dataout\);
+\DATA[4]~159_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(6) & \SPI_MASTER|DataRxd\(4));
 
-\DATA[4]~181_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SYS_PORT|config_latch~dataout\ & \SPI_MASTER|DataRxd\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
-\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(5));
+\DATA[4]~159_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\SYS_PORT|config_latch~dataout\ & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(6));
 
-\DATA[4]~181_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(5) & NOT \IO_PORT|sdcs_latch~dataout\);
+\DATA[4]~159_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\IO_PORT|sdcs_latch~dataout\ & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(6));
 
-\DATA[4]~181_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[4]~159_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(5) & \ADDR~dataout\(6));
+
+\DATA[4]~159_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[4]~181_pxor_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(4));
-
-\DATA[4]~181_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[4]~159_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[4]~181_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[4]~159_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\DATA[4]~159_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[4]~181_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[4]~159_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[4]~181_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[4]~159_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[5]~188_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \IO_PORT|sdclk_latch~dataout\ & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
-
-\DATA[5]~188_pterm1_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[5]~163_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[5]~188_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \IO_PORT|sdclk_latch~dataout\ & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+\DATA[5]~163_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \SPI_MASTER|DataRxd\(5));
 
-\DATA[5]~188_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SYS_PORT|asel_latch~dataout\ & \SPI_MASTER|DataRxd\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+\DATA[5]~163_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\SYS_PORT|asel_latch~dataout\ & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT 
+\ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6));
 
-\DATA[5]~188_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SPI_MASTER|DataRxd\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+\DATA[5]~163_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\IO_PORT|sdclk_latch~dataout\ & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT 
+\ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6));
 
-\DATA[5]~188_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[5]~163_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[5]~188_pxor_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(5));
+\DATA[5]~163_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[5]~188_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[5]~163_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[5]~188_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[5]~163_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\DATA[5]~163_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[5]~188_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[5]~163_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[5]~188_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[5]~163_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~203_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4));
+\DATA[6]~171_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_latch~dataout\ & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
 
-\DATA[6]~203_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \SPI_MASTER|SS~dataout\);
+\DATA[6]~171_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9)
+& NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \SPI_MASTER|DataRxd\(6));
 
-\DATA[6]~203_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\I2C_PORT|sda_latch~dataout\ & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
+\DATA[6]~171_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\SPI_MASTER|SS~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10)
+& NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
 
-\DATA[6]~203_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(6) & \ADDR~dataout\(7));
+\DATA[6]~171_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6));
 
-\DATA[6]~203_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(6) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
+\DATA[6]~171_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_latch~dataout\ & NOT \RW~dataout\);
 
-\DATA[6]~203_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~171_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~203_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~171_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~203_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~171_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~203_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[6]~171_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[6]~203_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~171_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~203_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~171_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~212_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4));
+\DATA[7]~179_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|scl_latch~dataout\ & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
 
-\DATA[7]~212_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \IO_PORT|switch_latch~dataout\);
+\DATA[7]~179_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9)
+& NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \SPI_MASTER|DataRxd\(7));
 
-\DATA[7]~212_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\I2C_PORT|scl_latch~dataout\ & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
+\DATA[7]~179_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\IO_PORT|switch_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
 
-\DATA[7]~212_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(7) & \ADDR~dataout\(7));
+\DATA[7]~179_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6));
 
-\DATA[7]~212_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(7) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
+\DATA[7]~179_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|scl_latch~dataout\ & NOT \RW~dataout\);
 
-\DATA[7]~212_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~179_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~212_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~179_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~212_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~179_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~212_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[7]~179_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[7]~212_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~179_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~212_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~179_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \rd_n~2_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
@@ -2147,72 +2108,72 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT 
+\ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6));
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6));
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11)
+& NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6));
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
@@ -2258,12 +2219,12 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \CONF~dataout\ & \SYS_PORT|config_latch~dataout\ & NOT \RESET~dataout\);
 
 \SYS_PORT|config_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT 
-\ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \CONF~dataout\ & \SYS_PORT|config_latch~dataout\);
+vcc & vcc & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \CONF~dataout\ & \SYS_PORT|config_latch~dataout\);
 
 \SYS_PORT|config_latch_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT 
-\ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CONF~dataout\ & NOT \SYS_PORT|config_latch~dataout\);
+vcc & vcc & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & \CONF~dataout\ & NOT \SYS_PORT|config_latch~dataout\);
 
 \SYS_PORT|config_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2293,12 +2254,12 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SDSW~dataout\ & \IO_PORT|switch_latch~dataout\ & NOT \RESET~dataout\);
 
 \IO_PORT|switch_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT 
-\ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \SDSW~dataout\ & \IO_PORT|switch_latch~dataout\);
+vcc & vcc & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8)
+& NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & \SDSW~dataout\ & \IO_PORT|switch_latch~dataout\);
 
 \IO_PORT|switch_latch_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT 
-\ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \SDSW~dataout\ & NOT \IO_PORT|switch_latch~dataout\);
+vcc & vcc & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8)
+& NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \SDSW~dataout\ & NOT \IO_PORT|switch_latch~dataout\);
 
 \IO_PORT|switch_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2322,20 +2283,20 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \IO_PORT|led_latch[1]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\IO_PORT|led_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~2\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|led_latch\(1) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~1\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|led_latch[1]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|led_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~2\);
+\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|led_latch\(1) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~1\);
 
 \IO_PORT|led_latch[1]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\IO_PORT|led_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~2\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|led_latch\(1) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~1\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|led_latch[1]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \IO_PORT|led_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~2\);
+\CPU_CLOCK|clock_state\(1) & \IO_PORT|led_latch\(1) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~1\);
 
 \IO_PORT|led_latch[1]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2359,20 +2320,20 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \IO_PORT|led_latch[0]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\IO_PORT|led_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[0]~1\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|led_latch\(0) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[0]~0\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|led_latch[0]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|led_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[0]~1\);
+\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|led_latch\(0) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[0]~0\);
 
 \IO_PORT|led_latch[0]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\IO_PORT|led_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[0]~1\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|led_latch\(0) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[0]~0\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|led_latch[0]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \IO_PORT|led_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[0]~1\);
+\CPU_CLOCK|clock_state\(1) & \IO_PORT|led_latch\(0) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[0]~0\);
 
 \IO_PORT|led_latch[0]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2393,20 +2354,20 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \IO_PORT|sdcs_latch_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \IO_PORT|sdcs_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[4]~5\);
+\CPU_CLOCK|clock_state\(1) & \IO_PORT|sdcs_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[4]~4\);
 
 \IO_PORT|sdcs_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\IO_PORT|sdcs_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[4]~5\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|sdcs_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[4]~4\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|sdcs_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|sdcs_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
-NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[4]~5\);
+\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|sdcs_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[4]~4\);
 
 \IO_PORT|sdcs_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\IO_PORT|sdcs_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[4]~5\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|sdcs_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[4]~4\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|sdcs_latch_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2433,20 +2394,20 @@ NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~da
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \IO_PORT|sdclk_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\IO_PORT|sdclk_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~6\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|sdclk_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~5\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|sdclk_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|sdclk_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
-NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~6\);
+\CPU_CLOCK|clock_state\(1) & NOT \IO_PORT|sdclk_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~5\);
 
 \IO_PORT|sdclk_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\IO_PORT|sdclk_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~6\ & \CPU_CLOCK|clock_state\(2));
+\IO_PORT|sdclk_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~5\ & \CPU_CLOCK|clock_state\(2));
 
 \IO_PORT|sdclk_latch_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \IO_PORT|sdclk_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~6\);
+\CPU_CLOCK|clock_state\(1) & \IO_PORT|sdclk_latch~dataout\ & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~5\);
 
 \IO_PORT|sdclk_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2476,12 +2437,12 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \PBTN~dataout\ & \IO_PORT|button_latch~dataout\ & NOT \RESET~dataout\);
 
 \IO_PORT|button_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT 
-\ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & \PBTN~dataout\ & \IO_PORT|button_latch~dataout\);
+vcc & vcc & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8)
+& NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & \PBTN~dataout\ & \IO_PORT|button_latch~dataout\);
 
 \IO_PORT|button_latch_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT 
-\ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \PBTN~dataout\ & NOT \IO_PORT|button_latch~dataout\);
+vcc & vcc & NOT \ADDR~dataout\(5) & \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8)
+& NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \PBTN~dataout\ & NOT \IO_PORT|button_latch~dataout\);
 
 \IO_PORT|button_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2640,8 +2601,8 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \CPU_CLOCK|clock_state\(1) & NOT \CPU_CLOCK|clock_state\(0));
 
 \CPU_CLOCK|clock_state[1]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & \ADDR~dataout\(15) & NOT \CPU_CLOCK|clock_state\(2) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(6) & \CPU_CLOCK|clock_state\(1));
+& vcc & vcc & NOT \ADDR~dataout\(5) & NOT \CPU_CLOCK|clock_state\(2) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \CPU_CLOCK|clock_state\(1));
 
 \CPU_CLOCK|clock_state[1]_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -2773,8 +2734,8 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \CPU_CLOCK|clock_state\(1) & \CPU_CLOCK|clock_state\(2));
 
 \CPU_CLOCK|clock_state[2]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & \CPU_CLOCK|clock_state\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & 
-NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(6) & \CPU_CLOCK|clock_state\(1) & NOT \CPU_CLOCK|clock_state\(2));
+& vcc & \CPU_CLOCK|clock_state\(0) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
+NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \CPU_CLOCK|clock_state\(1) & NOT \CPU_CLOCK|clock_state\(2));
 
 \CPU_CLOCK|clock_state[2]_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3073,19 +3034,19 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 
 \SD_PORT|d_latch[0]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
 \SD_PORT|d_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[0]~1\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[0]~0\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[0]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[0]~1\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[0]~0\);
 
 \SD_PORT|d_latch[0]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \SD_PORT|d_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[0]~1\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[0]~0\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[0]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(0) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[0]~1\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[0]~0\);
 
 \SD_PORT|d_latch[0]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3103,6 +3064,43 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SD_PORT|d_latch[0]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[4]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[4]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[4]~4\ & \CPU_CLOCK|clock_state\(2));
+
+\SD_PORT|d_latch[4]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[4]~4\);
+
+\SD_PORT|d_latch[4]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[4]~4\ & \CPU_CLOCK|clock_state\(2));
+
+\SD_PORT|d_latch[4]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[4]~4\);
+
+\SD_PORT|d_latch[4]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[4]_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[4]_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[4]_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+
+\SD_PORT|d_latch[4]_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[4]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SPI_MASTER|SCLK_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
@@ -3137,43 +3135,6 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 
 \SPI_MASTER|SCLK_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[4]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[4]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[4]~5\ & \CPU_CLOCK|clock_state\(2));
-
-\SD_PORT|d_latch[4]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[4]~5\);
-
-\SD_PORT|d_latch[4]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[4]~5\ & \CPU_CLOCK|clock_state\(2));
-
-\SD_PORT|d_latch[4]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[4]~5\);
-
-\SD_PORT|d_latch[4]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[4]_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[4]_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[4]_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\SD_PORT|d_latch[4]_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[4]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SPI_MASTER|SCLK~1_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3247,17 +3208,16 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 spi_start_pterm1_bus <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \SPI_MASTER|SS~dataout\ & \spi_start~dataout\);
 
-spi_start_pterm2_bus <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & 
-\ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \CPU_CLOCK|clock_state\(2) & NOT \SPI_MASTER|SS~dataout\);
+spi_start_pterm2_bus <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & 
+\ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \RESET~dataout\ & \CPU_CLOCK|clock_state\(2) & NOT \SPI_MASTER|SS~dataout\);
 
-spi_start_pterm3_bus <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \SPI_MASTER|SS~dataout\);
+spi_start_pterm3_bus <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & 
+NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \RESET~dataout\ & NOT \SPI_MASTER|SS~dataout\);
 
-spi_start_pterm4_bus <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\ADDR~dataout\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \SPI_MASTER|SS~dataout\);
+spi_start_pterm4_bus <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 spi_start_pterm5_bus <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3524,20 +3484,20 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SYS_PORT|romsel_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SYS_PORT|romsel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~2\ & \CPU_CLOCK|clock_state\(2));
+\SYS_PORT|romsel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~1\ & \CPU_CLOCK|clock_state\(2));
 
 \SYS_PORT|romsel_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \SYS_PORT|romsel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9)
-& NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~2\);
+\CPU_CLOCK|clock_state\(1) & NOT \SYS_PORT|romsel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11)
+& NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~1\);
 
 \SYS_PORT|romsel_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SYS_PORT|romsel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~2\ & \CPU_CLOCK|clock_state\(2));
+\SYS_PORT|romsel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~1\ & \CPU_CLOCK|clock_state\(2));
 
 \SYS_PORT|romsel_latch_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \SYS_PORT|romsel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
-NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~2\);
+\CPU_CLOCK|clock_state\(1) & \SYS_PORT|romsel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & 
+NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~1\);
 
 \SYS_PORT|romsel_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3561,20 +3521,20 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SYS_PORT|asel_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SYS_PORT|asel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~6\ & \CPU_CLOCK|clock_state\(2));
+\SYS_PORT|asel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~5\ & \CPU_CLOCK|clock_state\(2));
 
 \SYS_PORT|asel_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \SYS_PORT|asel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
-NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~6\);
+\CPU_CLOCK|clock_state\(1) & NOT \SYS_PORT|asel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & 
+NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~5\);
 
 \SYS_PORT|asel_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SYS_PORT|asel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~6\ & \CPU_CLOCK|clock_state\(2));
+\SYS_PORT|asel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~5\ & \CPU_CLOCK|clock_state\(2));
 
 \SYS_PORT|asel_latch_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \SYS_PORT|asel_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~6\);
+\CPU_CLOCK|clock_state\(1) & \SYS_PORT|asel_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~5\);
 
 \SYS_PORT|asel_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3594,24 +3554,98 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 \SYS_PORT|asel_latch_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
+\I2C_PORT|scl_latch_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[7]~7\);
+
+\I2C_PORT|scl_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[7]~7\ & \CPU_CLOCK|clock_state\(2));
+
+\I2C_PORT|scl_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & NOT \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[7]~7\);
+
+\I2C_PORT|scl_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[7]~7\ & \CPU_CLOCK|clock_state\(2));
+
+\I2C_PORT|scl_latch_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|scl_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|scl_latch_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|scl_latch_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|scl_latch_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+
+\I2C_PORT|scl_latch_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|scl_latch_papre_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\);
+
+\SD_PORT|d_latch[7]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[7]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[7]~7\ & \CPU_CLOCK|clock_state\(2));
+
+\SD_PORT|d_latch[7]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[7]~7\);
+
+\SD_PORT|d_latch[7]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[7]~7\ & \CPU_CLOCK|clock_state\(2));
+
+\SD_PORT|d_latch[7]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[7]~7\);
+
+\SD_PORT|d_latch[7]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[7]_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[7]_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[7]_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+
+\SD_PORT|d_latch[7]_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[7]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
 \SD_PORT|d_latch[5]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SD_PORT|d_latch[5]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
 \SD_PORT|d_latch\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~6\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[5]~5\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[5]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[5]~6\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[5]~5\);
 
 \SD_PORT|d_latch[5]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \SD_PORT|d_latch\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~6\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[5]~5\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[5]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[5]~6\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[5]~5\);
 
 \SD_PORT|d_latch[5]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3636,19 +3670,19 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 
 \SD_PORT|d_latch[1]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
 \SD_PORT|d_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~2\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[1]~1\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[1]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[1]~2\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[1]~1\);
 
 \SD_PORT|d_latch[1]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \SD_PORT|d_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~2\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[1]~1\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[1]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[1]~2\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[1]~1\);
 
 \SD_PORT|d_latch[1]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3666,6 +3700,80 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SD_PORT|d_latch[1]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|sda_latch_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & \I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[6]~6\);
+
+\I2C_PORT|sda_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[6]~6\ & \CPU_CLOCK|clock_state\(2));
+
+\I2C_PORT|sda_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & NOT \I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
+\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[6]~6\);
+
+\I2C_PORT|sda_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[6]~6\ & \CPU_CLOCK|clock_state\(2));
+
+\I2C_PORT|sda_latch_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|sda_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|sda_latch_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|sda_latch_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|sda_latch_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+
+\I2C_PORT|sda_latch_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\I2C_PORT|sda_latch_papre_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\);
+
+\SD_PORT|d_latch[6]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[6]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[6]~6\ & \CPU_CLOCK|clock_state\(2));
+
+\SD_PORT|d_latch[6]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[6]~6\);
+
+\SD_PORT|d_latch[6]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[6]~6\ & \CPU_CLOCK|clock_state\(2));
+
+\SD_PORT|d_latch[6]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[6]~6\);
+
+\SD_PORT|d_latch[6]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[6]_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[6]_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[6]_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+
+\SD_PORT|d_latch[6]_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+
+\SD_PORT|d_latch[6]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \BAUD_CLOCK|a_out~5_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
@@ -3701,154 +3809,6 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 \BAUD_CLOCK|a_out~5_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\I2C_PORT|scl_latch_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[7]~8\);
-
-\I2C_PORT|scl_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[7]~8\ & \CPU_CLOCK|clock_state\(2));
-
-\I2C_PORT|scl_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
-NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[7]~8\);
-
-\I2C_PORT|scl_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[7]~8\ & \CPU_CLOCK|clock_state\(2));
-
-\I2C_PORT|scl_latch_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|scl_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|scl_latch_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|scl_latch_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|scl_latch_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\I2C_PORT|scl_latch_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|scl_latch_papre_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\);
-
-\SD_PORT|d_latch[7]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[7]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[7]~8\ & \CPU_CLOCK|clock_state\(2));
-
-\SD_PORT|d_latch[7]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[7]~8\);
-
-\SD_PORT|d_latch[7]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[7]~8\ & \CPU_CLOCK|clock_state\(2));
-
-\SD_PORT|d_latch[7]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(7) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[7]~8\);
-
-\SD_PORT|d_latch[7]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[7]_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[7]_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[7]_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\SD_PORT|d_latch[7]_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[7]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|sda_latch_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[6]~7\);
-
-\I2C_PORT|sda_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[6]~7\ & \CPU_CLOCK|clock_state\(2));
-
-\I2C_PORT|sda_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
-NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[6]~7\);
-
-\I2C_PORT|sda_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[6]~7\ & \CPU_CLOCK|clock_state\(2));
-
-\I2C_PORT|sda_latch_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|sda_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|sda_latch_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|sda_latch_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|sda_latch_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\I2C_PORT|sda_latch_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\I2C_PORT|sda_latch_papre_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\);
-
-\SD_PORT|d_latch[6]_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[6]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[6]~7\ & \CPU_CLOCK|clock_state\(2));
-
-\SD_PORT|d_latch[6]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[6]~7\);
-
-\SD_PORT|d_latch[6]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[6]~7\ & \CPU_CLOCK|clock_state\(2));
-
-\SD_PORT|d_latch[6]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(6) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[6]~7\);
-
-\SD_PORT|d_latch[6]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[6]_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[6]_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[6]_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\SD_PORT|d_latch[6]_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SD_PORT|d_latch[6]_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
 \I2C_PORT|sda_mon_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2CSDA~0\ & NOT \I2C_PORT|sda_mon~dataout\ & NOT \RESET~dataout\);
 
@@ -3859,12 +3819,12 @@ NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~da
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \I2CSDA~0\ & \I2C_PORT|sda_mon~dataout\ & NOT \RESET~dataout\);
 
 \I2C_PORT|sda_mon_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & 
-NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \I2CSDA~0\ & \I2C_PORT|sda_mon~dataout\);
+& vcc & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & 
+NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & NOT \I2CSDA~0\ & \I2C_PORT|sda_mon~dataout\);
 
 \I2C_PORT|sda_mon_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & 
-NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & \I2CSDA~0\ & NOT \I2C_PORT|sda_mon~dataout\);
+& vcc & \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & 
+NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \I2CSDA~0\ & NOT \I2C_PORT|sda_mon~dataout\);
 
 \I2C_PORT|sda_mon_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3888,7 +3848,7 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SYS_PORT|romp27_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[3]~4\);
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[3]~3\);
 
 \SYS_PORT|romp27_latch_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3909,8 +3869,8 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SYS_PORT|romp27_latch_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & 
-NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \SYS_PORT|process_0~4_dataout\ & \RESET~dataout\);
+vcc & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & 
+NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \SYS_PORT|process_0~4_dataout\ & \RESET~dataout\);
 
 \SYS_PORT|romp27_latch_paclr_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \CONF~dataout\ & NOT \RESET~dataout\);
@@ -3923,19 +3883,19 @@ vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vc
 
 \SD_PORT|d_latch[3]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
 \SD_PORT|d_latch\(3) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[3]~4\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[3]~3\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[3]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(3) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[3]~4\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[3]~3\);
 
 \SD_PORT|d_latch[3]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \SD_PORT|d_latch\(3) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[3]~4\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[3]~3\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[3]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(3) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[3]~4\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[3]~3\);
 
 \SD_PORT|d_latch[3]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3959,20 +3919,20 @@ vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vc
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SYS_PORT|romseh_latch_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SYS_PORT|romseh_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[2]~3\ & \CPU_CLOCK|clock_state\(2));
+\SYS_PORT|romseh_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[2]~2\ & \CPU_CLOCK|clock_state\(2));
 
 \SYS_PORT|romseh_latch_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & NOT \SYS_PORT|romseh_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9)
-& NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[2]~3\);
+\CPU_CLOCK|clock_state\(1) & NOT \SYS_PORT|romseh_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11)
+& NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[2]~2\);
 
 \SYS_PORT|romseh_latch_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SYS_PORT|romseh_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[2]~3\ & \CPU_CLOCK|clock_state\(2));
+\SYS_PORT|romseh_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
+\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[2]~2\ & \CPU_CLOCK|clock_state\(2));
 
 \SYS_PORT|romseh_latch_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\CPU_CLOCK|clock_state\(1) & \SYS_PORT|romseh_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & 
-NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[2]~3\);
+\CPU_CLOCK|clock_state\(1) & \SYS_PORT|romseh_latch~dataout\ & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & 
+NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[2]~2\);
 
 \SYS_PORT|romseh_latch_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -3997,19 +3957,19 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 
 \SD_PORT|d_latch[2]_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
 \SD_PORT|d_latch\(2) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[2]~3\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[2]~2\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[2]_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & NOT \SD_PORT|d_latch\(2) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & \DATA[2]~3\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & \DATA[2]~2\);
 
 \SD_PORT|d_latch[2]_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \SD_PORT|d_latch\(2) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[2]~3\ & \CPU_CLOCK|clock_state\(2));
+\ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[2]~2\ & \CPU_CLOCK|clock_state\(2));
 
 \SD_PORT|d_latch[2]_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 \CPU_CLOCK|clock_state\(1) & \SD_PORT|d_latch\(2) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT 
-\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & NOT \RW~dataout\ & NOT \DATA[2]~3\);
+\ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \ADDR~dataout\(4) & NOT \RW~dataout\ & NOT \DATA[2]~2\);
 
 \SD_PORT|d_latch[2]_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -4161,143 +4121,40 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 \SPI_MASTER|MOSI_v~11_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~323_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~290_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~323_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(1) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & NOT \SYS_PORT|romsel_latch~dataout\);
+\DATA[3]~290_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
+\I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
+\ADDR~dataout\(7) & \ADDR~dataout\(5) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \SPI_MASTER|DataRxd\(3));
 
-\DATA[1]~323_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~290_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\SYS_PORT|romp27_latch~dataout\ & NOT \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9)
+& NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+
+\DATA[3]~290_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\IO_PORT|button_latch~dataout\ & NOT \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9)
+& NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & \ADDR~dataout\(6) & \ADDR~dataout\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\);
+
+\DATA[3]~290_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~323_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~290_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~323_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[1]~323_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[1]~323_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[3]~290_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~323_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[3]~290_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~323_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[3]~290_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[1]~323_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~290_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[1]~323_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[3]~325_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[3]~325_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(3) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(4) & NOT \ADDR~dataout\(6) & \ADDR~dataout\(5) & \I2C_PORT|scl_latch~dataout\);
-
-\DATA[3]~325_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\SYS_PORT|romp27_latch~dataout\ & NOT \SPI_MASTER|DataRxd\(3) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
-\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(5));
-
-\DATA[3]~325_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\IO_PORT|button_latch~dataout\ & NOT \SPI_MASTER|DataRxd\(3) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
-\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(5));
-
-\DATA[3]~325_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[3]~325_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[3]~325_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[3]~325_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[3]~325_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\DATA[3]~325_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[3]~325_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT 
-\ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(4) & \SYS_PORT|config_latch~dataout\);
-
-\DATA[4]~329_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\ADDR~dataout\(5) & NOT \SPI_MASTER|DataRxd\(4) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT 
-\ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \ADDR~dataout\(6) & NOT \ADDR~dataout\(4));
-
-\DATA[4]~329_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\DATA[4]~329_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[4]~329_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT 
-\SPI_MASTER|DataRxd\(5) & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT 
-\ADDR~dataout\(7) & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & \CPU_CLOCK|d_e_out~dataout\ & \RW~dataout\ & \SYS_PORT|asel_latch~dataout\);
-
-\DATA[5]~332_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\DATA[5]~332_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\DATA[5]~332_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[3]~290_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \SPI_MASTER|MOSI_v~13_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
@@ -4399,302 +4256,302 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 \~VCC~0_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~345_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(12) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~305_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(10) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~345_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(2) & \ADDR~dataout\(8));
+\DATA[2]~305_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_mon~dataout\ & NOT \CPU_CLOCK|d_e_out~dataout\);
 
-\DATA[2]~345_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(9) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~305_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(7) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~345_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(10) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~305_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(8) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~345_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(11) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~305_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(9) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~345_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~305_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~345_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~305_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~345_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~305_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~345_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[2]~305_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[2]~345_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~305_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~345_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~305_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~346_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RW~dataout\ & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~306_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\ & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~346_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(2) & NOT \ADDR~dataout\(13));
+\DATA[2]~306_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_mon~dataout\ & \ADDR~dataout\(11));
 
-\DATA[2]~346_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(14) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~306_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(12) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~346_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\ & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~306_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(13) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~346_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(15) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~306_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(14) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~346_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~306_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~346_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~306_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~346_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~306_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~346_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[2]~306_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[2]~346_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~306_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~346_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~306_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~347_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~307_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~347_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(2) & NOT \CPU_CLOCK|d_e_out~dataout\);
+\DATA[2]~307_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_mon~dataout\ & NOT \ADDR~dataout\(15));
 
-\DATA[2]~347_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-\RW~dataout\ & \ADDR~dataout\(15) & \RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & 
-NOT \ADDR~dataout\(4) & \ADDR~dataout\(6) & NOT \SYS_PORT|romseh_latch~dataout\ & \CPU_CLOCK|d_e_out~dataout\);
+\DATA[2]~307_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(6) & NOT \ADDR~dataout\(5) & \I2C_PORT|sda_mon~dataout\);
 
-\DATA[2]~347_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(5) & NOT \ADDR~dataout\(6) & \SPI_MASTER|DataRxd\(2));
+\DATA[2]~307_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\RESET~dataout\ & \ADDR~dataout\(14) & \ADDR~dataout\(13) & NOT \ADDR~dataout\(12) & NOT \ADDR~dataout\(11) & NOT \ADDR~dataout\(10) & NOT \ADDR~dataout\(9) & NOT \ADDR~dataout\(8) & NOT \ADDR~dataout\(7) & \CPU_CLOCK|d_e_out~dataout\ & 
+\RW~dataout\ & NOT \ADDR~dataout\(4) & NOT \SYS_PORT|romseh_latch~dataout\ & \ADDR~dataout\(6) & \ADDR~dataout\(15));
 
-\DATA[2]~347_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~307_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~347_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~307_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~347_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~307_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~347_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~307_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~347_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[2]~307_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[2]~347_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~307_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~347_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~307_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~361_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(12) & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~321_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(10) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~361_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(6) & \ADDR~dataout\(8));
+\DATA[6]~321_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_latch~dataout\ & NOT \CPU_CLOCK|d_e_out~dataout\);
 
-\DATA[6]~361_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(9) & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~321_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(7) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~361_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(10) & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~321_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(8) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~361_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(11) & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~321_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(9) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~361_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~321_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~361_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~321_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~361_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~321_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~361_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[6]~321_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[6]~361_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~321_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~361_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~321_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~362_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RW~dataout\ & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~322_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\ & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~362_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(6) & NOT \ADDR~dataout\(13));
+\DATA[6]~322_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_latch~dataout\ & \ADDR~dataout\(11));
 
-\DATA[6]~362_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(14) & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~322_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(12) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~362_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\ & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~322_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(13) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~362_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(15) & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~322_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(14) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~362_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~322_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~362_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~322_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~362_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~322_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~362_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[6]~322_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[6]~362_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~322_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~362_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~322_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~323_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(6) & NOT \CPU_CLOCK|d_e_out~dataout\);
+\DATA[6]~323_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|sda_latch~dataout\ & NOT \ADDR~dataout\(15));
 
-\DATA[6]~363_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(6) & NOT \ADDR~dataout\(5) & \SPI_MASTER|DataRxd\(6));
+\DATA[6]~323_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(6) & NOT \ADDR~dataout\(5) & \I2C_PORT|sda_latch~dataout\);
 
-\DATA[6]~363_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~323_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~323_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~323_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~323_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~323_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[6]~323_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[6]~363_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~323_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~363_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~323_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~376_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(12) & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~336_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(10) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~376_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(7) & \ADDR~dataout\(8));
+\DATA[7]~336_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|scl_latch~dataout\ & NOT \CPU_CLOCK|d_e_out~dataout\);
 
-\DATA[7]~376_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(9) & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~336_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(7) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~376_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(10) & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~336_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(8) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~376_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(11) & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~336_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(9) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~376_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~336_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~376_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~336_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~376_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~336_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~376_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[7]~336_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[7]~376_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~336_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~376_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~336_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~377_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RW~dataout\ & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~337_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\ & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~377_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(7) & NOT \ADDR~dataout\(13));
+\DATA[7]~337_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|scl_latch~dataout\ & \ADDR~dataout\(11));
 
-\DATA[7]~377_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(14) & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~337_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \ADDR~dataout\(12) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~377_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \RESET~dataout\ & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~337_pterm3_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(13) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~377_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(15) & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~337_pterm4_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(14) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~377_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~337_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~377_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~337_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~377_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~337_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~377_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[7]~337_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[7]~377_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~337_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~377_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~337_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~338_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \SPI_MASTER|DataRxd\(7) & NOT \CPU_CLOCK|d_e_out~dataout\);
+\DATA[7]~338_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \I2C_PORT|scl_latch~dataout\ & NOT \ADDR~dataout\(15));
 
-\DATA[7]~378_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(6) & NOT \ADDR~dataout\(5) & \SPI_MASTER|DataRxd\(7));
+\DATA[7]~338_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \ADDR~dataout\(6) & NOT \ADDR~dataout\(5) & \I2C_PORT|scl_latch~dataout\);
 
-\DATA[7]~378_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~338_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~338_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~338_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~338_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~338_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[7]~338_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[7]~378_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~338_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~378_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~338_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \ADDR_DECODE|ram2~20_pterm0_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
@@ -4796,103 +4653,103 @@ gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gn
 \spi_pclk~19bal_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~340_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[2]~173_dataout\);
+\DATA[2]~340_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[2]~147_dataout\);
 
-\DATA[2]~380_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~340_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~340_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~340_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~340_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~340_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[2]~340_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[2]~340_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[2]~380_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~340_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[2]~380_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[2]~340_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~341_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[6]~203_dataout\);
+\DATA[6]~341_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[6]~171_dataout\);
 
-\DATA[6]~381_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~341_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~341_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~341_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~341_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~341_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[6]~341_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[6]~341_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[6]~381_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~341_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[6]~381_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[6]~341_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~342_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[7]~212_dataout\);
+\DATA[7]~342_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \DATA[7]~179_dataout\);
 
-\DATA[7]~382_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~342_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~342_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~342_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~342_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~342_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\DATA[7]~342_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+\DATA[7]~342_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\DATA[7]~382_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~342_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\DATA[7]~382_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\DATA[7]~342_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \ADDR_DECODE|ram2~26_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
@@ -4937,14 +4794,14 @@ vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vc
 \SYS_PORT|process_0~5_datain_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
 vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \CPU_CLOCK|clock_state\(1) & NOT \CPU_CLOCK|clock_state\(2));
 \ALT_INV_I2CSDA~0\ <= NOT \I2CSDA~0\;
-\ALT_INV_DATA[7]~8\ <= NOT \DATA[7]~8\;
-\ALT_INV_DATA[6]~7\ <= NOT \DATA[6]~7\;
-\ALT_INV_DATA[5]~6\ <= NOT \DATA[5]~6\;
-\ALT_INV_DATA[4]~5\ <= NOT \DATA[4]~5\;
-\ALT_INV_DATA[3]~4\ <= NOT \DATA[3]~4\;
-\ALT_INV_DATA[2]~3\ <= NOT \DATA[2]~3\;
-\ALT_INV_DATA[1]~2\ <= NOT \DATA[1]~2\;
-\ALT_INV_DATA[0]~1\ <= NOT \DATA[0]~1\;
+\ALT_INV_DATA[7]~7\ <= NOT \DATA[7]~7\;
+\ALT_INV_DATA[6]~6\ <= NOT \DATA[6]~6\;
+\ALT_INV_DATA[5]~5\ <= NOT \DATA[5]~5\;
+\ALT_INV_DATA[4]~4\ <= NOT \DATA[4]~4\;
+\ALT_INV_DATA[3]~3\ <= NOT \DATA[3]~3\;
+\ALT_INV_DATA[2]~2\ <= NOT \DATA[2]~2\;
+\ALT_INV_DATA[1]~1\ <= NOT \DATA[1]~1\;
+\ALT_INV_DATA[0]~0\ <= NOT \DATA[0]~0\;
 \ALT_INV_SDSW~dataout\ <= NOT \SDSW~dataout\;
 \ALT_INV_SDDI~dataout\ <= NOT \SDDI~dataout\;
 \ALT_INV_PBTN~dataout\ <= NOT \PBTN~dataout\;
@@ -4971,10 +4828,10 @@ vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vc
 \I2C_PORT|ALT_INV_sda_mon~dataout\ <= NOT \I2C_PORT|sda_mon~dataout\;
 \SD_PORT|ALT_INV_d_latch\(6) <= NOT \SD_PORT|d_latch\(6);
 \I2C_PORT|ALT_INV_sda_latch~dataout\ <= NOT \I2C_PORT|sda_latch~dataout\;
-\SD_PORT|ALT_INV_d_latch\(7) <= NOT \SD_PORT|d_latch\(7);
-\I2C_PORT|ALT_INV_scl_latch~dataout\ <= NOT \I2C_PORT|scl_latch~dataout\;
 \SD_PORT|ALT_INV_d_latch\(1) <= NOT \SD_PORT|d_latch\(1);
 \SD_PORT|ALT_INV_d_latch\(5) <= NOT \SD_PORT|d_latch\(5);
+\SD_PORT|ALT_INV_d_latch\(7) <= NOT \SD_PORT|d_latch\(7);
+\I2C_PORT|ALT_INV_scl_latch~dataout\ <= NOT \I2C_PORT|scl_latch~dataout\;
 \SYS_PORT|ALT_INV_asel_latch~dataout\ <= NOT \SYS_PORT|asel_latch~dataout\;
 \SYS_PORT|ALT_INV_romsel_latch~dataout\ <= NOT \SYS_PORT|romsel_latch~dataout\;
 \SPI_MASTER|ALT_INV_DataRxd\(2) <= NOT \SPI_MASTER|DataRxd\(2);
@@ -5018,10 +4875,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[0]~147_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[0]~130_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(0),
-	dataout => \DATA[0]~1\);
+	dataout => \DATA[0]~0\);
 
 -- Location: PIN_55
 \DATA[1]~I\ : max_io
@@ -5033,10 +4890,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[1]~157_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[1]~138_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(1),
-	dataout => \DATA[1]~2\);
+	dataout => \DATA[1]~1\);
 
 -- Location: PIN_56
 \DATA[2]~I\ : max_io
@@ -5048,10 +4905,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[2]~380_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[2]~340_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(2),
-	dataout => \DATA[2]~3\);
+	dataout => \DATA[2]~2\);
 
 -- Location: PIN_57
 \DATA[3]~I\ : max_io
@@ -5063,10 +4920,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[3]~174_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[3]~148_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(3),
-	dataout => \DATA[3]~4\);
+	dataout => \DATA[3]~3\);
 
 -- Location: PIN_58
 \DATA[4]~I\ : max_io
@@ -5078,10 +4935,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[4]~181_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[4]~159_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(4),
-	dataout => \DATA[4]~5\);
+	dataout => \DATA[4]~4\);
 
 -- Location: PIN_60
 \DATA[5]~I\ : max_io
@@ -5093,10 +4950,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[5]~188_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[5]~163_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(5),
-	dataout => \DATA[5]~6\);
+	dataout => \DATA[5]~5\);
 
 -- Location: PIN_61
 \DATA[6]~I\ : max_io
@@ -5108,10 +4965,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[6]~381_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[6]~341_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(6),
-	dataout => \DATA[6]~7\);
+	dataout => \DATA[6]~6\);
 
 -- Location: PIN_63
 \DATA[7]~I\ : max_io
@@ -5123,10 +4980,10 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \DATA[7]~382_dataout\,
-	oe => \DATA[7]~156_dataout\,
+	datain => \DATA[7]~342_dataout\,
+	oe => \DATA[7]~134_dataout\,
 	padio => DATA(7),
-	dataout => \DATA[7]~8\);
+	dataout => \DATA[7]~7\);
 
 -- Location: PIN_11
 \I2CSDA~I\ : max_io
@@ -5157,7 +5014,21 @@ PORT MAP (
 	padio => ww_RESET,
 	dataout => \RESET~dataout\);
 
--- Location: LC2
+-- Location: PIN_22
+\SDDI~I\ : max_io
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	operation_mode => "input",
+	weak_pull_up => "false")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_SDDI,
+	dataout => \SDDI~dataout\);
+
+-- Location: LC1
 \CPU_CLOCK|pre_cnt\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5182,7 +5053,82 @@ PORT MAP (
 	pena => \CPU_CLOCK|pre_cnt_pena_bus\,
 	dataout => \CPU_CLOCK|pre_cnt~dataout\);
 
+-- Location: LC100
+\AUX_CLOCK|LPM_COUNTER_component|dffs[1]\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
+-- pragma translate_on
+PORT MAP (
+	clk => \XOSC~dataout\,
+	pterm0 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm0_bus\,
+	pterm1 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm1_bus\,
+	pterm2 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm2_bus\,
+	pterm3 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm3_bus\,
+	pterm4 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm4_bus\,
+	pterm5 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm5_bus\,
+	pxor => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pxor_bus\,
+	pclk => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pclk_bus\,
+	papre => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_papre_bus\,
+	paclr => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_paclr_bus\,
+	pena => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pena_bus\,
+	dataout => \AUX_CLOCK|LPM_COUNTER_component|dffs\(1));
+
+-- Location: LC104
+\AUX_CLOCK|LPM_COUNTER_component|dffs[2]\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
+-- pragma translate_on
+PORT MAP (
+	clk => \XOSC~dataout\,
+	pterm0 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm0_bus\,
+	pterm1 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm1_bus\,
+	pterm2 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm2_bus\,
+	pterm3 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm3_bus\,
+	pterm4 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm4_bus\,
+	pterm5 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm5_bus\,
+	pxor => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pxor_bus\,
+	pclk => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pclk_bus\,
+	papre => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_papre_bus\,
+	paclr => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_paclr_bus\,
+	pena => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pena_bus\,
+	dataout => \AUX_CLOCK|LPM_COUNTER_component|dffs\(2));
+
 -- Location: LC102
+\AUX_CLOCK|LPM_COUNTER_component|dffs[3]\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
+-- pragma translate_on
+PORT MAP (
+	clk => \XOSC~dataout\,
+	pterm0 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm0_bus\,
+	pterm1 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm1_bus\,
+	pterm2 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm2_bus\,
+	pterm3 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm3_bus\,
+	pterm4 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm4_bus\,
+	pterm5 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm5_bus\,
+	pxor => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pxor_bus\,
+	pclk => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pclk_bus\,
+	papre => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_papre_bus\,
+	paclr => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_paclr_bus\,
+	pena => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pena_bus\,
+	dataout => \AUX_CLOCK|LPM_COUNTER_component|dffs\(3));
+
+-- Location: LC107
 \CPU_CLOCK|clock_state[0]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5220,20 +5166,6 @@ PORT MAP (
 	oe => GND,
 	padio => ww_ADDR(6),
 	dataout => \ADDR~dataout\(6));
-
--- Location: PIN_77
-\ADDR[5]~I\ : max_io
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	operation_mode => "input",
-	weak_pull_up => "false")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_ADDR(5),
-	dataout => \ADDR~dataout\(5));
 
 -- Location: PIN_75
 \ADDR[7]~I\ : max_io
@@ -5361,7 +5293,21 @@ PORT MAP (
 	padio => ww_ADDR(15),
 	dataout => \ADDR~dataout\(15));
 
--- Location: LC108
+-- Location: PIN_77
+\ADDR[5]~I\ : max_io
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	operation_mode => "input",
+	weak_pull_up => "false")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_ADDR(5),
+	dataout => \ADDR~dataout\(5));
+
+-- Location: LC105
 \CPU_CLOCK|clock_state[1]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5439,147 +5385,7 @@ PORT MAP (
 	padio => ww_ADDR(4),
 	dataout => \ADDR~dataout\(4));
 
--- Location: LC9
-\IO_PORT|led_latch[0]\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	aclr => \ALT_INV_RESET~dataout\,
-	pterm0 => \IO_PORT|led_latch[0]_pterm0_bus\,
-	pterm1 => \IO_PORT|led_latch[0]_pterm1_bus\,
-	pterm2 => \IO_PORT|led_latch[0]_pterm2_bus\,
-	pterm3 => \IO_PORT|led_latch[0]_pterm3_bus\,
-	pterm4 => \IO_PORT|led_latch[0]_pterm4_bus\,
-	pterm5 => \IO_PORT|led_latch[0]_pterm5_bus\,
-	pxor => \IO_PORT|led_latch[0]_pxor_bus\,
-	pclk => \IO_PORT|led_latch[0]_pclk_bus\,
-	papre => \IO_PORT|led_latch[0]_papre_bus\,
-	paclr => \IO_PORT|led_latch[0]_paclr_bus\,
-	pena => \IO_PORT|led_latch[0]_pena_bus\,
-	dataout => \IO_PORT|led_latch\(0));
-
--- Location: LC30
-\CPU_CLOCK|d_e_out\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "invert",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "dff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	pterm0 => \CPU_CLOCK|d_e_out_pterm0_bus\,
-	pterm1 => \CPU_CLOCK|d_e_out_pterm1_bus\,
-	pterm2 => \CPU_CLOCK|d_e_out_pterm2_bus\,
-	pterm3 => \CPU_CLOCK|d_e_out_pterm3_bus\,
-	pterm4 => \CPU_CLOCK|d_e_out_pterm4_bus\,
-	pterm5 => \CPU_CLOCK|d_e_out_pterm5_bus\,
-	pxor => \CPU_CLOCK|d_e_out_pxor_bus\,
-	pclk => \CPU_CLOCK|d_e_out_pclk_bus\,
-	papre => \CPU_CLOCK|d_e_out_papre_bus\,
-	paclr => \CPU_CLOCK|d_e_out_paclr_bus\,
-	pena => \CPU_CLOCK|d_e_out_pena_bus\,
-	dataout => \CPU_CLOCK|d_e_out~dataout\);
-
--- Location: PIN_22
-\SDDI~I\ : max_io
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	operation_mode => "input",
-	weak_pull_up => "false")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_SDDI,
-	dataout => \SDDI~dataout\);
-
--- Location: LC106
-\AUX_CLOCK|LPM_COUNTER_component|dffs[1]\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	pterm0 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm0_bus\,
-	pterm1 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm1_bus\,
-	pterm2 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm2_bus\,
-	pterm3 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm3_bus\,
-	pterm4 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm4_bus\,
-	pterm5 => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pterm5_bus\,
-	pxor => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pxor_bus\,
-	pclk => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pclk_bus\,
-	papre => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_papre_bus\,
-	paclr => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_paclr_bus\,
-	pena => \AUX_CLOCK|LPM_COUNTER_component|dffs[1]_pena_bus\,
-	dataout => \AUX_CLOCK|LPM_COUNTER_component|dffs\(1));
-
--- Location: LC104
-\AUX_CLOCK|LPM_COUNTER_component|dffs[2]\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	pterm0 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm0_bus\,
-	pterm1 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm1_bus\,
-	pterm2 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm2_bus\,
-	pterm3 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm3_bus\,
-	pterm4 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm4_bus\,
-	pterm5 => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pterm5_bus\,
-	pxor => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pxor_bus\,
-	pclk => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pclk_bus\,
-	papre => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_papre_bus\,
-	paclr => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_paclr_bus\,
-	pena => \AUX_CLOCK|LPM_COUNTER_component|dffs[2]_pena_bus\,
-	dataout => \AUX_CLOCK|LPM_COUNTER_component|dffs\(2));
-
--- Location: LC101
-\AUX_CLOCK|LPM_COUNTER_component|dffs[3]\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	pterm0 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm0_bus\,
-	pterm1 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm1_bus\,
-	pterm2 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm2_bus\,
-	pterm3 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm3_bus\,
-	pterm4 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm4_bus\,
-	pterm5 => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pterm5_bus\,
-	pxor => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pxor_bus\,
-	pclk => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pclk_bus\,
-	papre => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_papre_bus\,
-	paclr => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_paclr_bus\,
-	pena => \AUX_CLOCK|LPM_COUNTER_component|dffs[3]_pena_bus\,
-	dataout => \AUX_CLOCK|LPM_COUNTER_component|dffs\(3));
-
--- Location: LC54
+-- Location: LC37
 \IO_PORT|sdclk_latch\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5619,7 +5425,7 @@ PORT MAP (
 	padio => ww_XOSC,
 	dataout => \XOSC~dataout\);
 
--- Location: LC71
+-- Location: LC70
 \spi_pclk~19bal\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5641,7 +5447,7 @@ PORT MAP (
 	pena => \spi_pclk~19bal_pena_bus\,
 	dataout => \spi_pclk~19bal_dataout\);
 
--- Location: LC124
+-- Location: LC125
 \SPI_MASTER|state.state_bit_2\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5665,7 +5471,7 @@ PORT MAP (
 	pena => \SPI_MASTER|state.state_bit_2_pena_bus\,
 	dataout => \SPI_MASTER|state.state_bit_2~dataout\);
 
--- Location: LC36
+-- Location: LC46
 \SPI_MASTER|index[0]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5715,7 +5521,7 @@ PORT MAP (
 	pena => \SPI_MASTER|index[1]_pena_bus\,
 	dataout => \SPI_MASTER|index\(1));
 
--- Location: LC46
+-- Location: LC45
 \SPI_MASTER|state.state_bit_0\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5763,7 +5569,7 @@ PORT MAP (
 	pena => \SPI_MASTER|state.state_bit_1_pena_bus\,
 	dataout => \SPI_MASTER|state.state_bit_1~dataout\);
 
--- Location: LC125
+-- Location: LC117
 \SPI_MASTER|SS\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5814,7 +5620,7 @@ PORT MAP (
 	pena => spi_start_pena_bus,
 	dataout => \spi_start~dataout\);
 
--- Location: LC45
+-- Location: LC36
 \SPI_MASTER|index[2]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5839,7 +5645,7 @@ PORT MAP (
 	pena => \SPI_MASTER|index[2]_pena_bus\,
 	dataout => \SPI_MASTER|index\(2));
 
--- Location: LC105
+-- Location: LC79
 \SPI_MASTER|DataRxd[0]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5864,52 +5670,33 @@ PORT MAP (
 	pena => \SPI_MASTER|DataRxd[0]_pena_bus\,
 	dataout => \SPI_MASTER|DataRxd\(0));
 
--- Location: LC83
-\DATA[0]~147\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "xor",
-	output_mode => "comb",
-	pexp_mode => "off")
--- pragma translate_on
-PORT MAP (
-	pterm0 => \DATA[0]~147_pterm0_bus\,
-	pterm1 => \DATA[0]~147_pterm1_bus\,
-	pterm2 => \DATA[0]~147_pterm2_bus\,
-	pterm3 => \DATA[0]~147_pterm3_bus\,
-	pterm4 => \DATA[0]~147_pterm4_bus\,
-	pterm5 => \DATA[0]~147_pterm5_bus\,
-	pxor => \DATA[0]~147_pxor_bus\,
-	pclk => \DATA[0]~147_pclk_bus\,
-	papre => \DATA[0]~147_papre_bus\,
-	paclr => \DATA[0]~147_paclr_bus\,
-	pena => \DATA[0]~147_pena_bus\,
-	dataout => \DATA[0]~147_dataout\);
-
 -- Location: LC35
-\DATA[7]~156\ : max_mcell
+\CPU_CLOCK|d_e_out\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "comb",
-	pexp_mode => "off")
+	operation_mode => "invert",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "dff")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[7]~156_pterm0_bus\,
-	pterm1 => \DATA[7]~156_pterm1_bus\,
-	pterm2 => \DATA[7]~156_pterm2_bus\,
-	pterm3 => \DATA[7]~156_pterm3_bus\,
-	pterm4 => \DATA[7]~156_pterm4_bus\,
-	pterm5 => \DATA[7]~156_pterm5_bus\,
-	pxor => \DATA[7]~156_pxor_bus\,
-	pclk => \DATA[7]~156_pclk_bus\,
-	papre => \DATA[7]~156_papre_bus\,
-	paclr => \DATA[7]~156_paclr_bus\,
-	pena => \DATA[7]~156_pena_bus\,
-	dataout => \DATA[7]~156_dataout\);
+	clk => \XOSC~dataout\,
+	pterm0 => \CPU_CLOCK|d_e_out_pterm0_bus\,
+	pterm1 => \CPU_CLOCK|d_e_out_pterm1_bus\,
+	pterm2 => \CPU_CLOCK|d_e_out_pterm2_bus\,
+	pterm3 => \CPU_CLOCK|d_e_out_pterm3_bus\,
+	pterm4 => \CPU_CLOCK|d_e_out_pterm4_bus\,
+	pterm5 => \CPU_CLOCK|d_e_out_pterm5_bus\,
+	pxor => \CPU_CLOCK|d_e_out_pxor_bus\,
+	pclk => \CPU_CLOCK|d_e_out_pclk_bus\,
+	papre => \CPU_CLOCK|d_e_out_papre_bus\,
+	paclr => \CPU_CLOCK|d_e_out_paclr_bus\,
+	pena => \CPU_CLOCK|d_e_out_pena_bus\,
+	dataout => \CPU_CLOCK|d_e_out~dataout\);
 
--- Location: LC117
-\SYS_PORT|romsel_latch\ : max_mcell
+-- Location: LC63
+\IO_PORT|led_latch[0]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -5921,20 +5708,64 @@ GENERIC MAP (
 PORT MAP (
 	clk => \XOSC~dataout\,
 	aclr => \ALT_INV_RESET~dataout\,
-	pterm0 => \SYS_PORT|romsel_latch_pterm0_bus\,
-	pterm1 => \SYS_PORT|romsel_latch_pterm1_bus\,
-	pterm2 => \SYS_PORT|romsel_latch_pterm2_bus\,
-	pterm3 => \SYS_PORT|romsel_latch_pterm3_bus\,
-	pterm4 => \SYS_PORT|romsel_latch_pterm4_bus\,
-	pterm5 => \SYS_PORT|romsel_latch_pterm5_bus\,
-	pxor => \SYS_PORT|romsel_latch_pxor_bus\,
-	pclk => \SYS_PORT|romsel_latch_pclk_bus\,
-	papre => \SYS_PORT|romsel_latch_papre_bus\,
-	paclr => \SYS_PORT|romsel_latch_paclr_bus\,
-	pena => \SYS_PORT|romsel_latch_pena_bus\,
-	dataout => \SYS_PORT|romsel_latch~dataout\);
+	pterm0 => \IO_PORT|led_latch[0]_pterm0_bus\,
+	pterm1 => \IO_PORT|led_latch[0]_pterm1_bus\,
+	pterm2 => \IO_PORT|led_latch[0]_pterm2_bus\,
+	pterm3 => \IO_PORT|led_latch[0]_pterm3_bus\,
+	pterm4 => \IO_PORT|led_latch[0]_pterm4_bus\,
+	pterm5 => \IO_PORT|led_latch[0]_pterm5_bus\,
+	pxor => \IO_PORT|led_latch[0]_pxor_bus\,
+	pclk => \IO_PORT|led_latch[0]_pclk_bus\,
+	papre => \IO_PORT|led_latch[0]_papre_bus\,
+	paclr => \IO_PORT|led_latch[0]_paclr_bus\,
+	pena => \IO_PORT|led_latch[0]_pena_bus\,
+	dataout => \IO_PORT|led_latch\(0));
 
--- Location: LC112
+-- Location: LC83
+\DATA[0]~130\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "comb",
+	pexp_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	pterm0 => \DATA[0]~130_pterm0_bus\,
+	pterm1 => \DATA[0]~130_pterm1_bus\,
+	pterm2 => \DATA[0]~130_pterm2_bus\,
+	pterm3 => \DATA[0]~130_pterm3_bus\,
+	pterm4 => \DATA[0]~130_pterm4_bus\,
+	pterm5 => \DATA[0]~130_pterm5_bus\,
+	pxor => \DATA[0]~130_pxor_bus\,
+	pclk => \DATA[0]~130_pclk_bus\,
+	papre => \DATA[0]~130_papre_bus\,
+	paclr => \DATA[0]~130_paclr_bus\,
+	pena => \DATA[0]~130_pena_bus\,
+	dataout => \DATA[0]~130_dataout\);
+
+-- Location: LC96
+\DATA[7]~134\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "comb",
+	pexp_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	pterm0 => \DATA[7]~134_pterm0_bus\,
+	pterm1 => \DATA[7]~134_pterm1_bus\,
+	pterm2 => \DATA[7]~134_pterm2_bus\,
+	pterm3 => \DATA[7]~134_pterm3_bus\,
+	pterm4 => \DATA[7]~134_pterm4_bus\,
+	pterm5 => \DATA[7]~134_pterm5_bus\,
+	pxor => \DATA[7]~134_pxor_bus\,
+	pclk => \DATA[7]~134_pclk_bus\,
+	papre => \DATA[7]~134_papre_bus\,
+	paclr => \DATA[7]~134_paclr_bus\,
+	pena => \DATA[7]~134_pena_bus\,
+	dataout => \DATA[7]~134_dataout\);
+
+-- Location: LC111
 \SPI_MASTER|DataRxd[1]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -5959,27 +5790,31 @@ PORT MAP (
 	pena => \SPI_MASTER|DataRxd[1]_pena_bus\,
 	dataout => \SPI_MASTER|DataRxd\(1));
 
--- Location: LC84
-\DATA[1]~323\ : max_mcell
+-- Location: LC124
+\SYS_PORT|romsel_latch\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[1]~323_pterm0_bus\,
-	pterm1 => \DATA[1]~323_pterm1_bus\,
-	pterm2 => \DATA[1]~323_pterm2_bus\,
-	pterm3 => \DATA[1]~323_pterm3_bus\,
-	pterm4 => \DATA[1]~323_pterm4_bus\,
-	pterm5 => \DATA[1]~323_pterm5_bus\,
-	pxor => \DATA[1]~323_pxor_bus\,
-	pclk => \DATA[1]~323_pclk_bus\,
-	papre => \DATA[1]~323_papre_bus\,
-	paclr => \DATA[1]~323_paclr_bus\,
-	pena => \DATA[1]~323_pena_bus\,
-	pexpout => \DATA[1]~323_pexpout\);
+	clk => \XOSC~dataout\,
+	aclr => \ALT_INV_RESET~dataout\,
+	pterm0 => \SYS_PORT|romsel_latch_pterm0_bus\,
+	pterm1 => \SYS_PORT|romsel_latch_pterm1_bus\,
+	pterm2 => \SYS_PORT|romsel_latch_pterm2_bus\,
+	pterm3 => \SYS_PORT|romsel_latch_pterm3_bus\,
+	pterm4 => \SYS_PORT|romsel_latch_pterm4_bus\,
+	pterm5 => \SYS_PORT|romsel_latch_pterm5_bus\,
+	pxor => \SYS_PORT|romsel_latch_pxor_bus\,
+	pclk => \SYS_PORT|romsel_latch_pclk_bus\,
+	papre => \SYS_PORT|romsel_latch_papre_bus\,
+	paclr => \SYS_PORT|romsel_latch_paclr_bus\,
+	pena => \SYS_PORT|romsel_latch_pena_bus\,
+	dataout => \SYS_PORT|romsel_latch~dataout\);
 
 -- Location: LC127
 \IO_PORT|led_latch[1]\ : max_mcell
@@ -6008,148 +5843,28 @@ PORT MAP (
 	dataout => \IO_PORT|led_latch\(1));
 
 -- Location: LC85
-\DATA[1]~157\ : max_mcell
+\DATA[1]~138\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
-	operation_mode => "xor",
+	operation_mode => "normal",
 	output_mode => "comb",
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pexpin => \DATA[1]~323_pexpout\,
-	pterm0 => \DATA[1]~157_pterm0_bus\,
-	pterm1 => \DATA[1]~157_pterm1_bus\,
-	pterm2 => \DATA[1]~157_pterm2_bus\,
-	pterm3 => \DATA[1]~157_pterm3_bus\,
-	pterm4 => \DATA[1]~157_pterm4_bus\,
-	pterm5 => \DATA[1]~157_pterm5_bus\,
-	pxor => \DATA[1]~157_pxor_bus\,
-	pclk => \DATA[1]~157_pclk_bus\,
-	papre => \DATA[1]~157_papre_bus\,
-	paclr => \DATA[1]~157_paclr_bus\,
-	pena => \DATA[1]~157_pena_bus\,
-	dataout => \DATA[1]~157_dataout\);
+	pterm0 => \DATA[1]~138_pterm0_bus\,
+	pterm1 => \DATA[1]~138_pterm1_bus\,
+	pterm2 => \DATA[1]~138_pterm2_bus\,
+	pterm3 => \DATA[1]~138_pterm3_bus\,
+	pterm4 => \DATA[1]~138_pterm4_bus\,
+	pterm5 => \DATA[1]~138_pterm5_bus\,
+	pxor => \DATA[1]~138_pxor_bus\,
+	pclk => \DATA[1]~138_pclk_bus\,
+	papre => \DATA[1]~138_papre_bus\,
+	paclr => \DATA[1]~138_paclr_bus\,
+	pena => \DATA[1]~138_pena_bus\,
+	dataout => \DATA[1]~138_dataout\);
 
--- Location: LC100
-\SPI_MASTER|DataRxd[2]\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	aclr => \ALT_INV_RESET~dataout\,
-	pterm0 => \SPI_MASTER|DataRxd[2]_pterm0_bus\,
-	pterm1 => \SPI_MASTER|DataRxd[2]_pterm1_bus\,
-	pterm2 => \SPI_MASTER|DataRxd[2]_pterm2_bus\,
-	pterm3 => \SPI_MASTER|DataRxd[2]_pterm3_bus\,
-	pterm4 => \SPI_MASTER|DataRxd[2]_pterm4_bus\,
-	pterm5 => \SPI_MASTER|DataRxd[2]_pterm5_bus\,
-	pxor => \SPI_MASTER|DataRxd[2]_pxor_bus\,
-	pclk => \SPI_MASTER|DataRxd[2]_pclk_bus\,
-	papre => \SPI_MASTER|DataRxd[2]_papre_bus\,
-	paclr => \SPI_MASTER|DataRxd[2]_paclr_bus\,
-	pena => \SPI_MASTER|DataRxd[2]_pena_bus\,
-	dataout => \SPI_MASTER|DataRxd\(2));
-
--- Location: LC63
-\SYS_PORT|romseh_latch\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	aclr => \ALT_INV_RESET~dataout\,
-	pterm0 => \SYS_PORT|romseh_latch_pterm0_bus\,
-	pterm1 => \SYS_PORT|romseh_latch_pterm1_bus\,
-	pterm2 => \SYS_PORT|romseh_latch_pterm2_bus\,
-	pterm3 => \SYS_PORT|romseh_latch_pterm3_bus\,
-	pterm4 => \SYS_PORT|romseh_latch_pterm4_bus\,
-	pterm5 => \SYS_PORT|romseh_latch_pterm5_bus\,
-	pxor => \SYS_PORT|romseh_latch_pxor_bus\,
-	pclk => \SYS_PORT|romseh_latch_pclk_bus\,
-	papre => \SYS_PORT|romseh_latch_papre_bus\,
-	paclr => \SYS_PORT|romseh_latch_paclr_bus\,
-	pena => \SYS_PORT|romseh_latch_pena_bus\,
-	dataout => \SYS_PORT|romseh_latch~dataout\);
-
--- Location: LC59
-\DATA[2]~347\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pterm0 => \DATA[2]~347_pterm0_bus\,
-	pterm1 => \DATA[2]~347_pterm1_bus\,
-	pterm2 => \DATA[2]~347_pterm2_bus\,
-	pterm3 => \DATA[2]~347_pterm3_bus\,
-	pterm4 => \DATA[2]~347_pterm4_bus\,
-	pterm5 => \DATA[2]~347_pterm5_bus\,
-	pxor => \DATA[2]~347_pxor_bus\,
-	pclk => \DATA[2]~347_pclk_bus\,
-	papre => \DATA[2]~347_papre_bus\,
-	paclr => \DATA[2]~347_paclr_bus\,
-	pena => \DATA[2]~347_pena_bus\,
-	pexpout => \DATA[2]~347_pexpout\);
-
--- Location: LC60
-\DATA[2]~346\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pexpin => \DATA[2]~347_pexpout\,
-	pterm0 => \DATA[2]~346_pterm0_bus\,
-	pterm1 => \DATA[2]~346_pterm1_bus\,
-	pterm2 => \DATA[2]~346_pterm2_bus\,
-	pterm3 => \DATA[2]~346_pterm3_bus\,
-	pterm4 => \DATA[2]~346_pterm4_bus\,
-	pterm5 => \DATA[2]~346_pterm5_bus\,
-	pxor => \DATA[2]~346_pxor_bus\,
-	pclk => \DATA[2]~346_pclk_bus\,
-	papre => \DATA[2]~346_papre_bus\,
-	paclr => \DATA[2]~346_paclr_bus\,
-	pena => \DATA[2]~346_pena_bus\,
-	pexpout => \DATA[2]~346_pexpout\);
-
--- Location: LC61
-\DATA[2]~345\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pexpin => \DATA[2]~346_pexpout\,
-	pterm0 => \DATA[2]~345_pterm0_bus\,
-	pterm1 => \DATA[2]~345_pterm1_bus\,
-	pterm2 => \DATA[2]~345_pterm2_bus\,
-	pterm3 => \DATA[2]~345_pterm3_bus\,
-	pterm4 => \DATA[2]~345_pterm4_bus\,
-	pterm5 => \DATA[2]~345_pterm5_bus\,
-	pxor => \DATA[2]~345_pxor_bus\,
-	pclk => \DATA[2]~345_pclk_bus\,
-	papre => \DATA[2]~345_papre_bus\,
-	paclr => \DATA[2]~345_paclr_bus\,
-	pena => \DATA[2]~345_pena_bus\,
-	pexpout => \DATA[2]~345_pexpout\);
-
--- Location: LC50
+-- Location: LC54
 \I2C_PORT|sda_mon\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -6175,7 +5890,126 @@ PORT MAP (
 	dataout => \I2C_PORT|sda_mon~dataout\);
 
 -- Location: LC62
-\DATA[2]~173\ : max_mcell
+\SYS_PORT|romseh_latch\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
+-- pragma translate_on
+PORT MAP (
+	clk => \XOSC~dataout\,
+	aclr => \ALT_INV_RESET~dataout\,
+	pterm0 => \SYS_PORT|romseh_latch_pterm0_bus\,
+	pterm1 => \SYS_PORT|romseh_latch_pterm1_bus\,
+	pterm2 => \SYS_PORT|romseh_latch_pterm2_bus\,
+	pterm3 => \SYS_PORT|romseh_latch_pterm3_bus\,
+	pterm4 => \SYS_PORT|romseh_latch_pterm4_bus\,
+	pterm5 => \SYS_PORT|romseh_latch_pterm5_bus\,
+	pxor => \SYS_PORT|romseh_latch_pxor_bus\,
+	pclk => \SYS_PORT|romseh_latch_pclk_bus\,
+	papre => \SYS_PORT|romseh_latch_papre_bus\,
+	paclr => \SYS_PORT|romseh_latch_paclr_bus\,
+	pena => \SYS_PORT|romseh_latch_pena_bus\,
+	dataout => \SYS_PORT|romseh_latch~dataout\);
+
+-- Location: LC58
+\DATA[2]~307\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pterm0 => \DATA[2]~307_pterm0_bus\,
+	pterm1 => \DATA[2]~307_pterm1_bus\,
+	pterm2 => \DATA[2]~307_pterm2_bus\,
+	pterm3 => \DATA[2]~307_pterm3_bus\,
+	pterm4 => \DATA[2]~307_pterm4_bus\,
+	pterm5 => \DATA[2]~307_pterm5_bus\,
+	pxor => \DATA[2]~307_pxor_bus\,
+	pclk => \DATA[2]~307_pclk_bus\,
+	papre => \DATA[2]~307_papre_bus\,
+	paclr => \DATA[2]~307_paclr_bus\,
+	pena => \DATA[2]~307_pena_bus\,
+	pexpout => \DATA[2]~307_pexpout\);
+
+-- Location: LC59
+\DATA[2]~306\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pexpin => \DATA[2]~307_pexpout\,
+	pterm0 => \DATA[2]~306_pterm0_bus\,
+	pterm1 => \DATA[2]~306_pterm1_bus\,
+	pterm2 => \DATA[2]~306_pterm2_bus\,
+	pterm3 => \DATA[2]~306_pterm3_bus\,
+	pterm4 => \DATA[2]~306_pterm4_bus\,
+	pterm5 => \DATA[2]~306_pterm5_bus\,
+	pxor => \DATA[2]~306_pxor_bus\,
+	pclk => \DATA[2]~306_pclk_bus\,
+	papre => \DATA[2]~306_papre_bus\,
+	paclr => \DATA[2]~306_paclr_bus\,
+	pena => \DATA[2]~306_pena_bus\,
+	pexpout => \DATA[2]~306_pexpout\);
+
+-- Location: LC60
+\DATA[2]~305\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pexpin => \DATA[2]~306_pexpout\,
+	pterm0 => \DATA[2]~305_pterm0_bus\,
+	pterm1 => \DATA[2]~305_pterm1_bus\,
+	pterm2 => \DATA[2]~305_pterm2_bus\,
+	pterm3 => \DATA[2]~305_pterm3_bus\,
+	pterm4 => \DATA[2]~305_pterm4_bus\,
+	pterm5 => \DATA[2]~305_pterm5_bus\,
+	pxor => \DATA[2]~305_pxor_bus\,
+	pclk => \DATA[2]~305_pclk_bus\,
+	papre => \DATA[2]~305_papre_bus\,
+	paclr => \DATA[2]~305_paclr_bus\,
+	pena => \DATA[2]~305_pena_bus\,
+	pexpout => \DATA[2]~305_pexpout\);
+
+-- Location: LC99
+\SPI_MASTER|DataRxd[2]\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
+-- pragma translate_on
+PORT MAP (
+	aclr => \ALT_INV_RESET~dataout\,
+	pterm0 => \SPI_MASTER|DataRxd[2]_pterm0_bus\,
+	pterm1 => \SPI_MASTER|DataRxd[2]_pterm1_bus\,
+	pterm2 => \SPI_MASTER|DataRxd[2]_pterm2_bus\,
+	pterm3 => \SPI_MASTER|DataRxd[2]_pterm3_bus\,
+	pterm4 => \SPI_MASTER|DataRxd[2]_pterm4_bus\,
+	pterm5 => \SPI_MASTER|DataRxd[2]_pterm5_bus\,
+	pxor => \SPI_MASTER|DataRxd[2]_pxor_bus\,
+	pclk => \SPI_MASTER|DataRxd[2]_pclk_bus\,
+	papre => \SPI_MASTER|DataRxd[2]_papre_bus\,
+	paclr => \SPI_MASTER|DataRxd[2]_paclr_bus\,
+	pena => \SPI_MASTER|DataRxd[2]_pena_bus\,
+	dataout => \SPI_MASTER|DataRxd\(2));
+
+-- Location: LC61
+\DATA[2]~147\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -6183,22 +6017,22 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pexpin => \DATA[2]~345_pexpout\,
-	pterm0 => \DATA[2]~173_pterm0_bus\,
-	pterm1 => \DATA[2]~173_pterm1_bus\,
-	pterm2 => \DATA[2]~173_pterm2_bus\,
-	pterm3 => \DATA[2]~173_pterm3_bus\,
-	pterm4 => \DATA[2]~173_pterm4_bus\,
-	pterm5 => \DATA[2]~173_pterm5_bus\,
-	pxor => \DATA[2]~173_pxor_bus\,
-	pclk => \DATA[2]~173_pclk_bus\,
-	papre => \DATA[2]~173_papre_bus\,
-	paclr => \DATA[2]~173_paclr_bus\,
-	pena => \DATA[2]~173_pena_bus\,
-	dataout => \DATA[2]~173_dataout\);
+	pexpin => \DATA[2]~305_pexpout\,
+	pterm0 => \DATA[2]~147_pterm0_bus\,
+	pterm1 => \DATA[2]~147_pterm1_bus\,
+	pterm2 => \DATA[2]~147_pterm2_bus\,
+	pterm3 => \DATA[2]~147_pterm3_bus\,
+	pterm4 => \DATA[2]~147_pterm4_bus\,
+	pterm5 => \DATA[2]~147_pterm5_bus\,
+	pxor => \DATA[2]~147_pxor_bus\,
+	pclk => \DATA[2]~147_pclk_bus\,
+	papre => \DATA[2]~147_papre_bus\,
+	paclr => \DATA[2]~147_paclr_bus\,
+	pena => \DATA[2]~147_pena_bus\,
+	dataout => \DATA[2]~147_dataout\);
 
 -- Location: LC86
-\DATA[2]~380\ : max_mcell
+\DATA[2]~340\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -6206,18 +6040,43 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[2]~380_pterm0_bus\,
-	pterm1 => \DATA[2]~380_pterm1_bus\,
-	pterm2 => \DATA[2]~380_pterm2_bus\,
-	pterm3 => \DATA[2]~380_pterm3_bus\,
-	pterm4 => \DATA[2]~380_pterm4_bus\,
-	pterm5 => \DATA[2]~380_pterm5_bus\,
-	pxor => \DATA[2]~380_pxor_bus\,
-	pclk => \DATA[2]~380_pclk_bus\,
-	papre => \DATA[2]~380_papre_bus\,
-	paclr => \DATA[2]~380_paclr_bus\,
-	pena => \DATA[2]~380_pena_bus\,
-	dataout => \DATA[2]~380_dataout\);
+	pterm0 => \DATA[2]~340_pterm0_bus\,
+	pterm1 => \DATA[2]~340_pterm1_bus\,
+	pterm2 => \DATA[2]~340_pterm2_bus\,
+	pterm3 => \DATA[2]~340_pterm3_bus\,
+	pterm4 => \DATA[2]~340_pterm4_bus\,
+	pterm5 => \DATA[2]~340_pterm5_bus\,
+	pxor => \DATA[2]~340_pxor_bus\,
+	pclk => \DATA[2]~340_pclk_bus\,
+	papre => \DATA[2]~340_papre_bus\,
+	paclr => \DATA[2]~340_paclr_bus\,
+	pena => \DATA[2]~340_pena_bus\,
+	dataout => \DATA[2]~340_dataout\);
+
+-- Location: LC106
+\SPI_MASTER|DataRxd[3]\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
+-- pragma translate_on
+PORT MAP (
+	aclr => \ALT_INV_RESET~dataout\,
+	pterm0 => \SPI_MASTER|DataRxd[3]_pterm0_bus\,
+	pterm1 => \SPI_MASTER|DataRxd[3]_pterm1_bus\,
+	pterm2 => \SPI_MASTER|DataRxd[3]_pterm2_bus\,
+	pterm3 => \SPI_MASTER|DataRxd[3]_pterm3_bus\,
+	pterm4 => \SPI_MASTER|DataRxd[3]_pterm4_bus\,
+	pterm5 => \SPI_MASTER|DataRxd[3]_pterm5_bus\,
+	pxor => \SPI_MASTER|DataRxd[3]_pxor_bus\,
+	pclk => \SPI_MASTER|DataRxd[3]_pclk_bus\,
+	papre => \SPI_MASTER|DataRxd[3]_papre_bus\,
+	paclr => \SPI_MASTER|DataRxd[3]_paclr_bus\,
+	pena => \SPI_MASTER|DataRxd[3]_pena_bus\,
+	dataout => \SPI_MASTER|DataRxd\(3));
 
 -- Location: LC3
 \I2C_PORT|scl_latch\ : max_mcell
@@ -6244,31 +6103,6 @@ PORT MAP (
 	pena => \I2C_PORT|scl_latch_pena_bus\,
 	dataout => \I2C_PORT|scl_latch~dataout\);
 
--- Location: LC98
-\SPI_MASTER|DataRxd[3]\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	aclr => \ALT_INV_RESET~dataout\,
-	pterm0 => \SPI_MASTER|DataRxd[3]_pterm0_bus\,
-	pterm1 => \SPI_MASTER|DataRxd[3]_pterm1_bus\,
-	pterm2 => \SPI_MASTER|DataRxd[3]_pterm2_bus\,
-	pterm3 => \SPI_MASTER|DataRxd[3]_pterm3_bus\,
-	pterm4 => \SPI_MASTER|DataRxd[3]_pterm4_bus\,
-	pterm5 => \SPI_MASTER|DataRxd[3]_pterm5_bus\,
-	pxor => \SPI_MASTER|DataRxd[3]_pxor_bus\,
-	pclk => \SPI_MASTER|DataRxd[3]_pclk_bus\,
-	papre => \SPI_MASTER|DataRxd[3]_papre_bus\,
-	paclr => \SPI_MASTER|DataRxd[3]_paclr_bus\,
-	pena => \SPI_MASTER|DataRxd[3]_pena_bus\,
-	dataout => \SPI_MASTER|DataRxd\(3));
-
 -- Location: PIN_34
 \CONF~I\ : max_io
 -- pragma translate_off
@@ -6283,7 +6117,7 @@ PORT MAP (
 	padio => ww_CONF,
 	dataout => \CONF~dataout\);
 
--- Location: SEXP2
+-- Location: SEXP1
 \SYS_PORT|process_0~4\ : max_sexp
 PORT MAP (
 	datain => \SYS_PORT|process_0~4_datain_bus\,
@@ -6328,7 +6162,7 @@ PORT MAP (
 	padio => ww_PBTN,
 	dataout => \PBTN~dataout\);
 
--- Location: LC48
+-- Location: LC41
 \IO_PORT|button_latch\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -6354,7 +6188,7 @@ PORT MAP (
 	dataout => \IO_PORT|button_latch~dataout\);
 
 -- Location: LC87
-\DATA[3]~325\ : max_mcell
+\DATA[3]~290\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "vcc",
@@ -6362,21 +6196,21 @@ GENERIC MAP (
 	pexp_mode => "on")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[3]~325_pterm0_bus\,
-	pterm1 => \DATA[3]~325_pterm1_bus\,
-	pterm2 => \DATA[3]~325_pterm2_bus\,
-	pterm3 => \DATA[3]~325_pterm3_bus\,
-	pterm4 => \DATA[3]~325_pterm4_bus\,
-	pterm5 => \DATA[3]~325_pterm5_bus\,
-	pxor => \DATA[3]~325_pxor_bus\,
-	pclk => \DATA[3]~325_pclk_bus\,
-	papre => \DATA[3]~325_papre_bus\,
-	paclr => \DATA[3]~325_paclr_bus\,
-	pena => \DATA[3]~325_pena_bus\,
-	pexpout => \DATA[3]~325_pexpout\);
+	pterm0 => \DATA[3]~290_pterm0_bus\,
+	pterm1 => \DATA[3]~290_pterm1_bus\,
+	pterm2 => \DATA[3]~290_pterm2_bus\,
+	pterm3 => \DATA[3]~290_pterm3_bus\,
+	pterm4 => \DATA[3]~290_pterm4_bus\,
+	pterm5 => \DATA[3]~290_pterm5_bus\,
+	pxor => \DATA[3]~290_pxor_bus\,
+	pclk => \DATA[3]~290_pclk_bus\,
+	papre => \DATA[3]~290_papre_bus\,
+	paclr => \DATA[3]~290_paclr_bus\,
+	pena => \DATA[3]~290_pena_bus\,
+	pexpout => \DATA[3]~290_pexpout\);
 
 -- Location: LC88
-\DATA[3]~174\ : max_mcell
+\DATA[3]~148\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "xor",
@@ -6384,46 +6218,21 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pexpin => \DATA[3]~325_pexpout\,
-	pterm0 => \DATA[3]~174_pterm0_bus\,
-	pterm1 => \DATA[3]~174_pterm1_bus\,
-	pterm2 => \DATA[3]~174_pterm2_bus\,
-	pterm3 => \DATA[3]~174_pterm3_bus\,
-	pterm4 => \DATA[3]~174_pterm4_bus\,
-	pterm5 => \DATA[3]~174_pterm5_bus\,
-	pxor => \DATA[3]~174_pxor_bus\,
-	pclk => \DATA[3]~174_pclk_bus\,
-	papre => \DATA[3]~174_papre_bus\,
-	paclr => \DATA[3]~174_paclr_bus\,
-	pena => \DATA[3]~174_pena_bus\,
-	dataout => \DATA[3]~174_dataout\);
+	pexpin => \DATA[3]~290_pexpout\,
+	pterm0 => \DATA[3]~148_pterm0_bus\,
+	pterm1 => \DATA[3]~148_pterm1_bus\,
+	pterm2 => \DATA[3]~148_pterm2_bus\,
+	pterm3 => \DATA[3]~148_pterm3_bus\,
+	pterm4 => \DATA[3]~148_pterm4_bus\,
+	pterm5 => \DATA[3]~148_pterm5_bus\,
+	pxor => \DATA[3]~148_pxor_bus\,
+	pclk => \DATA[3]~148_pclk_bus\,
+	papre => \DATA[3]~148_papre_bus\,
+	paclr => \DATA[3]~148_paclr_bus\,
+	pena => \DATA[3]~148_pena_bus\,
+	dataout => \DATA[3]~148_dataout\);
 
--- Location: LC96
-\SYS_PORT|config_latch\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "xor",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "dff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	pterm0 => \SYS_PORT|config_latch_pterm0_bus\,
-	pterm1 => \SYS_PORT|config_latch_pterm1_bus\,
-	pterm2 => \SYS_PORT|config_latch_pterm2_bus\,
-	pterm3 => \SYS_PORT|config_latch_pterm3_bus\,
-	pterm4 => \SYS_PORT|config_latch_pterm4_bus\,
-	pterm5 => \SYS_PORT|config_latch_pterm5_bus\,
-	pxor => \SYS_PORT|config_latch_pxor_bus\,
-	pclk => \SYS_PORT|config_latch_pclk_bus\,
-	papre => \SYS_PORT|config_latch_papre_bus\,
-	paclr => \SYS_PORT|config_latch_paclr_bus\,
-	pena => \SYS_PORT|config_latch_pena_bus\,
-	dataout => \SYS_PORT|config_latch~dataout\);
-
--- Location: LC70
+-- Location: LC80
 \SPI_MASTER|DataRxd[4]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -6448,27 +6257,30 @@ PORT MAP (
 	pena => \SPI_MASTER|DataRxd[4]_pena_bus\,
 	dataout => \SPI_MASTER|DataRxd\(4));
 
--- Location: LC90
-\DATA[4]~329\ : max_mcell
+-- Location: LC52
+\SYS_PORT|config_latch\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
+	operation_mode => "xor",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "dff")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[4]~329_pterm0_bus\,
-	pterm1 => \DATA[4]~329_pterm1_bus\,
-	pterm2 => \DATA[4]~329_pterm2_bus\,
-	pterm3 => \DATA[4]~329_pterm3_bus\,
-	pterm4 => \DATA[4]~329_pterm4_bus\,
-	pterm5 => \DATA[4]~329_pterm5_bus\,
-	pxor => \DATA[4]~329_pxor_bus\,
-	pclk => \DATA[4]~329_pclk_bus\,
-	papre => \DATA[4]~329_papre_bus\,
-	paclr => \DATA[4]~329_paclr_bus\,
-	pena => \DATA[4]~329_pena_bus\,
-	pexpout => \DATA[4]~329_pexpout\);
+	clk => \XOSC~dataout\,
+	pterm0 => \SYS_PORT|config_latch_pterm0_bus\,
+	pterm1 => \SYS_PORT|config_latch_pterm1_bus\,
+	pterm2 => \SYS_PORT|config_latch_pterm2_bus\,
+	pterm3 => \SYS_PORT|config_latch_pterm3_bus\,
+	pterm4 => \SYS_PORT|config_latch_pterm4_bus\,
+	pterm5 => \SYS_PORT|config_latch_pterm5_bus\,
+	pxor => \SYS_PORT|config_latch_pxor_bus\,
+	pclk => \SYS_PORT|config_latch_pclk_bus\,
+	papre => \SYS_PORT|config_latch_papre_bus\,
+	paclr => \SYS_PORT|config_latch_paclr_bus\,
+	pena => \SYS_PORT|config_latch_pena_bus\,
+	dataout => \SYS_PORT|config_latch~dataout\);
 
 -- Location: LC24
 \IO_PORT|sdcs_latch\ : max_mcell
@@ -6496,53 +6308,26 @@ PORT MAP (
 	dataout => \IO_PORT|sdcs_latch~dataout\);
 
 -- Location: LC91
-\DATA[4]~181\ : max_mcell
+\DATA[4]~159\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
-	operation_mode => "xor",
+	operation_mode => "normal",
 	output_mode => "comb",
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pexpin => \DATA[4]~329_pexpout\,
-	pterm0 => \DATA[4]~181_pterm0_bus\,
-	pterm1 => \DATA[4]~181_pterm1_bus\,
-	pterm2 => \DATA[4]~181_pterm2_bus\,
-	pterm3 => \DATA[4]~181_pterm3_bus\,
-	pterm4 => \DATA[4]~181_pterm4_bus\,
-	pterm5 => \DATA[4]~181_pterm5_bus\,
-	pxor => \DATA[4]~181_pxor_bus\,
-	pclk => \DATA[4]~181_pclk_bus\,
-	papre => \DATA[4]~181_papre_bus\,
-	paclr => \DATA[4]~181_paclr_bus\,
-	pena => \DATA[4]~181_pena_bus\,
-	dataout => \DATA[4]~181_dataout\);
-
--- Location: LC52
-\SYS_PORT|asel_latch\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "tff")
--- pragma translate_on
-PORT MAP (
-	clk => \XOSC~dataout\,
-	aclr => \ALT_INV_RESET~dataout\,
-	pterm0 => \SYS_PORT|asel_latch_pterm0_bus\,
-	pterm1 => \SYS_PORT|asel_latch_pterm1_bus\,
-	pterm2 => \SYS_PORT|asel_latch_pterm2_bus\,
-	pterm3 => \SYS_PORT|asel_latch_pterm3_bus\,
-	pterm4 => \SYS_PORT|asel_latch_pterm4_bus\,
-	pterm5 => \SYS_PORT|asel_latch_pterm5_bus\,
-	pxor => \SYS_PORT|asel_latch_pxor_bus\,
-	pclk => \SYS_PORT|asel_latch_pclk_bus\,
-	papre => \SYS_PORT|asel_latch_papre_bus\,
-	paclr => \SYS_PORT|asel_latch_paclr_bus\,
-	pena => \SYS_PORT|asel_latch_pena_bus\,
-	dataout => \SYS_PORT|asel_latch~dataout\);
+	pterm0 => \DATA[4]~159_pterm0_bus\,
+	pterm1 => \DATA[4]~159_pterm1_bus\,
+	pterm2 => \DATA[4]~159_pterm2_bus\,
+	pterm3 => \DATA[4]~159_pterm3_bus\,
+	pterm4 => \DATA[4]~159_pterm4_bus\,
+	pterm5 => \DATA[4]~159_pterm5_bus\,
+	pxor => \DATA[4]~159_pxor_bus\,
+	pclk => \DATA[4]~159_pclk_bus\,
+	papre => \DATA[4]~159_papre_bus\,
+	paclr => \DATA[4]~159_paclr_bus\,
+	pena => \DATA[4]~159_pena_bus\,
+	dataout => \DATA[4]~159_dataout\);
 
 -- Location: LC109
 \SPI_MASTER|DataRxd[5]\ : max_mcell
@@ -6569,53 +6354,8 @@ PORT MAP (
 	pena => \SPI_MASTER|DataRxd[5]_pena_bus\,
 	dataout => \SPI_MASTER|DataRxd\(5));
 
--- Location: LC92
-\DATA[5]~332\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pterm0 => \DATA[5]~332_pterm0_bus\,
-	pterm1 => \DATA[5]~332_pterm1_bus\,
-	pterm2 => \DATA[5]~332_pterm2_bus\,
-	pterm3 => \DATA[5]~332_pterm3_bus\,
-	pterm4 => \DATA[5]~332_pterm4_bus\,
-	pterm5 => \DATA[5]~332_pterm5_bus\,
-	pxor => \DATA[5]~332_pxor_bus\,
-	pclk => \DATA[5]~332_pclk_bus\,
-	papre => \DATA[5]~332_papre_bus\,
-	paclr => \DATA[5]~332_paclr_bus\,
-	pena => \DATA[5]~332_pena_bus\,
-	pexpout => \DATA[5]~332_pexpout\);
-
--- Location: LC93
-\DATA[5]~188\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "xor",
-	output_mode => "comb",
-	pexp_mode => "off")
--- pragma translate_on
-PORT MAP (
-	pexpin => \DATA[5]~332_pexpout\,
-	pterm0 => \DATA[5]~188_pterm0_bus\,
-	pterm1 => \DATA[5]~188_pterm1_bus\,
-	pterm2 => \DATA[5]~188_pterm2_bus\,
-	pterm3 => \DATA[5]~188_pterm3_bus\,
-	pterm4 => \DATA[5]~188_pterm4_bus\,
-	pterm5 => \DATA[5]~188_pterm5_bus\,
-	pxor => \DATA[5]~188_pxor_bus\,
-	pclk => \DATA[5]~188_pclk_bus\,
-	papre => \DATA[5]~188_papre_bus\,
-	paclr => \DATA[5]~188_paclr_bus\,
-	pena => \DATA[5]~188_pena_bus\,
-	dataout => \DATA[5]~188_dataout\);
-
--- Location: LC110
-\SPI_MASTER|DataRxd[6]\ : max_mcell
+-- Location: LC50
+\SYS_PORT|asel_latch\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -6625,87 +6365,42 @@ GENERIC MAP (
 	register_mode => "tff")
 -- pragma translate_on
 PORT MAP (
+	clk => \XOSC~dataout\,
 	aclr => \ALT_INV_RESET~dataout\,
-	pterm0 => \SPI_MASTER|DataRxd[6]_pterm0_bus\,
-	pterm1 => \SPI_MASTER|DataRxd[6]_pterm1_bus\,
-	pterm2 => \SPI_MASTER|DataRxd[6]_pterm2_bus\,
-	pterm3 => \SPI_MASTER|DataRxd[6]_pterm3_bus\,
-	pterm4 => \SPI_MASTER|DataRxd[6]_pterm4_bus\,
-	pterm5 => \SPI_MASTER|DataRxd[6]_pterm5_bus\,
-	pxor => \SPI_MASTER|DataRxd[6]_pxor_bus\,
-	pclk => \SPI_MASTER|DataRxd[6]_pclk_bus\,
-	papre => \SPI_MASTER|DataRxd[6]_papre_bus\,
-	paclr => \SPI_MASTER|DataRxd[6]_paclr_bus\,
-	pena => \SPI_MASTER|DataRxd[6]_pena_bus\,
-	dataout => \SPI_MASTER|DataRxd\(6));
+	pterm0 => \SYS_PORT|asel_latch_pterm0_bus\,
+	pterm1 => \SYS_PORT|asel_latch_pterm1_bus\,
+	pterm2 => \SYS_PORT|asel_latch_pterm2_bus\,
+	pterm3 => \SYS_PORT|asel_latch_pterm3_bus\,
+	pterm4 => \SYS_PORT|asel_latch_pterm4_bus\,
+	pterm5 => \SYS_PORT|asel_latch_pterm5_bus\,
+	pxor => \SYS_PORT|asel_latch_pxor_bus\,
+	pclk => \SYS_PORT|asel_latch_pclk_bus\,
+	papre => \SYS_PORT|asel_latch_papre_bus\,
+	paclr => \SYS_PORT|asel_latch_paclr_bus\,
+	pena => \SYS_PORT|asel_latch_pena_bus\,
+	dataout => \SYS_PORT|asel_latch~dataout\);
 
--- Location: LC113
-\DATA[6]~363\ : max_mcell
+-- Location: LC93
+\DATA[5]~163\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
-	operation_mode => "vcc",
+	operation_mode => "normal",
 	output_mode => "comb",
-	pexp_mode => "on")
+	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[6]~363_pterm0_bus\,
-	pterm1 => \DATA[6]~363_pterm1_bus\,
-	pterm2 => \DATA[6]~363_pterm2_bus\,
-	pterm3 => \DATA[6]~363_pterm3_bus\,
-	pterm4 => \DATA[6]~363_pterm4_bus\,
-	pterm5 => \DATA[6]~363_pterm5_bus\,
-	pxor => \DATA[6]~363_pxor_bus\,
-	pclk => \DATA[6]~363_pclk_bus\,
-	papre => \DATA[6]~363_papre_bus\,
-	paclr => \DATA[6]~363_paclr_bus\,
-	pena => \DATA[6]~363_pena_bus\,
-	pexpout => \DATA[6]~363_pexpout\);
-
--- Location: LC114
-\DATA[6]~362\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pexpin => \DATA[6]~363_pexpout\,
-	pterm0 => \DATA[6]~362_pterm0_bus\,
-	pterm1 => \DATA[6]~362_pterm1_bus\,
-	pterm2 => \DATA[6]~362_pterm2_bus\,
-	pterm3 => \DATA[6]~362_pterm3_bus\,
-	pterm4 => \DATA[6]~362_pterm4_bus\,
-	pterm5 => \DATA[6]~362_pterm5_bus\,
-	pxor => \DATA[6]~362_pxor_bus\,
-	pclk => \DATA[6]~362_pclk_bus\,
-	papre => \DATA[6]~362_papre_bus\,
-	paclr => \DATA[6]~362_paclr_bus\,
-	pena => \DATA[6]~362_pena_bus\,
-	pexpout => \DATA[6]~362_pexpout\);
-
--- Location: LC115
-\DATA[6]~361\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pexpin => \DATA[6]~362_pexpout\,
-	pterm0 => \DATA[6]~361_pterm0_bus\,
-	pterm1 => \DATA[6]~361_pterm1_bus\,
-	pterm2 => \DATA[6]~361_pterm2_bus\,
-	pterm3 => \DATA[6]~361_pterm3_bus\,
-	pterm4 => \DATA[6]~361_pterm4_bus\,
-	pterm5 => \DATA[6]~361_pterm5_bus\,
-	pxor => \DATA[6]~361_pxor_bus\,
-	pclk => \DATA[6]~361_pclk_bus\,
-	papre => \DATA[6]~361_papre_bus\,
-	paclr => \DATA[6]~361_paclr_bus\,
-	pena => \DATA[6]~361_pena_bus\,
-	pexpout => \DATA[6]~361_pexpout\);
+	pterm0 => \DATA[5]~163_pterm0_bus\,
+	pterm1 => \DATA[5]~163_pterm1_bus\,
+	pterm2 => \DATA[5]~163_pterm2_bus\,
+	pterm3 => \DATA[5]~163_pterm3_bus\,
+	pterm4 => \DATA[5]~163_pterm4_bus\,
+	pterm5 => \DATA[5]~163_pterm5_bus\,
+	pxor => \DATA[5]~163_pxor_bus\,
+	pclk => \DATA[5]~163_pclk_bus\,
+	papre => \DATA[5]~163_papre_bus\,
+	paclr => \DATA[5]~163_paclr_bus\,
+	pena => \DATA[5]~163_pena_bus\,
+	dataout => \DATA[5]~163_dataout\);
 
 -- Location: LC5
 \I2C_PORT|sda_latch\ : max_mcell
@@ -6732,8 +6427,101 @@ PORT MAP (
 	pena => \I2C_PORT|sda_latch_pena_bus\,
 	dataout => \I2C_PORT|sda_latch~dataout\);
 
+-- Location: LC113
+\DATA[6]~323\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pterm0 => \DATA[6]~323_pterm0_bus\,
+	pterm1 => \DATA[6]~323_pterm1_bus\,
+	pterm2 => \DATA[6]~323_pterm2_bus\,
+	pterm3 => \DATA[6]~323_pterm3_bus\,
+	pterm4 => \DATA[6]~323_pterm4_bus\,
+	pterm5 => \DATA[6]~323_pterm5_bus\,
+	pxor => \DATA[6]~323_pxor_bus\,
+	pclk => \DATA[6]~323_pclk_bus\,
+	papre => \DATA[6]~323_papre_bus\,
+	paclr => \DATA[6]~323_paclr_bus\,
+	pena => \DATA[6]~323_pena_bus\,
+	pexpout => \DATA[6]~323_pexpout\);
+
+-- Location: LC114
+\DATA[6]~322\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pexpin => \DATA[6]~323_pexpout\,
+	pterm0 => \DATA[6]~322_pterm0_bus\,
+	pterm1 => \DATA[6]~322_pterm1_bus\,
+	pterm2 => \DATA[6]~322_pterm2_bus\,
+	pterm3 => \DATA[6]~322_pterm3_bus\,
+	pterm4 => \DATA[6]~322_pterm4_bus\,
+	pterm5 => \DATA[6]~322_pterm5_bus\,
+	pxor => \DATA[6]~322_pxor_bus\,
+	pclk => \DATA[6]~322_pclk_bus\,
+	papre => \DATA[6]~322_papre_bus\,
+	paclr => \DATA[6]~322_paclr_bus\,
+	pena => \DATA[6]~322_pena_bus\,
+	pexpout => \DATA[6]~322_pexpout\);
+
+-- Location: LC115
+\DATA[6]~321\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pexpin => \DATA[6]~322_pexpout\,
+	pterm0 => \DATA[6]~321_pterm0_bus\,
+	pterm1 => \DATA[6]~321_pterm1_bus\,
+	pterm2 => \DATA[6]~321_pterm2_bus\,
+	pterm3 => \DATA[6]~321_pterm3_bus\,
+	pterm4 => \DATA[6]~321_pterm4_bus\,
+	pterm5 => \DATA[6]~321_pterm5_bus\,
+	pxor => \DATA[6]~321_pxor_bus\,
+	pclk => \DATA[6]~321_pclk_bus\,
+	papre => \DATA[6]~321_papre_bus\,
+	paclr => \DATA[6]~321_paclr_bus\,
+	pena => \DATA[6]~321_pena_bus\,
+	pexpout => \DATA[6]~321_pexpout\);
+
+-- Location: LC110
+\SPI_MASTER|DataRxd[6]\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "normal",
+	output_mode => "reg",
+	pexp_mode => "off",
+	power_up => "low",
+	register_mode => "tff")
+-- pragma translate_on
+PORT MAP (
+	aclr => \ALT_INV_RESET~dataout\,
+	pterm0 => \SPI_MASTER|DataRxd[6]_pterm0_bus\,
+	pterm1 => \SPI_MASTER|DataRxd[6]_pterm1_bus\,
+	pterm2 => \SPI_MASTER|DataRxd[6]_pterm2_bus\,
+	pterm3 => \SPI_MASTER|DataRxd[6]_pterm3_bus\,
+	pterm4 => \SPI_MASTER|DataRxd[6]_pterm4_bus\,
+	pterm5 => \SPI_MASTER|DataRxd[6]_pterm5_bus\,
+	pxor => \SPI_MASTER|DataRxd[6]_pxor_bus\,
+	pclk => \SPI_MASTER|DataRxd[6]_pclk_bus\,
+	papre => \SPI_MASTER|DataRxd[6]_papre_bus\,
+	paclr => \SPI_MASTER|DataRxd[6]_paclr_bus\,
+	pena => \SPI_MASTER|DataRxd[6]_pena_bus\,
+	dataout => \SPI_MASTER|DataRxd\(6));
+
 -- Location: LC116
-\DATA[6]~203\ : max_mcell
+\DATA[6]~171\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -6741,22 +6529,22 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pexpin => \DATA[6]~361_pexpout\,
-	pterm0 => \DATA[6]~203_pterm0_bus\,
-	pterm1 => \DATA[6]~203_pterm1_bus\,
-	pterm2 => \DATA[6]~203_pterm2_bus\,
-	pterm3 => \DATA[6]~203_pterm3_bus\,
-	pterm4 => \DATA[6]~203_pterm4_bus\,
-	pterm5 => \DATA[6]~203_pterm5_bus\,
-	pxor => \DATA[6]~203_pxor_bus\,
-	pclk => \DATA[6]~203_pclk_bus\,
-	papre => \DATA[6]~203_papre_bus\,
-	paclr => \DATA[6]~203_paclr_bus\,
-	pena => \DATA[6]~203_pena_bus\,
-	dataout => \DATA[6]~203_dataout\);
+	pexpin => \DATA[6]~321_pexpout\,
+	pterm0 => \DATA[6]~171_pterm0_bus\,
+	pterm1 => \DATA[6]~171_pterm1_bus\,
+	pterm2 => \DATA[6]~171_pterm2_bus\,
+	pterm3 => \DATA[6]~171_pterm3_bus\,
+	pterm4 => \DATA[6]~171_pterm4_bus\,
+	pterm5 => \DATA[6]~171_pterm5_bus\,
+	pxor => \DATA[6]~171_pxor_bus\,
+	pclk => \DATA[6]~171_pclk_bus\,
+	papre => \DATA[6]~171_papre_bus\,
+	paclr => \DATA[6]~171_paclr_bus\,
+	pena => \DATA[6]~171_pena_bus\,
+	dataout => \DATA[6]~171_dataout\);
 
 -- Location: LC94
-\DATA[6]~381\ : max_mcell
+\DATA[6]~341\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -6764,20 +6552,88 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[6]~381_pterm0_bus\,
-	pterm1 => \DATA[6]~381_pterm1_bus\,
-	pterm2 => \DATA[6]~381_pterm2_bus\,
-	pterm3 => \DATA[6]~381_pterm3_bus\,
-	pterm4 => \DATA[6]~381_pterm4_bus\,
-	pterm5 => \DATA[6]~381_pterm5_bus\,
-	pxor => \DATA[6]~381_pxor_bus\,
-	pclk => \DATA[6]~381_pclk_bus\,
-	papre => \DATA[6]~381_papre_bus\,
-	paclr => \DATA[6]~381_paclr_bus\,
-	pena => \DATA[6]~381_pena_bus\,
-	dataout => \DATA[6]~381_dataout\);
+	pterm0 => \DATA[6]~341_pterm0_bus\,
+	pterm1 => \DATA[6]~341_pterm1_bus\,
+	pterm2 => \DATA[6]~341_pterm2_bus\,
+	pterm3 => \DATA[6]~341_pterm3_bus\,
+	pterm4 => \DATA[6]~341_pterm4_bus\,
+	pterm5 => \DATA[6]~341_pterm5_bus\,
+	pxor => \DATA[6]~341_pxor_bus\,
+	pclk => \DATA[6]~341_pclk_bus\,
+	papre => \DATA[6]~341_papre_bus\,
+	paclr => \DATA[6]~341_paclr_bus\,
+	pena => \DATA[6]~341_pena_bus\,
+	dataout => \DATA[6]~341_dataout\);
 
--- Location: LC99
+-- Location: LC118
+\DATA[7]~338\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pterm0 => \DATA[7]~338_pterm0_bus\,
+	pterm1 => \DATA[7]~338_pterm1_bus\,
+	pterm2 => \DATA[7]~338_pterm2_bus\,
+	pterm3 => \DATA[7]~338_pterm3_bus\,
+	pterm4 => \DATA[7]~338_pterm4_bus\,
+	pterm5 => \DATA[7]~338_pterm5_bus\,
+	pxor => \DATA[7]~338_pxor_bus\,
+	pclk => \DATA[7]~338_pclk_bus\,
+	papre => \DATA[7]~338_papre_bus\,
+	paclr => \DATA[7]~338_paclr_bus\,
+	pena => \DATA[7]~338_pena_bus\,
+	pexpout => \DATA[7]~338_pexpout\);
+
+-- Location: LC119
+\DATA[7]~337\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pexpin => \DATA[7]~338_pexpout\,
+	pterm0 => \DATA[7]~337_pterm0_bus\,
+	pterm1 => \DATA[7]~337_pterm1_bus\,
+	pterm2 => \DATA[7]~337_pterm2_bus\,
+	pterm3 => \DATA[7]~337_pterm3_bus\,
+	pterm4 => \DATA[7]~337_pterm4_bus\,
+	pterm5 => \DATA[7]~337_pterm5_bus\,
+	pxor => \DATA[7]~337_pxor_bus\,
+	pclk => \DATA[7]~337_pclk_bus\,
+	papre => \DATA[7]~337_papre_bus\,
+	paclr => \DATA[7]~337_paclr_bus\,
+	pena => \DATA[7]~337_pena_bus\,
+	pexpout => \DATA[7]~337_pexpout\);
+
+-- Location: LC120
+\DATA[7]~336\ : max_mcell
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "vcc",
+	output_mode => "comb",
+	pexp_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	pexpin => \DATA[7]~337_pexpout\,
+	pterm0 => \DATA[7]~336_pterm0_bus\,
+	pterm1 => \DATA[7]~336_pterm1_bus\,
+	pterm2 => \DATA[7]~336_pterm2_bus\,
+	pterm3 => \DATA[7]~336_pterm3_bus\,
+	pterm4 => \DATA[7]~336_pterm4_bus\,
+	pterm5 => \DATA[7]~336_pterm5_bus\,
+	pxor => \DATA[7]~336_pxor_bus\,
+	pclk => \DATA[7]~336_pclk_bus\,
+	papre => \DATA[7]~336_papre_bus\,
+	paclr => \DATA[7]~336_paclr_bus\,
+	pena => \DATA[7]~336_pena_bus\,
+	pexpout => \DATA[7]~336_pexpout\);
+
+-- Location: LC98
 \SPI_MASTER|DataRxd[7]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -6801,74 +6657,6 @@ PORT MAP (
 	paclr => \SPI_MASTER|DataRxd[7]_paclr_bus\,
 	pena => \SPI_MASTER|DataRxd[7]_pena_bus\,
 	dataout => \SPI_MASTER|DataRxd\(7));
-
--- Location: LC118
-\DATA[7]~378\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pterm0 => \DATA[7]~378_pterm0_bus\,
-	pterm1 => \DATA[7]~378_pterm1_bus\,
-	pterm2 => \DATA[7]~378_pterm2_bus\,
-	pterm3 => \DATA[7]~378_pterm3_bus\,
-	pterm4 => \DATA[7]~378_pterm4_bus\,
-	pterm5 => \DATA[7]~378_pterm5_bus\,
-	pxor => \DATA[7]~378_pxor_bus\,
-	pclk => \DATA[7]~378_pclk_bus\,
-	papre => \DATA[7]~378_papre_bus\,
-	paclr => \DATA[7]~378_paclr_bus\,
-	pena => \DATA[7]~378_pena_bus\,
-	pexpout => \DATA[7]~378_pexpout\);
-
--- Location: LC119
-\DATA[7]~377\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pexpin => \DATA[7]~378_pexpout\,
-	pterm0 => \DATA[7]~377_pterm0_bus\,
-	pterm1 => \DATA[7]~377_pterm1_bus\,
-	pterm2 => \DATA[7]~377_pterm2_bus\,
-	pterm3 => \DATA[7]~377_pterm3_bus\,
-	pterm4 => \DATA[7]~377_pterm4_bus\,
-	pterm5 => \DATA[7]~377_pterm5_bus\,
-	pxor => \DATA[7]~377_pxor_bus\,
-	pclk => \DATA[7]~377_pclk_bus\,
-	papre => \DATA[7]~377_papre_bus\,
-	paclr => \DATA[7]~377_paclr_bus\,
-	pena => \DATA[7]~377_pena_bus\,
-	pexpout => \DATA[7]~377_pexpout\);
-
--- Location: LC120
-\DATA[7]~376\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "vcc",
-	output_mode => "comb",
-	pexp_mode => "on")
--- pragma translate_on
-PORT MAP (
-	pexpin => \DATA[7]~377_pexpout\,
-	pterm0 => \DATA[7]~376_pterm0_bus\,
-	pterm1 => \DATA[7]~376_pterm1_bus\,
-	pterm2 => \DATA[7]~376_pterm2_bus\,
-	pterm3 => \DATA[7]~376_pterm3_bus\,
-	pterm4 => \DATA[7]~376_pterm4_bus\,
-	pterm5 => \DATA[7]~376_pterm5_bus\,
-	pxor => \DATA[7]~376_pxor_bus\,
-	pclk => \DATA[7]~376_pclk_bus\,
-	papre => \DATA[7]~376_papre_bus\,
-	paclr => \DATA[7]~376_paclr_bus\,
-	pena => \DATA[7]~376_pena_bus\,
-	pexpout => \DATA[7]~376_pexpout\);
 
 -- Location: PIN_17
 \SDSW~I\ : max_io
@@ -6910,7 +6698,7 @@ PORT MAP (
 	dataout => \IO_PORT|switch_latch~dataout\);
 
 -- Location: LC121
-\DATA[7]~212\ : max_mcell
+\DATA[7]~179\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -6918,22 +6706,22 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pexpin => \DATA[7]~376_pexpout\,
-	pterm0 => \DATA[7]~212_pterm0_bus\,
-	pterm1 => \DATA[7]~212_pterm1_bus\,
-	pterm2 => \DATA[7]~212_pterm2_bus\,
-	pterm3 => \DATA[7]~212_pterm3_bus\,
-	pterm4 => \DATA[7]~212_pterm4_bus\,
-	pterm5 => \DATA[7]~212_pterm5_bus\,
-	pxor => \DATA[7]~212_pxor_bus\,
-	pclk => \DATA[7]~212_pclk_bus\,
-	papre => \DATA[7]~212_papre_bus\,
-	paclr => \DATA[7]~212_paclr_bus\,
-	pena => \DATA[7]~212_pena_bus\,
-	dataout => \DATA[7]~212_dataout\);
+	pexpin => \DATA[7]~336_pexpout\,
+	pterm0 => \DATA[7]~179_pterm0_bus\,
+	pterm1 => \DATA[7]~179_pterm1_bus\,
+	pterm2 => \DATA[7]~179_pterm2_bus\,
+	pterm3 => \DATA[7]~179_pterm3_bus\,
+	pterm4 => \DATA[7]~179_pterm4_bus\,
+	pterm5 => \DATA[7]~179_pterm5_bus\,
+	pxor => \DATA[7]~179_pxor_bus\,
+	pclk => \DATA[7]~179_pclk_bus\,
+	papre => \DATA[7]~179_papre_bus\,
+	paclr => \DATA[7]~179_paclr_bus\,
+	pena => \DATA[7]~179_pena_bus\,
+	dataout => \DATA[7]~179_dataout\);
 
 -- Location: LC97
-\DATA[7]~382\ : max_mcell
+\DATA[7]~342\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -6941,18 +6729,18 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \DATA[7]~382_pterm0_bus\,
-	pterm1 => \DATA[7]~382_pterm1_bus\,
-	pterm2 => \DATA[7]~382_pterm2_bus\,
-	pterm3 => \DATA[7]~382_pterm3_bus\,
-	pterm4 => \DATA[7]~382_pterm4_bus\,
-	pterm5 => \DATA[7]~382_pterm5_bus\,
-	pxor => \DATA[7]~382_pxor_bus\,
-	pclk => \DATA[7]~382_pclk_bus\,
-	papre => \DATA[7]~382_papre_bus\,
-	paclr => \DATA[7]~382_paclr_bus\,
-	pena => \DATA[7]~382_pena_bus\,
-	dataout => \DATA[7]~382_dataout\);
+	pterm0 => \DATA[7]~342_pterm0_bus\,
+	pterm1 => \DATA[7]~342_pterm1_bus\,
+	pterm2 => \DATA[7]~342_pterm2_bus\,
+	pterm3 => \DATA[7]~342_pterm3_bus\,
+	pterm4 => \DATA[7]~342_pterm4_bus\,
+	pterm5 => \DATA[7]~342_pterm5_bus\,
+	pxor => \DATA[7]~342_pxor_bus\,
+	pclk => \DATA[7]~342_pclk_bus\,
+	papre => \DATA[7]~342_papre_bus\,
+	paclr => \DATA[7]~342_paclr_bus\,
+	pena => \DATA[7]~342_pena_bus\,
+	dataout => \DATA[7]~342_dataout\);
 
 -- Location: LC64
 \~VCC~0\ : max_mcell
@@ -7078,7 +6866,7 @@ PORT MAP (
 	padio => ww_WOSC,
 	dataout => \WOSC~dataout\);
 
--- Location: LC26
+-- Location: LC89
 \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[0]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7131,7 +6919,7 @@ PORT MAP (
 	dataout => \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs\(1));
 
 -- Location: LC51
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4\ : max_mcell
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "invert",
@@ -7139,21 +6927,21 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm0_bus\,
-	pterm1 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm1_bus\,
-	pterm2 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm2_bus\,
-	pterm3 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm3_bus\,
-	pterm4 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm4_bus\,
-	pterm5 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pterm5_bus\,
-	pxor => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pxor_bus\,
-	pclk => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pclk_bus\,
-	papre => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_papre_bus\,
-	paclr => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_paclr_bus\,
-	pena => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_pena_bus\,
-	dataout => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_dataout\);
+	pterm0 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm0_bus\,
+	pterm1 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm1_bus\,
+	pterm2 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm2_bus\,
+	pterm3 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm3_bus\,
+	pterm4 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm4_bus\,
+	pterm5 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pterm5_bus\,
+	pxor => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pxor_bus\,
+	pclk => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pclk_bus\,
+	papre => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_papre_bus\,
+	paclr => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_paclr_bus\,
+	pena => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_pena_bus\,
+	dataout => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_dataout\);
 
 -- Location: LC49
-\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3\ : max_mcell
+\PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "invert",
@@ -7161,18 +6949,18 @@ GENERIC MAP (
 	pexp_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	pterm0 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm0_bus\,
-	pterm1 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm1_bus\,
-	pterm2 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm2_bus\,
-	pterm3 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm3_bus\,
-	pterm4 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm4_bus\,
-	pterm5 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pterm5_bus\,
-	pxor => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pxor_bus\,
-	pclk => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pclk_bus\,
-	papre => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_papre_bus\,
-	paclr => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_paclr_bus\,
-	pena => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_pena_bus\,
-	dataout => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_dataout\);
+	pterm0 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm0_bus\,
+	pterm1 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm1_bus\,
+	pterm2 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm2_bus\,
+	pterm3 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm3_bus\,
+	pterm4 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm4_bus\,
+	pterm5 => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pterm5_bus\,
+	pxor => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pxor_bus\,
+	pclk => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pclk_bus\,
+	papre => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_papre_bus\,
+	paclr => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_paclr_bus\,
+	pena => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_pena_bus\,
+	dataout => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_dataout\);
 
 -- Location: LC11
 \IO_PORT|sdcs_latch~1\ : max_mcell
@@ -7375,7 +7163,7 @@ PORT MAP (
 	pena => \SPI_MASTER|SCLK~1_pena_bus\,
 	dataout => \SPI_MASTER|SCLK~1_dataout\);
 
--- Location: LC79
+-- Location: LC74
 \BAUD_CLOCK|counter|LPM_COUNTER_component|dffs[2]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7569,7 +7357,7 @@ PORT MAP (
 	datain => \SPI_MASTER|MOSI_v~4_datain_bus\,
 	dataout => \SPI_MASTER|MOSI_v~4_dataout\);
 
--- Location: LC15
+-- Location: LC9
 \SD_PORT|d_latch[0]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7621,7 +7409,7 @@ PORT MAP (
 	pena => \SD_PORT|d_latch[1]_pena_bus\,
 	dataout => \SD_PORT|d_latch\(1));
 
--- Location: LC12
+-- Location: LC15
 \SD_PORT|d_latch[3]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7647,7 +7435,7 @@ PORT MAP (
 	pena => \SD_PORT|d_latch[3]_pena_bus\,
 	dataout => \SD_PORT|d_latch\(3));
 
--- Location: LC58
+-- Location: LC55
 \SD_PORT|d_latch[2]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7696,7 +7484,7 @@ PORT MAP (
 	pena => \SPI_MASTER|MOSI_v~15_pena_bus\,
 	pexpout => \SPI_MASTER|MOSI_v~15_pexpout\);
 
--- Location: LC32
+-- Location: LC25
 \SD_PORT|d_latch[4]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7722,7 +7510,7 @@ PORT MAP (
 	pena => \SD_PORT|d_latch[4]_pena_bus\,
 	dataout => \SD_PORT|d_latch\(4));
 
--- Location: LC44
+-- Location: LC48
 \SD_PORT|d_latch[5]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7748,7 +7536,7 @@ PORT MAP (
 	pena => \SD_PORT|d_latch[5]_pena_bus\,
 	dataout => \SD_PORT|d_latch\(5));
 
--- Location: LC4
+-- Location: LC10
 \SD_PORT|d_latch[7]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7774,7 +7562,7 @@ PORT MAP (
 	pena => \SD_PORT|d_latch[7]_pena_bus\,
 	dataout => \SD_PORT|d_latch\(7));
 
--- Location: LC10
+-- Location: LC12
 \SD_PORT|d_latch[6]\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
@@ -7955,7 +7743,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~4_dataout\,
+	datain => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr1|aneb_result_wire[0]~3_dataout\,
 	oe => VCC,
 	padio => ww_CIOCS);
 
@@ -7969,7 +7757,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~3_dataout\,
+	datain => \PERIP_DECODE|LPM_DECODE_component|auto_generated|cmpr2|aneb_result_wire[0]~5_dataout\,
 	oe => VCC,
 	padio => ww_SCCCS);
 

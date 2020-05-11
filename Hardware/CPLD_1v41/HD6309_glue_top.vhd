@@ -9,19 +9,16 @@ use IEEE.NUMERIC_STD.ALL;
 -- Target = Altera EPM7128SLI84 CPLD
 -- Tool = Quartus 32-bit web edition 13.0.1
 --
--- VERSION 1.41 - May 1, 2020
+-- VERSION 1.41 - May 11, 2020
 --
 -- This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 
 -- International License. To view a copy of this license, visit 
 -- http://creativecommons.org/licenses/by-sa/4.0/.
 -- 
--- V1.41 adds an SD SPI data read-only register. Upon read, a SPI transaction
--- is initiated. The purpose of this read-only register is to allow use
--- of the 6309 TFM (block memory move) instruction for fast SD card reading.
--- Other minor changes: eliminated 1WS option for ROM. Simplified ADDR_DECODE 
+-- V1.41 eliminated 1WS option for ROM. Simplified ADDR_DECODE 
 -- block and implemented peripheral chip select generation via LPFM decoder.
--- Changed sense of select signals to active high, these are inverted when
--- driven to output pins, if required.
+-- Changed internal sense of select signals to active high, to be inverted when0
+-- driven to output pins, if required. 
 --
 -- V1.4 adds provisions for a bit-banged I2C interface to a realtime clock.
 -- The parallel interface Epson RTC7301 is long obsolete and hard to find.
@@ -91,7 +88,7 @@ architecture behavioral of HD6309_glue_top is
 	signal e_drv, q_drv : std_logic;			-- internal E and Q clocks
 	signal bclk_drv, aclk_drv : std_logic;	-- SCC baud rate reference clocks
 	signal dly_e : std_logic;			-- delayed E clock used for internal SFR access
-	signal ready3 : std_logic; 		-- internal READY signal (H = ready, L = insert xWS)
+	signal ready3 : std_logic; 		-- internal READY signal (H = ready, L = insert 3WS)
 	signal aux_div_taps : std_logic_vector(5 downto 0);	-- XOSC divided by 2,4,8,16,32,64
 	
 	-- external read, write, memory, and peripheral select signals
@@ -101,16 +98,15 @@ architecture behavioral of HD6309_glue_top is
 	signal z_wr_gate : std_logic;			-- write gate for Zilog peripherals (H during S2)	
 	
 	-- internal control and select signals
-	signal romsel, romseh, periph, peripl : std_logic;	
+	signal romenl, romenh, periph, peripl : std_logic;	
 	signal aclk_sel, sdclk_sel : std_logic;
 	
 	-- internal peripheral select signals
-	signal sys_sel, sd_sel, iop_sel, ver_sel, i2c_sel, sd2_sel, nu8_sel, nu9_sel : std_logic;
+	signal sys_sel, sd_sel, iop_sel, ver_sel, i2c_sel, nu7_sel, nu8_sel, nu9_sel : std_logic;
 	
 	-- SD/SPI peripheral signals
 	signal spi_pclk : std_logic;	
 	signal spi_start, spi_busy_n, spi_csn, spi_sdo, spi_sck : std_logic;
-   
 	
 	-- internal peripheral datapaths
 	signal data_in, sys_data_out, sdc_data_out, iop_data_out : std_logic_vector(7 downto 0);
@@ -130,7 +126,7 @@ architecture behavioral of HD6309_glue_top is
 	);
 	
 	-- map the "misc" clock generator
-	-- uses the XOSC input and produces SPI and I2C outputs
+	-- uses the XOSC input and produces slow SPI clock output
 	AUX_CLOCK : entity work.count6 port map (
 		clock	=> XOSC,
 		q => aux_div_taps
@@ -155,8 +151,8 @@ architecture behavioral of HD6309_glue_top is
 		addr => ADDR(15 downto 8),
 		rd_n => rd_n,
 		wr_n => wr_n,
-		romsel => romsel,		
-		romseh => romseh,
+		romenl => romenl,		
+		romenh => romenh,
 		rom => rom_sel,
 		ram1 => ram1_sel,
 		ram2 => ram2_sel,
@@ -175,7 +171,7 @@ architecture behavioral of HD6309_glue_top is
 		eq4 => sys_sel,
 		eq5 => iop_sel,
 		eq6 => ver_sel,
-		eq7 => sd2_sel,
+		eq7 => nu7_sel,
 		eq8 => nu8_sel,
 		eq9 => nu9_sel
 	);
@@ -192,8 +188,8 @@ architecture behavioral of HD6309_glue_top is
 	);
 	
 	-- control signals from SYSTEM CONFIG port
-	romsel <= sys_data_out(1);
-	romseh <= sys_data_out(2);
+	romenl <= sys_data_out(1);
+	romenh <= sys_data_out(2);
 	ROMP27 <= sys_data_out(3);
 	aclk_sel <= sys_data_out(5);
 
@@ -247,7 +243,7 @@ architecture behavioral of HD6309_glue_top is
       DataRxd  => spi_data_rx,  -- data byte last received
       StartTx  => spi_start	  -- active high start pulse
 	);	
-
+                                                                                         
 	-- SPI master TX start control logic
 	process (RESET,XOSC) begin
 		-- clear outputs upon reset
@@ -261,8 +257,8 @@ architecture behavioral of HD6309_glue_top is
 			if (spi_busy_n = '0') then
 				spi_start <= '0';				
 		
-		-- set spi_start latch on write to SDdata, or any access to SD2data
-			elsif ((wr_n = '0' and sd_sel = '1') or sd2_sel = '1') then
+		-- set spi_start latch on write to SDdata
+			elsif (wr_n = '0' and sd_sel = '1') then
 				spi_start <= '1';	
 			end if;
 		
@@ -276,19 +272,18 @@ architecture behavioral of HD6309_glue_top is
 				iop_data_out when ( dly_e = '1' and iop_sel = '1' and RW = '1' ) else
 				BIN_VERSION when ( dly_e = '1' and ver_sel = '1' and RW = '1' ) else
 				i2c_data_out when ( dly_e = '1' and i2c_sel = '1' and RW = '1' ) else
-				spi_data_rx when ( dly_e = '1' and sd2_sel = '1' and RW = '1' ) else
 				(others => 'Z');
 				
 	-- Read-Write signal generation
 	-------------------------------
-	-- Generation of Zilog ZRD is RW without any qualification
-	-- Generation of Zilog ZRW is RW qualified by last portion of e-clock (state 2)
+	-- Generation of Zilog ZRD is RW unqualified 
+	-- Generation of Zilog ZRW is RW qualified by last portion of e-clock (state 2) and an active SCC or CIO select
 	-- both ZRD and ZWR are asseted simultaneously during RESET
 	z_rd_n <= '0' when ( RESET = '0' or RW = '1' ) else '1';
 	z_wr_n <= '0' when ( RESET = '0' or (RW = '0' and z_wr_gate = '1') ) else '1';
 	
-	-- Generation of RD is RW qualified by a negated RESET
-	-- Generation of WR is CPU RW qualified by e-clock (states 3,2)
+	-- Generation of RD is CPU RW qualified by negated RESET
+	-- Generation of WR is CPU RW qualified by negated RESET and e-clock (states 3,2) 
 	rd_n <= '0' when ( RESET = '1' and RW = '1' ) else '1';
 	wr_n <= '0' when ( RESET = '1' and RW = '0' and e_drv = '1' ) else '1';
 	----
@@ -307,13 +302,13 @@ architecture behavioral of HD6309_glue_top is
 	
 	-- Drive the E qualified RD and WR outputs
 	RD <= rd_n;		
-	WR <= wr_n;
+	WR <= wr_n;                                              
 	
 	-- Drive the special Zilog RD and WR outputs
 	ZRD <= z_rd_n;
 	ZWR <= z_wr_n;
 	
-	-- Drive the active low memory and peripheral chip selects
+	-- Drive the active low memory and peripheral chip selects                           
 	SCCCS <= not scc_sel;
 	CIOCS <= not cio_sel;
 	ROMCS <= not rom_sel;

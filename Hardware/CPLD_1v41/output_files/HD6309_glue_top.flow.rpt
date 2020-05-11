@@ -1,5 +1,5 @@
 Flow report for HD6309_glue_top
-Fri May 01 13:43:43 2020
+Mon May 11 15:26:13 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,14 +40,14 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +---------------------------+-------------------------------------------------+
-; Flow Status               ; Successful - Fri May 01 13:43:43 2020           ;
+; Flow Status               ; Successful - Mon May 11 15:26:13 2020           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; HD6309_glue_top                                 ;
 ; Top-level Entity Name     ; HD6309_glue_top                                 ;
 ; Family                    ; MAX7000S                                        ;
 ; Device                    ; EPM7128SLI84-10                                 ;
 ; Timing Models             ; Final                                           ;
-; Total macrocells          ; 101 / 128 ( 79 % )                              ;
+; Total macrocells          ; 98 / 128 ( 77 % )                               ;
 ; Total pins                ; 60 / 68 ( 88 % )                                ;
 +---------------------------+-------------------------------------------------+
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/01/2020 13:43:35 ;
+; Start date & time ; 05/11/2020 15:26:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; HD6309_glue_top     ;
 +-------------------+---------------------+
@@ -68,16 +68,14 @@ applicable agreement for further details.
 +--------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name          ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID    ; 77537056329688.158835501506992 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID    ; 77537056329688.158922516605948 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT   ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL      ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; FITTER_EFFORT            ; Standard Fit                   ; Auto Fit      ; --          ; --             ;
 ; IP_TOOL_NAME             ; LPM_COUNTER                    ; --            ; --          ; --             ;
 ; IP_TOOL_NAME             ; LPM_COUNTER                    ; --            ; --          ; --             ;
 ; IP_TOOL_NAME             ; LPM_DECODE                     ; --            ; --          ; --             ;
-; IP_TOOL_NAME             ; LPM_DECODE                     ; --            ; --          ; --             ;
 ; IP_TOOL_NAME             ; LPM_COUNTER                    ; --            ; --          ; --             ;
-; IP_TOOL_VERSION          ; 13.0                           ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION          ; 13.0                           ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION          ; 13.0                           ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION          ; 13.0                           ; --            ; --          ; --             ;
@@ -85,7 +83,6 @@ applicable agreement for further details.
 ; MISC_FILE                ; count3.cmp                     ; --            ; --          ; --             ;
 ; MISC_FILE                ; count4.cmp                     ; --            ; --          ; --             ;
 ; MISC_FILE                ; decode10.cmp                   ; --            ; --          ; --             ;
-; MISC_FILE                ; decode8.cmp                    ; --            ; --          ; --             ;
 ; MISC_FILE                ; count6.cmp                     ; --            ; --          ; --             ;
 ; OPTIMIZE_HOLD_TIMING     ; Off                            ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY ; output_files                   ; --            ; --          ; --             ;
@@ -97,12 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 477 MB              ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 476 MB              ; 00:00:02                           ;
 ; Fitter                    ; 00:00:01     ; 1.0                     ; 508 MB              ; 00:00:01                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 374 MB              ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 382 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 356 MB              ; 00:00:00                           ;
-; Total                     ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 374 MB              ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 382 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 356 MB              ; 00:00:00                           ;
+; Total                     ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

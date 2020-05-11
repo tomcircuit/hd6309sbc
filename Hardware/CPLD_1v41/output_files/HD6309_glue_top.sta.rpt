@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for HD6309_glue_top
-Fri May 01 13:43:41 2020
+Mon May 11 15:26:12 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -169,6 +169,15 @@ No paths to report.
 ; -9.800  ; simpleSPI_M:SPI_MASTER|index[1]                            ; simpleSPI_M:SPI_MASTER|MOSI_v                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
 ; -9.800  ; simpleSPI_M:SPI_MASTER|index[0]                            ; simpleSPI_M:SPI_MASTER|MOSI_v                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.800      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; cpuclock:CPU_CLOCK|pre_cnt                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; cpuclock:CPU_CLOCK|clock_state[0]                          ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; cpuclock:CPU_CLOCK|clock_state[0]                          ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[0]                          ; cpuclock:CPU_CLOCK|clock_state[0]                          ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
@@ -183,15 +192,6 @@ No paths to report.
 ; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; cpuclock:CPU_CLOCK|clock_state[2]                          ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; cpuclock:CPU_CLOCK|d_e_out                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; cpuclock:CPU_CLOCK|d_e_out                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; sysport:SYS_PORT|asel_latch                                ; sysport:SYS_PORT|asel_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; sysport:SYS_PORT|asel_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; sysport:SYS_PORT|asel_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
@@ -204,12 +204,12 @@ No paths to report.
 ; -9.000  ; IOport:IO_PORT|led_latch[0]                                ; IOport:IO_PORT|led_latch[0]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|led_latch[0]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|led_latch[0]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; IOport:IO_PORT|led_latch[1]                                ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; sysport:SYS_PORT|romsel_latch                              ; sysport:SYS_PORT|romsel_latch                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; sysport:SYS_PORT|romsel_latch                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; sysport:SYS_PORT|romsel_latch                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; IOport:IO_PORT|led_latch[1]                                ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; I2Cport:I2C_PORT|sda_latch                                 ; I2Cport:I2C_PORT|sda_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; I2Cport:I2C_PORT|sda_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; I2Cport:I2C_PORT|sda_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
@@ -222,25 +222,25 @@ No paths to report.
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; I2Cport:I2C_PORT|scl_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; I2Cport:I2C_PORT|scl_latch                                 ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; IOport:IO_PORT|button_latch                                ; IOport:IO_PORT|button_latch                                ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; sysport:SYS_PORT|config_latch                              ; sysport:SYS_PORT|config_latch                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; IOport:IO_PORT|sdcs_latch                                  ; IOport:IO_PORT|sdcs_latch                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|sdcs_latch                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|sdcs_latch                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; sysport:SYS_PORT|config_latch                              ; sysport:SYS_PORT|config_latch                              ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; SDdata:SD_PORT|d_latch[0]                                  ; SDdata:SD_PORT|d_latch[0]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[0]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[0]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; SDdata:SD_PORT|d_latch[4]                                  ; SDdata:SD_PORT|d_latch[4]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[4]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[4]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; SDdata:SD_PORT|d_latch[7]                                  ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; SDdata:SD_PORT|d_latch[5]                                  ; SDdata:SD_PORT|d_latch[5]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[5]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[5]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; SDdata:SD_PORT|d_latch[1]                                  ; SDdata:SD_PORT|d_latch[1]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[1]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[1]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; SDdata:SD_PORT|d_latch[7]                                  ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; SDdata:SD_PORT|d_latch[6]                                  ; SDdata:SD_PORT|d_latch[6]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[6]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[6]                                  ; XOSC         ; XOSC        ; 1.000        ; 0.000      ; 8.000      ;
@@ -293,6 +293,15 @@ No paths to report.
 ; -6.700 ; SDdata:SD_PORT|d_latch[1]                                  ; simpleSPI_M:SPI_MASTER|MOSI_v                              ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.800      ;
 ; -6.700 ; SDdata:SD_PORT|d_latch[3]                                  ; simpleSPI_M:SPI_MASTER|MOSI_v                              ; XOSC         ; XOSC        ; -0.500       ; 13.000     ; 8.800      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; cpuclock:CPU_CLOCK|pre_cnt                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; cpuclock:CPU_CLOCK|clock_state[0]                          ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; cpuclock:CPU_CLOCK|clock_state[0]                          ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[0]                          ; cpuclock:CPU_CLOCK|clock_state[0]                          ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
@@ -307,15 +316,6 @@ No paths to report.
 ; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; cpuclock:CPU_CLOCK|clock_state[2]                          ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; cpuclock:CPU_CLOCK|d_e_out                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; cpuclock:CPU_CLOCK|d_e_out                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; cpuclock:CPU_CLOCK|pre_cnt                                 ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[1] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[2] ; count6:AUX_CLOCK|lpm_counter:LPM_COUNTER_component|dffs[3] ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; sysport:SYS_PORT|asel_latch                                ; sysport:SYS_PORT|asel_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; sysport:SYS_PORT|asel_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; sysport:SYS_PORT|asel_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
@@ -328,12 +328,12 @@ No paths to report.
 ; 5.000  ; IOport:IO_PORT|led_latch[0]                                ; IOport:IO_PORT|led_latch[0]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|led_latch[0]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|led_latch[0]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; IOport:IO_PORT|led_latch[1]                                ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; sysport:SYS_PORT|romsel_latch                              ; sysport:SYS_PORT|romsel_latch                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; sysport:SYS_PORT|romsel_latch                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; sysport:SYS_PORT|romsel_latch                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; IOport:IO_PORT|led_latch[1]                                ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|led_latch[1]                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; I2Cport:I2C_PORT|sda_latch                                 ; I2Cport:I2C_PORT|sda_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; I2Cport:I2C_PORT|sda_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; I2Cport:I2C_PORT|sda_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
@@ -346,25 +346,25 @@ No paths to report.
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; I2Cport:I2C_PORT|scl_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; I2Cport:I2C_PORT|scl_latch                                 ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; IOport:IO_PORT|button_latch                                ; IOport:IO_PORT|button_latch                                ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; sysport:SYS_PORT|config_latch                              ; sysport:SYS_PORT|config_latch                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; IOport:IO_PORT|sdcs_latch                                  ; IOport:IO_PORT|sdcs_latch                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; IOport:IO_PORT|sdcs_latch                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; IOport:IO_PORT|sdcs_latch                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; sysport:SYS_PORT|config_latch                              ; sysport:SYS_PORT|config_latch                              ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; SDdata:SD_PORT|d_latch[0]                                  ; SDdata:SD_PORT|d_latch[0]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[0]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[0]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; SDdata:SD_PORT|d_latch[4]                                  ; SDdata:SD_PORT|d_latch[4]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[4]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[4]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; SDdata:SD_PORT|d_latch[7]                                  ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; SDdata:SD_PORT|d_latch[5]                                  ; SDdata:SD_PORT|d_latch[5]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[5]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[5]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; SDdata:SD_PORT|d_latch[1]                                  ; SDdata:SD_PORT|d_latch[1]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[1]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[1]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; SDdata:SD_PORT|d_latch[7]                                  ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[7]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; SDdata:SD_PORT|d_latch[6]                                  ; SDdata:SD_PORT|d_latch[6]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[2]                          ; SDdata:SD_PORT|d_latch[6]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000  ; cpuclock:CPU_CLOCK|clock_state[1]                          ; SDdata:SD_PORT|d_latch[6]                                  ; XOSC         ; XOSC        ; 0.000        ; 0.000      ; 8.000      ;
@@ -613,11 +613,11 @@ No paths to report.
 ; ACLK      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
 ; DATA[*]   ; XOSC       ; 23.400 ; 23.400 ; Rise       ; XOSC            ;
 ;  DATA[0]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
-;  DATA[1]  ; XOSC       ; 13.800 ; 13.800 ; Rise       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
 ;  DATA[2]  ; XOSC       ; 23.400 ; 23.400 ; Rise       ; XOSC            ;
 ;  DATA[3]  ; XOSC       ; 13.800 ; 13.800 ; Rise       ; XOSC            ;
-;  DATA[4]  ; XOSC       ; 13.800 ; 13.800 ; Rise       ; XOSC            ;
-;  DATA[5]  ; XOSC       ; 13.800 ; 13.800 ; Rise       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
 ;  DATA[6]  ; XOSC       ; 23.400 ; 23.400 ; Rise       ; XOSC            ;
 ;  DATA[7]  ; XOSC       ; 23.400 ; 23.400 ; Rise       ; XOSC            ;
 ; ECLK      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
@@ -636,15 +636,15 @@ No paths to report.
 ; TP13      ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
 ; WR        ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
 ; ZWR       ; XOSC       ; 13.000 ; 13.000 ; Rise       ; XOSC            ;
-; DATA[*]   ; XOSC       ; 36.400 ; 36.400 ; Fall       ; XOSC            ;
+; DATA[*]   ; XOSC       ; 34.000 ; 34.000 ; Fall       ; XOSC            ;
 ;  DATA[0]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
-;  DATA[1]  ; XOSC       ; 26.800 ; 26.800 ; Fall       ; XOSC            ;
-;  DATA[2]  ; XOSC       ; 36.400 ; 36.400 ; Fall       ; XOSC            ;
+;  DATA[1]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[2]  ; XOSC       ; 34.000 ; 34.000 ; Fall       ; XOSC            ;
 ;  DATA[3]  ; XOSC       ; 26.800 ; 26.800 ; Fall       ; XOSC            ;
-;  DATA[4]  ; XOSC       ; 26.800 ; 26.800 ; Fall       ; XOSC            ;
-;  DATA[5]  ; XOSC       ; 26.800 ; 26.800 ; Fall       ; XOSC            ;
-;  DATA[6]  ; XOSC       ; 36.400 ; 36.400 ; Fall       ; XOSC            ;
-;  DATA[7]  ; XOSC       ; 36.400 ; 36.400 ; Fall       ; XOSC            ;
+;  DATA[4]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[5]  ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
+;  DATA[6]  ; XOSC       ; 34.000 ; 34.000 ; Fall       ; XOSC            ;
+;  DATA[7]  ; XOSC       ; 34.000 ; 34.000 ; Fall       ; XOSC            ;
 ; SDCK      ; XOSC       ; 18.000 ; 18.000 ; Fall       ; XOSC            ;
 ; SDDO      ; XOSC       ; 18.000 ; 18.000 ; Fall       ; XOSC            ;
 ; TP11      ; XOSC       ; 26.000 ; 26.000 ; Fall       ; XOSC            ;
@@ -707,44 +707,44 @@ No paths to report.
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
 ; ADDR[4]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[4]    ; DATA[0]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
-; ADDR[4]    ; DATA[1]     ; 10.000 ; 10.800 ; 10.800 ; 10.000 ;
+; ADDR[4]    ; DATA[0]     ; 10.000 ; 16.500 ; 16.500 ; 10.000 ;
+; ADDR[4]    ; DATA[1]     ; 10.000 ; 16.500 ; 16.500 ; 10.000 ;
 ; ADDR[4]    ; DATA[2]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
-; ADDR[4]    ; DATA[3]     ; 10.800 ; 10.800 ; 10.800 ; 10.800 ;
-; ADDR[4]    ; DATA[4]     ; 10.000 ; 10.800 ; 10.800 ; 10.000 ;
-; ADDR[4]    ; DATA[5]     ; 10.000 ; 10.800 ; 10.800 ; 10.000 ;
+; ADDR[4]    ; DATA[3]     ; 10.800 ; 16.500 ; 16.500 ; 10.800 ;
+; ADDR[4]    ; DATA[4]     ; 10.000 ; 16.500 ; 16.500 ; 10.000 ;
+; ADDR[4]    ; DATA[5]     ; 10.000 ; 16.500 ; 16.500 ; 10.000 ;
 ; ADDR[4]    ; DATA[6]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
 ; ADDR[4]    ; DATA[7]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
 ; ADDR[4]    ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[5]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[5]    ; DATA[0]     ; 16.500 ; 10.000 ; 10.000 ; 16.500 ;
-; ADDR[5]    ; DATA[1]     ; 16.500 ; 10.800 ; 10.800 ; 16.500 ;
+; ADDR[5]    ; DATA[0]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[1]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
 ; ADDR[5]    ; DATA[2]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
-; ADDR[5]    ; DATA[3]     ; 16.500 ; 10.800 ; 10.800 ; 16.500 ;
-; ADDR[5]    ; DATA[4]     ; 16.500 ; 10.000 ; 10.000 ; 16.500 ;
-; ADDR[5]    ; DATA[5]     ; 16.500 ; 10.800 ; 10.800 ; 16.500 ;
+; ADDR[5]    ; DATA[3]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[4]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[5]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
 ; ADDR[5]    ; DATA[6]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
 ; ADDR[5]    ; DATA[7]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
 ; ADDR[5]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[6]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[6]    ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
-; ADDR[6]    ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[6]    ; DATA[0]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[1]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
 ; ADDR[6]    ; DATA[2]     ; 20.400 ; 20.400 ; 20.400 ; 20.400 ;
-; ADDR[6]    ; DATA[3]     ; 16.500 ; 10.800 ; 10.800 ; 16.500 ;
-; ADDR[6]    ; DATA[4]     ; 16.500 ; 10.000 ; 10.000 ; 16.500 ;
-; ADDR[6]    ; DATA[5]     ; 16.500 ;        ;        ; 16.500 ;
+; ADDR[6]    ; DATA[3]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[4]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[5]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
 ; ADDR[6]    ; DATA[6]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
 ; ADDR[6]    ; DATA[7]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
 ; ADDR[6]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[7]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[7]    ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[7]    ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
-; ADDR[7]    ; DATA[2]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
+; ADDR[7]    ; DATA[2]     ; 18.800 ; 20.400 ; 20.400 ; 18.800 ;
 ; ADDR[7]    ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[7]    ; DATA[4]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[7]    ; DATA[5]     ;        ; 16.500 ; 16.500 ;        ;
-; ADDR[7]    ; DATA[6]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
-; ADDR[7]    ; DATA[7]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
+; ADDR[7]    ; DATA[6]     ; 18.800 ; 18.000 ; 18.000 ; 18.800 ;
+; ADDR[7]    ; DATA[7]     ; 18.800 ; 18.000 ; 18.000 ; 18.800 ;
 ; ADDR[7]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[8]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[8]    ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
@@ -783,24 +783,24 @@ No paths to report.
 ; ADDR[11]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[11]   ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[11]   ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
-; ADDR[11]   ; DATA[2]     ; 18.800 ; 20.400 ; 20.400 ; 18.800 ;
+; ADDR[11]   ; DATA[2]     ; 19.600 ; 20.400 ; 20.400 ; 19.600 ;
 ; ADDR[11]   ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[11]   ; DATA[4]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[11]   ; DATA[5]     ;        ; 16.500 ; 16.500 ;        ;
-; ADDR[11]   ; DATA[6]     ; 18.800 ; 18.000 ; 18.000 ; 18.800 ;
-; ADDR[11]   ; DATA[7]     ; 18.800 ; 18.000 ; 18.000 ; 18.800 ;
+; ADDR[11]   ; DATA[6]     ; 19.600 ; 18.000 ; 18.000 ; 19.600 ;
+; ADDR[11]   ; DATA[7]     ; 19.600 ; 18.000 ; 18.000 ; 19.600 ;
 ; ADDR[11]   ; RAM2CS      ; 18.800 ;        ;        ; 18.800 ;
 ; ADDR[11]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[11]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[12]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[12]   ; DATA[0]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[12]   ; DATA[1]     ;        ; 16.500 ; 16.500 ;        ;
-; ADDR[12]   ; DATA[2]     ; 18.800 ; 20.400 ; 20.400 ; 18.800 ;
+; ADDR[12]   ; DATA[2]     ; 19.600 ; 20.400 ; 20.400 ; 19.600 ;
 ; ADDR[12]   ; DATA[3]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[12]   ; DATA[4]     ;        ; 16.500 ; 16.500 ;        ;
 ; ADDR[12]   ; DATA[5]     ;        ; 16.500 ; 16.500 ;        ;
-; ADDR[12]   ; DATA[6]     ; 18.800 ; 18.000 ; 18.000 ; 18.800 ;
-; ADDR[12]   ; DATA[7]     ; 18.800 ; 18.000 ; 18.000 ; 18.800 ;
+; ADDR[12]   ; DATA[6]     ; 19.600 ; 18.000 ; 18.000 ; 19.600 ;
+; ADDR[12]   ; DATA[7]     ; 19.600 ; 18.000 ; 18.000 ; 19.600 ;
 ; ADDR[12]   ; RAM2CS      ; 18.800 ;        ;        ; 18.800 ;
 ; ADDR[12]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[12]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
@@ -831,12 +831,12 @@ No paths to report.
 ; ADDR[15]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[15]   ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
 ; ADDR[15]   ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
-; ADDR[15]   ; DATA[2]     ; 20.400 ; 19.600 ; 19.600 ; 20.400 ;
+; ADDR[15]   ; DATA[2]     ; 20.400 ; 20.400 ; 20.400 ; 20.400 ;
 ; ADDR[15]   ; DATA[3]     ; 16.500 ;        ;        ; 16.500 ;
 ; ADDR[15]   ; DATA[4]     ; 16.500 ;        ;        ; 16.500 ;
 ; ADDR[15]   ; DATA[5]     ; 16.500 ;        ;        ; 16.500 ;
-; ADDR[15]   ; DATA[6]     ; 18.000 ; 19.600 ; 19.600 ; 18.000 ;
-; ADDR[15]   ; DATA[7]     ; 18.000 ; 19.600 ; 19.600 ; 18.000 ;
+; ADDR[15]   ; DATA[6]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
+; ADDR[15]   ; DATA[7]     ; 18.000 ; 20.400 ; 20.400 ; 18.000 ;
 ; ADDR[15]   ; RAM1CS      ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[15]   ; RAM2CS      ; 19.600 ;        ;        ; 19.600 ;
 ; ADDR[15]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
@@ -863,12 +863,12 @@ No paths to report.
 ; RESET      ; ZWR         ;        ; 10.000 ; 10.000 ;        ;
 ; RW         ; DATA[0]     ; 16.500 ;        ;        ; 16.500 ;
 ; RW         ; DATA[1]     ; 16.500 ;        ;        ; 16.500 ;
-; RW         ; DATA[2]     ; 20.400 ; 19.600 ; 19.600 ; 20.400 ;
+; RW         ; DATA[2]     ; 20.400 ; 18.000 ; 18.000 ; 20.400 ;
 ; RW         ; DATA[3]     ; 16.500 ;        ;        ; 16.500 ;
 ; RW         ; DATA[4]     ; 16.500 ;        ;        ; 16.500 ;
 ; RW         ; DATA[5]     ; 16.500 ;        ;        ; 16.500 ;
-; RW         ; DATA[6]     ; 18.000 ; 19.600 ; 19.600 ; 18.000 ;
-; RW         ; DATA[7]     ; 18.000 ; 19.600 ; 19.600 ; 18.000 ;
+; RW         ; DATA[6]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
+; RW         ; DATA[7]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
 ; RW         ; RAM2CS      ;        ; 19.600 ; 19.600 ;        ;
 ; RW         ; RD          ; 10.000 ;        ;        ; 10.000 ;
 ; RW         ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
@@ -884,44 +884,44 @@ No paths to report.
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
 ; ADDR[4]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[4]    ; DATA[0]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[4]    ; DATA[0]     ; 10.000 ; 16.500 ; 16.500 ; 10.000 ;
 ; ADDR[4]    ; DATA[1]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
-; ADDR[4]    ; DATA[2]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
+; ADDR[4]    ; DATA[2]     ; 18.000 ; 16.500 ; 16.500 ; 18.000 ;
 ; ADDR[4]    ; DATA[3]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
 ; ADDR[4]    ; DATA[4]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
 ; ADDR[4]    ; DATA[5]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
-; ADDR[4]    ; DATA[6]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
-; ADDR[4]    ; DATA[7]     ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
+; ADDR[4]    ; DATA[6]     ; 18.000 ; 16.500 ; 16.500 ; 18.000 ;
+; ADDR[4]    ; DATA[7]     ; 18.000 ; 16.500 ; 16.500 ; 18.000 ;
 ; ADDR[4]    ; SCCCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[5]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[5]    ; DATA[0]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
 ; ADDR[5]    ; DATA[1]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
-; ADDR[5]    ; DATA[2]     ; 16.500 ; 20.400 ; 20.400 ; 16.500 ;
+; ADDR[5]    ; DATA[2]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
 ; ADDR[5]    ; DATA[3]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
 ; ADDR[5]    ; DATA[4]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
 ; ADDR[5]    ; DATA[5]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
-; ADDR[5]    ; DATA[6]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
-; ADDR[5]    ; DATA[7]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
+; ADDR[5]    ; DATA[6]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[5]    ; DATA[7]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
 ; ADDR[5]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[6]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[6]    ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
-; ADDR[6]    ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
-; ADDR[6]    ; DATA[2]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
-; ADDR[6]    ; DATA[3]     ; 10.000 ; 10.800 ; 10.800 ; 10.000 ;
+; ADDR[6]    ; DATA[0]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[1]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[2]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[3]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
 ; ADDR[6]    ; DATA[4]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
-; ADDR[6]    ; DATA[5]     ; 10.000 ;        ;        ; 10.000 ;
-; ADDR[6]    ; DATA[6]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
-; ADDR[6]    ; DATA[7]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
+; ADDR[6]    ; DATA[5]     ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; ADDR[6]    ; DATA[6]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
+; ADDR[6]    ; DATA[7]     ; 16.500 ; 16.500 ; 16.500 ; 16.500 ;
 ; ADDR[6]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[7]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[7]    ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[7]    ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[7]    ; DATA[2]     ; 18.000 ; 16.500 ; 16.500 ; 18.000 ;
+; ADDR[7]    ; DATA[2]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
 ; ADDR[7]    ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[7]    ; DATA[4]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[7]    ; DATA[5]     ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[7]    ; DATA[6]     ; 18.000 ; 16.500 ; 16.500 ; 18.000 ;
-; ADDR[7]    ; DATA[7]     ; 18.000 ; 16.500 ; 16.500 ; 18.000 ;
+; ADDR[7]    ; DATA[6]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
+; ADDR[7]    ; DATA[7]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
 ; ADDR[7]    ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[8]    ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[8]    ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
@@ -960,24 +960,24 @@ No paths to report.
 ; ADDR[11]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[11]   ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[11]   ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[11]   ; DATA[2]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
+; ADDR[11]   ; DATA[2]     ; 19.600 ; 16.500 ; 16.500 ; 19.600 ;
 ; ADDR[11]   ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[11]   ; DATA[4]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[11]   ; DATA[5]     ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[11]   ; DATA[6]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
-; ADDR[11]   ; DATA[7]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
+; ADDR[11]   ; DATA[6]     ; 19.600 ; 16.500 ; 16.500 ; 19.600 ;
+; ADDR[11]   ; DATA[7]     ; 19.600 ; 16.500 ; 16.500 ; 19.600 ;
 ; ADDR[11]   ; RAM2CS      ; 18.800 ;        ;        ; 18.800 ;
 ; ADDR[11]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[11]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[12]   ; CIOCS       ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[12]   ; DATA[0]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[12]   ; DATA[1]     ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[12]   ; DATA[2]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
+; ADDR[12]   ; DATA[2]     ; 19.600 ; 16.500 ; 16.500 ; 19.600 ;
 ; ADDR[12]   ; DATA[3]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[12]   ; DATA[4]     ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[12]   ; DATA[5]     ;        ; 10.000 ; 10.000 ;        ;
-; ADDR[12]   ; DATA[6]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
-; ADDR[12]   ; DATA[7]     ; 18.800 ; 16.500 ; 16.500 ; 18.800 ;
+; ADDR[12]   ; DATA[6]     ; 19.600 ; 16.500 ; 16.500 ; 19.600 ;
+; ADDR[12]   ; DATA[7]     ; 19.600 ; 16.500 ; 16.500 ; 19.600 ;
 ; ADDR[12]   ; RAM2CS      ; 18.800 ;        ;        ; 18.800 ;
 ; ADDR[12]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[12]   ; SCCCS       ;        ; 10.000 ; 10.000 ;        ;
@@ -1008,12 +1008,12 @@ No paths to report.
 ; ADDR[15]   ; CIOCS       ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[15]   ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[15]   ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
-; ADDR[15]   ; DATA[2]     ; 16.500 ; 19.600 ; 19.600 ; 16.500 ;
+; ADDR[15]   ; DATA[2]     ; 16.500 ; 20.400 ; 20.400 ; 16.500 ;
 ; ADDR[15]   ; DATA[3]     ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[15]   ; DATA[4]     ; 10.000 ;        ;        ; 10.000 ;
 ; ADDR[15]   ; DATA[5]     ; 10.000 ;        ;        ; 10.000 ;
-; ADDR[15]   ; DATA[6]     ; 16.500 ; 19.600 ; 19.600 ; 16.500 ;
-; ADDR[15]   ; DATA[7]     ; 16.500 ; 19.600 ; 19.600 ; 16.500 ;
+; ADDR[15]   ; DATA[6]     ; 16.500 ; 20.400 ; 20.400 ; 16.500 ;
+; ADDR[15]   ; DATA[7]     ; 16.500 ; 20.400 ; 20.400 ; 16.500 ;
 ; ADDR[15]   ; RAM1CS      ;        ; 10.000 ; 10.000 ;        ;
 ; ADDR[15]   ; RAM2CS      ; 18.000 ;        ;        ; 18.000 ;
 ; ADDR[15]   ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
@@ -1040,12 +1040,12 @@ No paths to report.
 ; RESET      ; ZWR         ;        ; 10.000 ; 10.000 ;        ;
 ; RW         ; DATA[0]     ; 10.000 ;        ;        ; 10.000 ;
 ; RW         ; DATA[1]     ; 10.000 ;        ;        ; 10.000 ;
-; RW         ; DATA[2]     ; 16.500 ; 19.600 ; 19.600 ; 16.500 ;
+; RW         ; DATA[2]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
 ; RW         ; DATA[3]     ; 10.000 ;        ;        ; 10.000 ;
 ; RW         ; DATA[4]     ; 10.000 ;        ;        ; 10.000 ;
 ; RW         ; DATA[5]     ; 10.000 ;        ;        ; 10.000 ;
-; RW         ; DATA[6]     ; 16.500 ; 19.600 ; 19.600 ; 16.500 ;
-; RW         ; DATA[7]     ; 16.500 ; 19.600 ; 19.600 ; 16.500 ;
+; RW         ; DATA[6]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
+; RW         ; DATA[7]     ; 16.500 ; 18.000 ; 18.000 ; 16.500 ;
 ; RW         ; RAM2CS      ;        ; 18.000 ; 18.000 ;        ;
 ; RW         ; RD          ; 10.000 ;        ;        ; 10.000 ;
 ; RW         ; ROMCS       ; 10.000 ;        ;        ; 10.000 ;
@@ -1129,7 +1129,7 @@ No paths to report.
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
 ; WOSC       ; WOSC     ; 6        ; 0        ; 0        ; 0        ;
-; XOSC       ; XOSC     ; 208      ; 4        ; 12       ; 231      ;
+; XOSC       ; XOSC     ; 208      ; 3        ; 12       ; 231      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1140,7 +1140,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
 ; WOSC       ; WOSC     ; 6        ; 0        ; 0        ; 0        ;
-; XOSC       ; XOSC     ; 208      ; 4        ; 12       ; 231      ;
+; XOSC       ; XOSC     ; 208      ; 3        ; 12       ; 231      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1177,7 +1177,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 01 13:43:41 2020
+    Info: Processing started: Mon May 11 15:26:11 2020
 Info: Command: quartus_sta HD6309_glue_top -c HD6309_glue_top
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
@@ -1213,8 +1213,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 382 megabytes
-    Info: Processing ended: Fri May 01 13:43:41 2020
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Mon May 11 15:26:12 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
