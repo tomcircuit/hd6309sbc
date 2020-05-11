@@ -1,0 +1,460 @@
+                      (       sdtest.asm):00001          ; HD6309 SBC SD function debug/test
+                      (       sdtest.asm):00002         
+                      (       sdtest.asm):00003                  INCLUDE "hd6309_hardware.inc"
+                      (hd6309_hardware.i):00001         ;
+                      (hd6309_hardware.i):00002         ; 512B from $E000-$E1FF is reserved for I/O devices:
+                      (hd6309_hardware.i):00003         ; Z8536 CIO at $E000, Z85C30 SCC at $E010
+                      (hd6309_hardware.i):00004         
+     E000             (hd6309_hardware.i):00005         IOPAGE   EQU      $E000                             ; Base address of I/O page
+     E000             (hd6309_hardware.i):00006         ZCIO     EQU      IOPAGE+$00                        ; CIO base address
+     E000             (hd6309_hardware.i):00007         CIOC     EQU      ZCIO                              ; CIO port C access
+     E001             (hd6309_hardware.i):00008         CIOB     EQU      ZCIO+1                            ; CIO port B access
+     E002             (hd6309_hardware.i):00009         CIOA     EQU      ZCIO+2                            ; CIO port A access
+     E003             (hd6309_hardware.i):00010         CIOCTL   EQU      ZCIO+3                            ; CIO control register
+                      (hd6309_hardware.i):00011         
+     E010             (hd6309_hardware.i):00012         ZSCC     EQU      IOPAGE+$10                        ; SCC base address
+     E010             (hd6309_hardware.i):00013         ZSCCBC   EQU      ZSCC                              ;   SCC channel B command reg
+     E011             (hd6309_hardware.i):00014         ZSCCBD   EQU      ZSCC+1                            ;   SCC channel B data reg
+     E012             (hd6309_hardware.i):00015         ZSCCAC   EQU      ZSCC+2                            ;   SCC channel A command reg
+     E013             (hd6309_hardware.i):00016         ZSCCAD   EQU      ZSCC+3                            ;   SCC channel A data reg
+     0001             (hd6309_hardware.i):00017         ZSCC.RXBF EQU     $01                               ; BIT MASK FOR RX BUFFER FULL
+     0004             (hd6309_hardware.i):00018         ZSCC.TXBE EQU     $04                               ; BIT MASK FOR TX BUFFER EMPTY
+                      (hd6309_hardware.i):00019         
+                      (hd6309_hardware.i):00020         ; I2CPORT at $E020
+                      (hd6309_hardware.i):00021         ;
+                      (hd6309_hardware.i):00022         ;       7     6    5    4     3     2    1    0
+                      (hd6309_hardware.i):00023         ;        [DSCL][DSDA][---][---][MSCL][MSDA][---][---]
+                      (hd6309_hardware.i):00024         ;      rw    rw    r    r    r     r     r    r
+                      (hd6309_hardware.i):00025         ;      1     1     0    0    x     x     0    0
+                      (hd6309_hardware.i):00026         ;
+                      (hd6309_hardware.i):00027         ; DSCL == drive SCL 1 --> float SCL ; 0 --> drive SCL low
+                      (hd6309_hardware.i):00028         ; DSDA == drive SDA 1 --> float SDA ; 0 --> drive SDA low
+                      (hd6309_hardware.i):00029         ; MSCK == monitor SCL --> state of SCL
+                      (hd6309_hardware.i):00030         ; MSDA == monitor SDA --> state of SDA
+                      (hd6309_hardware.i):00031         
+     E020             (hd6309_hardware.i):00032         I2CPORT  EQU      IOPAGE+$20                        ;soft I2C port
+     0080             (hd6309_hardware.i):00033         I2C.DSCL EQU      $80
+     0040             (hd6309_hardware.i):00034         I2C.DSDA EQU      $40
+     0008             (hd6309_hardware.i):00035         I2C.MSCL EQU      $08
+     0004             (hd6309_hardware.i):00036         I2C.MSDA EQU      $04
+                      (hd6309_hardware.i):00037         
+                      (hd6309_hardware.i):00038         ; SDCARD port at $E030
+                      (hd6309_hardware.i):00039         ;    8 bits of data to transfer via SPI
+                      (hd6309_hardware.i):00040         
+     E030             (hd6309_hardware.i):00041         SDPORT   EQU      IOPAGE+$30                        ; SDPORT register address
+                      (hd6309_hardware.i):00042         
+                      (hd6309_hardware.i):00043         ; SYSTEM CONFIG port at $E040
+                      (hd6309_hardware.i):00044         ;       7    6    5    4    3     2     1      0
+                      (hd6309_hardware.i):00045         ;        [---][---][---][CONF][RA14][ROMH][ROML][ROMWS]
+                      (hd6309_hardware.i):00046         ;      r    r    r    r     rw    rw    rw    rw
+                      (hd6309_hardware.i):00047         ;      0    0    0    x     1     1     1     1
+                      (hd6309_hardware.i):00048         ;
+                      (hd6309_hardware.i):00049         ;  CONF == status of CONFIG jumper
+                      (hd6309_hardware.i):00050         ;  RA14 == control ROM pin 27 (default to CONFIG jumper at reset)
+                      (hd6309_hardware.i):00051         ;  ROMH == 1 --> bank ROM over $E200-$FFFF during reads (writes always go to RAM)
+                      (hd6309_hardware.i):00052         ;  ROML == 1 --> bank ROM over $C000-$DFFF during reads (writes always go to RAM)
+                      (hd6309_hardware.i):00053         ;  ROMWS == 1 --> insert wait state for ROM access; 0 --> no wait states for ROM
+                      (hd6309_hardware.i):00054         
+     E040             (hd6309_hardware.i):00055         SYSCFG   EQU      IOPAGE+$40                        ; SYSCFG register address
+     0001             (hd6309_hardware.i):00056         SYS.ROMWS EQU     $01
+     0002             (hd6309_hardware.i):00057         SYS.ROMSEL EQU    $02
+     0004             (hd6309_hardware.i):00058         SYS.ROMSEH EQU    $04
+     0008             (hd6309_hardware.i):00059         SYS.RA14 EQU      $08
+                      (hd6309_hardware.i):00060         
+                      (hd6309_hardware.i):00061         ; INPUT-OUTPUT port at $E050
+                      (hd6309_hardware.i):00062         ;       7     6      5      4    3  2    1     0
+                      (hd6309_hardware.i):00063         ;    [SDSW][SDBSY][SDCLK][SDCS][PB][0][LED2][LED1]
+                      (hd6309_hardware.i):00064         ;       I     I      O      O    x       O     O
+                      (hd6309_hardware.i):00065         ;  all bits readable, output bits readback
+                      (hd6309_hardware.i):00066         ;
+                      (hd6309_hardware.i):00067         ;  SDSW == 1 when SD card is inserted
+                      (hd6309_hardware.i):00068         ;  SDBSY == 1 while SPI transaction is taking place
+                      (hd6309_hardware.i):00069         ;  SDCLK = 1 --> slow SPI clock; 0 --> fast SPI clock
+                      (hd6309_hardware.i):00070         ;  SDCS = 1 --> CS signal to SDcard negated; 0 --> asserted
+                      (hd6309_hardware.i):00071         ;  PB == 1 when pushbutton is pressed
+                      (hd6309_hardware.i):00072         ;  LEDn = 1 --> illuminate corresponding LED
+                      (hd6309_hardware.i):00073         
+     E050             (hd6309_hardware.i):00074         IOPORT   EQU      IOPAGE+$50                        ; INOUT register address
+     0001             (hd6309_hardware.i):00075         IO.LED1  EQU      $01
+     0002             (hd6309_hardware.i):00076         IO.LED2  EQU      $02
+     0008             (hd6309_hardware.i):00077         IO.PB    EQU      $08
+     0010             (hd6309_hardware.i):00078         IO.SDCS  EQU      $10
+     0020             (hd6309_hardware.i):00079         IO.SDCLK EQU      $20
+     0040             (hd6309_hardware.i):00080         IO.SDBSY EQU      $40
+     0080             (hd6309_hardware.i):00081         IO.SDSW  EQU      $80
+                      (hd6309_hardware.i):00082         
+     E060             (hd6309_hardware.i):00083         CPLDVER  EQU      IOPAGE+$60                        ; CPLD VERSION register address
+                      (hd6309_hardware.i):00084         
+                      (hd6309_hardware.i):00085         ; SD CARD 'read' port at $E070
+                      (hd6309_hardware.i):00086         ;    read data is same as SDPORT. Any access to this port triggers
+                      (hd6309_hardware.i):00087         ;    a SPI transaction (write data must be in SDPORT already). This is
+                      (hd6309_hardware.i):00088         ;    to enable use of TFM instruction for block read from SD card
+                      (hd6309_hardware.i):00089         
+     E070             (hd6309_hardware.i):00090         SD2PORT   EQU      IOPAGE+$70                       ; SD2PORT register address
+                      (hd6309_hardware.i):00091         
+                      (hd6309_hardware.i):00092         
+                      (hd6309_hardware.i):00093         ;; IOPORT LED and PB interface primitives
+0000                  (hd6309_hardware.i):00094         OnLED1   MACRO
+                      (hd6309_hardware.i):00095                  OIM      #IO.LED1,IOPORT                   ; turn on LED1
+                      (hd6309_hardware.i):00096                  ENDM
+                      (hd6309_hardware.i):00097         
+0000                  (hd6309_hardware.i):00098         OffLED1  MACRO
+                      (hd6309_hardware.i):00099                  AIM      #~IO.LED1,IOPORT                  ; turn off LED1
+                      (hd6309_hardware.i):00100                  ENDM
+                      (hd6309_hardware.i):00101         
+0000                  (hd6309_hardware.i):00102         ToggleLED1 MACRO
+                      (hd6309_hardware.i):00103                  EIM      #IO.LED1,IOPORT                   ; toggle LED1
+                      (hd6309_hardware.i):00104                  ENDM
+                      (hd6309_hardware.i):00105         
+0000                  (hd6309_hardware.i):00106         OnLED2   MACRO
+                      (hd6309_hardware.i):00107                  OIM      #IO.LED2,IOPORT                   ; turn on LED2
+                      (hd6309_hardware.i):00108                  ENDM
+                      (hd6309_hardware.i):00109         
+0000                  (hd6309_hardware.i):00110         OffLED2  MACRO
+                      (hd6309_hardware.i):00111                  AIM      #~IO.LED2,IOPORT                  ; turn off LED1
+                      (hd6309_hardware.i):00112                  ENDM
+                      (hd6309_hardware.i):00113         
+0000                  (hd6309_hardware.i):00114         ToggleLED2 MACRO
+                      (hd6309_hardware.i):00115                  EIM      #IO.LED2,IOPORT                   ; toggle LED2
+                      (hd6309_hardware.i):00116                  ENDM
+                      (hd6309_hardware.i):00117                  
+0000                  (hd6309_hardware.i):00118         OnLEDS   MACRO
+                      (hd6309_hardware.i):00119                  OIM      #(IO.LED1+IO.LED2),IOPORT        ; turn on LED1 + LED2
+                      (hd6309_hardware.i):00120                  ENDM
+                      (hd6309_hardware.i):00121         
+0000                  (hd6309_hardware.i):00122         OffLEDS  MACRO
+                      (hd6309_hardware.i):00123                  AIM      #~(IO.LED1+IO.LED2),IOPORT       ; turn off LED1 + LED2
+                      (hd6309_hardware.i):00124                  ENDM
+                      (hd6309_hardware.i):00125         
+0000                  (hd6309_hardware.i):00126         StatusPB MACRO
+                      (hd6309_hardware.i):00127                  TIM      #IO.PB,IOPORT                     ; check the pushbutton
+                      (hd6309_hardware.i):00128                  ENDM
+                      (hd6309_hardware.i):00129         
+                      (hd6309_hardware.i):00130         ;; I2C interface primitives
+0000                  (hd6309_hardware.i):00131         I2C_StatSDA MACRO
+                      (hd6309_hardware.i):00132                  TIM      #I2C.MSDA,I2CPORT                 ;(Z = 1 if SDA is low)
+                      (hd6309_hardware.i):00133                  ENDM
+                      (hd6309_hardware.i):00134         
+0000                  (hd6309_hardware.i):00135         I2C_SinkSDA MACRO
+                      (hd6309_hardware.i):00136                  AIM      #~I2C.DSDA,I2CPORT                ;Drive SDA line low
+                      (hd6309_hardware.i):00137                  ENDM
+                      (hd6309_hardware.i):00138         
+0000                  (hd6309_hardware.i):00139         I2C_ReleaseSDA MACRO
+                      (hd6309_hardware.i):00140                  OIM      #I2C.DSDA,I2CPORT                 ;Release SDA line
+                      (hd6309_hardware.i):00141                  ENDM
+                      (hd6309_hardware.i):00142         
+0000                  (hd6309_hardware.i):00143         I2C_StatSCL MACRO
+                      (hd6309_hardware.i):00144                  TIM      #I2C.MSCL,I2CPORT                 ;(Z = 1 if SCL is low)
+                      (hd6309_hardware.i):00145                  ENDM
+                      (hd6309_hardware.i):00146         
+0000                  (hd6309_hardware.i):00147         I2C_SinkSCL MACRO
+                      (hd6309_hardware.i):00148                  AIM      #~I2C.DSCL,I2CPORT                ;Drive SCL line low
+                      (hd6309_hardware.i):00149                  ENDM
+                      (hd6309_hardware.i):00150         
+0000                  (hd6309_hardware.i):00151         I2C_ReleaseSCL MACRO
+                      (hd6309_hardware.i):00152                  OIM      #I2C.DSCL,I2CPORT                 ;Release SCL line
+                      (hd6309_hardware.i):00153                  ENDM
+                      (hd6309_hardware.i):00154         
+0000                  (hd6309_hardware.i):00155         I2C_ReleaseBoth MACRO
+                      (hd6309_hardware.i):00156                  OIM      #(I2C.DSCL+I2C.DSDA),I2CPORT      ;Release both SDA and SCL lines
+                      (hd6309_hardware.i):00157                  ENDM
+                      (hd6309_hardware.i):00158                  
+0000                  (hd6309_hardware.i):00159         I2C_BitDelay MACRO
+                      (hd6309_hardware.i):00160                  NOP
+                      (hd6309_hardware.i):00161                  ENDM         
+                      (hd6309_hardware.i):00162         
+0000                  (hd6309_hardware.i):00163         I2C_StretchSCL MACRO
+0000                  (hd6309_hardware.i):00164         I?SSH    NOP
+                      (hd6309_hardware.i):00165                  I2C_ReleaseSCL                             ; try to release SCL
+                      (hd6309_hardware.i):00166                  NOP
+                      (hd6309_hardware.i):00167                  I2C_StatSCL                                ; check is SCL is really high yet
+                      (hd6309_hardware.i):00168                  BEQ      I?SSH                             ; if SCL is still low -> try again
+                      (hd6309_hardware.i):00169                  ENDM
+                      (hd6309_hardware.i):00170         
+                      (hd6309_hardware.i):00171         ;; SPI interface primitives
+0000                  (hd6309_hardware.i):00172         SPI_FastMode MACRO
+                      (hd6309_hardware.i):00173                  AIM      #~IO.SDCLK,IOPORT                 ; set SPI to fast mode
+                      (hd6309_hardware.i):00174                  ENDM
+                      (hd6309_hardware.i):00175         
+0000                  (hd6309_hardware.i):00176         SPI_SlowMode MACRO
+                      (hd6309_hardware.i):00177                  OIM      #IO.SDCLK,IOPORT                  ; set SPI to slow mode
+                      (hd6309_hardware.i):00178                  ENDM
+                      (hd6309_hardware.i):00179         
+0000                  (hd6309_hardware.i):00180         SPI_Status MACRO
+                      (hd6309_hardware.i):00181                  TIM      #IO.SDBSY,IOPORT                  ; check the SPI busy bit (Z=0 means busy)
+                      (hd6309_hardware.i):00182                  ENDM
+                      (hd6309_hardware.i):00183         
+                      (hd6309_hardware.i):00184         ;; SD card interface primitives
+0000                  (hd6309_hardware.i):00185         SD_AssertCS MACRO
+                      (hd6309_hardware.i):00186                  AIM      #~IO.SDCS,IOPORT                  ; assert SD card select
+                      (hd6309_hardware.i):00187                  ENDM
+                      (hd6309_hardware.i):00188         
+0000                  (hd6309_hardware.i):00189         SD_NegateCS MACRO
+                      (hd6309_hardware.i):00190                  OIM      #IO.SDCS,IOPORT                   ; negate SD card select
+                      (hd6309_hardware.i):00191                  ENDM
+                      (hd6309_hardware.i):00192         
+0000                  (hd6309_hardware.i):00193         SD_CardPresent MACRO
+                      (hd6309_hardware.i):00194                  TIM      #IO.SDSW,IOPORT                   ; examine SD card switch
+                      (hd6309_hardware.i):00195                  ENDM
+                      (       sdtest.asm):00004         
+                      (       sdtest.asm):00005                  ORG    $1000
+1000 7E1003           (       sdtest.asm):00006                  JMP    START
+                      (       sdtest.asm):00007         
+                      (       sdtest.asm):00008          ;  Condition Code Register bits
+     0001             (       sdtest.asm):00009         CC_C     EQU    $01
+     0002             (       sdtest.asm):00010         CC_V     EQU    $02
+     0004             (       sdtest.asm):00011         CC_Z     EQU    $04
+     0008             (       sdtest.asm):00012         CC_N     EQU    $08
+     0010             (       sdtest.asm):00013         CC_I     EQU    $10
+     0020             (       sdtest.asm):00014         CC_H     EQU    $20
+     0040             (       sdtest.asm):00015         CC_F     EQU    $40
+     0080             (       sdtest.asm):00016         CC_E     EQU    $80
+                      (       sdtest.asm):00017         
+                      (       sdtest.asm):00018          ;  Other defines
+     000D             (       sdtest.asm):00019         CR       EQU    $0D                      ;CARRIAGE RETURN
+     000A             (       sdtest.asm):00020         LF       EQU    $0A                      ;LINE FEED
+     0020             (       sdtest.asm):00021         SPACE    EQU    $20
+                      (       sdtest.asm):00022         
+     FF40             (       sdtest.asm):00023         SCC_InitA                    EQU $FF40     ; initialize SCC channel A
+     FF44             (       sdtest.asm):00024         GETCH                        EQU $FF44     ; wait for character from CONSOLE
+                      (       sdtest.asm):00025         
+     FF58             (       sdtest.asm):00026         PUTCH                        EQU $FF58     ; output character to CONSOLE
+     FF5C             (       sdtest.asm):00027         PUTBYTE                      EQU $FF5C     ; output HEX BYTE to CONSOLE
+     FF5E             (       sdtest.asm):00028         PUTWORD                      EQU $FF5E     ; output HEX WORD to CONSOLE
+     FF60             (       sdtest.asm):00029         PUTMSG                       EQU $FF60     ; output ASCIIZ message at PC to CONSOLE
+     FF62             (       sdtest.asm):00030         PUTSTR                       EQU $FF62     ; output ASCIIZ message at X to CONSOLE
+     FF64             (       sdtest.asm):00031         PUTCR                        EQU $FF64     ; output a CR+LF to CONSOLE
+     FFBA             (       sdtest.asm):00032         DELAYUS                      EQU $FFBA     ; delay X * 10us
+     FF94             (       sdtest.asm):00033         SPI_Read                     EQU $FF94     ; SPI read byte (send $FF)
+     FF96             (       sdtest.asm):00034         SPI_ReadBlock                EQU $FF96     ; SPI read block (send $FF)
+     FF98             (       sdtest.asm):00035         SPI_Write                    EQU $FF98     ; SPI write byte
+     FF9A             (       sdtest.asm):00036         SPI_WriteBlock               EQU $FF9A     ; SPI write block         
+                      (       sdtest.asm):00037         
+     FFA4             (       sdtest.asm):00038         SD_Initialize                EQU $FFA4     ; initialize SD card
+     FFA6             (       sdtest.asm):00039         SD_SendCmd                   EQU $FFA6     ; send command to SD card, get R1 response
+     FFA8             (       sdtest.asm):00040         SD_GetR7                     EQU $FFA8     ; get R7 response after command
+     FFAA             (       sdtest.asm):00041         SD_ReadBlock                 EQU $FFAA     ; read LBA block from SD card
+     FFAC             (       sdtest.asm):00042         SD_WriteBlock                EQU $FFAC     ; write LBA block to SD card
+     FFAE             (       sdtest.asm):00043         SD_WaitReady                 EQU $FFAE     ; wait for SD card to complete write operation
+                      (       sdtest.asm):00044         
+                      (       sdtest.asm):00045         
+     E73D             (       sdtest.asm):00046         PUTSPACE EQU    $E73D                    ; output SPACE
+     E203             (       sdtest.asm):00047         GOWOZ    EQU    $E203                    ; go to monitor
+                      (       sdtest.asm):00048         
+     1FFF             (       sdtest.asm):00049         MODEBYTE EQU    $1FFF
+                      (       sdtest.asm):00050         
+                      (       sdtest.asm):00051          ; ==================================================
+                      (       sdtest.asm):00052          ;   ENTRY POINT
+                      (       sdtest.asm):00053          ; ==================================================
+                      (       sdtest.asm):00054         
+1003                  (       sdtest.asm):00055         START:
+1003 4F               (       sdtest.asm):00056                  CLRA                            ; always start in SLOW block mode
+1004 B71FFF           (       sdtest.asm):00057                  STA    MODEBYTE
+1007 8E11C9           (       sdtest.asm):00058                  LDX    #BANNER
+100A AD9FFF62         (       sdtest.asm):00059                  JSR    [PUTSTR]
+100E 8E1F80           (       sdtest.asm):00060         S?0      LDX    #$1F80                   ; pointer to scratch buffer
+1011 11C680           (       sdtest.asm):00061                  LDF    #$80                     ; verbose debug info
+1014 AD9FFFA4         (       sdtest.asm):00062                  JSR    [SD_Initialize]
+1018 2812             (       sdtest.asm):00063                  BVC    READ0
+101A B61FFF           (       sdtest.asm):00064                  LDA    MODEBYTE
+101D 4C               (       sdtest.asm):00065                  INCA
+101E 810A             (       sdtest.asm):00066                  CMPA   #10
+1020 25EC             (       sdtest.asm):00067                  BLO    S?0
+1022                  (       sdtest.asm):00068         ERROR0:
+1022 8E11F5           (       sdtest.asm):00069                  LDX    #SDERR
+1025 AD9FFF62         (       sdtest.asm):00070                  JSR    [PUTSTR]
+1029 7EE203           (       sdtest.asm):00071                  JMP    GOWOZ
+                      (       sdtest.asm):00072         
+102C                  (       sdtest.asm):00073         READ0:
+                      (       sdtest.asm):00074          ; read sector 0
+102C 8E122F           (       sdtest.asm):00075                  LDX    #READING
+102F AD9FFF62         (       sdtest.asm):00076                  JSR    [PUTSTR]
+                      (       sdtest.asm):00077         
+1033 8E1F90           (       sdtest.asm):00078                  LDX    #$1F90
+1036 108E2000         (       sdtest.asm):00079                  LDY    #$2000
+103A 104F             (       sdtest.asm):00080                  CLRD
+103C 105F             (       sdtest.asm):00081                  CLRW
+103E 10ED84           (       sdtest.asm):00082                  STQ    ,X
+1041 AD9FFF5E         (       sdtest.asm):00083                  JSR    [PUTWORD]
+1045 1F60             (       sdtest.asm):00084                  TFR    W,D
+1047 AD9FFF5E         (       sdtest.asm):00085                  JSR    [PUTWORD]
+104B AD9FFF64         (       sdtest.asm):00086                  JSR    [PUTCR]
+104F AD9FFFAA         (       sdtest.asm):00087                  JSR    [SD_ReadBlock]
+1053 1029013B         (       sdtest.asm):00088                  LBVS   ERROR
+1057 BD119C           (       sdtest.asm):00089                  JSR    DISPSEC
+                      (       sdtest.asm):00090         
+105A 8E11E7           (       sdtest.asm):00091                  LDX    #ASK
+105D AD9FFF62         (       sdtest.asm):00092                  JSR    [PUTSTR]
+1061 AD9FFF44         (       sdtest.asm):00093                  JSR    [GETCH]
+1065 AD9FFF58         (       sdtest.asm):00094                  JSR    [PUTCH]
+1069 AD9FFF64         (       sdtest.asm):00095                  JSR    [PUTCR]
+                      (       sdtest.asm):00096         
+                      (       sdtest.asm):00097          ; read sector 1
+106D 8E122F           (       sdtest.asm):00098                  LDX    #READING
+1070 AD9FFF62         (       sdtest.asm):00099                  JSR    [PUTSTR]
+                      (       sdtest.asm):00100         
+1074 8E1FA0           (       sdtest.asm):00101                  LDX    #$1FA0
+1077 108E2000         (       sdtest.asm):00102                  LDY    #$2000
+107B 104F             (       sdtest.asm):00103                  CLRD
+107D 10860001         (       sdtest.asm):00104                  LDW    #1
+1081 10ED84           (       sdtest.asm):00105                  STQ    ,X
+1084 AD9FFF5E         (       sdtest.asm):00106                  JSR    [PUTWORD]
+1088 1F60             (       sdtest.asm):00107                  TFR    W,D
+108A AD9FFF5E         (       sdtest.asm):00108                  JSR    [PUTWORD]
+108E AD9FFF64         (       sdtest.asm):00109                  JSR    [PUTCR]
+1092 AD9FFFAA         (       sdtest.asm):00110                  JSR    [SD_ReadBlock]
+1096 102900F8         (       sdtest.asm):00111                  LBVS   ERROR
+109A BD119C           (       sdtest.asm):00112                  JSR    DISPSEC
+                      (       sdtest.asm):00113         
+109D 8E11E7           (       sdtest.asm):00114                  LDX    #ASK
+10A0 AD9FFF62         (       sdtest.asm):00115                  JSR    [PUTSTR]
+10A4 AD9FFF44         (       sdtest.asm):00116                  JSR    [GETCH]
+10A8 AD9FFF58         (       sdtest.asm):00117                  JSR    [PUTCH]
+10AC AD9FFF64         (       sdtest.asm):00118                  JSR    [PUTCR]
+                      (       sdtest.asm):00119         
+                      (       sdtest.asm):00120          ; read sector 0
+10B0 8E122F           (       sdtest.asm):00121                  LDX    #READING
+10B3 AD9FFF62         (       sdtest.asm):00122                  JSR    [PUTSTR]
+                      (       sdtest.asm):00123         
+10B7 8E1F90           (       sdtest.asm):00124                  LDX    #$1F90
+10BA 108E2000         (       sdtest.asm):00125                  LDY    #$2000
+10BE 104F             (       sdtest.asm):00126                  CLRD
+10C0 105F             (       sdtest.asm):00127                  CLRW
+10C2 10ED84           (       sdtest.asm):00128                  STQ    ,X
+10C5 AD9FFF5E         (       sdtest.asm):00129                  JSR    [PUTWORD]
+10C9 1F60             (       sdtest.asm):00130                  TFR    W,D
+10CB AD9FFF5E         (       sdtest.asm):00131                  JSR    [PUTWORD]
+10CF AD9FFF64         (       sdtest.asm):00132                  JSR    [PUTCR]
+10D3 AD9FFFAA         (       sdtest.asm):00133                  JSR    [SD_ReadBlock]
+10D7 102900B7         (       sdtest.asm):00134                  LBVS   ERROR
+10DB BD119C           (       sdtest.asm):00135                  JSR    DISPSEC
+                      (       sdtest.asm):00136         
+10DE 8E11E7           (       sdtest.asm):00137                  LDX    #ASK
+10E1 AD9FFF62         (       sdtest.asm):00138                  JSR    [PUTSTR]
+10E5 AD9FFF44         (       sdtest.asm):00139                  JSR    [GETCH]
+10E9 AD9FFF58         (       sdtest.asm):00140                  JSR    [PUTCH]
+10ED AD9FFF64         (       sdtest.asm):00141                  JSR    [PUTCR]
+                      (       sdtest.asm):00142         
+                      (       sdtest.asm):00143          ; alter sector data
+10F1 8E123E           (       sdtest.asm):00144                  LDX    #CHANGING
+10F4 AD9FFF62         (       sdtest.asm):00145                  JSR    [PUTSTR]
+                      (       sdtest.asm):00146         
+10F8 8E2000           (       sdtest.asm):00147                  LDX    #$2000
+10FB EC84             (       sdtest.asm):00148                  LDD    ,X
+10FD 104C             (       sdtest.asm):00149                  INCD
+10FF ED84             (       sdtest.asm):00150                  STD    ,X
+                      (       sdtest.asm):00151         
+                      (       sdtest.asm):00152          ; write sector 0
+1101 8E1259           (       sdtest.asm):00153                  LDX    #WRITING
+1104 AD9FFF62         (       sdtest.asm):00154                  JSR    [PUTSTR]
+                      (       sdtest.asm):00155         
+1108 8E1FB0           (       sdtest.asm):00156                  LDX    #$1FB0
+110B 108E2000         (       sdtest.asm):00157                  LDY    #$2000
+110F 104F             (       sdtest.asm):00158                  CLRD
+1111 105F             (       sdtest.asm):00159                  CLRW
+1113 10ED84           (       sdtest.asm):00160                  STQ    ,X
+1116 AD9FFF5E         (       sdtest.asm):00161                  JSR    [PUTWORD]
+111A 1F60             (       sdtest.asm):00162                  TFR    W,D
+111C AD9FFF5E         (       sdtest.asm):00163                  JSR    [PUTWORD]
+1120 AD9FFF64         (       sdtest.asm):00164                  JSR    [PUTCR]
+1124 AD9FFFAC         (       sdtest.asm):00165                  JSR    [SD_WriteBlock]
+1128 10290066         (       sdtest.asm):00166                  LBVS   ERROR
+                      (       sdtest.asm):00167                  
+112C 8E11E7           (       sdtest.asm):00168                  LDX    #ASK
+112F AD9FFF62         (       sdtest.asm):00169                  JSR    [PUTSTR]
+1133 AD9FFF44         (       sdtest.asm):00170                  JSR    [GETCH]
+1137 AD9FFF58         (       sdtest.asm):00171                  JSR    [PUTCH]
+113B AD9FFF64         (       sdtest.asm):00172                  JSR    [PUTCR]
+                      (       sdtest.asm):00173         
+                      (       sdtest.asm):00174          ; alter sector data
+113F 8E123E           (       sdtest.asm):00175                  LDX    #CHANGING
+1142 AD9FFF62         (       sdtest.asm):00176                  JSR    [PUTSTR]
+                      (       sdtest.asm):00177         
+1146 8E2000           (       sdtest.asm):00178                  LDX    #$2000
+1149 EC84             (       sdtest.asm):00179                  LDD    ,X
+114B 104C             (       sdtest.asm):00180                  INCD
+114D ED84             (       sdtest.asm):00181                  STD    ,X
+                      (       sdtest.asm):00182         
+                      (       sdtest.asm):00183          ; write sector 1
+114F 8E1259           (       sdtest.asm):00184                  LDX    #WRITING
+1152 AD9FFF62         (       sdtest.asm):00185                  JSR    [PUTSTR]
+                      (       sdtest.asm):00186         
+1156 8E1FC0           (       sdtest.asm):00187                  LDX    #$1FC0
+1159 108E2000         (       sdtest.asm):00188                  LDY    #$2000
+115D 104F             (       sdtest.asm):00189                  CLRD
+115F 10860001         (       sdtest.asm):00190                  LDW    #1
+1163 10ED84           (       sdtest.asm):00191                  STQ    ,X
+1166 AD9FFF5E         (       sdtest.asm):00192                  JSR    [PUTWORD]
+116A 1F60             (       sdtest.asm):00193                  TFR    W,D
+116C AD9FFF5E         (       sdtest.asm):00194                  JSR    [PUTWORD]
+1170 AD9FFF64         (       sdtest.asm):00195                  JSR    [PUTCR]
+1174 AD9FFFAC         (       sdtest.asm):00196                  JSR    [SD_WriteBlock]
+1178 10290016         (       sdtest.asm):00197                  LBVS   ERROR
+                      (       sdtest.asm):00198         
+117C 8E11E7           (       sdtest.asm):00199                  LDX    #ASK
+117F AD9FFF62         (       sdtest.asm):00200                  JSR    [PUTSTR]
+1183 AD9FFF44         (       sdtest.asm):00201                  JSR    [GETCH]
+1187 AD9FFF58         (       sdtest.asm):00202                  JSR    [PUTCH]
+118B AD9FFF64         (       sdtest.asm):00203                  JSR    [PUTCR]
+118F 7E102C           (       sdtest.asm):00204                  JMP    READ0
+1192                  (       sdtest.asm):00205         ERROR:
+1192 8E1215           (       sdtest.asm):00206                  LDX    #ERRORTXT
+1195 AD9FFF62         (       sdtest.asm):00207                  JSR    [PUTSTR]
+1199 7EE203           (       sdtest.asm):00208                  JMP    GOWOZ
+                      (       sdtest.asm):00209         
+119C                  (       sdtest.asm):00210         DISPSEC:
+                      (       sdtest.asm):00211          ; display 64 bytes of sector data at 2000
+119C 8E2000           (       sdtest.asm):00212                  LDX    #$2000
+119F 118640           (       sdtest.asm):00213                  LDE    #64
+11A2 1FE8             (       sdtest.asm):00214         D?S0     TFR    E,A
+11A4 850F             (       sdtest.asm):00215                  BITA   #$0F
+11A6 2613             (       sdtest.asm):00216                  BNE    D?S1
+11A8 AD9FFF64         (       sdtest.asm):00217                  JSR    [PUTCR]
+11AC 1F10             (       sdtest.asm):00218                  TFR    X,D
+11AE AD9FFF5E         (       sdtest.asm):00219                  JSR    [PUTWORD]
+11B2 863A             (       sdtest.asm):00220                  LDA    #':'
+11B4 AD9FFF58         (       sdtest.asm):00221                  JSR    [PUTCH]
+11B8 BDE73D           (       sdtest.asm):00222                  JSR    PUTSPACE
+11BB A680             (       sdtest.asm):00223         D?S1     LDA    ,X+
+11BD AD9FFF5C         (       sdtest.asm):00224                  JSR    [PUTBYTE]
+11C1 114A             (       sdtest.asm):00225                  DECE
+11C3 26DD             (       sdtest.asm):00226                  BNE    D?S0
+11C5 6E9FFF64         (       sdtest.asm):00227                  JMP    [PUTCR]
+                      (       sdtest.asm):00228         
+11C9 3D3D3D2048443633 (       sdtest.asm):00229         BANNER   .ascii "=== HD6309 SD card test ==="
+     3039205344206361
+     7264207465737420
+     3D3D3D
+11E4 0A0D00           (       sdtest.asm):00230                  .db    10,13,0
+                      (       sdtest.asm):00231         
+11E7 5072657373206120 (       sdtest.asm):00232         ASK      .ascii "Press a key"
+     6B6579
+11F2 0A0D00           (       sdtest.asm):00233                  .db    10,13,0
+                      (       sdtest.asm):00234         
+11F5 4572726F723A2066 (       sdtest.asm):00235         SDERR    .ascii "Error: failed to init SD card"
+     61696C656420746F
+     20696E6974205344
+     2063617264
+1212 0A0D00           (       sdtest.asm):00236                  .db    10,13,0
+                      (       sdtest.asm):00237         
+1215 492F4F206572726F (       sdtest.asm):00238         ERRORTXT .ascii "I/O error during access"
+     7220647572696E67
+     20616363657373
+122C 0A0D00           (       sdtest.asm):00239                  .db    10,13,0
+                      (       sdtest.asm):00240         
+122F 52656164696E6720 (       sdtest.asm):00241         READING  .ascii "Reading block "
+     626C6F636B20
+123D 00               (       sdtest.asm):00242                  .db    0
+                      (       sdtest.asm):00243         
+123E 496E6372656D656E (       sdtest.asm):00244         CHANGING .ascii "Incrementing block bytes"
+     74696E6720626C6F
+     636B206279746573
+1256 0A0D00           (       sdtest.asm):00245                  .db    10,13,0
+                      (       sdtest.asm):00246         
+1259 57726974696E6720 (       sdtest.asm):00247         WRITING  .ascii "Writing block "
+     626C6F636B20
+1267 00               (       sdtest.asm):00248                  .db    0
+                      (       sdtest.asm):00249         
+                      (       sdtest.asm):00250         
+1268 0A0D00           (       sdtest.asm):00251         EOLSTR   .db    10,13,0
+                      (       sdtest.asm):00252         

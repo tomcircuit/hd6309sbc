@@ -1,0 +1,684 @@
+                      (          rtc.asm):00001                  INCLUDE "hd6309_hardware.inc"
+                      (hd6309_hardware.i):00001         ;
+                      (hd6309_hardware.i):00002         ; 512B from $E000-$E1FF is reserved for I/O devices:
+                      (hd6309_hardware.i):00003         ; Z8536 CIO at $E000, Z85C30 SCC at $E010
+                      (hd6309_hardware.i):00004         
+     E000             (hd6309_hardware.i):00005         IOPAGE   EQU      $E000                             ; Base address of I/O page
+     E000             (hd6309_hardware.i):00006         ZCIO     EQU      IOPAGE+$00                        ; CIO base address
+     E000             (hd6309_hardware.i):00007         CIOC     EQU      ZCIO                              ; CIO port C access
+     E001             (hd6309_hardware.i):00008         CIOB     EQU      ZCIO+1                            ; CIO port B access
+     E002             (hd6309_hardware.i):00009         CIOA     EQU      ZCIO+2                            ; CIO port A access
+     E003             (hd6309_hardware.i):00010         CIOCTL   EQU      ZCIO+3                            ; CIO control register
+                      (hd6309_hardware.i):00011         
+     E010             (hd6309_hardware.i):00012         ZSCC     EQU      IOPAGE+$10                        ; SCC base address
+     E010             (hd6309_hardware.i):00013         ZSCCBC   EQU      ZSCC                              ;   SCC channel B command reg
+     E011             (hd6309_hardware.i):00014         ZSCCBD   EQU      ZSCC+1                            ;   SCC channel B data reg
+     E012             (hd6309_hardware.i):00015         ZSCCAC   EQU      ZSCC+2                            ;   SCC channel A command reg
+     E013             (hd6309_hardware.i):00016         ZSCCAD   EQU      ZSCC+3                            ;   SCC channel A data reg
+     0001             (hd6309_hardware.i):00017         ZSCC.RXBF EQU     $01                               ; BIT MASK FOR RX BUFFER FULL
+     0004             (hd6309_hardware.i):00018         ZSCC.TXBE EQU     $04                               ; BIT MASK FOR TX BUFFER EMPTY
+                      (hd6309_hardware.i):00019         
+                      (hd6309_hardware.i):00020         ; I2CPORT at $E020
+                      (hd6309_hardware.i):00021         ;
+                      (hd6309_hardware.i):00022         ;       7     6    5    4     3     2    1    0
+                      (hd6309_hardware.i):00023         ;        [DSCL][DSDA][---][---][MSCL][MSDA][---][---]
+                      (hd6309_hardware.i):00024         ;      rw    rw    r    r    r     r     r    r
+                      (hd6309_hardware.i):00025         ;      1     1     0    0    x     x     0    0
+                      (hd6309_hardware.i):00026         ;
+                      (hd6309_hardware.i):00027         ; DSCL == drive SCL 1 --> float SCL ; 0 --> drive SCL low
+                      (hd6309_hardware.i):00028         ; DSDA == drive SDA 1 --> float SDA ; 0 --> drive SDA low
+                      (hd6309_hardware.i):00029         ; MSCK == monitor SCL --> state of SCL
+                      (hd6309_hardware.i):00030         ; MSDA == monitor SDA --> state of SDA
+                      (hd6309_hardware.i):00031         
+     E020             (hd6309_hardware.i):00032         I2CPORT  EQU      IOPAGE+$20                        ;soft I2C port
+     0080             (hd6309_hardware.i):00033         I2C.DSCL EQU      $80
+     0040             (hd6309_hardware.i):00034         I2C.DSDA EQU      $40
+     0008             (hd6309_hardware.i):00035         I2C.MSCL EQU      $08
+     0004             (hd6309_hardware.i):00036         I2C.MSDA EQU      $04
+                      (hd6309_hardware.i):00037         
+                      (hd6309_hardware.i):00038         ; SDCARD port at $E030
+                      (hd6309_hardware.i):00039         ;    8 bits of data to transfer via SPI
+                      (hd6309_hardware.i):00040         
+     E030             (hd6309_hardware.i):00041         SDPORT   EQU      IOPAGE+$30                        ; SDPORT register address
+                      (hd6309_hardware.i):00042         
+                      (hd6309_hardware.i):00043         ; SYSTEM CONFIG port at $E040
+                      (hd6309_hardware.i):00044         ;       7    6    5    4    3     2     1      0
+                      (hd6309_hardware.i):00045         ;        [---][---][---][CONF][RA14][ROMH][ROML][ROMWS]
+                      (hd6309_hardware.i):00046         ;      r    r    r    r     rw    rw    rw    rw
+                      (hd6309_hardware.i):00047         ;      0    0    0    x     1     1     1     1
+                      (hd6309_hardware.i):00048         ;
+                      (hd6309_hardware.i):00049         ;  CONF == status of CONFIG jumper
+                      (hd6309_hardware.i):00050         ;  RA14 == control ROM pin 27 (default to CONFIG jumper at reset)
+                      (hd6309_hardware.i):00051         ;  ROMH == 1 --> bank ROM over $E200-$FFFF during reads (writes always go to RAM)
+                      (hd6309_hardware.i):00052         ;  ROML == 1 --> bank ROM over $C000-$DFFF during reads (writes always go to RAM)
+                      (hd6309_hardware.i):00053         ;  ROMWS == 1 --> insert wait state for ROM access; 0 --> no wait states for ROM
+                      (hd6309_hardware.i):00054         
+     E040             (hd6309_hardware.i):00055         SYSCFG   EQU      IOPAGE+$40                        ; SYSCFG register address
+     0001             (hd6309_hardware.i):00056         SYS.ROMWS EQU     $01
+     0002             (hd6309_hardware.i):00057         SYS.ROMSEL EQU    $02
+     0004             (hd6309_hardware.i):00058         SYS.ROMSEH EQU    $04
+     0008             (hd6309_hardware.i):00059         SYS.RA14 EQU      $08
+                      (hd6309_hardware.i):00060         
+                      (hd6309_hardware.i):00061         ; INPUT-OUTPUT port at $E050
+                      (hd6309_hardware.i):00062         ;       7     6      5      4    3  2    1     0
+                      (hd6309_hardware.i):00063         ;    [SDSW][SDBSY][SDCLK][SDCS][PB][0][LED2][LED1]
+                      (hd6309_hardware.i):00064         ;       I     I      O      O    x       O     O
+                      (hd6309_hardware.i):00065         ;  all bits readable, output bits readback
+                      (hd6309_hardware.i):00066         ;
+                      (hd6309_hardware.i):00067         ;  SDSW == 1 when SD card is inserted
+                      (hd6309_hardware.i):00068         ;  SDBSY == 1 while SPI transaction is taking place
+                      (hd6309_hardware.i):00069         ;  SDCLK = 1 --> slow SPI clock; 0 --> fast SPI clock
+                      (hd6309_hardware.i):00070         ;  SDCS = 1 --> CS signal to SDcard negated; 0 --> asserted
+                      (hd6309_hardware.i):00071         ;  PB == 1 when pushbutton is pressed
+                      (hd6309_hardware.i):00072         ;  LEDn = 1 --> illuminate corresponding LED
+                      (hd6309_hardware.i):00073         
+     E050             (hd6309_hardware.i):00074         IOPORT   EQU      IOPAGE+$50                        ; INOUT register address
+     0001             (hd6309_hardware.i):00075         IO.LED1  EQU      $01
+     0002             (hd6309_hardware.i):00076         IO.LED2  EQU      $02
+     0008             (hd6309_hardware.i):00077         IO.PB    EQU      $08
+     0010             (hd6309_hardware.i):00078         IO.SDCS  EQU      $10
+     0020             (hd6309_hardware.i):00079         IO.SDCLK EQU      $20
+     0040             (hd6309_hardware.i):00080         IO.SDBSY EQU      $40
+     0080             (hd6309_hardware.i):00081         IO.SDSW  EQU      $80
+                      (hd6309_hardware.i):00082         
+     E060             (hd6309_hardware.i):00083         CPLDVER  EQU      IOPAGE+$60                        ; CPLD VERSION register address
+                      (hd6309_hardware.i):00084         
+                      (hd6309_hardware.i):00085         ;; IOPORT LED and PB interface primitives
+0000                  (hd6309_hardware.i):00086         OnLED1   MACRO
+                      (hd6309_hardware.i):00087                  OIM      #IO.LED1,IOPORT                   ; turn on LED1
+                      (hd6309_hardware.i):00088                  ENDM
+                      (hd6309_hardware.i):00089         
+0000                  (hd6309_hardware.i):00090         OffLED1  MACRO
+                      (hd6309_hardware.i):00091                  AIM      #~IO.LED1,IOPORT                  ; turn off LED1
+                      (hd6309_hardware.i):00092                  ENDM
+                      (hd6309_hardware.i):00093         
+0000                  (hd6309_hardware.i):00094         ToggleLED1 MACRO
+                      (hd6309_hardware.i):00095                  EIM      #IO.LED1,IOPORT                   ; toggle LED1
+                      (hd6309_hardware.i):00096                  ENDM
+                      (hd6309_hardware.i):00097         
+0000                  (hd6309_hardware.i):00098         OnLED2   MACRO
+                      (hd6309_hardware.i):00099                  OIM      #IO.LED2,IOPORT                   ; turn on LED2
+                      (hd6309_hardware.i):00100                  ENDM
+                      (hd6309_hardware.i):00101         
+0000                  (hd6309_hardware.i):00102         OffLED2  MACRO
+                      (hd6309_hardware.i):00103                  AIM      #~IO.LED2,IOPORT                  ; turn off LED1
+                      (hd6309_hardware.i):00104                  ENDM
+                      (hd6309_hardware.i):00105         
+0000                  (hd6309_hardware.i):00106         ToggleLED2 MACRO
+                      (hd6309_hardware.i):00107                  EIM      #IO.LED2,IOPORT                   ; toggle LED2
+                      (hd6309_hardware.i):00108                  ENDM
+                      (hd6309_hardware.i):00109                  
+0000                  (hd6309_hardware.i):00110         OnLEDS   MACRO
+                      (hd6309_hardware.i):00111                  OIM      #(IO.LED1+IO.LED2),IOPORT        ; turn on LED1 + LED2
+                      (hd6309_hardware.i):00112                  ENDM
+                      (hd6309_hardware.i):00113         
+0000                  (hd6309_hardware.i):00114         OffLEDS  MACRO
+                      (hd6309_hardware.i):00115                  AIM      #~(IO.LED1+IO.LED2),IOPORT       ; turn off LED1 + LED2
+                      (hd6309_hardware.i):00116                  ENDM
+                      (hd6309_hardware.i):00117         
+0000                  (hd6309_hardware.i):00118         StatusPB MACRO
+                      (hd6309_hardware.i):00119                  TIM      #IO.PB,IOPORT                     ; check the pushbutton
+                      (hd6309_hardware.i):00120                  ENDM
+                      (hd6309_hardware.i):00121         
+                      (hd6309_hardware.i):00122         ;; I2C interface primitives
+0000                  (hd6309_hardware.i):00123         I2C_StatSDA MACRO
+                      (hd6309_hardware.i):00124                  TIM      #I2C.MSDA,I2CPORT                 ;(Z = 1 if SDA is low)
+                      (hd6309_hardware.i):00125                  ENDM
+                      (hd6309_hardware.i):00126         
+0000                  (hd6309_hardware.i):00127         I2C_SinkSDA MACRO
+                      (hd6309_hardware.i):00128                  AIM      #~I2C.DSDA,I2CPORT                ;Drive SDA line low
+                      (hd6309_hardware.i):00129                  ENDM
+                      (hd6309_hardware.i):00130         
+0000                  (hd6309_hardware.i):00131         I2C_ReleaseSDA MACRO
+                      (hd6309_hardware.i):00132                  OIM      #I2C.DSDA,I2CPORT                 ;Release SDA line
+                      (hd6309_hardware.i):00133                  ENDM
+                      (hd6309_hardware.i):00134         
+0000                  (hd6309_hardware.i):00135         I2C_StatSCL MACRO
+                      (hd6309_hardware.i):00136                  TIM      #I2C.MSCL,I2CPORT                 ;(Z = 1 if SCL is low)
+                      (hd6309_hardware.i):00137                  ENDM
+                      (hd6309_hardware.i):00138         
+0000                  (hd6309_hardware.i):00139         I2C_SinkSCL MACRO
+                      (hd6309_hardware.i):00140                  AIM      #~I2C.DSCL,I2CPORT                ;Drive SCL line low
+                      (hd6309_hardware.i):00141                  ENDM
+                      (hd6309_hardware.i):00142         
+0000                  (hd6309_hardware.i):00143         I2C_ReleaseSCL MACRO
+                      (hd6309_hardware.i):00144                  OIM      #I2C.DSCL,I2CPORT                 ;Release SCL line
+                      (hd6309_hardware.i):00145                  ENDM
+                      (hd6309_hardware.i):00146         
+0000                  (hd6309_hardware.i):00147         I2C_ReleaseBoth MACRO
+                      (hd6309_hardware.i):00148                  OIM      #(I2C.DSCL+I2C.DSDA),I2CPORT      ;Release both SDA and SCL lines
+                      (hd6309_hardware.i):00149                  ENDM
+                      (hd6309_hardware.i):00150                  
+0000                  (hd6309_hardware.i):00151         I2C_BitDelay MACRO
+                      (hd6309_hardware.i):00152                  NOP
+                      (hd6309_hardware.i):00153                  ENDM         
+                      (hd6309_hardware.i):00154         
+0000                  (hd6309_hardware.i):00155         I2C_StretchSCL MACRO
+0000                  (hd6309_hardware.i):00156         I?SSH    NOP
+                      (hd6309_hardware.i):00157                  I2C_ReleaseSCL                             ; try to release SCL
+                      (hd6309_hardware.i):00158                  NOP
+                      (hd6309_hardware.i):00159                  I2C_StatSCL                                ; check is SCL is really high yet
+                      (hd6309_hardware.i):00160                  BEQ      I?SSH                             ; if SCL is still low -> try again
+                      (hd6309_hardware.i):00161                  ENDM
+                      (hd6309_hardware.i):00162         
+                      (hd6309_hardware.i):00163         ;; SPI interface primitives
+0000                  (hd6309_hardware.i):00164         SPI_FastMode MACRO
+                      (hd6309_hardware.i):00165                  AIM      #~IO.SDCLK,IOPORT                 ; set SPI to fast mode
+                      (hd6309_hardware.i):00166                  ENDM
+                      (hd6309_hardware.i):00167         
+0000                  (hd6309_hardware.i):00168         SPI_SlowMode MACRO
+                      (hd6309_hardware.i):00169                  OIM      #IO.SDCLK,IOPORT                  ; set SPI to slow mode
+                      (hd6309_hardware.i):00170                  ENDM
+                      (hd6309_hardware.i):00171         
+0000                  (hd6309_hardware.i):00172         SPI_Status MACRO
+                      (hd6309_hardware.i):00173                  TIM      #IO.SDBSY,IOPORT                  ; check the SPI busy bit (Z=0 means busy)
+                      (hd6309_hardware.i):00174                  ENDM
+                      (hd6309_hardware.i):00175         
+                      (hd6309_hardware.i):00176         ;; SD card interface primitives
+0000                  (hd6309_hardware.i):00177         SD_AssertCS MACRO
+                      (hd6309_hardware.i):00178                  AIM      #~IO.SDCS,IOPORT                  ; assert SD card select
+                      (hd6309_hardware.i):00179                  ENDM
+                      (hd6309_hardware.i):00180         
+0000                  (hd6309_hardware.i):00181         SD_NegateCS MACRO
+                      (hd6309_hardware.i):00182                  OIM      #IO.SDCS,IOPORT                   ; negate SD card select
+                      (hd6309_hardware.i):00183                  ENDM
+                      (hd6309_hardware.i):00184         
+0000                  (hd6309_hardware.i):00185         SD_CardPresent MACRO
+                      (hd6309_hardware.i):00186                  TIM      #IO.SDSW,IOPORT                   ; examine SD card switch
+                      (hd6309_hardware.i):00187                  ENDM
+                      (          rtc.asm):00002         
+     0002             (          rtc.asm):00003         CC_V     EQU    $02
+                      (          rtc.asm):00004         
+     00D0             (          rtc.asm):00005         RTC.ADDRESS EQU $D0
+     0000             (          rtc.asm):00006         RTC.SECONDS EQU 0
+     0001             (          rtc.asm):00007         RTC.MINUTES EQU 1
+     0002             (          rtc.asm):00008         RTC.HOURS EQU   2
+     0003             (          rtc.asm):00009         RTC.WEEKDAY EQU 3
+     0004             (          rtc.asm):00010         RTC.DAY  EQU    4
+     0005             (          rtc.asm):00011         RTC.MONTH EQU   5
+     0006             (          rtc.asm):00012         RTC.YEAR EQU    6
+     000E             (          rtc.asm):00013         RTC.CONTROL EQU 14
+     000F             (          rtc.asm):00014         RTC.STATUS EQU  15
+                      (          rtc.asm):00015         
+     E206             (          rtc.asm):00016         GONOICE  EQU    $E206
+     1F00             (          rtc.asm):00017         RAM_START EQU   $1F00
+     FFB8             (          rtc.asm):00018         DELAYMS  EQU    $FFB8                    ; [INDIRECT] delay X * ms
+                      (          rtc.asm):00019         
+                      (          rtc.asm):00020                  ORG    $2000
+                      (          rtc.asm):00021                  OnLED1
+2000 7101E050         (           OnLED1):00001                  OIM      #IO.LED1,IOPORT                   ; turn on LED1
+                      (          rtc.asm):00022                  OnLED2
+2004 7102E050         (           OnLED2):00001                  OIM      #IO.LED2,IOPORT                   ; turn on LED2
+                      (          rtc.asm):00023                  I2C_ReleaseBoth
+2008 71C0E020         (  I2C_ReleaseBoth):00001                  OIM      #(I2C.DSCL+I2C.DSDA),I2CPORT      ;Release both SDA and SCL lines
+200C 8E0064           (          rtc.asm):00024                  LDX    #100
+200F AD9FFFB8         (          rtc.asm):00025                  JSR    [DELAYMS]
+2013 BD2050           (          rtc.asm):00026                  JSR    I2C_Initialize
+                      (          rtc.asm):00027         
+2016 8E0014           (          rtc.asm):00028                  LDX    #20
+2019 AD9FFFB8         (          rtc.asm):00029                  JSR    [DELAYMS]
+                      (          rtc.asm):00030         
+201D C620             (          rtc.asm):00031                  LDB    #$20                     ; SRAM addr $20
+201F BD20F8           (          rtc.asm):00032                  JSR    RTC_ReadByte             ; read RAM value into B
+2022 5C               (          rtc.asm):00033                  INCB                            ; increment by one
+2023 1F98             (          rtc.asm):00034                  TFR    B,A                      ; copy into A
+2025 B71F00           (          rtc.asm):00035                  STA    RAM_START
+2028 C620             (          rtc.asm):00036                  LDB    #$20                     ; SRAM addr $20
+202A BD2120           (          rtc.asm):00037                  JSR    RTC_WriteByte            ; write A into RAM
+202D 12               (          rtc.asm):00038                  NOP
+                      (          rtc.asm):00039         
+202E 108E1F00         (          rtc.asm):00040                  LDY    #RAM_START               ; read the time REGS into RAM
+2032 BD2172           (          rtc.asm):00041                  JSR    RTC_ReadRegs
+2035 12               (          rtc.asm):00042                  NOP
+2036 108E1F00         (          rtc.asm):00043                  LDY    #RAM_START               ; write the time REGS into RTC
+203A BD213B           (          rtc.asm):00044                  JSR    RTC_WriteRegs
+203D 12               (          rtc.asm):00045                  NOP
+                      (          rtc.asm):00046         
+203E 108E1F10         (          rtc.asm):00047                  LDY    #RAM_START+$10
+2042 BD21F3           (          rtc.asm):00048                  JSR    RTC_FmtTime
+2045 108E1F20         (          rtc.asm):00049                  LDY    #RAM_START+$20
+2049 BD21A8           (          rtc.asm):00050                  JSR    RTC_FmtDate
+204C 12               (          rtc.asm):00051                  NOP
+                      (          rtc.asm):00052         
+204D 7EE206           (          rtc.asm):00053                  JMP    GONOICE
+                      (          rtc.asm):00054         
+                      (          rtc.asm):00055          ;;======================================================================
+                      (          rtc.asm):00056          ;; PLATFORM DEPENDENT SOFT I2C FUNCTIONS - LOW LEVEL DRIVER
+                      (          rtc.asm):00057          ;;======================================================================
+                      (          rtc.asm):00058         
+                      (          rtc.asm):00059          ;; I2C status flags
+     0000             (          rtc.asm):00060         I2C_Success EQU 0
+     0001             (          rtc.asm):00061         I2C_NoSlaveAck EQU 1
+     0002             (          rtc.asm):00062         I2C_BusError EQU 2
+                      (          rtc.asm):00063         
+                      (          rtc.asm):00064          ;; I2C Acknowledge Constants
+     0001             (          rtc.asm):00065         I2C_ACKNOWLEDGE EQU 1
+     0000             (          rtc.asm):00066         I2C_NOTACKNOWLEDGE EQU 0
+                      (          rtc.asm):00067         
+                      (          rtc.asm):00068          ;;
+                      (          rtc.asm):00069          ;; I2C_Initialize - cycle SCK until SDA goes high, up to 255 times
+                      (          rtc.asm):00070          ;; This is per the DS3232M datasheet to re-sync communication.
+                      (          rtc.asm):00071          ;; inputs:  none
+                      (          rtc.asm):00072          ;; return:  V=0 if SDA went high during init
+                      (          rtc.asm):00073          ;;          V=1 if SDA remained low
+                      (          rtc.asm):00074          ;;
+2050                  (          rtc.asm):00075         I2C_Initialize:
+2050 8680             (          rtc.asm):00076                  LDA    #$80                     ; init cycle counter to $80
+2052 BD20BD           (          rtc.asm):00077         IN0?     JSR    I2C_SendNAK              ; do a NAK cycle (toggles SCL with SDA high), SDA status in Z
+2055 2629             (          rtc.asm):00078                  BNE    I2C_SendStop             ; SDA is high, so all is well, return via SendStop
+2057 4C               (          rtc.asm):00079                  INCA                            ; increment cycle counter
+2058 28F8             (          rtc.asm):00080                  BVC    IN0?                     ; not wrapped around to $80 yet, keep trying
+205A 39               (          rtc.asm):00081                  RTS
+                      (          rtc.asm):00082         
+                      (          rtc.asm):00083          ;;
+                      (          rtc.asm):00084          ;; I2C_SendByte - sends one byte of data to an I2C slave device and check for Slave ACK
+                      (          rtc.asm):00085          ;; inputs:  A = byte to send to slave
+                      (          rtc.asm):00086          ;; return:  A = byte sent to slave
+                      (          rtc.asm):00087          ;;          Z = 1 if slave ACK'd byte
+                      (          rtc.asm):00088          ;;          Z = 0 if no slave ACK
+                      (          rtc.asm):00089          ;;
+205B                  (          rtc.asm):00090         I2C_SendByte:
+205B 3416             (          rtc.asm):00091                  PSHS   A,B,X                    ; preserve ACC A, B and X
+205D 8E0008           (          rtc.asm):00092                  LDX    #8                       ; init X as loop counter
+2060 F6E020           (          rtc.asm):00093         SB0?     LDB    I2CPORT                  ; move I2C.DSDA [6] to B[7]
+2063 58               (          rtc.asm):00094                  ASLB
+2064 103689           (          rtc.asm):00095                  EORR   A,B                      ; EOR A[7] with I2C.DSDA
+2067 2A04             (          rtc.asm):00096                  BPL    SB1?                     ;   B[7]=0 means drive is correct
+2069 7540E020         (          rtc.asm):00097                  EIM    #(I2C.DSDA),I2CPORT      ; change drive output polarity
+206D                  (          rtc.asm):00098         SB1?     I2C_ReleaseSCL                  ; release SCL
+206D 7180E020         (   I2C_ReleaseSCL):00001                  OIM      #I2C.DSCL,I2CPORT                 ;Release SCL line
+                      (          rtc.asm):00099                  I2C_BitDelay                    ; half-bit delay
+2071 12               (     I2C_BitDelay):00001                  NOP
+                      (          rtc.asm):00100                  I2C_SinkSCL                     ; drive SCL low
+2072 727FE020         (      I2C_SinkSCL):00001                  AIM      #~I2C.DSCL,I2CPORT                ;Drive SCL line low
+                      (          rtc.asm):00101                  I2C_BitDelay                    ; half-bit delay
+2076 12               (     I2C_BitDelay):00001                  NOP
+2077 48               (          rtc.asm):00102                  ASLA                            ; shift ACC A to expose next bit to send
+2078 301F             (          rtc.asm):00103                  LEAX   -1,X                     ; decrement loop counter
+207A 26E4             (          rtc.asm):00104                  BNE    SB0?                     ;   repeat until all bits are sent
+207C 3516             (          rtc.asm):00105                  PULS   A,B,X                    ; restore ACC A,B and X
+207E 203D             (          rtc.asm):00106                  BRA    I2C_SendNAK              ; exit via SendNAK (to check for slave ACK)
+                      (          rtc.asm):00107         
+                      (          rtc.asm):00108          ;;
+                      (          rtc.asm):00109          ;; I2C_SendStop - send a STOP condition
+                      (          rtc.asm):00110          ;; return: all registers preserved
+                      (          rtc.asm):00111          ;;
+2080                  (          rtc.asm):00112         I2C_SendStop:
+                      (          rtc.asm):00113                  I2C_SinkSDA                     ; SCL high followed by SDA high is STOP condition
+2080 72BFE020         (      I2C_SinkSDA):00001                  AIM      #~I2C.DSDA,I2CPORT                ;Drive SDA line low
+                      (          rtc.asm):00114                  I2C_ReleaseSCL
+2084 7180E020         (   I2C_ReleaseSCL):00001                  OIM      #I2C.DSCL,I2CPORT                 ;Release SCL line
+                      (          rtc.asm):00115                  I2C_BitDelay
+2088 12               (     I2C_BitDelay):00001                  NOP
+                      (          rtc.asm):00116                  I2C_ReleaseSDA
+2089 7140E020         (   I2C_ReleaseSDA):00001                  OIM      #I2C.DSDA,I2CPORT                 ;Release SDA line
+                      (          rtc.asm):00117                  I2C_BitDelay
+208D 12               (     I2C_BitDelay):00001                  NOP
+208E 39               (          rtc.asm):00118                  RTS
+                      (          rtc.asm):00119         
+                      (          rtc.asm):00120          ;;
+                      (          rtc.asm):00121          ;; I2C_RcvByte - receives one byte of data from an I2C slave device, with
+                      (          rtc.asm):00122          ;;                the ability to control NAK or ACK of the received data
+                      (          rtc.asm):00123          ;; inputs: A = 0 to NAK upon receipt
+                      (          rtc.asm):00124          ;;         A != 0 to ACK upon receipt
+                      (          rtc.asm):00125          ;; return: A = byte received from slave
+                      (          rtc.asm):00126          ;;
+208F                  (          rtc.asm):00127         I2C_RcvByte:
+208F 3414             (          rtc.asm):00128                  PSHS   B,X                      ; preserve B and X
+2091 1F89             (          rtc.asm):00129                  TFR    A,B                      ; copy ACC A to B (to save ACK/NAK status)
+2093 8E0008           (          rtc.asm):00130                  LDX    #8                       ; init X as loop counter
+2096 4F               (          rtc.asm):00131                  CLRA                            ; clear A before shifting in bits
+                      (          rtc.asm):00132                  I2C_ReleaseSDA                  ; allow SDA to be asserted by slave
+2097 7140E020         (   I2C_ReleaseSDA):00001                  OIM      #I2C.DSDA,I2CPORT                 ;Release SDA line
+209B 48               (          rtc.asm):00133         RB0?     LSLA                            ; shift A left each loop iteration
+                      (          rtc.asm):00134                  I2C_ReleaseSCL                  ; release SCL, wait for stretch
+209C 7180E020         (   I2C_ReleaseSCL):00001                  OIM      #I2C.DSCL,I2CPORT                 ;Release SCL line
+                      (          rtc.asm):00135                  I2C_BitDelay                    ; half-bit delay
+20A0 12               (     I2C_BitDelay):00001                  NOP
+                      (          rtc.asm):00136                  I2C_StatSDA                     ; check SDA pin (Z = 1 if low)
+20A1 7B04E020         (      I2C_StatSDA):00001                  TIM      #I2C.MSDA,I2CPORT                 ;(Z = 1 if SDA is low)
+20A5 2702             (          rtc.asm):00137                  BEQ    RB1?                     ; if SDA is low, leave ACC A alone
+20A7 8A01             (          rtc.asm):00138                  ORA    #$01                     ; otherwise, set lsb
+20A9                  (          rtc.asm):00139         RB1?     I2C_SinkSCL                     ; clear SCL to end bit
+20A9 727FE020         (      I2C_SinkSCL):00001                  AIM      #~I2C.DSCL,I2CPORT                ;Drive SCL line low
+                      (          rtc.asm):00140                  I2C_BitDelay                    ; half-bit delay
+20AD 12               (     I2C_BitDelay):00001                  NOP
+20AE 301F             (          rtc.asm):00141                  LEAX   -1,X                     ; decrement loop counter
+20B0 26E9             (          rtc.asm):00142                  BNE    RB0?                     ; loop back until all bits are received
+20B2 5D               (          rtc.asm):00143                  TSTB                            ; examine ACK/NAK status (set/clear Z)
+20B3 3514             (          rtc.asm):00144                  PULS   B,X                      ; restore B and X (flags unaffected)
+20B5 2706             (          rtc.asm):00145                  BEQ    I2C_SendNAK              ; if input parameter was zero, send a NAK
+                      (          rtc.asm):00146                                                  ; ...otherwise, fall into I2C_SendACK
+                      (          rtc.asm):00147         
+                      (          rtc.asm):00148          ;;
+                      (          rtc.asm):00149          ;; I2C_SendACK - send ACK to I2C slave device
+                      (          rtc.asm):00150          ;; inputs: none
+                      (          rtc.asm):00151          ;; return: ACK/NAK status in Z (Z = 1 if either slave or master ACK)
+                      (          rtc.asm):00152          ;;
+20B7                  (          rtc.asm):00153         I2C_SendACK:
+                      (          rtc.asm):00154                  I2C_SinkSDA                     ; assert SDA for MASTER ACK
+20B7 72BFE020         (      I2C_SinkSDA):00001                  AIM      #~I2C.DSDA,I2CPORT                ;Drive SDA line low
+20BB 2004             (          rtc.asm):00155                  BRA    I2C_SN0                  ; the rest is just like a NAK
+                      (          rtc.asm):00156         
+                      (          rtc.asm):00157          ;;
+                      (          rtc.asm):00158          ;; I2C_SendNAK & SendACK - send a NAK or ACK to I2C slave device
+                      (          rtc.asm):00159          ;; inputs: none
+                      (          rtc.asm):00160          ;; return: ACK/NAK status in Z (Z = 1 if either slave or master ACK)
+                      (          rtc.asm):00161          ;;
+20BD                  (          rtc.asm):00162         I2C_SendNAK:
+                      (          rtc.asm):00163                  I2C_ReleaseSDA                  ; release SDA line for MASTER NAK / or query slave ACK
+20BD 7140E020         (   I2C_ReleaseSDA):00001                  OIM      #I2C.DSDA,I2CPORT                 ;Release SDA line
+20C1                  (          rtc.asm):00164         I2C_SN0  I2C_ReleaseSCL                  ; send clock for NAK
+20C1 7180E020         (   I2C_ReleaseSCL):00001                  OIM      #I2C.DSCL,I2CPORT                 ;Release SCL line
+                      (          rtc.asm):00165                  I2C_BitDelay                    ; half-bit delay
+20C5 12               (     I2C_BitDelay):00001                  NOP
+                      (          rtc.asm):00166                  I2C_StatSDA                     ; check of ACK bit
+20C6 7B04E020         (      I2C_StatSDA):00001                  TIM      #I2C.MSDA,I2CPORT                 ;(Z = 1 if SDA is low)
+20CA 3401             (          rtc.asm):00167                  PSHS   CC                       ; save CC bits
+                      (          rtc.asm):00168                  I2C_SinkSCL                     ; finish the NAK bit
+20CC 727FE020         (      I2C_SinkSCL):00001                  AIM      #~I2C.DSCL,I2CPORT                ;Drive SCL line low
+                      (          rtc.asm):00169                  I2C_BitDelay                    ; half-bit delay
+20D0 12               (     I2C_BitDelay):00001                  NOP
+20D1 3581             (          rtc.asm):00170                  PULS   CC,PC                    ; restore CC bits and return
+                      (          rtc.asm):00171         
+                      (          rtc.asm):00172          ;;
+                      (          rtc.asm):00173          ;; I2C_GoMaster - sends an I2C start and slave address and check for acknowledge
+                      (          rtc.asm):00174          ;; inputs:  A = slave address A[7:1] + R/W A[0]
+                      (          rtc.asm):00175          ;; return:  A = I2C.Success(0) or I2C_NoSlaveAck(1) or I2C.BusError(2)
+                      (          rtc.asm):00176          ;;          Z = 0 when I2C.Success, otherwise Z = 0
+                      (          rtc.asm):00177          ;;
+20D3                  (          rtc.asm):00178         I2C_GoMaster:
+                      (          rtc.asm):00179                  I2C_ReleaseBoth                 ; release SDA and SCL
+20D3 71C0E020         (  I2C_ReleaseBoth):00001                  OIM      #(I2C.DSCL+I2C.DSDA),I2CPORT      ;Release both SDA and SCL lines
+                      (          rtc.asm):00180                  I2C_BitDelay                    ; allow SDA to float high
+20D7 12               (     I2C_BitDelay):00001                  NOP
+                      (          rtc.asm):00181                  I2C_StatSDA                     ; check SDA state
+20D8 7B04E020         (      I2C_StatSDA):00001                  TIM      #I2C.MSDA,I2CPORT                 ;(Z = 1 if SDA is low)
+20DC 2712             (          rtc.asm):00182                  BEQ    GMBERR?                  ; if SDA is still low, return with fBusError
+                      (          rtc.asm):00183                  I2C_SinkSDA                     ; begin I2C START by bringing SDA low first
+20DE 72BFE020         (      I2C_SinkSDA):00001                  AIM      #~I2C.DSDA,I2CPORT                ;Drive SDA line low
+                      (          rtc.asm):00184                  I2C_BitDelay                    ; half-bit delay
+20E2 12               (     I2C_BitDelay):00001                  NOP
+                      (          rtc.asm):00185                  I2C_SinkSCL                     ; complete I2C START by bringing SCL low
+20E3 727FE020         (      I2C_SinkSCL):00001                  AIM      #~I2C.DSCL,I2CPORT                ;Drive SCL line low
+                      (          rtc.asm):00186                  I2C_BitDelay                    ; half-bit delay
+20E7 12               (     I2C_BitDelay):00001                  NOP
+20E8 BD205B           (          rtc.asm):00187                  JSR    I2C_SendByte             ; now send the byte in A, Z = 1 means sent OK
+20EB 2606             (          rtc.asm):00188                  BNE    GMSNAK?                  ; if no slave ACK, then return with fNoSlaveAck
+20ED 8600             (          rtc.asm):00189                  LDA    #I2C_Success             ; send a fSuccess code (0)
+20EF 39               (          rtc.asm):00190                  RTS
+20F0 8602             (          rtc.asm):00191         GMBERR?  LDA    #I2C_BusError            ; return a fBusError code (2)
+20F2 39               (          rtc.asm):00192                  RTS
+20F3 8601             (          rtc.asm):00193         GMSNAK?  LDA    #I2C_NoSlaveAck          ; send a fNoSlaveAck code (1)
+20F5 39               (          rtc.asm):00194                  RTS
+                      (          rtc.asm):00195         
+                      (          rtc.asm):00196          ;;
+                      (          rtc.asm):00197          ;; RTC_ReadStatus - read the STATUS register from DS3232M RTC
+                      (          rtc.asm):00198          ;; RTC_ReadByte - read a single byte from the DS3232M RTC
+                      (          rtc.asm):00199          ;; inputs: B = register address
+                      (          rtc.asm):00200          ;;
+                      (          rtc.asm):00201          ;; I2C_ReadByte - read a single byte from a specific address
+                      (          rtc.asm):00202          ;; inputs: E = slave address
+                      (          rtc.asm):00203          ;;         B = register address
+                      (          rtc.asm):00204          ;;
+                      (          rtc.asm):00205          ;; return: A = I2C.Success(0) or I2C_NoSlaveAck(1) or I2C.BusError(2)
+                      (          rtc.asm):00206          ;;         B = value of read data byte
+                      (          rtc.asm):00207          ;;         Z = 1 when I2C.Success, otherwise Z = 0
+                      (          rtc.asm):00208          ;;
+                      (          rtc.asm):00209          ;; READ REG  == [START], ADDR, [ack], <REG ADDR>, [ack], [START], ADDR, [ack], <read data>, [ACK], [STOP]
+                      (          rtc.asm):00210          ;;
+20F6                  (          rtc.asm):00211         RTC_ReadStatus:
+20F6 C60F             (          rtc.asm):00212                  LDB    #RTC.STATUS              ; RTC status addr into B
+20F8                  (          rtc.asm):00213         RTC_ReadByte:
+20F8 1186D0           (          rtc.asm):00214                  LDE    #RTC.ADDRESS             ; RTC address into E
+20FB                  (          rtc.asm):00215         I2C_ReadByte:
+20FB 1FE8             (          rtc.asm):00216                  TFR    E,A                      ; slave address into A
+20FD 84FE             (          rtc.asm):00217                  ANDA   #$FE                     ; send START and slave address (WRITE)
+20FF BD20D3           (          rtc.asm):00218                  JSR    I2C_GoMaster             ; try to send slave address
+2102 2668             (          rtc.asm):00219                  BNE    I_ERR                    ; error, return with status!
+2104 1F98             (          rtc.asm):00220                  TFR    B,A                      ; register address into A
+2106 BD205B           (          rtc.asm):00221                  JSR    I2C_SendByte             ; try to send register address
+2109 2661             (          rtc.asm):00222                  BNE    I_ERR                    ; error, return with status!
+210B 1FE8             (          rtc.asm):00223                  TFR    E,A                      ; slave address back into A
+210D 8A01             (          rtc.asm):00224                  ORA    #$01                     ; send START and slave address (READ)
+210F BD20D3           (          rtc.asm):00225                  JSR    I2C_GoMaster             ; try to send slave address
+2112 2658             (          rtc.asm):00226                  BNE    I_ERR                    ; error, return with status!
+2114 8600             (          rtc.asm):00227                  LDA    #I2C_NOTACKNOWLEDGE      ; only one byte, so NAK it
+2116 BD208F           (          rtc.asm):00228                  JSR    I2C_RcvByte              ; read the data byte
+2119 1F89             (          rtc.asm):00229                  TFR    A,B                      ; copy byte value to B
+211B 2047             (          rtc.asm):00230                  BRA    I_OK
+                      (          rtc.asm):00231         
+                      (          rtc.asm):00232          ;;
+                      (          rtc.asm):00233          ;; RTC_ClearStatus - clear STATUS:OSF,BSY,A1F,A2F bits in the DS3232M RTC
+                      (          rtc.asm):00234          ;;
+                      (          rtc.asm):00235          ;; RTC_WriteByte - write a single byte to the DS3232M RTC
+                      (          rtc.asm):00236          ;; inputs: B = register address
+                      (          rtc.asm):00237          ;;
+                      (          rtc.asm):00238          ;; I2C_WriteByte - write one byte of data to a specific address
+                      (          rtc.asm):00239          ;; inputs: E = slave address
+                      (          rtc.asm):00240          ;;         B = register address
+                      (          rtc.asm):00241          ;;                A = data to write
+                      (          rtc.asm):00242          ;; return: A = I2C.Success(0) or I2C_NoSlaveAck(1) or I2C.BusError(2)
+                      (          rtc.asm):00243          ;;         Z = 1 when I2C.Success, otherwise Z = 0
+                      (          rtc.asm):00244          ;;
+                      (          rtc.asm):00245          ;; WRITE REG == [START], ADDR, [ack], <REG ADDR>, [ack], <WRITE DATA>, [ack], [STOP]
+                      (          rtc.asm):00246          ;;
+211D                  (          rtc.asm):00247         RTC_ClearStatus:
+211D 4F               (          rtc.asm):00248                  CLRA                            ; clear OSF, 32KHz, BSY, A1F, A2F
+211E C60F             (          rtc.asm):00249                  LDB    #RTC.STATUS              ; RTC status addr into B
+2120                  (          rtc.asm):00250         RTC_WriteByte:
+2120 1186D0           (          rtc.asm):00251                  LDE    #RTC.ADDRESS             ; RTC address into E
+2123                  (          rtc.asm):00252         I2C_WriteByte:
+2123 1E8E             (          rtc.asm):00253                  EXG    A,E                      ; slave address in A, data in E
+2125 84FE             (          rtc.asm):00254                  ANDA   #$FE                     ; send START and slave address (WRITE)
+2127 8DAA             (          rtc.asm):00255                  BSR    I2C_GoMaster             ; try to send slave address
+2129 2641             (          rtc.asm):00256                  BNE    I_ERR                    ; error, return with status!
+212B 1F98             (          rtc.asm):00257                  TFR    B,A                      ; copy register address into A
+212D BD205B           (          rtc.asm):00258                  JSR    I2C_SendByte             ; try to send register address
+2130 263A             (          rtc.asm):00259                  BNE    I_ERR                    ; error, return with status!
+2132 1FE8             (          rtc.asm):00260                  TFR    E,A                      ; copy data byte to be written into A
+2134 BD205B           (          rtc.asm):00261                  JSR    I2C_SendByte             ; try to send data byte
+2137 2633             (          rtc.asm):00262                  BNE    I_ERR                    ; error, return with status!
+2139 2729             (          rtc.asm):00263                  BEQ    I_OK                     ; send stop and return with success
+                      (          rtc.asm):00264         
+                      (          rtc.asm):00265          ;;
+                      (          rtc.asm):00266          ;; RTC_WriteRegs - write registers 0-15 to the DS3232M RTC
+                      (          rtc.asm):00267          ;; inputs: Y = addr of write data buffer
+                      (          rtc.asm):00268          ;;
+                      (          rtc.asm):00269          ;; I2C_WriteBlock - writes one or more bytes of data to a specific address
+                      (          rtc.asm):00270          ;; inputs: E = slave address
+                      (          rtc.asm):00271          ;;         B = register address
+                      (          rtc.asm):00272          ;;         Y = addr of write data buffer
+                      (          rtc.asm):00273          ;;         X = number of bytes to write
+                      (          rtc.asm):00274          ;; return: A = I2C.Success(0) or I2C_NoSlaveAck(1) or I2C.BusError(2)
+                      (          rtc.asm):00275          ;;         Z = 1 when I2C.Success, otherwise Z = 0
+                      (          rtc.asm):00276          ;;         Y is preserved
+                      (          rtc.asm):00277          ;;         X is destroyed
+                      (          rtc.asm):00278          ;;
+                      (          rtc.asm):00279          ;; WRITE MANY == [START], ADDR, [ack], <REG ADDR>, [ack], <WRITE DATA>, [ack], <WRITE DATA>, [ack], ... [STOP]
+                      (          rtc.asm):00280          ;;
+213B                  (          rtc.asm):00281         RTC_WriteRegs:
+213B 5F               (          rtc.asm):00282                  CLRB                            ; start at Reg 0
+213C 8E000F           (          rtc.asm):00283                  LDX    #15                      ; end at Reg 15
+213F                  (          rtc.asm):00284         RTC_WriteBlock:
+213F 1186D0           (          rtc.asm):00285                  LDE    #RTC.ADDRESS             ; RTC address into E
+2142                  (          rtc.asm):00286         I2C_WriteBlock:
+2142 3420             (          rtc.asm):00287                  PSHS   Y                        ; preserve write buffer address
+2144 1FE8             (          rtc.asm):00288                  TFR    E,A                      ; slave address in A
+2146 84FE             (          rtc.asm):00289                  ANDA   #$FE                     ; send START and slave address (WRITE)
+2148 8D89             (          rtc.asm):00290                  BSR    I2C_GoMaster             ; try to send slave address
+214A 261E             (          rtc.asm):00291                  BNE    I_ERRX                   ; error, return with status!
+214C 1F98             (          rtc.asm):00292                  TFR    B,A                      ; copy register address into A
+214E BD205B           (          rtc.asm):00293                  JSR    I2C_SendByte             ; try to send register address
+2151 2617             (          rtc.asm):00294                  BNE    I_ERRX                   ; error, return with status!
+2153 3000             (          rtc.asm):00295         WM0?     LEAX   0,X                      ; test the byte counter
+2155 270B             (          rtc.asm):00296                  BEQ    I_OKX                    ; all done, send a STOP
+2157 A6A0             (          rtc.asm):00297         WM1?     LDA    ,Y+                      ; copy byte from write buffer to A
+2159 BD205B           (          rtc.asm):00298                  JSR    I2C_SendByte             ; try to send data byte
+215C 260C             (          rtc.asm):00299                  BNE    I_ERRX                   ; error, return with status!
+215E 301F             (          rtc.asm):00300                  LEAX   -1,X                     ; decrement the byte counter
+2160 26F5             (          rtc.asm):00301                  BNE    WM1?                     ; repeat until finished
+2162 3520             (          rtc.asm):00302         I_OKX    PULS   Y                        ; restore buffer start address
+2164 BD2080           (          rtc.asm):00303         I_OK     JSR    I2C_SendStop             ; send a STOP condition
+2167 8600             (          rtc.asm):00304                  LDA    #I2C_Success             ; send a fSuccess code (0) and set Z = 1
+2169 39               (          rtc.asm):00305                  RTS
+216A 3520             (          rtc.asm):00306         I_ERRX   PULS   Y                        ; restore buffer start address
+216C BD2080           (          rtc.asm):00307         I_ERR    JSR    I2C_SendStop             ; send a STOP condition
+216F 8601             (          rtc.asm):00308                  LDA    #I2C_NoSlaveAck          ; send a fNoSlaveAck code (1) and set Z = 0
+2171 39               (          rtc.asm):00309                  RTS
+                      (          rtc.asm):00310         
+                      (          rtc.asm):00311          ;;
+                      (          rtc.asm):00312          ;; RTC_ReadRegs - read registers 0-15 from the DS3232M RTC
+                      (          rtc.asm):00313          ;; inputs: Y = addr of read data buffer
+                      (          rtc.asm):00314          ;;
+                      (          rtc.asm):00315          ;; I2C_ReadBlock - read one or more bytes of data from a specific (8 bit) address
+                      (          rtc.asm):00316          ;; inputs: E = slave address
+                      (          rtc.asm):00317          ;;         B = register address
+                      (          rtc.asm):00318          ;;         Y = addr of read data buffer
+                      (          rtc.asm):00319          ;;         X = number of bytes to read
+                      (          rtc.asm):00320          ;; return: A = I2C.Success(0) or I2C_NoSlaveAck(1) or I2C.BusError(2)
+                      (          rtc.asm):00321          ;;         B = value of last read data byte
+                      (          rtc.asm):00322          ;;         Z = 1 when I2C.Success, otherwise Z = 0
+                      (          rtc.asm):00323          ;;         Y is preserved
+                      (          rtc.asm):00324          ;;         X is destroyed
+                      (          rtc.asm):00325          ;;
+                      (          rtc.asm):00326          ;; READ MANY == [START], ADDR, [ack], <REG ADDR>, [ack], [START], ADDR, [ack], <read data>, [ACK], <read data>, [ACK], ... [STOP]
+                      (          rtc.asm):00327          ;;
+2172                  (          rtc.asm):00328         RTC_ReadRegs:
+2172 5F               (          rtc.asm):00329                  CLRB                            ; start at Reg 0
+2173 8E000F           (          rtc.asm):00330                  LDX    #15                      ; end at Reg 15
+2176                  (          rtc.asm):00331         RTC_ReadBlock:
+2176 1186D0           (          rtc.asm):00332                  LDE    #RTC.ADDRESS             ; RTC address into E
+2179                  (          rtc.asm):00333         I2C_ReadBlock:
+2179 3420             (          rtc.asm):00334                  PSHS   Y                        ; preserve buffer start address
+217B 1FE8             (          rtc.asm):00335                  TFR    E,A                      ; slave address in A
+217D 84FE             (          rtc.asm):00336                  ANDA   #$FE                     ; send START and slave address (WRITE)
+217F BD20D3           (          rtc.asm):00337                  JSR    I2C_GoMaster             ; try to send slave address
+2182 26E6             (          rtc.asm):00338                  BNE    I_ERRX                   ; error, return with status!
+2184 1F98             (          rtc.asm):00339                  TFR    B,A                      ; register address into A
+2186 BD205B           (          rtc.asm):00340                  JSR    I2C_SendByte             ; try to send register address
+2189 26DF             (          rtc.asm):00341                  BNE    I_ERRX                   ; error, return with status!
+218B 1FE8             (          rtc.asm):00342                  TFR    E,A                      ; slave address back into A
+218D 8A01             (          rtc.asm):00343                  ORA    #$01                     ; send START and slave address (READ)
+218F BD20D3           (          rtc.asm):00344                  JSR    I2C_GoMaster             ; try to send slave address
+2192 26D6             (          rtc.asm):00345                  BNE    I_ERRX                   ; error, return with status!
+2194 3000             (          rtc.asm):00346         RM0?     LEAX   0,X                      ; test the byte counter
+2196 27CA             (          rtc.asm):00347                  BEQ    I_OKX                    ; all done, send a STOP
+2198 8601             (          rtc.asm):00348         RM1?     LDA    #I2C_ACKNOWLEDGE         ; assume ACK (1)
+219A 301F             (          rtc.asm):00349                  LEAX   -1,X                     ; decrement the byte counter
+219C 2601             (          rtc.asm):00350                  BNE    RM2?                     ; not the last byte to read
+219E 4F               (          rtc.asm):00351                  CLRA                            ; yes, last byte, respond with NAK (0)
+219F BD208F           (          rtc.asm):00352         RM2?     JSR    I2C_RcvByte              ; read the data byte
+21A2 A7A0             (          rtc.asm):00353                  STA    ,Y+                      ; store in buffer
+21A4 1F89             (          rtc.asm):00354                  TFR    A,B                      ; copy read byte to B
+21A6 20EC             (          rtc.asm):00355                  BRA    RM0?                     ; repeat until finished
+                      (          rtc.asm):00356         
+                      (          rtc.asm):00357          ;;======================================================================
+                      (          rtc.asm):00358          ;; PLATFORM DEPENDENT DS3232M I2C REALTIME CLOCK FUNCTIONS
+                      (          rtc.asm):00359          ;;======================================================================
+                      (          rtc.asm):00360          ;;
+                      (          rtc.asm):00361          ;; RTC_FmtDate - format the date from DS3232 RTC in MM/DD/YYYY format
+                      (          rtc.asm):00362          ;; inputs:  Y = pointer to 16 bytes of scratch RAM
+                      (          rtc.asm):00363          ;; output:  A = RTC status register value
+                      (          rtc.asm):00364          ;;          V = 1 if I2C bus error or RTC communication error
+                      (          rtc.asm):00365          ;;          V = 0 if successful read
+                      (          rtc.asm):00366          ;;          null terminated ASCII string structure
+                      (          rtc.asm):00367          ;;                                1 1
+                      (          rtc.asm):00368          ;;        X + 0 1 2 3 4 5 6 7 8 9 0 1
+                      (          rtc.asm):00369          ;;            M M / D D / C C Y Y * 0
+                      (          rtc.asm):00370          ;;          * at position 11 is only if OSF detected, otherwise NULL
+                      (          rtc.asm):00371          ;;
+21A8                  (          rtc.asm):00372         RTC_FmtDate:
+21A8 BD2050           (          rtc.asm):00373                  JSR    I2C_Initialize           ; try to initialize the I2C
+21AB 2936             (          rtc.asm):00374                  BVS    R?NORTC                  ; SDA stuck low, abort
+21AD BD2172           (          rtc.asm):00375                  JSR    RTC_ReadRegs             ; read RTC registers 0-15
+21B0 2631             (          rtc.asm):00376                  BNE    R?NORTC                  ; error return from read, abort
+21B2 A626             (          rtc.asm):00377                  LDA    RTC.YEAR,Y               ; get the year (6)
+21B4 8D30             (          rtc.asm):00378                  BSR    FMTBCD                   ; convert year to ASCII
+21B6 ED28             (          rtc.asm):00379                  STD    8,Y                      ; store in buffer (8,9)
+21B8 8620             (          rtc.asm):00380                  LDA    #$20                     ; Assume 21st century
+21BA E625             (          rtc.asm):00381                  LDB    RTC.MONTH,Y              ; get the month/century (5)
+21BC 58               (          rtc.asm):00382                  ASLB                            ; shift CENTURY bit into C
+21BD 8900             (          rtc.asm):00383                  ADCA   #0                       ; add CENTURY bit to $20 (= $20 or $21)
+21BF 8D25             (          rtc.asm):00384         R?DCEN   BSR    FMTBCD                   ; convert century to ASCII
+21C1 ED26             (          rtc.asm):00385                  STD    6,Y                      ; store in buffer (6,7)
+21C3 A625             (          rtc.asm):00386                  LDA    RTC.MONTH,Y              ; get the month/century (5)
+21C5 C41F             (          rtc.asm):00387                  ANDB   #$1F                     ; strip off the century info
+21C7 8D1D             (          rtc.asm):00388                  BSR    FMTBCD                   ; convert BCD to ASCII
+21C9 EDA4             (          rtc.asm):00389                  STD    ,Y                       ; store in buffer (0,1)
+21CB A624             (          rtc.asm):00390                  LDA    RTC.DAY,Y                ; get the day of month (4)
+21CD 8D17             (          rtc.asm):00391                  BSR    FMTBCD                   ; convert BCD to ASCII
+21CF ED23             (          rtc.asm):00392                  STD    3,Y                      ; store in buffer (3,4)
+21D1 862F             (          rtc.asm):00393                  LDA    #'/'                     ; separator character
+21D3 A722             (          rtc.asm):00394                  STA    2,Y                      ; month/date
+21D5 A725             (          rtc.asm):00395                  STA    5,Y                      ; date/year
+21D7 104F             (          rtc.asm):00396                  CLRD
+21D9 ED2A             (          rtc.asm):00397                  STD    10,Y                     ; null terminate the string (even with *) (10,11)
+21DB A62F             (          rtc.asm):00398                  LDA    RTC.STATUS,Y             ; get status register
+21DD 2A03             (          rtc.asm):00399                  BPL    R?NOOSF                  ; OSF in b7, if clear no OSF events occurred
+21DF 612A2A           (          rtc.asm):00400                  OIM    #'*',10,Y                ; put OSF event indicator after date
+21E2 39               (          rtc.asm):00401         R?NOOSF  RTS                             ; return with overflow clear
+21E3 1A02             (          rtc.asm):00402         R?NORTC  ORCC   #CC_V                    ; set the overflow flag for RTC read error
+21E5 39               (          rtc.asm):00403                  RTS
+                      (          rtc.asm):00404         
+                      (          rtc.asm):00405          ;;
+                      (          rtc.asm):00406          ;; FMTBCD - convert a BCD value in A to ASCII characters in D
+                      (          rtc.asm):00407          ;; inputs: A = BCD input value
+                      (          rtc.asm):00408          ;; output: D = ASCII character pairs (MSD in A, LSD in B)
+                      (          rtc.asm):00409          ;;
+21E6                  (          rtc.asm):00410         FMTBCD:
+21E6 1F89             (          rtc.asm):00411                  TFR    A,B                      ; copy A to B
+21E8 44               (          rtc.asm):00412                  LSRA                            ; move MSD down to lower nybble
+21E9 44               (          rtc.asm):00413                  LSRA
+21EA 44               (          rtc.asm):00414                  LSRA
+21EB 44               (          rtc.asm):00415                  LSRA
+21EC C40F             (          rtc.asm):00416                  ANDB   #$0F                     ; clear upper bits in LSD
+21EE 108A3030         (          rtc.asm):00417                  ORD    #$3030                   ; convert to ASCII 00-99
+21F2 39               (          rtc.asm):00418                  RTS
+                      (          rtc.asm):00419         
+                      (          rtc.asm):00420          ;;
+                      (          rtc.asm):00421          ;; RTC_FmtTime - format the time from DS3232 RTC in HH:MM:SS format
+                      (          rtc.asm):00422          ;; inputs:  Y = pointer to 16 bytes of scratch RAM
+                      (          rtc.asm):00423          ;; output:  A = RTC status register value
+                      (          rtc.asm):00424          ;;          V = 1 if I2C bus error or RTC communication error
+                      (          rtc.asm):00425          ;;          V = 0 if successful read
+                      (          rtc.asm):00426          ;;          null terminated ASCII string structure
+                      (          rtc.asm):00427          ;;        X + 0 1 2 3 4 5 6 7 8 9
+                      (          rtc.asm):00428          ;;            H H : M M : S S * 0
+                      (          rtc.asm):00429          ;;          * at position 11 is only if OSF detected, otherwise NULL
+                      (          rtc.asm):00430          ;;
+21F3                  (          rtc.asm):00431         RTC_FmtTime:
+21F3 BD2050           (          rtc.asm):00432                  JSR    I2C_Initialize           ; try to initialize the I2C
+21F6 293A             (          rtc.asm):00433                  BVS    R?NORTC                  ; SDA stuck low, abort
+21F8 BD2172           (          rtc.asm):00434                  JSR    RTC_ReadRegs             ; read RTC registers 0-15
+21FB 2635             (          rtc.asm):00435                  BNE    R?NORTC                  ; error return from read, abort
+21FD A6A4             (          rtc.asm):00436                  LDA    RTC.SECONDS,Y            ; get the seconds (0)
+21FF 8DE5             (          rtc.asm):00437                  BSR    FMTBCD                   ; convert seconds to ASCII
+2201 ED26             (          rtc.asm):00438                  STD    6,Y                      ; store in buffer (6,7)
+2203 A621             (          rtc.asm):00439                  LDA    RTC.MINUTES,Y            ; get the minutes (1)
+2205 8DDF             (          rtc.asm):00440                  BSR    FMTBCD                   ; convert BCD to ASCII
+2207 ED23             (          rtc.asm):00441                  STD    3,Y                      ; store in buffer (3,4)
+2209 A622             (          rtc.asm):00442                  LDA    RTC.HOURS,Y              ; get the hours (2)
+220B 1F89             (          rtc.asm):00443                  TFR    A,B                      ; copy hours to B (for LSD)
+220D 8540             (          rtc.asm):00444                  BITA   #$40                     ; test the 12/24 bit (1 = 12, 0 = 24)
+220F 2709             (          rtc.asm):00445                  BEQ    R?T24                    ;  24HR time already
+2211 8520             (          rtc.asm):00446                  BITA   #$20                     ; is it AM or PM (0 = AM, 1 = PM)
+2213 2705             (          rtc.asm):00447                  BEQ    R?T24                    ;   AM, so leave it alone
+2215 841F             (          rtc.asm):00448                  ANDA   #$1F                     ; start with BCD 12H time
+2217 8B12             (          rtc.asm):00449                  ADDA   #$12                     ; add BCD 12 hours
+2219 19               (          rtc.asm):00450                  DAA                             ; adjust decimal result
+221A 843F             (          rtc.asm):00451         R?T24    ANDA   #$3F                     ; retain only the 24 hour time
+221C 8DC8             (          rtc.asm):00452                  BSR    FMTBCD                   ; convert BCD to ASCII
+221E ED20             (          rtc.asm):00453                  STD    0,Y                      ; store in buffer (0,1)
+2220 863A             (          rtc.asm):00454                  LDA    #':'                     ; separator character
+2222 A722             (          rtc.asm):00455                  STA    2,Y                      ; month/date
+2224 A725             (          rtc.asm):00456                  STA    5,Y                      ; date/year
+2226 104F             (          rtc.asm):00457                  CLRD
+2228 ED28             (          rtc.asm):00458                  STD    8,Y                      ; null terminate the string (even with *) (8,9)
+222A A62F             (          rtc.asm):00459                  LDA    RTC.STATUS,Y             ; get status register
+222C 2A03             (          rtc.asm):00460                  BPL    R?NOOSF                  ; OSF in b7, if clear no OSF events occurred
+222E 612A28           (          rtc.asm):00461                  OIM    #'*',8,Y                 ; put OSF event indicator after time
+2231 39               (          rtc.asm):00462         R?NOOSF  RTS                             ; return with overflow clear
+2232 1A02             (          rtc.asm):00463         R?NORTC  ORCC   #CC_V                    ; set the overflow flag for RTC read error
+2234 39               (          rtc.asm):00464                  RTS
+                      (          rtc.asm):00465         
