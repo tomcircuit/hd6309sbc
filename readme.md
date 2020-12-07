@@ -8,16 +8,14 @@ bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a S
 
 ## HD6309 SBC V1 Features
 
-3 MHz Hitachi HD63C09 microprocessor w/ external clock  
-64KB RAM (2x 32KB SRAM)  
-32KB EPROM (27C256)
-Parallel Interface & Timers (Zilog Z8536 CIO)  
-Dual Serial Channels (Zilog Z85C30 SCC)  
-Realtime Clock (Epson RTC7301)  w/
-SPI-mode micro-SD memory card  
-USB slave (FTDI FT230XS) connected to SCC Ch. A
+Version 1 of the SBC has the following features:
 
-
+ - 3 MHz Hitachi HD63C09 microprocessor w/ external clock
+ - 64KB RAM (2x 32KB SRAM)
+ - 32KB EPROM (27C256) 
+ - Parallel Interface & Timers (Zilog  Z8536 CIO)   Dual Serial Channels (Zilog Z85C30 SCC)   Realtime Clock
+   (Epson RTC7301)  w/ CR2032 backup SPI-mode micro-SD memory card   USB
+   slave (FTDI FT230XS) connected to SCC Ch. A
 
 Hardware wise, the short-term goal is met: it all functions and seems to be working as
 intended. The long-term goal is to make a companion card that mates with the stacking
@@ -50,5 +48,5 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxODI0NTg5LDEyNjEyNjI1NjFdfQ==
+eyJoaXN0b3J5IjpbNzAxODU3MjEsMTI2MTI2MjU2MV19
 -->
