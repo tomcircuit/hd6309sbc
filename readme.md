@@ -29,15 +29,14 @@ Hardware wise, the short-term goal is met: it all functions and works as intende
 
 Future hardware features to consider would be elimination of the CIO chip (seldom used), a better SCC (faster baudrate) and more memory and associated MMU. To do any/all of these, a bigger CPLD is required, as the MAX7128 is nearly fully used. 
 
-> UPDATE: The Epson RTC is nearly unobtainable now, so I've made a small PCB to hold an 
+> UPDATE: The Epson RTC is nearly unobtainable now, so I've made a small PCB to hold an I2C RTC that plugs into the Epson RTC socket. The CPLD has been changed, accordingly, to add a bitbanged I2C port.
 
 It seems to be an axiom that every SBC has a ROM resident monitor. Over the years, I've used a number of different monitors on this SBC. For my own use I've ported the (excellent) Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot be redistributed. What I include in this repository is a ported version of "WOZMON", the Apple 1 monitor. It's enough to examine and modify memory, and load Intel hex and Motorola S-record files.
 
 Assembly language is fun and all, but having a ROM-resident BASIC interpreter is even better. Grant Searle to the rescue,
 who has dissected and commented 6809 MICROSOFT BASIC, which I easily adapted to this SBC.
 
-The firmware stretch goal is some sort of operating system, such as NitrOS-9 operating 
-system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems 
+Future software goals would be to port some sort of operating system, such as NitrOS-9 operating system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems 
 like a nice OS.
 
 More up-to-date information on the SBC can be found on the Hackaday project page:
@@ -56,6 +55,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODM5NjEwMzksMTc5NTk5MTA3NSw2Mz
-MyNDM3NzQsMTI2MTI2MjU2MV19
+eyJoaXN0b3J5IjpbNTQyNzA4MzEsMTc5NTk5MTA3NSw2MzMyND
+M3NzQsMTI2MTI2MjU2MV19
 -->
