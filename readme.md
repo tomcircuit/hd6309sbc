@@ -6,6 +6,24 @@ The HD6309 SBC is a retroputing distraction, born to provide an opportunity to t
 There are many 8bit SBC (singleboard computers) in the wild, each developed according to the designers' vision. Some go for strict hardware implementation using only vintage components, while others take advantage of modern FPGAs and encapsulate nearly everything into a single device. For this particular SBC, I went for a blend of 'old skool' and 'all mod cons'. For example, the primary interface is ASCII serial, but the physical layer is implemented as a FDTI USB
 bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a SPI-mode SD card interface, rather than the purist approach of an actual floppy drive. I use a CPLD for all the glue logic for ease of reconfiguring address mapping and operation. Fortunately, it all can be powered from the USB port (<250mA at last measurement).
 
+HD6309 SBC V1 Features
+3 MHz Hitachi HD63C09 microprocessor w/ external clock  
+64KB RAM (2x 32KB SRAM)  
+32KB EPROM (27C256)  
+Parallel Interface & Timers (Zilog Z8536 CIO)  
+Dual Serial Channels (Zilog Z85C30 SCC)  
+Realtime Clock (Epson RTC7301 Maxim DS3232)  
+micro-SD memory card  
+USB slave (FTDI FT230XS) connected to SCC Ch. A
+
+  
+  
+  
+  
+  
+  
+
+
 For 
 
 
@@ -40,5 +58,5 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTg0NzE4NywxMjYxMjYyNTYxXX0=
+eyJoaXN0b3J5IjpbMTI5MDM0Mzg2MCwxMjYxMjYyNTYxXX0=
 -->
