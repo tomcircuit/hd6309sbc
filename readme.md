@@ -15,6 +15,7 @@ Version 1 of the SBC has the following features:
  - 32KB EPROM (27C256) 
  - Parallel Interface & Timers (Zilog Z8536 CIO)
  - Dual Serial Channels (Zilog Z85C30 SCC)   
+ - USB slave (FTDI FT230XS) connected to SCC Ch. A
  - Realtime Clock (Epson RTC7301)  w/ CR2032 backup 
  - SPI-mode micro-SD memory card (CPLD hardware SPI)
  - RESET pushbutton
@@ -22,9 +23,9 @@ Version 1 of the SBC has the following features:
  - 2 USER LED's (control via CPLD)
  - USB RX/TX Activity LED
  - SD card Activity LED
- - USB slave (FTDI FT230XS) connected to SCC Ch. A
+ - Expansion Connector (bus signals)
 
-Hardware wise, the short-term goal is met: it all functions and works as intended. Several people have built this SBC from the files I provided, and the feedback has been helpul.
+Hardware wise, the short-term goal is met: it all functions and works as intended. Several people have built this SBC from the files I provided, and the feedback has been helpful. 
 
 
 The long-term goal is to make a companion card that mates with the stacking
@@ -57,5 +58,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMzMjQzNzc0LDEyNjEyNjI1NjFdfQ==
+eyJoaXN0b3J5IjpbMTc5NTk5MTA3NSw2MzMyNDM3NzQsMTI2MT
+I2MjU2MV19
 -->
