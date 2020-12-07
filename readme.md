@@ -1,9 +1,9 @@
 
-# Hitachi HD6309 Singleboard Computer 
+# Hitachi HD6309 Singleboard Computer - V1
  
 The HD6309 SBC is a retroputing distraction, born to provide an opportunity to try my hand at assembly language for the 6809 - which many have billed as "the most advanced 8-bit processor" ever. The Hitachi 6309 variant is **even more advanced**, with significant extensions from the base Motorola 6809 ISA. 
 
-There are many 8bit SBC (singleboard computers) in the wild, each developed according to the designers' vision. Some go for strict hardware implementation using only vintage components, while others take advantage of modern FPGAs and encapsulate nearly everything into a single device. For this particular SBC, I went for a blend of 'old skool' and 'all mod cons'. For example, the primary interface is ASCII serial, but the physical layer is implemented as a FDTI USB
+There are many 8bit SBC (singleboard computers) in the wild, each developed according to the designers' vision. Some go for strict hardware implementation using only vintage components, while others take advantage of modern FPGAs and encapsulate nearly everything into a single device. For this particular SBC, I went for a blend of *old skool* and *all mod cons*. For example, the primary interface is ASCII serial, but the physical layer is implemented as a FDTI USB
 bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a SPI-mode SD card interface, rather than the purist approach of an actual floppy drive. I use a CPLD for all the glue logic for ease of reconfiguring address mapping and operation. Fortunately, it all can be powered from the USB port (<250mA at last measurement).
 
 ## HD6309 SBC V1 Features
@@ -36,18 +36,16 @@ It seems to be an axiom that every SBC has a ROM resident monitor. Over the year
 Assembly language is fun and all, but having a ROM-resident BASIC interpreter is even better. Grant Searle to the rescue,
 who has dissected and commented 6809 MICROSOFT BASIC, which I easily adapted to this SBC.
 
-Future software goals would be to port some sort of operating system, such as NitrOS-9 operating system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems 
-like a nice OS.
+Future software goals would be to port some sort of operating system, such as NitrOS-9 operating system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems like a nice OS. I think that more memory would really be required to support this.
 
-More up-to-date information on the SBC can be found on the Hackaday project page:
-https://hackaday.io/project/345-hd6309-singleboard-computer
+The most up-to-date information on the SBC can be found on the Hackaday project page: https://hackaday.io/project/345-hd6309-singleboard-computer
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
 HD6309 Singleboard Computer (SBC)
 Tom LeMense
-1/28/2020
+12/7/2020
 
 tomcircuit@gmail.com
 @TomLeMense
@@ -55,6 +53,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQyNzA4MzEsMTc5NTk5MTA3NSw2MzMyND
-M3NzQsMTI2MTI2MjU2MV19
+eyJoaXN0b3J5IjpbMTMxNTE5NzM1MSwxNzk1OTkxMDc1LDYzMz
+I0Mzc3NCwxMjYxMjYyNTYxXX0=
 -->
