@@ -4,7 +4,7 @@
 The HD6309 SBC is a retroputing distraction, born to provide an opportunity to try my hand at assembly language for the 6809 - which many have billed as "the most advanced 8-bit processor" ever. The Hitachi 6309 variant is **even more advanced**, with significant extensions from the base Motorola 6809 ISA. 
 
 There are many 8bit SBC (singleboard computers) in the wild, each developed according to the designers' vision. Some go for strict hardware implementation using only vintage components, while others take advantage of modern FPGAs and encapsulate nearly everything into a single device. For this particular SBC, I went for a blend of *old skool* and *all mod cons*. For example, the primary interface is ASCII serial, but the physical layer is implemented as a FDTI USB
-bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a SPI-mode SD card interface, rather than the purist approach of an actual floppy drive. I use a CPLD for all the glue logic for ease of reconfiguring address mapping and operation. Fortunately, it all can be powered from the USB port (<250mA at last measurement).
+bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a SPI-mode SD card interface, rather than the purist approach of an actual floppy drive. I use a CPLD for all the glue logic for ease of reconfiguring address mapping and supporting built-in control registers. Fortunately, it all can be powered from the USB port (<250mA at last measurement).
 
 ## HD6309 SBC V1 Features
 
@@ -53,6 +53,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNTE5NzM1MSwxNzk1OTkxMDc1LDYzMz
+eyJoaXN0b3J5IjpbMTU2MzU0MTQyMiwxNzk1OTkxMDc1LDYzMz
 I0Mzc3NCwxMjYxMjYyNTYxXX0=
 -->
