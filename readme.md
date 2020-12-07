@@ -6,9 +6,9 @@ The HD6309 SBC is a retroputing distraction, born to provide an opportunity to t
 There are many 8bit SBC (singleboard computers) in the wild, each developed according to the designers' vision. Some go for strict hardware implementation using only vintage components, while others take advantage of modern FPGAs and encapsulate nearly everything into a single device. For this particular SBC, I went for a blend of *old skool* and *all mod cons*. For example, the primary interface is ASCII serial, but the physical layer is implemented as a FDTI USB
 bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a SPI-mode SD card interface, rather than the purist approach of an actual floppy drive. I use a CPLD for all the glue logic for ease of reconfiguring address mapping and supporting built-in control registers. Fortunately, it all can be powered from the USB port (<250mA at last measurement).
 
-## HD6309 SBC V1 Features
+## HD6309 SBC V1 Hardware
 
-Version 1 of the SBC has the following features:
+Version 1 of the SBC hardware has the following features:
 
  - 3 MHz Hitachi HD63C09 microprocessor 
  - 64KB RAM (2x 32KB SRAM)
@@ -31,12 +31,18 @@ Future hardware features to consider would be elimination of the CIO chip (seldo
 
 > UPDATE: The Epson RTC is nearly unobtainable now, so I've made a small PCB to hold an I2C RTC that plugs into the Epson RTC socket. The CPLD has been changed, accordingly, to add a bitbanged I2C port.
 
+## HD6309 SBCV1  Firmware
+
 It seems to be an axiom that every SBC has a ROM resident monitor. Over the years, I've used a number of different monitors on this SBC. For my own use I've ported the (excellent) Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot be redistributed. What I include in this repository is a ported version of "WOZMON", the Apple 1 monitor. It's enough to examine and modify memory, and load Intel hex and Motorola S-record files.
 
 Assembly language is fun and all, but having a ROM-resident BASIC interpreter is even better. Grant Searle to the rescue,
 who has dissected and commented 6809 MICROSOFT BASIC, which I easily adapted to this SBC.
 
+The SBC has a 
+
 Future software goals would be to port some sort of operating system, such as NitrOS-9 operating system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems like a nice OS. I think that more memory would really be required to support this.
+
+
 
 The most up-to-date information on the SBC can be found on the Hackaday project page: https://hackaday.io/project/345-hd6309-singleboard-computer
 
@@ -53,6 +59,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MzU0MTQyMiwxNzk1OTkxMDc1LDYzMz
+eyJoaXN0b3J5IjpbMjEyNjYyNzEyNywxNzk1OTkxMDc1LDYzMz
 I0Mzc3NCwxMjYxMjYyNTYxXX0=
 -->
