@@ -16,10 +16,12 @@ Version 1 of the SBC has the following features:
  - Parallel Interface & Timers (Zilog Z8536 CIO)
  - Dual Serial Channels (Zilog Z85C30 SCC)   
  - Realtime Clock (Epson RTC7301)  w/ CR2032 backup 
- - SPI-mode micro-SD memory card (CPLD)
+ - SPI-mode micro-SD memory card (CPLD hardware SPI)
  - RESET pushbutton
  - USER pushbutton (read via CPLD)
- - 
+ - 2 USER LED's (control via CPLD)
+ - USB RX/TX Activity LED
+ - SD card Activity LED
  - USB slave (FTDI FT230XS) connected to SCC Ch. A
 
 Hardware wise, the short-term goal is met: it all functions and works as intended. Several people have built this SBC from the files I provided, and the feedback has been helpul.
@@ -55,5 +57,5 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0ODU2NTY2NywxMjYxMjYyNTYxXX0=
+eyJoaXN0b3J5IjpbNjMzMjQzNzc0LDEyNjEyNjI1NjFdfQ==
 -->
