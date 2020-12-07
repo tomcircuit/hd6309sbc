@@ -42,7 +42,7 @@ The SBC has 32K of ROM (either a 27C256 or a 27C512 will work) that is accessed 
 
 Future software goals would be to port some sort of operating system, such as NitrOS-9 operating system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems like a nice OS. I think that more memory would really be required to support this.
 
-There is a 'user manual' in this reposit
+There is a 'user manual' in the root of this repository that provides more information on the SBC.
 
 The most up-to-date information on the SBC can be found on the Hackaday project page: https://hackaday.io/project/345-hd6309-singleboard-computer
 
@@ -59,6 +59,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQzNTc1MzU4LDIxMjY2MjcxMjcsMTc5NT
-k5MTA3NSw2MzMyNDM3NzQsMTI2MTI2MjU2MV19
+eyJoaXN0b3J5IjpbMTIxNDkzNTY1MCwyMTI2NjI3MTI3LDE3OT
+U5OTEwNzUsNjMzMjQzNzc0LDEyNjEyNjI1NjFdfQ==
 -->
