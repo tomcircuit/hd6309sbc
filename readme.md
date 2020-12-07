@@ -4,25 +4,10 @@
 The HD6309 SBC is a retroputing distraction, born to provide an opportunity to try my hand at assembly language for the 6809 - which many have billed as "the most advanced 8-bit processor" ever. The Hitachi 6309 variant is **even more advanced**, with significant extensions from the base Motorola 6809 ISA. 
 
 There are many 8bit SBC (singleboard computers) in the wild, each developed according to the designers' vision. Some go for strict hardware implementation using only vintage components, while others take advantage of modern FPGAs and encapsulate nearly everything into a single device. For this particular SBC, I went for a blend of 'old skool' and 'all mod cons'. For example, the primary interface is ASCII serial, but the physical layer is implemented as a FDTI USB
-bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a SPI-mode SD card interface, rather than the purist approach of an actual floppy drive. I use a CPLD for all the glue logic for ease of reconfiguring address mapping and operation. Fortunately, it all can be powered from the USB port (<230mA at last measurement).
+bridge chip, as I loathe having to use RS232 adapters. Similarly, I included a SPI-mode SD card interface, rather than the purist approach of an actual floppy drive. I use a CPLD for all the glue logic for ease of reconfiguring address mapping and operation. Fortunately, it all can be powered from the USB port (<250mA at last measurement).
 
-This is my attempt at a LiPo-based battery pack for "Classic" HP Calculators, specifically HP-35, HP-45, and HP-55.  The original NiCd packs are all dead by now, and rebuilding them is difficult - *assuming you can even find a pack to rebuild*. I thought it would be fun to use a rechargeable LiPo battery, and include the circuitry to re-charge via USB as well. 
+For 
 
-> LiPo chemistry has very specific care-and-feeding when it comes to recharging, **you cannot use the HP AC charger to recharge this pack!**  Don't even try it with Version 1 of this project!
-
-**UPDATE**: Version 2 design includes *Charger Immunity* circuitry to prevent mayhem if the HP AC  charger is connected. 
-
-This set of design files pertains to the HD6309 Singleboard Computer v1.0
-
-The HD6309 SBC is a retroputing distraction, born to provide an opportunity to try my hand
-at assembly language for the 6809 - which many have billed as "the most advanced 8-bit
-processor" ever. I shot for a blend of 'old skool' and 'all mod cons'. For example, the
-primary interface is ASCII serial, but the physical layer is implemented as a FDTI USB
-bridge chip, as I loathe having to bust out RS232 adapters. Similarly, I included a
-SPI-mode SD card interface, rather than the purist approach of an actual floppy drive.
-I use a CPLD for all the glue logic for ease of reconfiguring address mapping and 
-operation. Fortunately, it all can be powered from the USB port (<230mA at last
-measurement).
 
 Hardware wise, the short-term goal is met: it all functions and seems to be working as
 intended. The long-term goal is to make a companion card that mates with the stacking
@@ -55,5 +40,5 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNjEwMjIwLDEyNjEyNjI1NjFdfQ==
+eyJoaXN0b3J5IjpbMjA1OTg0NzE4NywxMjYxMjYyNTYxXX0=
 -->
