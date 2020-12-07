@@ -27,15 +27,10 @@ Version 1 of the SBC has the following features:
 
 Hardware wise, the short-term goal is met: it all functions and works as intended. Several people have built this SBC from the files I provided, and the feedback has been helpful. 
 
+It seems to be an axiom that every SBC has a ROM resident Firmware wise, things are not quite as settled. For my own use I've ported the (excellent) Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot be redistributed. 
 
-The long-term goal is to make a companion card that mates with the stacking
-'expansion port' connector that provides more functionality - particularly towards the 
-stretch software-goal (NitrOS-9). Therefore, some sort of video display, keyboard
-interface, and perhaps some larger store of memory (and associated MMU). 
 
-Firmware wise, things are not quite as settled. For my own use I've ported the (excellent) 
-Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot
-be redistributed. What would be nice is a monitor in the spirit of Motorola's ASSIST09.
+What would be nice is a monitor in the spirit of Motorola's ASSIST09.
 Another firmware goal is a ROM-resident BASIC interpreter. Grant Searle to the rescue,
 who has dissected and commented 6809 MICROSOFT BASIC, which I've adapted to this SBC.
 The firmware stretch goal is some sort of operating system, such as NitrOS-9 operating 
@@ -58,6 +53,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NTk5MTA3NSw2MzMyNDM3NzQsMTI2MT
-I2MjU2MV19
+eyJoaXN0b3J5IjpbLTE1NjUyMTI4NDcsMTc5NTk5MTA3NSw2Mz
+MyNDM3NzQsMTI2MTI2MjU2MV19
 -->
