@@ -29,7 +29,7 @@ Hardware wise, the short-term goal is met: it all functions and works as intende
 
 Future hardware features to consider would be elimination of the CIO chip (seldom used), a better SCC (faster baudrate) and more memory and associated MMU. To do any/all of these, a bigger CPLD is required, as the MAX7128 is nearly fully used. 
 
-
+> UPDATE: The Epson RTC is nearly unobtainable now, so I've made a small PCB to hold an 
 
 It seems to be an axiom that every SBC has a ROM resident monitor. Over the years, I've used a number of different monitors on this SBC. For my own use I've ported the (excellent) Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot be redistributed. What I include in this repository is a ported version of "WOZMON", the Apple 1 monitor. It's enough to examine and modify memory, and load Intel hex and Motorola S-record files.
 
@@ -56,6 +56,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMTI5NDM1MiwxNzk1OTkxMDc1LDYzMz
-I0Mzc3NCwxMjYxMjYyNTYxXX0=
+eyJoaXN0b3J5IjpbLTE0ODM5NjEwMzksMTc5NTk5MTA3NSw2Mz
+MyNDM3NzQsMTI2MTI2MjU2MV19
 -->
