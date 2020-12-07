@@ -38,7 +38,7 @@ It seems to be an axiom that every SBC has a ROM resident monitor. Over the year
 Assembly language is fun and all, but having a ROM-resident BASIC interpreter is even better. Grant Searle to the rescue,
 who has dissected and commented 6809 MICROSOFT BASIC, which I easily adapted to this SBC.
 
-The SBC has a 
+The SBC has 32K of ROM (either a 27C256 or a 27C512 will work) that is accessed as two ~16K banks. The **CONFIG** jumper (JP4) selects the state o
 
 Future software goals would be to port some sort of operating system, such as NitrOS-9 operating system (level I). Here I am completely a noob; I've never used OS-9 at all, but it seems like a nice OS. I think that more memory would really be required to support this.
 
@@ -59,6 +59,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNjYyNzEyNywxNzk1OTkxMDc1LDYzMz
-I0Mzc3NCwxMjYxMjYyNTYxXX0=
+eyJoaXN0b3J5IjpbLTE3OTM1OTAxNDAsMjEyNjYyNzEyNywxNz
+k1OTkxMDc1LDYzMzI0Mzc3NCwxMjYxMjYyNTYxXX0=
 -->
