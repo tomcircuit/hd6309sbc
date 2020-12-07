@@ -27,6 +27,8 @@ Version 1 of the SBC has the following features:
 
 Hardware wise, the short-term goal is met: it all functions and works as intended. Several people have built this SBC from the files I provided, and the feedback has been helpful. 
 
+Future hardware features to consider would be more memory and associated MMU, a bigger CPLD (current one is nearly full!) 
+
 It seems to be an axiom that every SBC has a ROM resident monitor. Over the years, I've used a number of different monitors on this SBC. For my own use I've ported the (excellent) Dave Dunfield MON09 to this SBC but, sadly, this is not open source and cannot be redistributed. What I include in this repository is a ported version of "WOZMON", the Apple 1 monitor. It's enough to examine and modify memory, and load Intel hex and Motorola S-record files.
 
 Assembly language is fun and all, but having a ROM-resident BASIC interpreter is even better. Grant Searle to the rescue,
@@ -52,6 +54,6 @@ tomcircuit@gmail.com
 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE1NjUyMTQ3LDE3OTU5OTEwNzUsNjMzMj
-QzNzc0LDEyNjEyNjI1NjFdfQ==
+eyJoaXN0b3J5IjpbLTE1NjQwMjExNDgsMTc5NTk5MTA3NSw2Mz
+MyNDM3NzQsMTI2MTI2MjU2MV19
 -->
